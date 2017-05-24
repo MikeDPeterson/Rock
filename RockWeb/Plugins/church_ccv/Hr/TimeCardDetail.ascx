@@ -27,20 +27,25 @@
                     <div class="col-xs-3 col-md-2 col-lg-1">
                         <strong>Date</strong>
                     </div>
-                    <div class="col-lg-3 hidden-xs hidden-sm hidden-md">
-                        <div class="row">
-                            <div class="col-md-3"><strong>Time In</strong></div>
-                            <div class="col-md-3"><strong>Lunch Out</strong></div>
-                            <div class="col-md-3"><strong>Lunch In</strong></div>
-                            <div class="col-md-3"><strong>Time Out</strong></div>
+                    <asp:Panel ID="pnlHourlyDetailRowHeader" runat="server">
+                        <div class="col-lg-3 hidden-xs hidden-sm hidden-md">
+                            <div class="row">
+                                <div class="col-md-3"><strong>Time In</strong></div>
+                                <div class="col-md-3"><strong>Lunch Out</strong></div>
+                                <div class="col-md-3"><strong>Lunch In</strong></div>
+                                <div class="col-md-3"><strong>Time Out</strong></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-4 col-md-2">
-                        <div class="row">
-                            <div class="col-xs-6"><strong>Hrs Worked</strong></div>
-                            <div class="col-xs-6"><strong>Overtime Hrs</strong></div>
+                        <div class="col-xs-4 col-md-2">
+                            <div class="row">
+                                <div class="col-xs-6"><strong>Hrs Worked</strong></div>
+                                <div class="col-xs-6"><strong>Overtime Hrs</strong></div>
+                            </div>
                         </div>
-                    </div>
+                    </asp:Panel>
+                    <asp:Panel ID="pnlSalaryDetailRowHeader" runat="server" Visible="false">
+                        <div class="col-lg-3 hidden-xs hidden-sm hidden-md"></div>
+                    </asp:Panel>
                     <div class="col-xs-2 col-md-2 col-lg-2"><strong>Other Hrs</strong></div>
                     <div class="col-xs-2 col-md-1 col-lg-1"><strong>Total Hrs</strong></div>
                     <div class="col-md-4 col-lg-2 hidden-xs hidden-sm"><strong>Note</strong></div>
@@ -61,32 +66,37 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 hidden-xs hidden-sm hidden-md">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <asp:Literal runat="server" ID="lStartDateTime" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <asp:Literal runat="server" ID="lLunchStartDateTime" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <asp:Literal runat="server" ID="lLunchEndDateTime" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <asp:Literal runat="server" ID="lEndDateTime" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 col-md-2">
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <asp:Literal runat="server" ID="lWorkedRegularHours" />
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <Rock:Badge runat="server" ID="lWorkedOvertimeHours" BadgeType="Danger" ToolTip="Overtime" />
+                                <asp:Panel ID="pnlHourlyDetailRow" runat="server">
+                                    <div class="col-lg-3 hidden-xs hidden-sm hidden-md">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <asp:Literal runat="server" ID="lStartDateTime" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <asp:Literal runat="server" ID="lLunchStartDateTime" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <asp:Literal runat="server" ID="lLunchEndDateTime" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <asp:Literal runat="server" ID="lEndDateTime" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    <div class="col-xs-4 col-md-2">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <asp:Literal runat="server" ID="lWorkedRegularHours" />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <Rock:Badge runat="server" ID="lWorkedOvertimeHours" BadgeType="Danger" ToolTip="Overtime" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </asp:Panel>
+                                <asp:Panel ID="pnlSalaryDetailRow" runat="server" Visible="false">
+                                    <div class="col-lg-3 hidden-xs hidden-sm hidden-md"></div>
+                                </asp:Panel>
                                 <div class="col-xs-2 col-md-2 col-lg-2">
                                     <Rock:Badge runat="server" ID="lPaidVacationHours" BadgeType="Success" ToolTip="Vacation" />
                                     <Rock:Badge runat="server" ID="lPaidHolidayHours" BadgeType="Info" ToolTip="Paid Holiday" />
@@ -114,26 +124,30 @@
                                 </div>
                                 <div class="col-xs-8 col-md-8">
                                     <asp:Panel ID="pnlEditRow" runat="server" CssClass="row js-time-edit-group">
-                                        <div class="col-md-3">
-                                            <Rock:TimePicker runat="server" ID="tpTimeIn" Placeholder="Enter Time" Label="Time In" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <Rock:TimePicker runat="server" ID="tpLunchOut" Placeholder="Enter Time" Label="Lunch Out" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <Rock:TimePicker runat="server" ID="tpLunchIn" Placeholder="Enter Time" Label="Lunch In" />
-                                        </div>
-                                        <div class="col-md-3">
-                                            <Rock:TimePicker runat="server" ID="tpTimeOut" Placeholder="Enter Time" Label="Time Out" />
-                                        </div>
+                                        <asp:Panel ID="pnlHourlyEditRow" runat="server">
+                                            <div class="col-md-3">
+                                                <Rock:TimePicker runat="server" ID="tpTimeIn" Placeholder="Enter Time" Label="Time In" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <Rock:TimePicker runat="server" ID="tpLunchOut" Placeholder="Enter Time" Label="Lunch Out" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <Rock:TimePicker runat="server" ID="tpLunchIn" Placeholder="Enter Time" Label="Lunch In" />
+                                            </div>
+                                            <div class="col-md-3">
+                                                <Rock:TimePicker runat="server" ID="tpTimeOut" Placeholder="Enter Time" Label="Time Out" />
+                                            </div>
+                                        </asp:Panel>
 
                                         <div class="col-md-3">
                                             <Rock:RockDropDownList runat="server" ID="ddlVacationHours" Label="Vacation Hrs" />
                                         </div>
-                                        <div class="col-md-3">
-                                            <asp:Label ID="lEarnedHolidayHours" runat="server" CssClass="js-earned-holiday-hours badge badge-info" ToolTip="Earned Holiday Hours based on 50% of hours worked" Style="float: right" />
-                                            <Rock:RockDropDownList runat="server" ID="ddlHolidayHours" Label="Holiday Hrs" />
-                                        </div>
+                                        <asp:Panel ID="pnlHourlyHolidayHoursEditDDL" runat="server">
+                                            <div class="col-md-3">
+                                                <asp:Label ID="lEarnedHolidayHours" runat="server" CssClass="js-earned-holiday-hours badge badge-info" ToolTip="Earned Holiday Hours based on 50% of hours worked" Style="float: right" />
+                                                <Rock:RockDropDownList runat="server" ID="ddlHolidayHours" Label="Holiday Hrs" />
+                                            </div>
+                                        </asp:Panel>
                                         <div class="col-md-3">
                                             <Rock:RockDropDownList runat="server" ID="ddlSickHours" Label="Sick Hrs" />
                                         </div>
@@ -223,21 +237,23 @@
 
                             <h4>Totals</h4>
 
-                            <div>
-                                <strong>Worked Hours</strong>
-                                <div class="row">
-                                    <div class="col-xs-8">&nbsp;Regular</div>
-                                    <div class="col-xs-4">
-                                        <asp:Literal ID="lTotalRegularWorked" runat="server" />
+                            <asp:Panel ID="pnlHourlyTotals" runat="server">
+                                <div>
+                                    <strong>Worked Hours</strong>
+                                    <div class="row">
+                                        <div class="col-xs-8">&nbsp;Regular</div>
+                                        <div class="col-xs-4">
+                                            <asp:Literal ID="lTotalRegularWorked" runat="server" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-8">&nbsp;Overtime</div>
+                                        <div class="col-xs-4">
+                                            <asp:Literal ID="lTotalOvertimeWorked" runat="server" />
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-8">&nbsp;Overtime</div>
-                                    <div class="col-xs-4">
-                                        <asp:Literal ID="lTotalOvertimeWorked" runat="server" />
-                                    </div>
-                                </div>
-                            </div>
+                            </asp:Panel>
 
                             <div class="margin-t-sm">
                                 <div class="row">
@@ -246,12 +262,14 @@
                                         <asp:Literal ID="lTotalVacationPaid" runat="server" />
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-8">Holiday Hours</div>
-                                    <div class="col-xs-4">
-                                        <asp:Literal ID="lTotalHolidayPaid" runat="server" />
+                                <asp:Panel ID="pnlHourlyTotalsHolidayHours" runat="server">
+                                    <div class="row">
+                                        <div class="col-xs-8">Holiday Hours</div>
+                                        <div class="col-xs-4">
+                                            <asp:Literal ID="lTotalHolidayPaid" runat="server" />
+                                        </div>
                                     </div>
-                                </div>
+                                </asp:Panel>
                                 <div class="row">
                                     <div class="col-xs-8">Sick Hours</div>
                                     <div class="col-xs-4">

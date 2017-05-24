@@ -385,6 +385,13 @@ namespace RockWeb.Plugins.church_ccv.Hr
             // make sure the current person is the timecard.person or is an approver of the timecard.person
             List<Person> approvers = TimeCardPayPeriodService.GetApproversForStaffPerson( hrContext, this.CurrentPersonId ?? 0 );
 
+            // hide hourly related items for Salary person
+            var attributeValueService = new AttributeValueService( hrContext );
+            bool isSalary = attributeValueService
+                .GetByAttributeId(32961) //32961 = Payroll Wage Type attribute
+                .Where(a => (a.Value == "440145BF-3D20-4F30-8C78-E275D58EB0BF" || a.Value == "CDDF9DDE-3D9D-495C-BD9B-E8186526600C") && a.EntityId == this.CurrentPersonId)
+                .Any();                
+
             bool editMode = false;
 
             pnlDetails.Visible = true;
@@ -428,7 +435,7 @@ namespace RockWeb.Plugins.church_ccv.Hr
             // only show the Submit panel if in edit mode
             pnlPersonActions.Visible = editMode;
 
-            lTimeCardPersonName.Text = string.Format( "{0}", timeCard.PersonAlias );
+            lTimeCardPersonName.Text = string.Format( "{0}", timeCard.PersonAlias ); 
             lTitle.Text = "Pay Period: " + timeCard.TimeCardPayPeriod.ToString();
             hlblSubTitle.Text = timeCard.GetStatusText();
 
@@ -525,6 +532,31 @@ namespace RockWeb.Plugins.church_ccv.Hr
             var historyQry = timeCardHistoryService.Queryable().Where( a => a.TimeCardId == timeCard.Id ).OrderByDescending( a => a.HistoryDateTime );
             gHistory.DataSource = historyQry.ToList();
             gHistory.DataBind();
+
+            if (isSalary)
+            {
+                pnlHourlyDetailRowHeader.Visible = false;
+                pnlSalaryDetailRowHeader.Visible = true;
+                Repeater rpr = (Repeater)FindControl("rptTimeCardDay");
+                for (int i = 0; i < rpr.Items.Count; i++)
+                {
+                    Panel pnlHourlyDetailRow = (Panel)rpr.Items[i].FindControl("pnlHourlyDetailRow");
+                    pnlHourlyDetailRow.Visible = false;
+
+                    Panel pnlSalaryDetailRow = (Panel)rpr.Items[i].FindControl("pnlSalaryDetailRow");
+                    pnlSalaryDetailRow.Visible = true;
+
+                    Panel pnlHourlyEditRow = (Panel)rpr.Items[i].FindControl("pnlHourlyEditRow");
+                    pnlHourlyEditRow.Visible = false;
+
+                    Panel pnlHourlyHolidayHoursEditDDL = (Panel)rpr.Items[i].FindControl("pnlHourlyHolidayHoursEditDDL");
+                    pnlHourlyHolidayHoursEditDDL.Visible = false;
+                }
+               
+
+                pnlHourlyTotals.Visible = false;
+                pnlHourlyTotalsHolidayHours.Visible = false;
+            }
         }
 
         #endregion
