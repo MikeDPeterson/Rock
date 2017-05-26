@@ -42,14 +42,22 @@
                                 <div class="col-xs-6"><strong>Overtime Hrs</strong></div>
                             </div>
                         </div>
+                        <div class="col-xs-2 col-md-2 col-lg-2"><strong>Other Hrs</strong></div>
+                        <div class="col-xs-2 col-md-1 col-lg-1"><strong>Total Hrs</strong></div>
+                        <div class="col-md-4 col-lg-2 hidden-xs hidden-sm"><strong>Note</strong></div>
+                
                     </asp:Panel>
                     <asp:Panel ID="pnlSalaryDetailRowHeader" runat="server" Visible="false">
-                        <div class="col-lg-3 hidden-xs hidden-sm hidden-md"></div>
+                        <div class="col-xs-4 col-md-2">
+                            <div class="row text-center">
+                                <div class="col-xs-6"><strong>Vacation Hours</strong></div>
+                                <div class="col-xs-6"><strong>Sick Hours</strong></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-2 hidden-xs hidden-sm"><strong>Note</strong></div>
                     </asp:Panel>
-                    <div class="col-xs-2 col-md-2 col-lg-2"><strong>Other Hrs</strong></div>
-                    <div class="col-xs-2 col-md-1 col-lg-1"><strong>Total Hrs</strong></div>
-                    <div class="col-md-4 col-lg-2 hidden-xs hidden-sm"><strong>Note</strong></div>
                 </div>
+
 
                 <asp:Repeater runat="server" ID="rptTimeCardDay" OnItemDataBound="rptTimeCardDay_ItemDataBound">
                     <ItemTemplate>
@@ -93,22 +101,31 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-xs-2 col-md-2 col-lg-2">
+                                        <Rock:Badge runat="server" ID="lPaidVacationHours" BadgeType="Success" ToolTip="Vacation" />
+                                        <Rock:Badge runat="server" ID="lPaidHolidayHours" BadgeType="Info" ToolTip="Paid Holiday" />
+                                        <Rock:Badge runat="server" ID="lPaidSickHours" BadgeType="Warning" ToolTip="Sick" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-1 col-lg-1">
+                                        <asp:Literal runat="server" ID="lTotalHours" />
+                                    </div>
                                 </asp:Panel>
                                 <asp:Panel ID="pnlSalaryDetailRow" runat="server" Visible="false">
-                                    <div class="col-lg-3 hidden-xs hidden-sm hidden-md"></div>
+                                    <div class="col-xs-4 col-md-2">
+                                        <div class="row text-center">
+                                            <div class="col-xs-6">
+                                                <Rock:Badge runat="server" ID="lSalaryVacationHours" BadgeType="Success" ToolTip="Vacation" />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <Rock:Badge runat="server" ID="lSalarySickHours" BadgeType="Warning" ToolTip="Sick" />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </asp:Panel>
-                                <div class="col-xs-2 col-md-2 col-lg-2">
-                                    <Rock:Badge runat="server" ID="lPaidVacationHours" BadgeType="Success" ToolTip="Vacation" />
-                                    <Rock:Badge runat="server" ID="lPaidHolidayHours" BadgeType="Info" ToolTip="Paid Holiday" />
-                                    <Rock:Badge runat="server" ID="lPaidSickHours" BadgeType="Warning" ToolTip="Sick" />
-                                </div>
-                                <div class="col-xs-2 col-md-1 col-lg-1">
-                                    <asp:Literal runat="server" ID="lTotalHours" />
-                                </div>
                                 <div class="col-md-4 col-lg-2 hidden-xs hidden-sm">
                                     <asp:Literal runat="server" ID="lNotes" />
                                 </div>
-                                <div class="col-md-1 hidden-xs hidden-sm gridresponsive-commandcolumn"><a class="btn btn-sm btn-default js-item-edit"><i class="fa fa-pencil"></i></a></div>
+                                <div class="col-md-1 hidden-xs hidden-sm gridresponsive-commandcolumn pull-right"><a class="btn btn-sm btn-default js-item-edit"><i class="fa fa-pencil"></i></a></div>
                             </div>
                             <div class="gridresponsive-item-edit padding-b-md" style="display: none;">
 
@@ -171,24 +188,38 @@
                                 <div class="col-xs-3 col-md-2 col-lg-1">
                                     Subtotal:
                                 </div>
-                                <div class="col-lg-3 hidden-xs hidden-sm hidden-md"></div>
-                                <div class="col-xs-4 col-md-2">
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <asp:Literal runat="server" ID="lWorkedRegularHoursSummary" />
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <asp:Literal runat="server" ID="lWorkedOvertimeHoursSummary" />
+                                <asp:Panel ID="pnlTimeCardSummaryHourlyRow" runat="server">
+                                    <div class="col-lg-3 hidden-xs hidden-sm hidden-md"></div>
+                                    <div class="col-xs-4 col-md-2">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <asp:Literal runat="server" ID="lWorkedRegularHoursSummary" />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <asp:Literal runat="server" ID="lWorkedOvertimeHoursSummary" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-2 col-md-2 col-lg-2">
-                                    <asp:Literal runat="server" ID="lOtherHoursSummary" />
-                                </div>
-                                <div class="col-xs-2 col-md-1 col-lg-1">
-                                    <asp:Literal runat="server" ID="lTotalHoursSummary" />
-                                </div>
-                                <div class="col-md-4 col-lg-2 hidden-xs hidden-sm"></div>
+                                    <div class="col-xs-2 col-md-2 col-lg-2">
+                                        <asp:Literal runat="server" ID="lOtherHoursSummary" />
+                                    </div>
+                                    <div class="col-xs-2 col-md-1 col-lg-1">
+                                        <asp:Literal runat="server" ID="lTotalHoursSummary" />
+                                    </div>
+                                    <div class="col-md-4 col-lg-2 hidden-xs hidden-sm"></div>
+                                </asp:Panel>
+                                <asp:Panel ID="pnlTimeCardSummarySalaryRow" runat="server" Visible="false">
+                                     <div class="col-xs-4 col-md-2">
+                                        <div class="row text-center">
+                                            <div class="col-xs-6">
+                                                <asp:Literal runat="server" ID="lTotalVacationHoursSummary" />
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <asp:Literal runat="server" ID="lTotalSickHoursSummary" />                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </asp:Panel>
                             </div>
                         </asp:Panel>
                     </ItemTemplate>
