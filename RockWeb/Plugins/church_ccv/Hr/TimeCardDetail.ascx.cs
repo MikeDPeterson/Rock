@@ -443,8 +443,11 @@ namespace RockWeb.Plugins.church_ccv.Hr
 
             hfEditMode.Value = editMode.ToTrueFalse();
 
-            // only show the Submit panel if in edit mode
-            pnlPersonActions.Visible = editMode;
+            // only show the Submit panel if in edit mode and InProgress
+            if(timeCard.TimeCardStatus == TimeCardStatus.InProgress)
+            {
+                pnlPersonActions.Visible = editMode;
+            }
 
             lTimeCardPersonName.Text = string.Format( "{0}", timeCard.PersonAlias ); 
             lTitle.Text = "Pay Period: " + timeCard.TimeCardPayPeriod.ToString();
@@ -546,37 +549,41 @@ namespace RockWeb.Plugins.church_ccv.Hr
 
             // hide hourly timecard controls and show salary timecard controls if timecardpersonid is a salary employee
             //   except where previous timecards have hours (for hourly employees that later become salary employees). 
-            var attributeValueService = new AttributeValueService(hrContext);
+            var attributeValueService = new AttributeValueService( hrContext );
+            int payrollWageTypeId = AttributeCache.Read( church.ccv.Utility.SystemGuids.Attribute.PERSON_PAYROLL_WAGE_TYPE.AsGuid() ).Id;
+
             bool isSalaryTimeCard = attributeValueService
-                .GetByAttributeId(32961) //32961 = Payroll Wage Type attribute
-                .Where(a => (a.Value == "440145BF-3D20-4F30-8C78-E275D58EB0BF" || a.Value == "CDDF9DDE-3D9D-495C-BD9B-E8186526600C") && a.EntityId == timeCardPersonId)
+                .GetByAttributeId( payrollWageTypeId )
+                .Where( a => ( a.Value == church.ccv.Utility.SystemGuids.DefinedValue.PERSON_PAYROLL_WAGE_TYPE_FULL_TIME_SALARY_EXEMPT ||
+                              a.Value == church.ccv.Utility.SystemGuids.DefinedValue.PERSON_PAYROLL_WAGE_TYPE_PART_TIME_SALARY_EXEMPT ) &&
+                              a.EntityId == timeCardPersonId )
                 .Any();
 
-            if (int.Parse(lTotalRegularWorked.Text) == 0)
+            if ( int.Parse(lTotalRegularWorked.Text ) == 0)
             {
-                if (isSalaryTimeCard)
+                if ( isSalaryTimeCard )
                 {
                     pnlHourlyDetailRowHeader.Visible = false;
                     pnlSalaryDetailRowHeader.Visible = true;
-                    Repeater rpr = (Repeater)FindControl("rptTimeCardDay");
+                    Repeater rpr = ( Repeater ) FindControl( "rptTimeCardDay" );
                     for (int i = 0; i < rpr.Items.Count; i++)
                     {
-                        Panel pnlHourlyDetailRow = (Panel)rpr.Items[i].FindControl("pnlHourlyDetailRow");
+                        Panel pnlHourlyDetailRow = ( Panel ) rpr.Items[i].FindControl( "pnlHourlyDetailRow" );
                         pnlHourlyDetailRow.Visible = false;
 
-                        Panel pnlSalaryDetailRow = (Panel)rpr.Items[i].FindControl("pnlSalaryDetailRow");
+                        Panel pnlSalaryDetailRow = ( Panel ) rpr.Items[i].FindControl( "pnlSalaryDetailRow" );
                         pnlSalaryDetailRow.Visible = true;
 
-                        Panel pnlHourlyEditRow = (Panel)rpr.Items[i].FindControl("pnlHourlyEditRow");
+                        Panel pnlHourlyEditRow = ( Panel ) rpr.Items[i].FindControl( "pnlHourlyEditRow" );
                         pnlHourlyEditRow.Visible = false;
 
-                        Panel pnlHourlyHolidayHoursEditDDL = (Panel)rpr.Items[i].FindControl("pnlHourlyHolidayHoursEditDDL");
+                        Panel pnlHourlyHolidayHoursEditDDL = ( Panel ) rpr.Items[i].FindControl( "pnlHourlyHolidayHoursEditDDL" );
                         pnlHourlyHolidayHoursEditDDL.Visible = false;
 
-                        Panel pnlTimeCardSummaryHourlyRow = (Panel)rpr.Items[i].FindControl("pnlTimeCardSummaryHourlyRow");
+                        Panel pnlTimeCardSummaryHourlyRow = ( Panel ) rpr.Items[i].FindControl( "pnlTimeCardSummaryHourlyRow" );
                         pnlTimeCardSummaryHourlyRow.Visible = false;
 
-                        Panel pnlTimeCardSummarySalaryRow = (Panel)rpr.Items[i].FindControl("pnlTimeCardSummarySalaryRow");
+                        Panel pnlTimeCardSummarySalaryRow = ( Panel ) rpr.Items[i].FindControl( "pnlTimeCardSummarySalaryRow" );
                         pnlTimeCardSummarySalaryRow.Visible = true;
                     }
 

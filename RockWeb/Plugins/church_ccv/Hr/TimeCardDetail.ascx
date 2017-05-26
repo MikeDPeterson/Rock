@@ -128,13 +128,12 @@
                                 <div class="col-md-1 hidden-xs hidden-sm gridresponsive-commandcolumn pull-right"><a class="btn btn-sm btn-default js-item-edit"><i class="fa fa-pencil"></i></a></div>
                             </div>
                             <div class="gridresponsive-item-edit padding-b-md" style="display: none;">
-
-                                <div class="col-xs-4 col-md-2">
+                                <div class="col-xs-3 col-md-2 col-lg-1">
                                     <div class="row">
-                                        <div class="col-xs-7">
+                                        <div class="col-xs-5">
                                             <asp:Literal runat="server" ID="lTimeCardDayNameEdit" />
                                         </div>
-                                        <div class="col-xs-5">
+                                        <div class="col-xs-7">
                                             <Rock:Badge runat="server" ID="lTimeCardDateEdit" />
                                         </div>
                                     </div>
@@ -236,7 +235,7 @@
                     <div class="col-md-8">
 
                         <!-- Actions/Submit Panel -->
-                        <asp:Panel ID="pnlPersonActions" CssClass="js-submit-panel" runat="server">
+                        <asp:Panel ID="pnlPersonActions" CssClass="js-submit-panel" runat="server" Visible="false">
                             <h4>Submit</h4>
 
                             <Rock:NotificationBox ID="nbSubmittedSuccessMessage" runat="server" NotificationBoxType="Success" />
