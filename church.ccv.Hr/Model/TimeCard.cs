@@ -51,6 +51,15 @@ namespace church.ccv.Hr.Model
         public TimeCardStatus TimeCardStatus { get; set; }
 
         /// <summary>
+        /// Gets or sets the clocked in status.
+        /// </summary>
+        /// <value>
+        /// The clocked in status.
+        /// </value>
+        [DataMember]
+        public ClockedInStatus ClockedInStatus { get; set; }
+
+        /// <summary>
         /// Gets or sets the submitted to person alias identifier.
         /// </summary>
         /// <value>
@@ -331,6 +340,38 @@ namespace church.ccv.Hr.Model
             return statusText;
         }
 
+        /// <summary>
+        /// Gets the clocked in status text
+        /// </summary>
+        /// <param name="timeCard">The time card.</param>
+        /// <returns></returns>
+        public string GetClockedInStatusText()
+        {
+            string clockedInStatusText = string.Empty;
+            switch ( this.ClockedInStatus )
+            {
+                case ClockedInStatus.In:
+                    clockedInStatusText = "Clocked In";
+                    break;
+                case ClockedInStatus.LunchOut:
+                    clockedInStatusText = "Lunch Out";
+                    break;
+                case ClockedInStatus.LunchIn:
+                    clockedInStatusText = "Lunch In";
+                    break;
+                case ClockedInStatus.Out:
+                    clockedInStatusText = "Clocked Out";
+                    break;
+                default:
+                    clockedInStatusText = this.ClockedInStatus.ConvertToString();
+                    break;
+            }
+
+
+
+            return clockedInStatusText;
+        }
+
         #endregion
     }
 
@@ -434,6 +475,32 @@ namespace church.ccv.Hr.Model
         /// Requires FollowUp
         /// </summary>
         FollowUp = 4
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public enum ClockedInStatus
+    {
+        /// <summary>
+        /// Clocked Out
+        /// </summary>
+        Out = 0,
+
+        /// <summary>
+        /// Clocked in
+        /// </summary>
+        In = 1,
+
+        /// <summary>
+        /// Lunch Clock Out
+        /// </summary>
+        LunchOut = 2,
+
+        /// <summary>
+        /// Lunch Clock in
+        /// </summary>
+        LunchIn = 3,
     }
 
     /// <summary>

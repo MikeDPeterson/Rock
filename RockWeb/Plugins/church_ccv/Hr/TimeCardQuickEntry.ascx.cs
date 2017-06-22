@@ -43,26 +43,53 @@ namespace RockWeb.Plugins.church_ccv.Hr
                 // Get the current period time card
                 TimeCard currentTimeCard = GetCurrentTimeCard();
 
-                // Set the current timecard period Label
-                if (currentTimeCard != null)
+                // If no current time card, show Create Time Card button
+                if ( currentTimeCard == null )
                 {
-                    lblCurrentTimePeriod.Text = String.Format("Pay Period: {0}", currentTimeCard.TimeCardPayPeriod);
+                    pnlQuickEntry.Visible = false;
+                    pnlCreateTimeCard.Visible = true;
                 }
+                else if ( currentTimeCard != null )
+                {
+                    // Set the current timecard period Label
+                    lblCurrentTimePeriod.Text = String.Format( "Pay Period: {0}", currentTimeCard.TimeCardPayPeriod );
 
-                // Set the clockedin status
-                bool clockedIn = GetClockedStatus();
-                if (clockedIn)
-                {
-                    lblClockedStatus.Text = "Clocked In";
-                }
-                else
-                {
-                    lblClockedStatus.Text = "Clocked Out";
+                    // Set clocked in status text
+                    lblClockedStatus.Text = currentTimeCard.GetClockedInStatusText();
+
+                    // Show / Hide relavent buttons for Clocking In / out
+                    switch ( currentTimeCard.ClockedInStatus )
+                    {
+                        case ClockedInStatus.In:
+                            lbTimeIn.Visible = false;
+                            lbLunchIn.Visible = false;
+                            lbLunchOut.Visible = true;
+                            lbTimeOut.Visible = true;
+                            break;
+                        case ClockedInStatus.LunchOut:
+                            lbLunchOut.Visible = false;
+                            lbTimeOut.Visible = false;
+                            lbTimeIn.Visible = false;
+                            lbLunchIn.Visible = true;
+                            break;
+                        case ClockedInStatus.LunchIn:
+                            lbLunchIn.Visible = false;
+                            lbLunchOut.Visible = false;
+                            lbTimeIn.Visible = false;
+                            lbTimeOut.Visible = true;
+                            break;
+                        case ClockedInStatus.Out:
+                            lbTimeIn.Visible = true;
+                            lbLunchIn.Visible = false;
+                            lbLunchOut.Visible = false;
+                            lbTimeOut.Visible = false;
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
         }
-
-
 
         #endregion
 
@@ -120,15 +147,18 @@ namespace RockWeb.Plugins.church_ccv.Hr
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        protected void lbClockIn_Click(object sender, EventArgs e)
+        protected void lbTimeIn_Click(object sender, EventArgs e)
         {
+            DateTime timeIn = DateTime.Now;
+            //UpdateCurrentTimeCard(clockInTime, lunchOutTime, lunchInTime, clockOutTime);
+            
 
             // Add the current DateTime to today's time card in the Time In field
-
+            
             lblClockedStatus.Text = "Clocked In at (time)";
-            lbClockIn.Visible = false;
+            lbTimeIn.Visible = false;
             lbLunchOut.Visible = true;
-            lbClockOut.Visible = true;
+            lbTimeOut.Visible = true;
         }
 
         /// <summary>
@@ -143,7 +173,7 @@ namespace RockWeb.Plugins.church_ccv.Hr
 
             lblClockedStatus.Text = "Lunch Out at (time)";
             lbLunchOut.Visible = false;
-            lbClockOut.Visible = false;
+            lbTimeOut.Visible = false;
             lbLunchIn.Visible = true;
         }
 
@@ -159,7 +189,7 @@ namespace RockWeb.Plugins.church_ccv.Hr
 
             lblClockedStatus.Text = "Lunch In at (time)";
             lbLunchIn.Visible = false;
-            lbClockOut.Visible = true;
+            lbTimeOut.Visible = true;
         }
 
         /// <summary>
@@ -167,16 +197,38 @@ namespace RockWeb.Plugins.church_ccv.Hr
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        protected void lbClockOut_Click(object sender, EventArgs e)
+        protected void lbTimeOut_Click(object sender, EventArgs e)
         {
 
             // Add the current DateTime to todays time card in the Clock Out field
 
             lbLunchOut.Visible = false;
-            lbClockOut.Visible = false;
+            lbTimeOut.Visible = false;
             lblClockedStatus.Text = "Time entry completed for today";
 
         }
+
+        /// <summary>
+        /// Handles the click event of the lbCreateTimeCard Control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
+        protected void lbCreateTimeCard_Click(object sender, EventArgs e )
+        {
+
+
+            // create time card
+            //currentEmployeeTimeCard = new TimeCard();
+            //currentEmployeeTimeCard.TimeCardPayPeriodId = currentPayPeriod.Id;
+            //currentEmployeeTimeCard.TimeCardStatus = TimeCardStatus.InProgress;
+            //currentEmployeeTimeCard.PersonAliasId = this.CurrentPersonAliasId.Value;
+            //currentEmployeeTimeCard.TimeCardDays = new List<TimeCardDay>();
+            //timeCardService.Add( currentEmployeeTimeCard );
+
+
+
+        }
+
 
 
         #endregion
@@ -189,48 +241,53 @@ namespace RockWeb.Plugins.church_ccv.Hr
         private TimeCard GetCurrentTimeCard()
         {
             var hrContext = new HrContext();
-            var timeCardService = new TimeCardService(hrContext);
-            var timeCardPayPeriodService = new TimeCardPayPeriodService(hrContext);
-            DateTime? firstPayPeriodStartDate = this.GetAttributeValue("FirstPayPeriodStartDate").AsDateTime();
-            if (!firstPayPeriodStartDate.HasValue)
+            var timeCardService = new TimeCardService( hrContext );
+            var timeCardPayPeriodService = new TimeCardPayPeriodService( hrContext );
+            DateTime? firstPayPeriodStartDate = this.GetAttributeValue( "FirstPayPeriodStartDate" ).AsDateTime();
+            if ( !firstPayPeriodStartDate.HasValue )
             {
-                lblCurrentTimePeriod.Text += "The first pay period start date must be set in block settings<br />";
+                lblInformationMessage.Text += "The first pay period start date must be set in block settings<br />";
+                ShowInformationMessage();
                 return null;
             }
 
-            var qry = timeCardService.Queryable().Where(a => a.PersonAlias.PersonId == this.CurrentPersonId);
+            var qry = timeCardService.Queryable().Where( a => a.PersonAlias.PersonId == this.CurrentPersonId );
 
-
-            // ensure that employee has a timecard for the current pay period
-            var currentPayPeriod = timeCardPayPeriodService.EnsureCurrentPayPeriod(firstPayPeriodStartDate.Value);
-            var currentEmployeeTimeCard = qry.Where(a => a.TimeCardPayPeriodId == currentPayPeriod.Id).FirstOrDefault();
-            if (currentEmployeeTimeCard == null)
+            // Check if employee has timecard for current pay period and return it, return null if no timecard found
+            var currentPayPeriod = timeCardPayPeriodService.EnsureCurrentPayPeriod( firstPayPeriodStartDate.Value );
+            var currentEmployeeTimeCard = qry.Where( a => a.TimeCardPayPeriodId == currentPayPeriod.Id ).FirstOrDefault();
+            if ( currentEmployeeTimeCard == null )
             {
-                lblCurrentTimePeriod.Text += "No time card exists create one<br />";
-                //currentEmployeeTimeCard = new TimeCard();
-                //currentEmployeeTimeCard.TimeCardPayPeriodId = currentPayPeriod.Id;
-                //currentEmployeeTimeCard.TimeCardStatus = TimeCardStatus.InProgress;
-                //currentEmployeeTimeCard.PersonAliasId = this.CurrentPersonAliasId.Value;
-                //currentEmployeeTimeCard.TimeCardDays = new List<TimeCardDay>();
-                //timeCardService.Add(currentEmployeeTimeCard);
-                //hrContext.SaveChanges();
+                return null;
             }
-
             return currentEmployeeTimeCard;
+        }
+
+        private void UpdateCurrentTimeCard(string currentTimeCardId, DateTime timeIn, DateTime lunchOut, DateTime lunchIn, DateTime timeOut)
+        {
+            var hrContext = new HrContext();
+            var timeCardDayService = new TimeCardDayService( hrContext );
+            var timeCardDay = timeCardDayService.Get( currentTimeCardId.AsInteger() );
+
+            timeCardDay.StartDateTime = timeIn;
+            timeCardDay.LunchStartDateTime = lunchOut;
+            timeCardDay.LunchEndDateTime = lunchIn;
+            timeCardDay.EndDateTime = timeOut;
+
 
         }
 
         /// <summary>
-        /// Get Clocked In Status
+        /// Show Information Message panel and hide other panels
         /// </summary>
-        private bool GetClockedStatus()
+        private void ShowInformationMessage()
         {
-
-
-            return false;
+            pnlInformationMessage.Visible = true;
+            pnlCreateTimeCard.Visible = false;
+            pnlQuickEntry.Visible = false;
         }
 
-
+     
         #endregion
 
 
