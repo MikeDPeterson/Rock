@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PrayerRequestEntry.Kiosk.ascx.cs" Inherits="RockWeb.Blocks.Prayer.PrayerRequestEntryKiosk" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PrayerRequestEntryKiosk.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Prayer.PrayerRequestEntryKiosk" %>
 <asp:UpdatePanel ID="upAdd" runat="server">
     <ContentTemplate>
         <asp:Panel runat="server" ID="pnlForm">
@@ -25,8 +25,14 @@
 
                                 <Rock:DataTextBox ID="dtbEmail" runat="server" Label="Email" TextMode="Email" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="Email" />
                     
-                                <Rock:RockDropDownList ID="bddlCategory" runat="server" Required="true" Label="Category"></Rock:RockDropDownList>
-
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <Rock:RockDropDownList ID="bddlCampus" runat="server" Required="true" Label="Campus"></Rock:RockDropDownList>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <Rock:RockDropDownList ID="bddlCategory" runat="server" Required="true" Label="Category"></Rock:RockDropDownList>
+                                    </div>
+                                </div>
                                 <em ID="lblCount" runat="server" class="pull-right badge"></em>
                                 <Rock:DataTextBox ID="dtbRequest" runat="server" Label="Request" TextMode="MultiLine" Rows="3" MaxLength="10" ValidateRequestMode="Disabled" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="Text" placeholder="Please pray that..."></Rock:DataTextBox>
 

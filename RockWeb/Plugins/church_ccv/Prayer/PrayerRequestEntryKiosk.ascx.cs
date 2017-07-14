@@ -1,32 +1,29 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using Rock;
 using Rock.Attribute;
-using Rock.Constants;
 using Rock.Data;
 using Rock.Model;
-using Rock.Security;
-using Rock.Web.Cache;
 using Rock.Web.UI;
 using Rock.Web.UI.Controls;
+using church.ccv.Prayer.Model;
+using Rock.Web.Cache;
 
-namespace RockWeb.Plugins.church_ccv.PrayerRequest
+namespace RockWeb.Plugins.church_ccv.Prayer
 {
-    [DisplayName( "Prayer Request Entry" )]
-    [Category( "Prayer" )]
-    [Description( "Allows prayer requests to be added via visitors on the website." )]
+    [DisplayName( "Campus Prayer Request Entry - Kiosk" )]
+    [Category( "CCV > Prayer" )]
+    [Description( "Allows prayer requests to be added from a kiosk." )]
 
     // Category Selection
-    [CategoryField( "Category Selection", "A top level category. This controls which categories the person can choose from when entering their prayer request.", false, "Rock.Model.PrayerRequest", "", "", false, "", "Category Selection", 1, "GroupCategoryId" )]
-    [CategoryField( "Default Category", "If categories are not being shown, choose a default category to use for all new prayer requests.", false, "Rock.Model.PrayerRequest", "", "", false, "4B2D88F5-6E45-4B4B-8776-11118C8E8269", "Category Selection", 2, "DefaultCategory" )]
+    [CategoryField( "Category Selection", "A top level category. This controls which categories the person can choose from when entering their prayer request.", false, "church.ccv.Prayer.Model.CampusPrayerRequest", "", "", false, "", "Category Selection", 1, "GroupCategoryId" )]
+    [CategoryField( "Default Category", "If categories are not being shown, choose a default category to use for all new prayer requests.", false, "church.ccv.Prayer.Model.CampusPrayerRequest", "", "", false, "4B2D88F5-6E45-4B4B-8776-11118C8E8269", "Category Selection", 2, "DefaultCategory" )]
     
     // Features
     [BooleanField( "Enable Auto Approve", "If enabled, prayer requests are automatically approved; otherwise they must be approved by an admin before they can be seen by the prayer team.", true, "Features", 3 )]
@@ -36,14 +33,15 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
     [BooleanField( "Enable Comments Flag", "If enabled, requestors will be able set whether or not they want to allow comments on their requests.", false, "Features", 7 )]
     [BooleanField( "Enable Public Display Flag", "If enabled, requestors will be able set whether or not they want their request displayed on the public website.", false, "Features", 8 )]
     [IntegerField( "Character Limit", "If set to something other than 0, this will limit the number of characters allowed when entering a new prayer request.", false, 250, "Features", 9 )]
-    [BooleanField( "Require Last Name", "Require that a last name be entered", true, "Features", 10 )]
-    
+    [BooleanField( "Autofill User Info", "When enabled will autofill the user's info. This is generally no wanted on a public kioks.", false, "", 10)]
+    [CampusField( "Default Campus", "The default campus for the request.", false, "", "Features", 14, "DefaultCampusId" )]
+
     // On Save Behavior
     [BooleanField( "Navigate To Parent On Save", "If enabled, on successful save control will redirect back to the parent page.", false, "On Save Behavior", 11 )]
-    [CodeEditorField( "Save Success Text", "Text to display upon successful save. (Only applies if not navigating to parent page on save.) <span class='tip tip-lava'></span><span class='tip tip-html'></span>", CodeEditorMode.Html, CodeEditorTheme.Rock, 200, false, "<p>Thank you for allowing us to pray for you.</p>", "On Save Behavior", 12 )]
-    [WorkflowTypeField( "Workflow", "An optional workflow to start when prayer request is created. The PrayerRequest will be set as the workflow 'Entity' attribute when processing is started.", false, false, "", "On Save Behavior", 13 )]
-    [BooleanField( "Enable Debug", "Outputs the object graph to help create your liquid syntax.", false, "On Save Behavior", 14 )]
-    public partial class PrayerRequestEntry : RockBlock
+    [CodeEditorField( "Save Success Text", "Text to display upon successful save. (Only applies if not navigating to parent page on save.) <span class='tip tip-html'>", CodeEditorMode.Html, CodeEditorTheme.Rock, 200, false, "<p>Thank you for allowing us to pray for you.</p>", "On Save Behavior", 12 )]
+
+    [LinkedPage( "Homepage", "Homepage of the kiosk.", true, "", "", 13 )]
+    public partial class PrayerRequestEntryKiosk : RockBlock
     {
         #region Properties
         public int? PrayerRequestEntityTypeId { get; private set; }
@@ -64,32 +62,41 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
         {
             base.OnInit( e );
 
-            RockContext rockContext = new RockContext();
+            if ( !IsPostBack )
+            {
+                // hide cancel buttons if no homepage defined
+                if ( string.IsNullOrWhiteSpace( GetAttributeValue( "Homepage" ) ) )
+                {
+                    lbPrayerCancel.Visible = false;
+                }
+            }
 
             this.EnableUrgentFlag = GetAttributeValue( "EnableUrgentFlag" ).AsBoolean();
             this.EnableCommentsFlag = GetAttributeValue( "EnableCommentsFlag" ).AsBoolean();
             this.EnablePublicDisplayFlag = GetAttributeValue( "EnablePublicDisplayFlag" ).AsBoolean();
-            tbLastName.Required = GetAttributeValue( "RequireLastName" ).AsBooleanOrNull() ?? true;
+            nbMessage.Text = GetAttributeValue( "SaveSuccessText" );
 
             RockPage.AddScriptLink( Page, ResolveUrl( "~/Scripts/bootstrap-limit.js" ) );
             var categoryGuid = GetAttributeValue( "GroupCategoryId" );
             if ( ! string.IsNullOrEmpty( categoryGuid ) )
             {
                 BindCategories( categoryGuid );
-
-                // set the default category
-                if ( !string.IsNullOrWhiteSpace( GetAttributeValue( "DefaultCategory" ) ) )
-                {
-                    
-                    Guid defaultCategoryGuid = GetAttributeValue( "DefaultCategory" ).AsGuid();
-                    var defaultCategoryId = CategoryCache.Read( defaultCategoryGuid, rockContext ).Id;
-
-                    bddlCategory.SetValue( defaultCategoryId );
-                }
             }
             else
             {
                 bddlCategory.Visible = false;
+            }
+
+            // bind Campus selection box
+            BindCampuses();
+
+            // set campus to default Campus specified in block settings
+            Guid defaultCampusGuid = GetAttributeValue( "DefaultCampusId" ).AsGuid();
+            CampusCache campus = CampusCache.All().Where( p => p.Guid == defaultCampusGuid ).SingleOrDefault();
+
+            if ( campus != null )
+            {
+                bddlCampus.SetValue( campus.Id );
             }
 
             Type type = new PrayerRequest().GetType();
@@ -128,14 +135,13 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
 
             if ( ! Page.IsPostBack )
             {
-                if ( CurrentPerson != null )
+                if ( CurrentPerson != null && (GetAttributeValue( "AutofillUserInfo" ).AsBoolean()) )
                 {
-                    tbFirstName.Text = CurrentPerson.FirstName;
-                    tbLastName.Text = CurrentPerson.LastName;
-                    tbEmail.Text = CurrentPerson.Email;
+                    dtbFirstName.Text = CurrentPerson.FirstName;
+                    dtbLastName.Text = CurrentPerson.LastName;
+                    dtbEmail.Text = CurrentPerson.Email;
+                    bddlCampus.SetValue( CurrentPerson.GetCampus().Id );
                 }
-
-                dtbRequest.Text = PageParameter( "Request" );
             }
         }
 
@@ -162,10 +168,10 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
             bool isAutoApproved = GetAttributeValue( "EnableAutoApprove" ).AsBoolean();
             bool defaultAllowComments = GetAttributeValue( "DefaultAllowCommentsSetting" ).AsBoolean();
 
-            PrayerRequest prayerRequest = new PrayerRequest { Id = 0, IsActive = true, IsApproved = isAutoApproved, AllowComments = defaultAllowComments };
+            CampusPrayerRequest prayerRequest = new CampusPrayerRequest { Id = 0, IsActive = true, IsApproved = isAutoApproved, AllowComments = defaultAllowComments };
 
             var rockContext = new RockContext();
-            PrayerRequestService prayerRequestService = new PrayerRequestService( rockContext );
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
             prayerRequestService.Add( prayerRequest );
             prayerRequest.EnteredDateTime = RockDateTime.Now;
 
@@ -178,28 +184,22 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
             }
 
             // Now record all the bits...
-            // Make sure the Category is hydrated so it's included for any Lava processing
-            Category category;
             int? categoryId = bddlCategory.SelectedValueAsInt();
             Guid defaultCategoryGuid = GetAttributeValue( "DefaultCategory" ).AsGuid();
             if ( categoryId == null && !defaultCategoryGuid.IsEmpty() )
             {
-                category = new CategoryService( rockContext ).Get( defaultCategoryGuid );
+                var category = new CategoryService( rockContext ).Get( defaultCategoryGuid );
                 categoryId = category.Id;
-            }
-            else
-            {
-                category = new CategoryService( rockContext ).Get( categoryId.Value );
             }
 
             prayerRequest.CategoryId = categoryId;
-            prayerRequest.Category = category;
             prayerRequest.RequestedByPersonAliasId = CurrentPersonAliasId;
-            prayerRequest.FirstName = tbFirstName.Text;
-            prayerRequest.LastName = tbLastName.Text;
-            prayerRequest.Email = tbEmail.Text;
+            prayerRequest.FirstName = dtbFirstName.Text;
+            prayerRequest.LastName = dtbLastName.Text;
+            prayerRequest.Email = dtbEmail.Text;
             prayerRequest.Text = dtbRequest.Text;
-            
+            prayerRequest.CampusId = bddlCampus.SelectedValueAsInt();
+
             if ( this.EnableUrgentFlag )
             {
                 prayerRequest.IsUrgent = cbIsUrgent.Checked;
@@ -236,8 +236,6 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
 
             rockContext.SaveChanges();
 
-            StartWorkflow( prayerRequest, rockContext );
-
             bool isNavigateToParent = GetAttributeValue( "NavigateToParentOnSave" ).AsBoolean();
 
             if ( isNavigateToParent )
@@ -248,41 +246,38 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
             {
                 pnlForm.Visible = false;
                 pnlReceipt.Visible = true;
-
-                // Build success text that is Lava capable
-                var mergeFields = Rock.Lava.LavaHelper.GetCommonMergeFields( this.RockPage, this.CurrentPerson );
-                mergeFields.Add( "PrayerRequest", prayerRequest );
-                nbMessage.Text = GetAttributeValue( "SaveSuccessText" ).ResolveMergeFields( mergeFields );
-
-                // Resolve any dynamic url references
-                string appRoot = ResolveRockUrl( "~/" );
-                string themeRoot = ResolveRockUrl( "~~/" );
-                nbMessage.Text = nbMessage.Text.Replace( "~~/", themeRoot ).Replace( "~/", appRoot );
-
-                // show liquid help for debug
-                if ( GetAttributeValue( "EnableDebug" ).AsBoolean() && IsUserAuthorized( Authorization.EDIT ) )
-                {
-                    nbMessage.Text += mergeFields.lavaDebugInfo();
-                }
             }
         }
 
         /// <summary>
-        /// Set up the form for another request from the same person.
+        /// When cancel clicked send them to the homepage
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
-        protected void btnAddAnother_Click( object sender, EventArgs e )
+        protected void lbPrayerCancel_Click( object sender, EventArgs e )
         {
-            pnlForm.Visible = true;
-            pnlReceipt.Visible = false;
-            dtbRequest.Text = string.Empty;
-            dtbRequest.Focus();
+            GoHome();
+        }
+
+        /// <summary>
+        /// When done button clicked send them to the homepage
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="EventArgs" /> instance containing the event data.</param>
+        protected void btnDone_Click( object sender, EventArgs e )
+        {
+            GoHome();
         }
 
         #endregion
 
         #region Methods
+
+        // redirects to the homepage
+        private void GoHome()
+        {
+            NavigateToLinkedPage( "Homepage" );
+        }
 
         /// <summary>
         /// Bind the category selector to the correct set of categories.
@@ -296,6 +291,19 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
             bddlCategory.DataTextField = "Name";
             bddlCategory.DataValueField = "Id";
             bddlCategory.DataBind();
+
+            bddlCategory.Items.Insert( 0, "" );
+        }
+
+        /// <summary>
+        /// Bind the campuses selector
+        /// </summary>
+        private void BindCampuses()
+        {
+            bddlCampus.DataSource = CampusCache.All();
+            bddlCampus.DataTextField = "Name";
+            bddlCampus.DataValueField = "Id";
+            bddlCampus.DataBind();
         }
 
         /// <summary>
@@ -323,35 +331,6 @@ namespace RockWeb.Plugins.church_ccv.PrayerRequest
             {
                 nbWarningMessage.Visible = false;
                 return true;
-            }
-        }
-
-        /// <summary>
-        /// Starts the workflow if one was defined in the block setting.
-        /// </summary>
-        /// <param name="prayerRequest">The prayer request.</param>
-        /// <param name="rockContext">The rock context.</param>
-        private void StartWorkflow( PrayerRequest prayerRequest, RockContext rockContext )
-        {
-            WorkflowType workflowType = null;
-            Guid? workflowTypeGuid = GetAttributeValue( "Workflow" ).AsGuidOrNull();
-            if ( workflowTypeGuid.HasValue )
-            {
-                var workflowTypeService = new WorkflowTypeService( rockContext );
-                workflowType = workflowTypeService.Get( workflowTypeGuid.Value );
-                if ( workflowType != null )
-                {
-                    try
-                    {
-                        var workflow = Workflow.Activate( workflowType, prayerRequest.Name );
-                        List<string> workflowErrors;
-                        new WorkflowService( rockContext ).Process( workflow, prayerRequest, out workflowErrors );
-                    }
-                    catch ( Exception ex )
-                    {
-                        ExceptionLogService.LogException( ex, this.Context );
-                    }
-                }
             }
         }
 

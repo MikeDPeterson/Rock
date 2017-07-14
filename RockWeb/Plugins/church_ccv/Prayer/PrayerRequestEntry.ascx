@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PrayerRequestEntry.ascx.cs" Inherits="RockWeb.Blocks.Prayer.PrayerRequestEntry" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PrayerRequestEntry.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Prayer.PrayerRequestEntry" %>
 <asp:UpdatePanel ID="upAdd" runat="server">
     <ContentTemplate>
         <asp:Panel runat="server" CssClass="panel panel-block" ID="pnlForm">
@@ -12,11 +12,24 @@
                 <Rock:NotificationBox ID="nbWarningMessage" runat="server" NotificationBoxType="Warning" Title="Warning" Visible="false" />
 
                 <fieldset>
-                    <Rock:RockTextBox ID="tbFirstName" runat="server" Label="First Name" Required="true" />
-                    <Rock:RockTextBox ID="tbLastName" runat="server" Label="Last Name" Required="false" />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <Rock:RockTextBox ID="tbFirstName" runat="server" Label="First Name" Required="true" />
+                        </div>
+                        <div class="col-sm-6">
+                            <Rock:RockTextBox ID="tbLastName" runat="server" Label="Last Name" Required="false" />
+                        </div>
+                    </div>
                     <Rock:RockTextBox ID="tbEmail" runat="server" Label="Email" TextMode="Email"  Required="false" />
                     
-                    <Rock:ButtonDropDownList ID="bddlCategory" runat="server" Label="Category"></Rock:ButtonDropDownList>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <Rock:ButtonDropDownList ID="bddlCampus" runat="server" Label="Campus"></Rock:ButtonDropDownList>
+                        </div>
+                        <div class="col-sm-6">
+                           <Rock:ButtonDropDownList ID="bddlCategory" runat="server" Label="Category"></Rock:ButtonDropDownList>
+                        </div>
+                    </div>
 
                     <em ID="lblCount" runat="server" class="pull-right badge"></em>
                     <Rock:DataTextBox ID="dtbRequest" runat="server" Label="Request" TextMode="MultiLine" Rows="3" MaxLength="10" ValidateRequestMode="Disabled" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="Text" placeholder="Please pray that..."></Rock:DataTextBox>
