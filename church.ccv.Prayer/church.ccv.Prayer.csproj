@@ -7,8 +7,8 @@
     <ProjectGuid>{A6530678-00CD-418E-8243-C738B5862FBB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>church.ccv.PrayerRequest</RootNamespace>
-    <AssemblyName>church.ccv.PrayerRequest</AssemblyName>
+    <RootNamespace>church.ccv.Prayer</RootNamespace>
+    <AssemblyName>church.ccv.Prayer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -95,7 +95,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\PrayerRequest.cs" />
+    <Compile Include="Model\CampusPrayerRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,7 @@ using Rock.Web.Cache;
 using Rock.Web.UI;
 using Rock.Web.UI.Controls;
 
-namespace RockWeb.Plugins.church_ccv.PrayerRequest
+namespace RockWeb.Plugins.church_ccv.Prayer
 {
     [DisplayName( "Prayer Request List" )]
     [Category( "Prayer" )]

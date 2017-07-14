@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
@@ -9,16 +7,16 @@ using System.Runtime.Serialization;
 using Rock.Data;
 using Rock.Model;
 
-namespace church.ccv.PrayerRequest.Model
+//namespace church.ccv.Prayer.Model
+namespace church.ccv.Prayer.Model
 {
     /// <summary>
     /// Represents a prayer request that a person has submitted. The PrayerRequest entity implements ICategorized which means that a prayer request can belong to a category.
     /// </summary>
-    [Table( "_church_ccv_PrayerRequest" )]
+    [Table( "_church_ccv_CampusPrayerRequest" )]
     [DataContract]
-    public partial class PrayerRequest : Model<PrayerRequest>, ICategorized
-    {
-
+    public partial class CampusPrayerRequest : Model<CampusPrayerRequest>, ICategorized, IRockEntity
+    { 
         #region Entity Properties
 
         /// <summary>
@@ -316,12 +314,12 @@ namespace church.ccv.PrayerRequest.Model
     /// <summary>
     /// PrayerRequest Configuration class.
     /// </summary>
-    public partial class PrayerRequestConfiguration : EntityTypeConfiguration<PrayerRequest>
+    public partial class CampusPrayerRequestConfiguration : EntityTypeConfiguration<CampusPrayerRequest>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="PrayerRequestConfiguration"/> class.
+        /// Initializes a new instance of the <see cref="CampusPrayerRequestConfiguration"/> class.
         /// </summary>
-        public PrayerRequestConfiguration()
+        public CampusPrayerRequestConfiguration()
         {
             this.HasOptional( p => p.Group ).WithMany().HasForeignKey( p => p.GroupId ).WillCascadeOnDelete( true );
             this.HasOptional( p => p.Category ).WithMany().HasForeignKey( p => p.CategoryId ).WillCascadeOnDelete( false );

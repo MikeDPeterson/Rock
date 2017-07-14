@@ -12,7 +12,7 @@ using Rock.Model;
 using Rock.Security;
 using Rock.Web.UI.Controls;
 
-namespace RockWeb.Plugins.church_ccv.PrayerRequest
+namespace RockWeb.Plugins.church_ccv.Prayer
 {
     /// <summary>
     /// 

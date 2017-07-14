@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PrayerCommentDetail.ascx.cs" Inherits="RockWeb.Blocks.Prayer.PrayerCommentDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PrayerCommentDetail.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Prayer.PrayerCommentDetail" %>
 
 <asp:UpdatePanel ID="upPrayerComments" runat="server">
     <ContentTemplate>
