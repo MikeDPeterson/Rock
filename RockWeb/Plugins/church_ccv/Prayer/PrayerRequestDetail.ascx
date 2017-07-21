@@ -30,7 +30,9 @@
                                     <Rock:PersonPicker ID="ppRequestor" runat="server" Label="Requested By" EnableSelfSelection="true" OnSelectPerson="ppRequestor_SelectPerson" />
                                     <Rock:RockTextBox ID="tbFirstName" runat="server" Label="First Name" Required="true" />
                                     <Rock:RockTextBox ID="tbLastName" runat="server" Label="Last Name" />
-                                    <Rock:DatePicker ID="dpExpirationDate" Text="Expires On" runat="server" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="ExpirationDate" />
+                                    <Rock:EmailBox ID="ebEmail" runat="server" Label="Email" />
+                                    <Rock:CampusPicker ID="cpCampus" runat="server" Label="Campus" />
+                                    <Rock:DatePicker ID="dpExpirationDate" Text="Expires On" runat="server" SourceTypeName="church.ccv.Prayer.Model.CampusPrayerRequest, church.ccv.Prayer" PropertyName="ExpirationDate" />
                                 </div>
 
                                 <div class="col-md-3">
@@ -63,9 +65,9 @@
 
                             <div class="row">
                                 <div class="col-md-12">
-                                    <Rock:CategoryPicker ID="catpCategory" runat="server" Label="Category" Required="true" EntityTypeName="Rock.Model.PrayerRequest" />
-                                    <Rock:DataTextBox ID="dtbText" runat="server" ValidateRequestMode="Disabled" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="Text" Label="Request" CssClass="field span12" TextMode="MultiLine" Rows="4" />
-                                    <Rock:DataTextBox ID="dtbAnswer" runat="server" ValidateRequestMode="Disabled" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="Answer" Label="Answer" CssClass="field span12" TextMode="MultiLine" Rows="4" />
+                                    <Rock:CategoryPicker ID="catpCategory" runat="server" Label="Category" Required="true" EntityTypeName="church.ccv.Prayer.Model.CampusPrayerRequest" />
+                                    <Rock:DataTextBox ID="dtbText" runat="server" ValidateRequestMode="Disabled" SourceTypeName="church.ccv.Prayer.Model.CampusPrayerRequest, church.ccv.Prayer" PropertyName="Text" Label="Request" CssClass="field span12" TextMode="MultiLine" Rows="4" />
+                                    <Rock:DataTextBox ID="dtbAnswer" runat="server" ValidateRequestMode="Disabled" SourceTypeName="church.ccv.Prayer.Model.CampusPrayerRequest, church.ccv.Prayer" PropertyName="Answer" Label="Answer" CssClass="field span12" TextMode="MultiLine" Rows="4" />
                                 </div>
                             </div>
 

@@ -1,9 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Web.UI;
-
+using church.ccv.Prayer.Model;
 using Rock;
 using Rock.Attribute;
 using Rock.Constants;
@@ -11,20 +10,22 @@ using Rock.Data;
 using Rock.Model;
 using Rock.Security;
 using Rock.Web;
+using Rock.Web.Cache;
 using Rock.Web.UI;
 using Rock.Web.UI.Controls;
 
 namespace RockWeb.Plugins.church_ccv.Prayer
 {
-    [DisplayName( "Prayer Request Detail" )]
-    [Category( "Prayer" )]
+    [DisplayName( "Campus Prayer Request Detail" )]
+    [Category( "CCV > Prayer" )]
     [Description( "Displays the details of a given Prayer Request for viewing or editing." )]
 
     [IntegerField( "Expires After (Days)", "Default number of days until the request will expire.", false, 14, "", 0, "ExpireDays" )]
-    [CategoryField( "Default Category", "If a category is not selected, choose a default category to use for all new prayer requests.", false, "Rock.Model.PrayerRequest", "", "", false, "4B2D88F5-6E45-4B4B-8776-11118C8E8269", "", 1, "DefaultCategory" )]
+    [CategoryField( "Default Category", "If a category is not selected, choose a default category to use for all new prayer requests.", false, "church.ccv.Prayer.Model.CampusPrayerRequest", "", "", false, "4B2D88F5-6E45-4B4B-8776-11118C8E8269", "", 1, "DefaultCategory" )]
     [BooleanField( "Set Current Person To Requester", "Will set the current person as the requester. This is useful in self-entry situiations.", false, order: 2 )]
 
     [BooleanField( "Require Last Name", "Require that a last name be entered", true, "", 3 )]
+    [CampusField( "Default Campus", "The default campus for the request.", true, "", "", 4, "DefaultCampusId" )]
     public partial class PrayerRequestDetail : RockBlock, IDetailBlock
     {
         #region Properties
@@ -132,7 +133,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         protected void lbEdit_Click( object sender, EventArgs e )
         {
             int prayerRequestId = hfPrayerRequestId.ValueAsInt();
-            PrayerRequest item = new PrayerRequestService( new RockContext() )
+            CampusPrayerRequest item = new Service<CampusPrayerRequest>( new RockContext() )
                 .Queryable( "RequestedByPersonAlias.Person,ApprovedByPersonAlias.Person" )
                 .FirstOrDefault( p => p.Id == prayerRequestId );
             ShowEditDetails( item );
@@ -194,11 +195,11 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// <param name="prayerId">The prayer identifier.</param>
         public void ShowDetail( int prayerId )
         {
-            PrayerRequest prayerRequest = null;
+            CampusPrayerRequest prayerRequest = null;
 
             if ( prayerId != 0 )
             {
-                prayerRequest = new PrayerRequestService( new RockContext() )
+                prayerRequest = new Service<CampusPrayerRequest>( new RockContext() )
                     .Queryable( "RequestedByPersonAlias.Person,ApprovedByPersonAlias.Person" )
                     .FirstOrDefault( p => p.Id == prayerId );
                 pdAuditDetails.SetEntity( prayerRequest, ResolveRockUrl( "~" ) );
@@ -206,7 +207,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
 
             if ( prayerRequest == null )
             {
-                prayerRequest = new PrayerRequest { Id = 0, IsActive = true, IsApproved = true, AllowComments = true };
+                prayerRequest = new CampusPrayerRequest { Id = 0, IsActive = true, IsApproved = true, AllowComments = true };
                 // hide the panel drawer that show created and last modified dates
                 pdAuditDetails.Visible = false;
             }
@@ -221,7 +222,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             {
                 readOnly = true;
                 nbEditModeMessage.Title = "Information";
-                nbEditModeMessage.Text = EditModeMessage.ReadOnlyEditActionNotAllowed( PrayerRequest.FriendlyTypeName );
+                nbEditModeMessage.Text = EditModeMessage.ReadOnlyEditActionNotAllowed( CampusPrayerRequest.FriendlyTypeName );
             }
 
             hlCategory.Text = prayerRequest.Category != null ? prayerRequest.Category.Name : string.Empty;
@@ -248,7 +249,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// Shows the readonly details.
         /// </summary>
         /// <param name="prayerRequest">The prayer request.</param>
-        private void ShowReadonlyDetails( PrayerRequest prayerRequest )
+        private void ShowReadonlyDetails( CampusPrayerRequest prayerRequest )
         {
             SetEditMode( false );
             lActionTitle.Text = string.Format( "{0} Prayer Request", prayerRequest.FullName ).FormatAsHtmlTitle();
@@ -260,6 +261,18 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             }
 
             descriptionList.Add( "Name", prayerRequest.FullName );
+            // Display Email if present on prayer request
+            if (prayerRequest.Email != null )
+            {
+                descriptionList.Add( "Email", prayerRequest.Email );
+            }
+
+            // Display Campus if present on prayer request
+            int campusId = prayerRequest.CampusId.GetValueOrDefault();
+            if ( campusId > 0)
+            {
+                descriptionList.Add( "Campus", CampusCache.Read( campusId ).Name );
+            }
             descriptionList.Add( "Request", prayerRequest.Text.ScrubHtmlAndConvertCrLfToBr() );
             descriptionList.Add( "Answer", prayerRequest.Answer.ScrubHtmlAndConvertCrLfToBr() );
             lMainDetails.Text = descriptionList.Html;
@@ -274,34 +287,51 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// Shows the edit details.
         /// </summary>
         /// <param name="prayerRequest">The prayer request.</param>
-        private void ShowEditDetails( PrayerRequest prayerRequest )
+        private void ShowEditDetails( CampusPrayerRequest prayerRequest )
         {
             SetEditMode( true );
 
             if ( prayerRequest.Id > 0 )
             {
-                lActionTitle.Text = ActionTitle.Edit( PrayerRequest.FriendlyTypeName ).FormatAsHtmlTitle();
+                lActionTitle.Text = ActionTitle.Edit( CampusPrayerRequest.FriendlyTypeName ).FormatAsHtmlTitle();
             }
             else
             {
-                lActionTitle.Text = ActionTitle.Add( PrayerRequest.FriendlyTypeName ).FormatAsHtmlTitle();
+                lActionTitle.Text = ActionTitle.Add( CampusPrayerRequest.FriendlyTypeName ).FormatAsHtmlTitle();
                 if ( CurrentPersonAlias != null && CurrentPerson != null && GetAttributeValue( "SetCurrentPersonToRequester" ).AsBoolean() )
                 {
                     prayerRequest.RequestedByPersonAlias = CurrentPersonAlias;
                     prayerRequest.FirstName = CurrentPerson.NickName;
                     prayerRequest.LastName = CurrentPerson.LastName;
+                    prayerRequest.CampusId = CurrentPerson.GetCampus().Id;
+                }
+            }
+
+            // Populate Campuses Drop down. Set campus of current person or set default campus
+            BindCampuses();
+            if (prayerRequest.CampusId > 0 )
+            {
+                cpCampus.SetValue( prayerRequest.CampusId );
+            }
+            else
+            {
+                Guid defaultCampusGuid = GetAttributeValue( "DefaultCampusId" ).AsGuid();
+                CampusCache campus = CampusCache.All().Where( p => p.Guid == defaultCampusGuid ).SingleOrDefault();
+                if ( campus != null )
+                {
+                    cpCampus.SetValue( campus.Id );
                 }
             }
 
             pnlDetails.Visible = true;
 
             catpCategory.SetValue( prayerRequest.Category );
-
             tbFirstName.Text = prayerRequest.FirstName;
             tbLastName.Text = prayerRequest.LastName;
+            ebEmail.Text = prayerRequest.Email;
             dtbText.Text = prayerRequest.Text;
             dtbAnswer.Text = prayerRequest.Answer;
-
+            
             if ( prayerRequest.RequestedByPersonAlias != null )
             {
                 ppRequestor.SetValue( prayerRequest.RequestedByPersonAlias.Person );
@@ -344,7 +374,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// Shows the prayer count.
         /// </summary>
         /// <param name="prayerRequest">The prayer request.</param>
-        private void ShowPrayerCount( PrayerRequest prayerRequest )
+        private void ShowPrayerCount( CampusPrayerRequest prayerRequest )
         {
             if ( prayerRequest.PrayerCount > 10 )
             {
@@ -365,7 +395,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// <param name="prayerRequest">The prayer request.</param>
         /// <param name="person">The person.</param>
         /// <param name="lFlagged">The l flagged.</param>
-        private void ShowStatus( PrayerRequest prayerRequest, Person person, HighlightLabel lFlagged )
+        private void ShowStatus( CampusPrayerRequest prayerRequest, Person person, HighlightLabel lFlagged )
         {
             int flagCount = prayerRequest.FlagCount ?? 0;
             if ( flagCount > 0 )
@@ -381,7 +411,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// Shows the approval.
         /// </summary>
         /// <param name="prayerRequest">The prayer request.</param>
-        private void ShowApproval( PrayerRequest prayerRequest )
+        private void ShowApproval( CampusPrayerRequest prayerRequest )
         {
             if ( prayerRequest != null )
             {
@@ -424,15 +454,15 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         private void SaveRequest()
         {
             var rockContext = new RockContext();
-            PrayerRequest prayerRequest;
-            PrayerRequestService prayerRequestService = new PrayerRequestService( rockContext );
+            CampusPrayerRequest prayerRequest;
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
 
             int prayerRequestId = hfPrayerRequestId.Value.AsInteger();
 
             // Fetch the prayer request or create a new one if needed
             if ( prayerRequestId == 0 )
             {
-                prayerRequest = new PrayerRequest();
+                prayerRequest = new CampusPrayerRequest();
                 prayerRequestService.Add( prayerRequest );
                 prayerRequest.EnteredDateTime = RockDateTime.Now;
             }
@@ -489,6 +519,8 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             prayerRequest.IsPublic = cbIsPublic.Checked;
             prayerRequest.FirstName = tbFirstName.Text;
             prayerRequest.LastName = tbLastName.Text;
+            prayerRequest.Email = ebEmail.Text;
+            prayerRequest.CampusId = cpCampus.SelectedValue.AsInteger();
             prayerRequest.Text = dtbText.Text.Trim();
             prayerRequest.Answer = dtbAnswer.Text.Trim();
 
@@ -506,6 +538,17 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             rockContext.SaveChanges();
 
             NavigateToParentPage();
+        }
+
+        /// <summary>
+        /// Bind the campuses selector
+        /// </summary>
+        private void BindCampuses()
+        {
+            cpCampus.DataSource = CampusCache.All();
+            cpCampus.DataTextField = "Name";
+            cpCampus.DataValueField = "Id";
+            cpCampus.DataBind();
         }
 
         #endregion
