@@ -24,7 +24,7 @@
                     
                     <div class="row">
                         <div class="col-sm-6">
-                            <Rock:ButtonDropDownList ID="bddlCampus" runat="server" Label="Campus"></Rock:ButtonDropDownList>
+                            <Rock:CampusPicker ID="cpCampus" runat="server" Label="Campus" />
                         </div>
                         <div class="col-sm-6">
                            <Rock:ButtonDropDownList ID="bddlCategory" runat="server" Label="Category"></Rock:ButtonDropDownList>

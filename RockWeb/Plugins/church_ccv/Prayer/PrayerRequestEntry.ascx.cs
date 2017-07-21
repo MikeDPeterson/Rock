@@ -100,7 +100,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
 
             if ( campus != null )
             {
-                bddlCampus.SetValue( campus.Id );
+                cpCampus.SetValue( campus.Id );
             }
             
             Type type = new CampusPrayerRequest().GetType();
@@ -144,7 +144,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
                     tbFirstName.Text = CurrentPerson.FirstName;
                     tbLastName.Text = CurrentPerson.LastName;
                     ebEmail.Text = CurrentPerson.Email;
-                    bddlCampus.SetValue( CurrentPerson.GetCampus().Id );
+                    cpCampus.SetValue( CurrentPerson.GetCampus().Id );
                 }
 
                 dtbRequest.Text = PageParameter( "Request" );
@@ -211,7 +211,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             prayerRequest.LastName = tbLastName.Text;
             prayerRequest.Email = ebEmail.Text;
             prayerRequest.Text = dtbRequest.Text;
-            prayerRequest.CampusId = bddlCampus.SelectedValueAsInt();
+            prayerRequest.CampusId = cpCampus.SelectedValueAsInt();
 
             if ( this.EnableUrgentFlag )
             {
@@ -316,10 +316,10 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// </summary>
         private void BindCampuses()
         {
-            bddlCampus.DataSource = CampusCache.All();
-            bddlCampus.DataTextField = "Name";
-            bddlCampus.DataValueField = "Id";
-            bddlCampus.DataBind();
+            cpCampus.DataSource = CampusCache.All();
+            cpCampus.DataTextField = "Name";
+            cpCampus.DataValueField = "Id";
+            cpCampus.DataBind();
         }
 
         /// <summary>
