@@ -136,7 +136,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
 
             // Set the campus filter
             BindCampuses();
-            rcpCampusFilter.SetValue( gfFilter.GetUserPreference( FilterSetting.Campus ) );
+            cpCampusFilter.SetValue( gfFilter.GetUserPreference( FilterSetting.Campus ) );
 
             // Set the Show Expired filter
             cbShowExpired.Checked = gfFilter.GetUserPreference( FilterSetting.ShowExpired ).AsBooleanOrNull() ?? false;
@@ -195,6 +195,15 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             else
             {
                 gfFilter.SaveUserPreference( FilterSetting.Comments, ddlAllowCommentsFilter.SelectedValue );
+            }
+
+            if (cpCampusFilter.SelectedValue == "all")
+            {
+                gfFilter.SaveUserPreference( FilterSetting.ActiveStatus, string.Empty );
+            }
+            else
+            {
+                gfFilter.SaveUserPreference( FilterSetting.Campus, cpCampusFilter.SelectedValue );
             }
 
             gfFilter.SaveUserPreference( FilterSetting.PrayerCategory, catpPrayerCategoryFilter.SelectedValue == Rock.Constants.None.IdValue ? string.Empty : catpPrayerCategoryFilter.SelectedValue );
@@ -289,7 +298,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             }
 
             // Filter by Campus if one is selected
-            int? selectedCampusId = rcpCampusFilter.SelectedCampusId;
+            int? selectedCampusId = cpCampusFilter.SelectedCampusId;
             if ( selectedCampusId > 0 )
             {
                 prayerRequests = prayerRequests.Where( a => a.Campus == selectedCampusId );
@@ -548,12 +557,12 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// </summary>
         private void BindCampuses()
         {
-            rcpCampusFilter.DataSource = CampusCache.All();
-            rcpCampusFilter.DataTextField = "Name";
-            rcpCampusFilter.DataValueField = "Id";
-            rcpCampusFilter.DataBind();
+            cpCampusFilter.DataSource = CampusCache.All();
+            cpCampusFilter.DataTextField = "Name";
+            cpCampusFilter.DataValueField = "Id";
+            cpCampusFilter.DataBind();
 
-            rcpCampusFilter.Items.Insert( 0, "[All]" );
+            cpCampusFilter.Items.Insert( 0, "[All]" );
         }
         
         #endregion

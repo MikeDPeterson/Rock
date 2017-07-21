@@ -43,7 +43,7 @@
                                 <asp:ListItem Text="Not Allowed" Value="unallow"></asp:ListItem>
                             </Rock:RockDropDownList>
                                                         
-                            <Rock:CampusPicker ID="rcpCampusFilter" runat="server" Label="Campus" />
+                            <Rock:CampusPicker ID="cpCampusFilter" runat="server" Label="Campus" />
                         
                             <Rock:CategoryPicker ID="catpPrayerCategoryFilter" runat="server" Label="Category" EntityTypeName="church.ccv.Prayer.Model.CampusPrayerRequest"/>
 
