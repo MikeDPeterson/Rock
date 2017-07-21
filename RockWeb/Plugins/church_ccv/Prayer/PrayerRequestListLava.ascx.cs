@@ -1,10 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Web.UI;
-
+using church.ccv.Prayer.Model;
 using Rock;
 using Rock.Attribute;
 using Rock.Data;
@@ -18,11 +17,11 @@ namespace RockWeb.Plugins.church_ccv.Prayer
     /// 
     /// </summary>
     [DisplayName( "Prayer Request List Lava" )]
-    [Category( "Prayer" )]
+    [Category( "CCV > Prayer" )]
     [Description( "List Prayer Requests using a Lava template." )]
     
-    [CategoryField( "Category", "The category (or parent category) to limit the listed prayer requests to.", true, "Rock.Model.PrayerRequest", order: 0 )]
-    [LinkedPage( "Prayer Request Detail Page", "The Page Request Detail Page to use for the LinkUrl merge field.  The LinkUrl field will include a [Id] which can be replaced by the prayerrequestitem.Id.", order: 1 )]
+    [CategoryField( "Category", "The category (or parent category) to limit the listed prayer requests to.", true, "church.ccv.Prayer.Model.CampusPrayerRequest", order: 0 )]
+    [LinkedPage( "Prayer Request Detail Page", "The Page Request Detail Page to use for the LinkUrl merge field.  The LinkUrl field will include a [Id] which can be replaced by the prayerrequestitem.Id.", false, order: 1 )]
     [CodeEditorField( "Lava Template", "Lava template to use to display content", CodeEditorMode.Lava, CodeEditorTheme.Rock, 400, true, @"
 <div class='panel panel-block'> 
     <div class='panel-heading'>
@@ -32,10 +31,11 @@ namespace RockWeb.Plugins.church_ccv.Prayer
 
         <ul>
         {% for prayerrequestitem in PrayerRequestItems %}
+            {% assign campus = Campuses | Where:'Id',prayerrequestitem.CampusId %}
             {% if LinkUrl != '' %}
-                <li>{{ prayerrequestitem.EnteredDateTime | Date:'M/d/yyyy'}} - <a href='{{ LinkUrl | Replace:'[Id]',prayerrequestitem.Id }}'>{{ prayerrequestitem.Text }}</a></li>
+                <li><strong>{{ prayerrequestitem.RequestedByPersonAlias.Person.NickName }} {{ prayerrequestitem.LastName }} - {{ campus }}</strong> <small>({{ prayerrequestitem.EnteredDateTime | Date:'M/d/yyyy'}})</small> - <a href='{{ LinkUrl | Replace:'[Id]',prayerrequestitem.Id }}'>{{ prayerrequestitem.Text }}</a></li>
             {% else %}
-                <li>{{ prayerrequestitem.EnteredDateTime | Date:'M/d/yyyy'}} - {{ prayerrequestitem.Text }}</li>
+                <li><strong>{{ prayerrequestitem.FirstName }} {{ prayerrequestitem.LastName }} - {{ campus }}</strong> <small>({{ prayerrequestitem.EnteredDateTime | Date:'M/d/yyyy'}})</small> - {{ prayerrequestitem.Text }}</li>
             {% endif %}
         {% endfor %}
         </ul>
@@ -45,7 +45,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
        "", 2, "LavaTemplate" )]
     
     [IntegerField( "Max Results", "The maximum number of results to display.", false, 100, order: 3 )]
-    [CustomDropdownListField( "Sort by", "", "0^Entered Date Descending,1^Entered Date Ascending,2^Text", false, "0", order: 4 )]
+    [CustomDropdownListField( "Sort by", "", "0^Entered Date Descending,1^Entered Date Ascending,2^Text,3^Campus", false, "0", order: 4 )]
     [CustomDropdownListField("Approval Status", "Which statuses to display.", "1^Approved,2^Unapproved,3^All", true, "1", order: 5)]
     [BooleanField( "Show Expired", "Includes expired prayer requests.", false, order: 6)]
     [SlidingDateRangeField( "Date Range", "Date range to limit by.", false, "", enabledSlidingDateRangeTypes: "Last,Previous,Current", order: 7 )]
@@ -110,7 +110,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             
             RockContext rockContext = new RockContext();
 
-            var prayerRequestService = new PrayerRequestService( rockContext );
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
             var qryPrayerRequests = prayerRequestService.Queryable();
 
             // filter out expired
@@ -164,6 +164,9 @@ namespace RockWeb.Plugins.church_ccv.Prayer
                     break;
 
                 case 2: qryPrayerRequests = qryPrayerRequests.OrderBy( a => a.Text );
+                    break;
+
+                case 3: qryPrayerRequests = qryPrayerRequests.OrderBy( a => a.CampusId );
                     break;
 
                 default: qryPrayerRequests = qryPrayerRequests.OrderBy( a => a.EnteredDateTime );
