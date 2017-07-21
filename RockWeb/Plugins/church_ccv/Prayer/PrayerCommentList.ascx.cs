@@ -1,10 +1,8 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 using Rock;
 using Rock.Attribute;
 using Rock.Constants;
@@ -91,38 +89,6 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         }
 
         /// <summary>
-        /// Handles the CheckChanged event of the grid's IsApproved field.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RowEventArgs" /> instance containing the event data.</param>
-        protected void gPrayerComments_CheckChanged( object sender, RowEventArgs e )
-        {
-            bool failure = true;
-
-            if ( e.RowKeyValues != null )
-            {
-                var rockContext = new RockContext();
-                NoteService noteService = new NoteService( rockContext );
-
-                // NOTE: DataKeys for Grid has two fields "id,entityId"
-                Note prayerComment = noteService.Get( (int)e.RowKeyValues["id"] );
-
-                if ( prayerComment != null )
-                {
-                    failure = false;
-                    rockContext.SaveChanges();
-                }
-
-                BindCommentsGrid();
-            }
-
-            if ( failure )
-            {
-                maGridWarning.Show( "Unable to approve that prayer comment", ModalAlertType.Warning );
-            }
-        }
-
-        /// <summary>
         /// Handles the Delete event of the gPrayerComments control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
@@ -157,34 +123,6 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         private void gPrayerComments_GridRebind( object sender, EventArgs e )
         {
             BindCommentsGrid();
-        }
-
-        /// <summary>
-        /// Handles disabling the Toggle fields if the user does not have Approval rights.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="GridViewRowEventArgs" /> instance containing the event data.</param>
-        protected void gPrayerComments_RowDataBound( object sender, GridViewRowEventArgs e )
-        {
-            if ( _canApprove )
-            {
-                return;
-            }
-
-            if ( e.Row.RowType == DataControlRowType.DataRow )
-            {
-                foreach ( TableCell cell in e.Row.Cells )
-                {
-                    foreach ( Control c in cell.Controls )
-                    {
-                        Toggle toggle = c as Toggle;
-                        if ( toggle != null )
-                        {
-                            toggle.Enabled = false;
-                        }
-                    }
-                }
-            }
         }
 
         /// <summary>
@@ -328,7 +266,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             // Set the category picker's selected value
             int selectedPrayerCategoryId = gfFilter.GetUserPreference( FilterSetting.PrayerCategory ).AsInteger();
             Category prayerCategory = new CategoryService( new RockContext() ).Get( selectedPrayerCategoryId );
-            catpPrayerCategoryFilter.SetValue( prayerCategory );
+            catpPrayerCategoryFilter.SetValue( prayerCategory ); 
 
             // only show the Filter if there isn't Category set in the Block Setting
             CategoryCache blockCategory = null;
