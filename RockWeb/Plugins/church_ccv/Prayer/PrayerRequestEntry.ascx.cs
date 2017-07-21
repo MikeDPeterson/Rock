@@ -35,7 +35,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
     [BooleanField( "Enable Public Display Flag", "If enabled, requestors will be able set whether or not they want their request displayed on the public website.", false, "Features", 8 )]
     [IntegerField( "Character Limit", "If set to something other than 0, this will limit the number of characters allowed when entering a new prayer request.", false, 250, "Features", 9 )]
     [BooleanField( "Require Last Name", "Require that a last name be entered", true, "Features", 10 )]
-    [CampusField( "Default Campus", "The default campus for the request.", false, "", "Features", 15, "DefaultCampusId" )]
+    [CampusField( "Default Campus", "The default campus for the request.", true, "", "Features", 15, "DefaultCampusId" )]
 
     // On Save Behavior
     [BooleanField( "Navigate To Parent On Save", "If enabled, on successful save control will redirect back to the parent page.", false, "On Save Behavior", 11 )]
@@ -94,7 +94,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             // bind Campus selection box
             BindCampuses();
 
-            // set campus to default Campus specified in block settings
+            // Set campus to default Campus specified in block settings
             Guid defaultCampusGuid = GetAttributeValue( "DefaultCampusId" ).AsGuid();
             CampusCache campus = CampusCache.All().Where( p => p.Guid == defaultCampusGuid ).SingleOrDefault();
 
@@ -143,7 +143,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
                 {
                     tbFirstName.Text = CurrentPerson.FirstName;
                     tbLastName.Text = CurrentPerson.LastName;
-                    tbEmail.Text = CurrentPerson.Email;
+                    ebEmail.Text = CurrentPerson.Email;
                     bddlCampus.SetValue( CurrentPerson.GetCampus().Id );
                 }
 
@@ -209,7 +209,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             prayerRequest.RequestedByPersonAliasId = CurrentPersonAliasId;
             prayerRequest.FirstName = tbFirstName.Text;
             prayerRequest.LastName = tbLastName.Text;
-            prayerRequest.Email = tbEmail.Text;
+            prayerRequest.Email = ebEmail.Text;
             prayerRequest.Text = dtbRequest.Text;
             prayerRequest.CampusId = bddlCampus.SelectedValueAsInt();
 

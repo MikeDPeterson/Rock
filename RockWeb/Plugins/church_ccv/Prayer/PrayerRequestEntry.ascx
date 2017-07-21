@@ -20,7 +20,7 @@
                             <Rock:RockTextBox ID="tbLastName" runat="server" Label="Last Name" Required="false" />
                         </div>
                     </div>
-                    <Rock:RockTextBox ID="tbEmail" runat="server" Label="Email" TextMode="Email"  Required="false" />
+                    <Rock:EmailBox ID="ebEmail" runat="server" Label="Email" TextMode="Email"  Required="false" />
                     
                     <div class="row">
                         <div class="col-sm-6">
@@ -32,7 +32,7 @@
                     </div>
 
                     <em ID="lblCount" runat="server" class="pull-right badge"></em>
-                    <Rock:DataTextBox ID="dtbRequest" runat="server" Label="Request" TextMode="MultiLine" Rows="3" MaxLength="10" ValidateRequestMode="Disabled" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="Text" placeholder="Please pray that..."></Rock:DataTextBox>
+                    <Rock:DataTextBox ID="dtbRequest" runat="server" Label="Request" TextMode="MultiLine" Rows="3" MaxLength="10" ValidateRequestMode="Disabled" SourceTypeName="church.ccv.Prayer.Model.CampusPrayerRequest, church.ccv.Prayer" PropertyName="Text" placeholder="Please pray that..."></Rock:DataTextBox>
 
                     <% if ( EnableUrgentFlag ) { %>
                         <Rock:RockCheckBox ID="cbIsUrgent" runat="server" Checked="false" Label="Urgent?" Text="Yes" Help="If 'yes' is checked the request will be flagged as urgent in need of attention quickly." />
