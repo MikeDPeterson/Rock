@@ -1,9 +1,9 @@
-﻿
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using church.ccv.Prayer.Model;
 using Rock;
 using Rock.Attribute;
 using Rock.Constants;
@@ -16,8 +16,8 @@ using Rock.Web.UI.Controls;
 
 namespace RockWeb.Plugins.church_ccv.Prayer
 {
-    [DisplayName( "Prayer Request List" )]
-    [Category( "Prayer" )]
+    [DisplayName( "Campus Prayer Request List" )]
+    [Category( "CCV > Prayer" )]
     [Description( "Displays a list of prayer requests for the configured top-level group category." )]
 
     [SecurityAction( Authorization.APPROVE, "The roles and/or users that have access to approve prayer requests and comments." )]
@@ -53,6 +53,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         public static class FilterSetting
         {
             public static readonly string PrayerCategory = "Prayer Category";
+            public static readonly string Campus = "Campus";
             public static readonly string DateRange = "Date Range";
             public static readonly string ApprovalStatus = "Approval Status";
             public static readonly string UrgentStatus = "Urgent Status";
@@ -132,6 +133,10 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             int selectedPrayerCategoryId = gfFilter.GetUserPreference( FilterSetting.PrayerCategory ).AsInteger();
             Category prayerCategory = new CategoryService( new RockContext() ).Get( selectedPrayerCategoryId );
             catpPrayerCategoryFilter.SetValue( prayerCategory );
+
+            // Set the campus filter
+            BindCampuses();
+            rcpCampusFilter.SetValue( gfFilter.GetUserPreference( FilterSetting.Campus ) );
 
             // Set the Show Expired filter
             cbShowExpired.Checked = gfFilter.GetUserPreference( FilterSetting.ShowExpired ).AsBooleanOrNull() ?? false;
@@ -251,7 +256,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// </summary>
         private void BindGrid()
         {
-            PrayerRequestService prayerRequestService = new PrayerRequestService( new RockContext() );
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( new RockContext() );
             SortProperty sortProperty = gPrayerRequests.SortProperty;
 
             var prayerRequests = prayerRequestService.Queryable().Select( a =>
@@ -259,6 +264,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
                 {
                     a.Id,
                     FullName = a.FirstName + " " + a.LastName,
+                    Campus = a.CampusId,
                     CategoryName = a.CategoryId.HasValue ? a.Category.Name : null,
                     EnteredDate = a.EnteredDateTime,
                     a.ExpirationDate,
@@ -280,6 +286,13 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             {
                 prayerRequests = prayerRequests.Where( c => c.CategoryId == selectedPrayerCategoryID
                     || c.CategoryParentCategoryId == selectedPrayerCategoryID );
+            }
+
+            // Filter by Campus if one is selected
+            int? selectedCampusId = rcpCampusFilter.SelectedCampusId;
+            if ( selectedCampusId > 0 )
+            {
+                prayerRequests = prayerRequests.Where( a => a.Campus == selectedCampusId );
             }
 
             // Filter by approved/unapproved
@@ -412,8 +425,8 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             if ( e.RowKeyValue != null )
             {
                 var rockContext = new RockContext();
-                PrayerRequestService prayerRequestService = new PrayerRequestService( rockContext );
-                PrayerRequest prayerRequest = prayerRequestService.Get( e.RowKeyId );
+                Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
+                CampusPrayerRequest prayerRequest = prayerRequestService.Get( e.RowKeyId );
 
                 if ( prayerRequest != null )
                 {
@@ -460,20 +473,13 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         protected void gPrayerRequests_Delete( object sender, RowEventArgs e )
         {
             var rockContext = new RockContext();
-            PrayerRequestService prayerRequestService = new PrayerRequestService( rockContext );
-            PrayerRequest prayerRequest = prayerRequestService.Get( e.RowKeyId );
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
+            CampusPrayerRequest prayerRequest = prayerRequestService.Get( e.RowKeyId );
 
             if ( prayerRequest != null )
             {
                 DeleteAllRelatedNotes( prayerRequest, rockContext );
-
-                string errorMessage;
-                if ( !prayerRequestService.CanDelete( prayerRequest, out errorMessage ) )
-                {
-                    maGridWarning.Show( errorMessage, ModalAlertType.Information );
-                    return;
-                }
-
+        
                 prayerRequestService.Delete( prayerRequest );
                 rockContext.SaveChanges();
             }
@@ -485,7 +491,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// Deletes all related notes.
         /// </summary>
         /// <param name="prayerRequest">The prayer request.</param>
-        private void DeleteAllRelatedNotes( PrayerRequest prayerRequest, RockContext rockContext )
+        private void DeleteAllRelatedNotes( CampusPrayerRequest prayerRequest, RockContext rockContext )
         {
             var noteTypeService = new NoteTypeService( rockContext );
             var noteType = noteTypeService.Get( Rock.SystemGuid.NoteType.PRAYER_COMMENT.AsGuid() );
@@ -537,6 +543,19 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             }
         }
 
+        /// <summary>
+        /// Bind the campus selector
+        /// </summary>
+        private void BindCampuses()
+        {
+            rcpCampusFilter.DataSource = CampusCache.All();
+            rcpCampusFilter.DataTextField = "Name";
+            rcpCampusFilter.DataValueField = "Id";
+            rcpCampusFilter.DataBind();
+
+            rcpCampusFilter.Items.Insert( 0, "[All]" );
+        }
+        
         #endregion
     }
 }

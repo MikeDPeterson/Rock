@@ -42,8 +42,10 @@
                                 <asp:ListItem Text="Allowed" Value="allow"></asp:ListItem>
                                 <asp:ListItem Text="Not Allowed" Value="unallow"></asp:ListItem>
                             </Rock:RockDropDownList>
-
-                            <Rock:CategoryPicker ID="catpPrayerCategoryFilter" runat="server" Label="Category" EntityTypeName="Rock.Model.PrayerRequest"/>
+                                                        
+                            <Rock:CampusPicker ID="rcpCampusFilter" runat="server" Label="Campus" />
+                        
+                            <Rock:CategoryPicker ID="catpPrayerCategoryFilter" runat="server" Label="Category" EntityTypeName="church.ccv.Prayer.Model.CampusPrayerRequest"/>
 
                             <Rock:RockCheckBox ID="cbShowExpired" runat="server" Label="Show Expired Requests?" />
 
@@ -54,6 +56,7 @@
                         <Rock:Grid ID="gPrayerRequests" runat="server" AllowSorting="true" RowItemText="request" OnRowSelected="gPrayerRequests_Edit" OnRowDataBound="gPrayerRequests_RowDataBound" >
                             <Columns>
                                 <Rock:RockBoundField DataField="FullName" HeaderText="Name" SortExpression="FullName" />
+                                <Rock:CampusField DataField="Campus" HeaderText="Campus" SortExpression="Campus" />
                                 <Rock:RockBoundField DataField="CategoryName" HeaderText="Category" SortExpression="CategoryName" />
                                 <Rock:DateField DataField="EnteredDate" HeaderText="Entered" SortExpression="EnteredDate"/>
                                 <Rock:RockBoundField DataField="Text" HeaderText="Request" SortExpression="Text" />
