@@ -16,25 +16,25 @@
                             <fieldset>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <Rock:DataTextBox ID="dtbFirstName" runat="server" Label="First Name" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="FirstName"/>
+                                        <Rock:DataTextBox ID="dtbFirstName" runat="server" Label="First Name" SourceTypeName="church.ccv.Prayer.Model.CampusPrayerRequest, church.ccv.Prayer" PropertyName="FirstName"/>
                                     </div>
                                     <div class="col-md-6">
-                                        <Rock:DataTextBox ID="dtbLastName" runat="server" Label="Last Name" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="LastName" />
+                                        <Rock:DataTextBox ID="dtbLastName" runat="server" Label="Last Name" SourceTypeName="church.ccv.Prayer.Model.CampusPrayerRequest, church.ccv.Prayer" PropertyName="LastName" />
                                     </div>
                                 </div>
 
-                                <Rock:DataTextBox ID="dtbEmail" runat="server" Label="Email" TextMode="Email" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="Email" />
+                                <Rock:EmailBox ID="ebEmail" runat="server" Label="Email" SourceTypeName="church.ccv.Prayer.Model.CampusPrayerRequest, church.ccv.Prayer" PropertyName="Email" />
                     
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <Rock:RockDropDownList ID="bddlCampus" runat="server" Required="true" Label="Campus"></Rock:RockDropDownList>
+                                        <Rock:CampusPicker ID="cpCampus" runat="server" Required="true" Label="Campus" />
                                     </div>
                                     <div class="col-md-6">
-                                        <Rock:RockDropDownList ID="bddlCategory" runat="server" Required="true" Label="Category"></Rock:RockDropDownList>
+                                        <Rock:RockDropDownList ID="bddlCategory" runat="server" Required="true" Label="Category" />
                                     </div>
                                 </div>
                                 <em ID="lblCount" runat="server" class="pull-right badge"></em>
-                                <Rock:DataTextBox ID="dtbRequest" runat="server" Label="Request" TextMode="MultiLine" Rows="3" MaxLength="10" ValidateRequestMode="Disabled" SourceTypeName="Rock.Model.PrayerRequest, Rock" PropertyName="Text" placeholder="Please pray that..."></Rock:DataTextBox>
+                                <Rock:DataTextBox ID="dtbRequest" runat="server" Label="Request" TextMode="MultiLine" Rows="3" MaxLength="10" ValidateRequestMode="Disabled" SourceTypeName="church.ccv.Prayer.Model.CampusPrayerRequest, church.ccv.Prayer" PropertyName="Text" placeholder="Please pray that..."></Rock:DataTextBox>
 
                                 <% if ( EnableUrgentFlag ) { %>
                                     <Rock:RockCheckBox ID="cbIsUrgent" runat="server" Checked="false" Label="Urgent?" Text="Yes" Help="If 'yes' is checked the request will be flagged as urgent in need of attention quickly." />
