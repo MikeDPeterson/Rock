@@ -1,10 +1,10 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using church.ccv.Prayer.Model;
 using Rock;
 using Rock.Attribute;
 using Rock.Data;
@@ -16,11 +16,11 @@ using Rock.Web.UI.Controls;
 namespace RockWeb.Plugins.church_ccv.Prayer
 {
     [DisplayName( "Prayer Session" )]
-    [Category( "Prayer" )]
+    [Category( "CCV > Prayer" )]
     [Description( "Allows a user to start a session to pray for active, approved prayer requests." )]
 
     [CodeEditorField( "Welcome Introduction Text", "Some text (or HTML) to display on the first step.", CodeEditorMode.Html, height: 100, required: false, defaultValue: "<h2>Let's get ready to pray...</h2>", order: 1 )]
-    [CategoryField( "Category", "A top level category. This controls which categories are shown when starting a prayer session.", false, "Rock.Model.PrayerRequest", "", "", false, "", "Filtering", 2, "CategoryGuid" )]
+    [CategoryField( "Category", "A top level category. This controls which categories are shown when starting a prayer session.", false, "church.ccv.Prayer.Model.CampusPrayerRequest", "", "", false, "", "Filtering", 2, "CategoryGuid" )]
     [BooleanField( "Enable Prayer Team Flagging", "If enabled, members of the prayer team can flag a prayer request if they feel the request is inappropriate and needs review by an administrator.", false, "Flagging", 3, "EnableCommunityFlagging" )]
     [IntegerField( "Flag Limit", "The number of flags a prayer request has to get from the prayer team before it is automatically unapproved.", false, 1, "Flagging", 4 )]
     public partial class PrayerSession : RockBlock
@@ -30,6 +30,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         private string _categoryGuidString = string.Empty;
         private int? _flagLimit = 1;
         private string[] _savedCategoryIdsSetting;
+        private string[] _savedCampusIdsSetting;
         #endregion
 
         #region Properties
@@ -100,6 +101,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
 
             if ( !Page.IsPostBack )
             {
+                BindCampuses();
                 DisplayCategories();
                 SetNoteType();
                 lbStart.Focus();
@@ -135,6 +137,17 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// <param name="e"></param>
         protected void lbStart_Click( object sender, EventArgs e )
         {
+            // Maker sure they selected at least one campus
+            if (cpCampuses.SelectedValues.Count == 0 )
+            {
+                nbSelectCampuses.Visible = true;
+                return;
+            }
+            else
+            {
+                nbSelectCampuses.Visible = false;
+            }
+
             // Make sure they selected at least one category
             if ( cblCategories.SelectedValues.Count == 0 )
             {
@@ -149,12 +162,15 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             lbNext.Focus();
             lbBack.Visible = false;
 
-            pnlChooseCategories.Visible = false;
+            pnlStartSession.Visible = false;
 
-            string settingPrefix = string.Format( "prayer-categories-{0}-", this.BlockId );
-            SavePreferences( settingPrefix );
+            string settingPrefixCategories = string.Format( "prayer-categories-{0}-", this.BlockId );
+            string settingPrefexCampuses = string.Format( "prayer-campus-{0}-", this.BlockId );
+            SavePreferences( settingPrefixCategories, settingPrefexCampuses );
 
-            SetAndDisplayPrayerRequests( cblCategories );
+            SetAndDisplayPrayerRequests( cblCategories, cpCampuses );
+
+
         }
 
         /// <summary>
@@ -176,9 +192,9 @@ namespace RockWeb.Plugins.church_ccv.Prayer
 
                 hfPrayerIndex.Value = index.ToString();
                 var rockContext = new RockContext();
-                PrayerRequestService service = new PrayerRequestService( rockContext );
+                Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
                 int prayerRequestId = prayerRequestIds[index];
-                PrayerRequest request = service.Queryable( "RequestedByPersonAlias.Person" ).FirstOrDefault( p => p.Id == prayerRequestId );
+                CampusPrayerRequest request = prayerRequestService.Queryable( "RequestedByPersonAlias.Person" ).FirstOrDefault( p => p.Id == prayerRequestId );
                 ShowPrayerRequest( request, rockContext );
             }
             else
@@ -210,14 +226,15 @@ namespace RockWeb.Plugins.church_ccv.Prayer
 
                 hfPrayerIndex.Value = index.ToString();
                 var rockContext = new RockContext();
-                PrayerRequestService service = new PrayerRequestService( rockContext );
+                Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
                 int prayerRequestId = prayerRequestIds[index];
-                PrayerRequest request = service.Queryable( "RequestedByPersonAlias.Person" ).FirstOrDefault( p => p.Id == prayerRequestId );
+                CampusPrayerRequest request = prayerRequestService.Queryable( "RequestedByPersonAlias.Person" ).FirstOrDefault( p => p.Id == prayerRequestId );
                 ShowPrayerRequest( request, rockContext );
-            }
-            else
-            {
-                lbBack.Visible = false;
+
+                if ( currentNumber == 1 )
+                {
+                    lbBack.Visible = false;
+                }
             }
         }
 
@@ -240,12 +257,13 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         protected void lbStartAgain_Click( object sender, EventArgs e )
         {
             lbBack.Visible = false;
-            pnlChooseCategories.Visible = true;
+            pnlStartSession.Visible = true;
             pnlFinished.Visible = false;
             pnlNoPrayerRequestsMessage.Visible = false;
             pnlPrayer.Visible = false;
             lbStart.Focus();
 
+            BindCampuses();
             DisplayCategories();
         }
 
@@ -270,9 +288,9 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             int prayerRequestId = hfIdValue.ValueAsInt();
 
             var rockContext = new RockContext();
-            var service = new PrayerRequestService( rockContext );
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
 
-            PrayerRequest request = service.Get( prayerRequestId );
+            CampusPrayerRequest request = prayerRequestService.Get( prayerRequestId );
 
             if ( request != null )
             {
@@ -299,8 +317,8 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         private void SetNoteType()
         {
             var rockContext = new RockContext();
-            var service = new NoteTypeService( rockContext );
-            var noteType = service.Get( Rock.SystemGuid.NoteType.PRAYER_COMMENT.AsGuid() );
+            NoteTypeService service = new NoteTypeService( rockContext );
+            NoteType noteType = service.Get( Rock.SystemGuid.NoteType.PRAYER_COMMENT.AsGuid() );
             NoteTypeId = noteType.Id;
         }
 
@@ -312,6 +330,29 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         private void UpdateSessionCountLabel( int currentNumber, int total )
         {
             hlblNumber.Text = string.Format( "{0} of {1}", currentNumber, total );
+        }
+
+        /// <summary>
+        /// Binds Campuses to campus picker
+        /// </summary>
+        private void BindCampuses()
+        {
+            string settingPrefix = string.Format( "prayer-campus-{0}-", this.BlockId );
+
+            cpCampuses.DataSource = CampusCache.All();
+            cpCampuses.DataTextField = "Name";
+            cpCampuses.DataValueField = "Id";
+            cpCampuses.DataBind();
+
+            // use the users preferences to set which campus items are checked.
+            _savedCampusIdsSetting = this.GetUserPreference( settingPrefix ).SplitDelimitedValues();
+
+            for ( int i = 0; i < cpCampuses.Items.Count; i++ )
+            {
+                ListItem item = ( ListItem ) cpCampuses.Items[i];
+                item.Selected = _savedCampusIdsSetting.Contains( item.Value );
+
+            }
         }
 
         /// <summary>
@@ -338,7 +379,13 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         {
             string settingPrefix = string.Format( "prayer-categories-{0}-", this.BlockId );
 
-            IQueryable<PrayerRequest> prayerRequestQuery = new PrayerRequestService( new RockContext() ).GetActiveApprovedUnexpired();
+            RockContext rockContext = new RockContext();
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
+
+            // Get Active Approved Unexpired prayer requests
+            IQueryable<CampusPrayerRequest> prayerRequestQuery = prayerRequestService.Queryable()
+                .Where( p => p.IsActive == true && p.IsApproved == true && RockDateTime.Today <= p.ExpirationDate )
+                .OrderByDescending( p => p.IsUrgent );
 
             // Filter categories if one has been selected in the configuration
             if ( !string.IsNullOrEmpty( categoryGuid ) )
@@ -383,37 +430,56 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// Saves the users selected prayer categories for use during the next prayer session.
         /// </summary>
         /// <param name="settingPrefix"></param>
-        private void SavePreferences( string settingPrefix )
+        private void SavePreferences( string settingPrefixCategories, string settingPrefixCampuses )
         {
-            var previouslyCheckedIds = this.GetUserPreference( settingPrefix ).SplitDelimitedValues();
+            // Save Selected Categories
+            var previouslyCheckedCategoryIds = this.GetUserPreference( settingPrefixCategories ).SplitDelimitedValues();
 
-            IEnumerable<string> allIds = cblCategories.Items.Cast<ListItem>()
+            IEnumerable<string> allCategoryIds = cblCategories.Items.Cast<ListItem>()
                               .Select( i => i.Value );
 
             // find the items that were previously saved but are no longer in the checkboxlist...
             // because we want to retain those as they may be active categories again in the future.
-            var itemsToKeep = previouslyCheckedIds.Except( allIds );
+            var itemsToKeepCategory = previouslyCheckedCategoryIds.Except( allCategoryIds );
 
             string categoryValues = cblCategories.SelectedValuesAsInt
                 .Where( v => v != 0 )
                 .Select( c => c.ToString() )
-                .Concat( itemsToKeep )
+                .Concat( itemsToKeepCategory )
                 .ToList()
                 .AsDelimited( "," );
 
-            this.SetUserPreference( settingPrefix, categoryValues );
+            this.SetUserPreference( settingPrefixCategories, categoryValues );
+
+            // Save Selected Campuses
+            var previouslyCheckedCampusIds = this.GetUserPreference( settingPrefixCampuses ).SplitDelimitedValues();
+
+            IEnumerable<string> allCampusIds = cpCampuses.Items.Cast<ListItem>()
+                .Select( i => i.Value );
+
+            // find the items that were previously saved but are no longer in the checkboxlist...
+            // because we want to retain those as they may be active categories again in the future.
+            var itemsToKeepCampuses = previouslyCheckedCampusIds.Except( allCampusIds );
+
+            string campusValues = cpCampuses.SelectedValues
+                .Concat( itemsToKeepCampuses )
+                .ToList()
+                .AsDelimited( "," );
+
+            this.SetUserPreference( settingPrefixCampuses, campusValues );
         }
 
         /// <summary>
-        /// Finds all approved prayer requests for the given selected categories and orders them by least prayed-for.
+        /// Finds all approved prayer requests for the given selected categories and campuses and orders them by least prayed-for.
         /// Also updates the prayer count for the first item in the list.
         /// </summary>
         /// <param name="categoriesList"></param>
-        private void SetAndDisplayPrayerRequests( RockCheckBoxList categoriesList )
+        private void SetAndDisplayPrayerRequests( RockCheckBoxList categoriesList, CampusesPicker campuses )
         {
             RockContext rockContext = new RockContext();
-            PrayerRequestService service = new PrayerRequestService( rockContext );
-            var prayerRequests = service.GetByCategoryIds( categoriesList.SelectedValuesAsInt ).OrderByDescending( p => p.IsUrgent ).ThenBy( p => p.PrayerCount ).ToList();
+            Service<CampusPrayerRequest> service = new Service<CampusPrayerRequest>( rockContext );
+
+            var prayerRequests = GetPrayerRequests( categoriesList.SelectedValuesAsInt, campuses.SelectedValues.AsIntegerList() ).OrderByDescending( p => p.IsUrgent ).ThenBy( p => p.PrayerCount ).ToList();
             List<int> list = prayerRequests.Select( p => p.Id ).ToList<int>();
 
             PrayerRequestIds = list;
@@ -421,8 +487,12 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             {
                 UpdateSessionCountLabel( 1, list.Count );
                 hfPrayerIndex.Value = "0";
-                PrayerRequest request = prayerRequests.First();
+                CampusPrayerRequest request = prayerRequests.First();
                 ShowPrayerRequest( request, rockContext );
+            }
+            else
+            {
+                pnlNoPrayerRequestsMessage.Visible = true;
             }
         }
 
@@ -431,7 +501,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// </summary>
         /// <param name="prayerRequest">The prayer request.</param>
         /// <param name="rockContext">The rock context.</param>
-        private void ShowPrayerRequest( PrayerRequest prayerRequest, RockContext rockContext )
+        private void ShowPrayerRequest( CampusPrayerRequest prayerRequest, RockContext rockContext )
         {
             pnlPrayer.Visible = true;
             divPrayerAnswer.Visible = false;
@@ -439,6 +509,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             prayerRequest.PrayerCount = ( prayerRequest.PrayerCount ?? 0 ) + 1;
             hlblPrayerCountTotal.Text = prayerRequest.PrayerCount.ToString() + " team prayers";
             hlblUrgent.Visible = prayerRequest.IsUrgent ?? false;
+            hlblCampus.Text = CampusCache.Read( prayerRequest.CampusId ?? 1 ).Name;
             lTitle.Text = prayerRequest.FullName.FormatAsHtmlTitle();
 
             lPrayerText.Text = prayerRequest.Text.ScrubHtmlAndConvertCrLfToBr();
@@ -487,6 +558,50 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             {
                 ExceptionLogService.LogException( ex, Context, this.RockPage.PageId, this.RockPage.Site.Id, CurrentPersonAlias );
             }
+        }
+
+        /// <summary>
+        /// Returns a collection of active <see cref="church.ccv.Prayer.Model.CampusPrayerRequest">PrayerRequests</see> that
+        /// are in a specified <see cref="Rock.Model.Category"/> or any of its subcategories for specified <see cref="Rock.Model.Campus"/>
+        /// </summary>
+        /// <param name="categoryIds">A <see cref="System.Collections.Generic.List{Int32}"/> of
+        /// the <see cref="Rock.Model.Category"/> IDs to retrieve PrayerRequests for.</param>
+        /// <param name="campusIds">A <see cref="System.Collections.Generic.List{Int32}"/> of
+        /// the <see cref="Rock.Model.Campus"/> IDs to retrieve PrayerRequests for. </param>
+        /// <param name="onlyApproved">set false to include un-approved requests.</param>
+        /// <param name="onlyUnexpired">set false to include expired requests.</param>
+        /// <returns>An enumerable collection of <see cref="church.ccv.Prayer.Model.CampusPrayerRequest"/> that
+        /// are in the specified <see cref="Rock.Model.Category"/> or any of its subcategories.</returns>
+        private IEnumerable<CampusPrayerRequest> GetPrayerRequests( List<int> categoryIds, List<int> campusIds, bool onlyApproved = true, bool onlyUnexpired = true )
+        {
+            RockContext rockContext = new RockContext();
+
+            CampusPrayerRequest prayerRequest = new CampusPrayerRequest();
+            Type type = prayerRequest.GetType();
+            var prayerRequestEntityTypeId = EntityTypeCache.GetId( type );
+
+            // Get all PrayerRequest category Ids that are the **parent or child** of the given categoryIds.
+            CategoryService categoryService = new CategoryService( rockContext );
+            IEnumerable<int> expandedCategoryIds = categoryService.GetByEntityTypeId( prayerRequestEntityTypeId )
+                .Where( c => categoryIds.Contains( c.Id ) || categoryIds.Contains( c.ParentCategoryId ?? -1 ) )
+                .Select( a => a.Id );
+
+            // Now find the active PrayerRequests that have any of those category Ids for the campuses selected.
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
+            IQueryable<CampusPrayerRequest> list = prayerRequestService.Queryable()
+                .Where( p => p.IsActive == true && expandedCategoryIds.Contains( p.CategoryId ?? -1 ) && campusIds.Contains( p.CampusId ?? -1 ) );
+
+            if ( onlyApproved )
+            {
+                list = list.Where( p => p.IsApproved == true );
+            }
+
+            if ( onlyUnexpired )
+            {
+                list = list.Where( p => RockDateTime.Today <= p.ExpirationDate );
+            }
+
+            return list;
         }
 
         #endregion

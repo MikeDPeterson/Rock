@@ -4,17 +4,31 @@
     <ContentTemplate>
 
          <!-- Start session -->
-        <asp:Panel ID="pnlChooseCategories" runat="server">
+        <asp:Panel ID="pnlStartSession" runat="server">
             <asp:Literal ID="lWelcomeInstructions" runat="server"></asp:Literal>
-            <p>Select one or more categories to begin your prayer session:</p>
-            <Rock:NotificationBox id="nbSelectCategories" runat="server" NotificationBoxType="Danger" Visible="false" Heading="I'm Sorry...">Please select at least one prayer category.</Rock:NotificationBox>
-            <Rock:RockCheckBox ID="cbSelectAll" CssClass="js-select-all" runat="server" Text="Select All"/>
-            <Rock:RockCheckBoxList ID="cblCategories" CssClass="js-category-items" runat="server" RepeatColumns="2"></Rock:RockCheckBoxList>
+            <div class="container">
+                <asp:Panel ID="pnlChooseCampuses" runat="server">
+                    <h4>Select one or more campuses:</h4>
+                    <Rock:NotificationBox ID="nbSelectCampuses" runat="server" NotificationBoxType="Danger" Visible="false" Heading="Please select at least one campus." />
+                    <Rock:RockCheckBox ID="cbSelectAllCampuses" CssClass="js-select-all-campuses" runat="server" Text="Select All" />
+                    <Rock:CampusesPicker ID="cpCampuses" runat="server" CssClass="js-campuses-items" Label="" RepeatDirection="Horizontal"/>
+                    <br />
+                </asp:Panel>
+
+                <asp:Panel ID="pnlChooseCategories" runat="server">
+                    <h4>Select one or more categories:</h4>
+                    <Rock:NotificationBox id="nbSelectCategories" runat="server" NotificationBoxType="Danger" Visible="false" Heading="Please select at least one prayer category." />
+                    <Rock:RockCheckBox ID="cbSelectAllCategories" CssClass="js-select-all-categories" runat="server" Text="Select All"/>
+                    <Rock:RockCheckBoxList ID="cblCategories" CssClass="js-category-items" runat="server" RepeatColumns="3" />
+                </asp:Panel>
+            </div>
+            <br />
             <asp:LinkButton ID="lbStart" runat="server" Text="Start" CssClass="btn btn-primary" OnClick="lbStart_Click" />
         </asp:Panel>
 
         <asp:Panel ID="pnlNoPrayerRequestsMessage" runat="server" Visible="false">
-            <Rock:NotificationBox id="nbNoPrayerRequests" runat="server" NotificationBoxType="Info" Heading="No Prayers">There are no active prayer requests at this time.</Rock:NotificationBox>
+            <Rock:NotificationBox id="nbNoPrayerRequests" runat="server" NotificationBoxType="Info" Heading="No Prayers">There are no active prayer requests for the selected campuses and categories at this time.</Rock:NotificationBox>
+            <asp:LinkButton ID="lbStartAgainNoPrayer" runat="server" Text="Start Again" CssClass="btn btn-primary" OnClick="lbStartAgain_Click" />
         </asp:Panel>
 
         <!-- The detail for each prayer -->
@@ -35,6 +49,7 @@
                         <Rock:HighlightLabel ID="hlblPrayerCountTotal" runat="server" IconCssClass="fa fa-users" LabelType="Info" Text="team: 0" ToolTip="The number of prayers offered by the team for this request." />
                         <Rock:HighlightLabel ID="hlblUrgent" runat="server" LabelType="Warning" Text="Urgent" Visible="false" />
                         <Rock:HighlightLabel ID="hlblCategory" runat="server" LabelType="Type" />
+                        <Rock:HighlightLabel ID="hlblCampus" runat="server" LabelType="Campus" />
 
                     </div>
                 </div>
@@ -118,9 +133,14 @@
     $(document).ready(function () { FadePanelIn(); });
     Sys.WebForms.PageRequestManager.getInstance().add_endRequest(FadePanelIn);
 
-    $('.js-select-all').click(function () {
-        var selectAllChecked = $('.js-select-all').prop('checked');
-        $('.js-category-items input').prop('checked', selectAllChecked)
+    $('.js-select-all-categories').click(function () {
+        var selectAllCheckedCategories = $('.js-select-all-categories').prop('checked');
+        $('.js-category-items input').prop('checked', selectAllCheckedCategories)
+    });
+
+    $('.js-select-all-campuses').click(function () {
+        var selectAllCheckedCampuses = $('.js-select-all-campuses').prop('checked');
+        $('.js-campuses-items input').prop('checked', selectAllCheckedCampuses)
     });
 
 </script>
