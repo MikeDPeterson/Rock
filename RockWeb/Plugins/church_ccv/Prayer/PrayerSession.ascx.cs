@@ -102,7 +102,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             if ( !Page.IsPostBack )
             {
                 BindCampuses();
-                DisplayCategories();
+                DisplayCategories( cpCampuses );
                 SetNoteType();
                 lbStart.Focus();
                 lbFlag.Visible = _enableCommunityFlagging;
@@ -264,7 +264,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             lbStart.Focus();
 
             BindCampuses();
-            DisplayCategories();
+            DisplayCategories( cpCampuses );
         }
 
         /// <summary>
@@ -307,6 +307,11 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             lbNext_Click( sender, e );
         }
 
+        protected void cpCampusesPicker_SelectedIndexChanged( object sender, EventArgs e )
+        {
+            DisplayCategories( cpCampuses );
+        }
+
         #endregion
 
         #region Methods
@@ -339,10 +344,23 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         {
             string settingPrefix = string.Format( "prayer-campus-{0}-", this.BlockId );
 
+            RockContext rockContext = new RockContext();
+            Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
+
+            var campuses = CampusCache.All();
+
+            foreach ( CampusCache campus in campuses)
+            {
+
+            }
+
             cpCampuses.DataSource = CampusCache.All();
             cpCampuses.DataTextField = "Name";
-            cpCampuses.DataValueField = "Id";
+            cpCampuses.DataValueField = "ID";
             cpCampuses.DataBind();
+
+            cpCampuses.SelectedIndexChanged += new EventHandler( cpCampusesPicker_SelectedIndexChanged );
+            
 
             // use the users preferences to set which campus items are checked.
             _savedCampusIdsSetting = this.GetUserPreference( settingPrefix ).SplitDelimitedValues();
@@ -358,10 +376,10 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// <summary>
         /// Displays any 'active' prayer categories or shows a message if there are none.
         /// </summary>
-        private void DisplayCategories()
+        private void DisplayCategories( CampusesPicker campuses)
         {
             // If there are no categories, then it means there are no prayer requests (in those categories)
-            if ( !BindCategories( _categoryGuidString ) )
+            if ( !BindCategories( _categoryGuidString, campuses ) )
             {
                 cblCategories.Visible = false;
                 pnlChooseCategories.Visible = false;
@@ -375,17 +393,18 @@ namespace RockWeb.Plugins.church_ccv.Prayer
         /// </summary>
         /// <param name="categoryGuid">the guid string of a top-level prayer category</param>
         /// <returns>true if there were active categories or false if there were none</returns>
-        private bool BindCategories( string categoryGuid )
+        private bool BindCategories( string categoryGuid, CampusesPicker campuses )
         {
             string settingPrefix = string.Format( "prayer-categories-{0}-", this.BlockId );
 
             RockContext rockContext = new RockContext();
             Service<CampusPrayerRequest> prayerRequestService = new Service<CampusPrayerRequest>( rockContext );
 
-            // Get Active Approved Unexpired prayer requests
-            IQueryable<CampusPrayerRequest> prayerRequestQuery = prayerRequestService.Queryable()
-                .Where( p => p.IsActive == true && p.IsApproved == true && RockDateTime.Today <= p.ExpirationDate )
-                .OrderByDescending( p => p.IsUrgent );
+            // Get Active Approved Unexpired prayer requests for the selected campuses
+            IQueryable < CampusPrayerRequest > prayerRequestQuery = prayerRequestService.Queryable()
+               .Where( p => p.IsActive == true && p.IsApproved == true && RockDateTime.Today <= p.ExpirationDate && campuses.SelectedValues.ToList().Contains( p.CampusId.ToString() ?? "" ) )
+               .OrderByDescending( p => p.IsUrgent );
+
 
             // Filter categories if one has been selected in the configuration
             if ( !string.IsNullOrEmpty( categoryGuid ) )
@@ -398,21 +417,35 @@ namespace RockWeb.Plugins.church_ccv.Prayer
                 }
             }
 
-            var categoryList = prayerRequestQuery
-                .Where( p => p.Category != null )
-                .Select( p => new { p.Category.Id, p.Category.Name } )
-                .GroupBy( g => new { g.Id, g.Name } )
+            // get all prayers with a CategoryId
+            var prayersWithCounts = prayerRequestQuery
+                .Where( p => p.CategoryId != null )
+                .Select( p => new { p.CategoryId, p.Category.Name, p.PrayerCount } );
+
+            // get prayers that havent been prayed for, group by category and ID
+            var categoriesNeedingPrayer = prayersWithCounts.Where( p => p.PrayerCount == 0 || p.PrayerCount == null ).GroupBy( g => new { g.CategoryId, g.Name } );
+
+            // group all prayers by category, ID, and NeedsPrayer (categoriesNeedingPrayer)
+            var prayerCategoriesWithStatus = prayersWithCounts
+                .GroupBy( p => new { p.CategoryId, p.Name, NeedsPrayer = categoriesNeedingPrayer.Where( c => c.Key.Name == p.Name ).Count() > 0 ? true : false } );
+
+            // Format list of prayers
+            var prayerList = prayerCategoriesWithStatus
                 .OrderBy( g => g.Key.Name )
                 .Select( a => new
                 {
-                    Id = a.Key.Id,
-                    Name = a.Key.Name + " (" + System.Data.Entity.SqlServer.SqlFunctions.StringConvert( (double)a.Count() ).Trim() + ")",
+                    Id = a.Key.CategoryId,
+                    Name = a.Key.NeedsPrayer == true 
+                        ? "<font color=\"red\">" + a.Key.Name + " (" + System.Data.Entity.SqlServer.SqlFunctions.StringConvert( ( double ) a.Count() ).Trim() + ")</Font>"
+                        : a.Key.Name + " (" + System.Data.Entity.SqlServer.SqlFunctions.StringConvert( ( double ) a.Count() ).Trim() + ")",
+                    NeedsPrayer = a.Key.NeedsPrayer,
                     Count = a.Count()
                 } ).ToList();
 
+            // Bind list of prayers to categories check box list
             cblCategories.DataTextField = "Name";
             cblCategories.DataValueField = "Id";
-            cblCategories.DataSource = categoryList;
+            cblCategories.DataSource = prayerList;
             cblCategories.DataBind();
 
             // use the users preferences to set which items are checked.
@@ -423,7 +456,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
                 item.Selected = _savedCategoryIdsSetting.Contains( item.Value );
             }
 
-            return categoryList.Count() > 0;
+            return prayerList.Count() > 0;
         }
 
         /// <summary>
