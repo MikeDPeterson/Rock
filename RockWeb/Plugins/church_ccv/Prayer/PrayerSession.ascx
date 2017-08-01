@@ -11,7 +11,7 @@
                     <h4>Select one or more campuses:</h4>
                     <Rock:NotificationBox ID="nbSelectCampuses" runat="server" NotificationBoxType="Danger" Visible="false" Heading="Please select at least one campus." />
                     <Rock:RockCheckBox ID="cbSelectAllCampuses" CssClass="js-select-all-campuses" runat="server" Text="Select All" />
-                    <Rock:CampusesPicker ID="cpCampuses" runat="server" CssClass="js-campuses-items" Label="" RepeatDirection="Horizontal" AutoPostBack="true" />
+                    <Rock:CampusesPicker ID="cpCampuses" runat="server" CssClass="js-campuses-items" Label="" RepeatDirection="Horizontal" AutoPostBack="true" OnCheckedChanged="cpCampusesPicker_SelectedIndexChanged" />
                     <br />
                 </asp:Panel>
 

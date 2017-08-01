@@ -359,9 +359,7 @@ namespace RockWeb.Plugins.church_ccv.Prayer
             cpCampuses.DataValueField = "ID";
             cpCampuses.DataBind();
 
-            cpCampuses.SelectedIndexChanged += new EventHandler( cpCampusesPicker_SelectedIndexChanged );
             
-
             // use the users preferences to set which campus items are checked.
             _savedCampusIdsSetting = this.GetUserPreference( settingPrefix ).SplitDelimitedValues();
 
