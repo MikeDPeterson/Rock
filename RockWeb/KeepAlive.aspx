@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="KeepAlive.aspx.cs" Inherits="KeepAlive" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="KeepAlive" Codebehind="KeepAlive.aspx.cs" %>
 
 <!DOCTYPE html>
 

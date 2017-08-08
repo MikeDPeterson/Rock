@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ResidentGradeRequest.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Residency.ResidentGradeRequest" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Residency.ResidentGradeRequest" Codebehind="ResidentGradeRequest.ascx.cs" %>
 
 <asp:UpdatePanel ID="updatePanel" runat="server">
     <ContentTemplate>

@@ -42,6 +42,15 @@ namespace RockWeb.Blocks.Administration
     [Description( "Used for making configuration changes to configurable items in the web.config." )]
     public partial class SystemConfiguration : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddTimeZone;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRunJobsInIISContext;
+        protected global::Rock.Web.UI.Controls.NumberBox numbMaxSize;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

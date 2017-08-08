@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GroupFinder.ascx.cs" Inherits="RockWeb.Blocks.Groups.GroupFinder" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Groups.GroupFinder" Codebehind="GroupFinder.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server" UpdateMode="Conditional">
     <ContentTemplate>

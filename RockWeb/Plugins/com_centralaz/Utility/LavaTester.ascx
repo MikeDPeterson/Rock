@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LavaTester.ascx.cs" Inherits="RockWeb.Plugins.com_centralaz.Utility.LavaTester" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.com_centralaz.Utility.LavaTester" Codebehind="LavaTester.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

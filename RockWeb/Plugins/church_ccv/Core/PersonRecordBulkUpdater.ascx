@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PersonRecordBulkUpdater.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Core.PersonRecordBulkUpdater" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Core.PersonRecordBulkUpdater" Codebehind="PersonRecordBulkUpdater.ascx.cs" %>
 
 <script src="/SignalR/hubs"></script>
 <script type="text/javascript">

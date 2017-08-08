@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AttendanceSpreadSheetTool.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Reporting.AttendanceSpreadSheetTool" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Reporting.AttendanceSpreadSheetTool" Codebehind="AttendanceSpreadSheetTool.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <Triggers>

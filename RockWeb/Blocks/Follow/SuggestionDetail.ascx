@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SuggestionDetail.ascx.cs" Inherits="RockWeb.Blocks.Follow.SuggestionDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Follow.SuggestionDetail" Codebehind="SuggestionDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="pnlSuggestionListUpdatePanel" runat="server">
     <ContentTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="InviteEntry.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Cms.InviteEntry" ViewStateMode="Disabled" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Cms.InviteEntry" ViewStateMode="Disabled" Codebehind="InviteEntry.ascx.cs" %>
 
 <asp:UpdatePanel ID="upDetail" runat="server">
     <ContentTemplate>

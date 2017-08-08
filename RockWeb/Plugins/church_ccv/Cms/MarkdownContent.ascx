@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MarkdownContent.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Cms.MarkdownContent" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Cms.MarkdownContent" Codebehind="MarkdownContent.ascx.cs" %>
 
 <asp:UpdatePanel ID="upDetail" runat="server">
     <ContentTemplate>

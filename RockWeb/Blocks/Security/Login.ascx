@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Login.ascx.cs" Inherits="RockWeb.Blocks.Security.Login" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Security.Login" Codebehind="Login.ascx.cs" %>
 
     <asp:Panel ID="pnlLogin" runat="server" DefaultButton="btnLogin">
 

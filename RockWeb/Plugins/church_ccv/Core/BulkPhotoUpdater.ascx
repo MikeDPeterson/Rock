@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="BulkPhotoUpdater.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Core.BulkPhotoUpdater" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Core.BulkPhotoUpdater" Codebehind="BulkPhotoUpdater.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

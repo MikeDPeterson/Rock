@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MeasureDashboardPastor.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Steps.MeasureDashboardPastor" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Steps.MeasureDashboardPastor" Codebehind="MeasureDashboardPastor.ascx.cs" %>
 
 <style>
     

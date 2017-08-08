@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ExceptionList.ascx.cs" Inherits="RockWeb.Blocks.Administration.ExceptionList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Administration.ExceptionList" Codebehind="ExceptionList.ascx.cs" %>
 
 <script type="text/javascript">
     function confirmExceptionListClear() {

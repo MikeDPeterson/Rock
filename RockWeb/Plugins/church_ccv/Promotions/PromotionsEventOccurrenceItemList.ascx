@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PromotionsEventOccurrenceItemList.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Promotions.PromotionsEventOccurrenceItemList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Promotions.PromotionsEventOccurrenceItemList" Codebehind="PromotionsEventOccurrenceItemList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

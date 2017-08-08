@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SampleLinqReport.ascx.cs" Inherits="RockWeb.Blocks.Reporting.SampleLinqReport" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Reporting.SampleLinqReport" Codebehind="SampleLinqReport.ascx.cs" %>
 
 <asp:UpdatePanel ID="upReport" runat="server">
     <ContentTemplate>

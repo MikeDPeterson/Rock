@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CalendarLava.ascx.cs" Inherits="RockWeb.Blocks.Event.CalendarLava" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Event.CalendarLava" Codebehind="CalendarLava.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <Triggers>

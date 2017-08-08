@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RegistrationInstanceDetail.ascx.cs" Inherits="RockWeb.Blocks.Event.RegistrationInstanceDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Event.RegistrationInstanceDetail" Codebehind="RegistrationInstanceDetail.ascx.cs" %>
 
 <script type="text/javascript">
     Sys.Application.add_load(function () {

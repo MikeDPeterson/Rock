@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="FollowingByEntityLava.ascx.cs" Inherits="RockWeb.Blocks.Core.FollowingByEntityLava" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Core.FollowingByEntityLava" Codebehind="FollowingByEntityLava.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

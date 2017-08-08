@@ -41,6 +41,41 @@ namespace RockWeb.Blocks.CheckIn.Config
     [LinkedPage( "Schedule Page", "Page used to manage schedules for the check-in type." )]
     public partial class CheckinTypeDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGeneral;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlType;
+        protected global::Rock.Web.UI.Controls.NumberBox nbSecurityCodeLength;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableManager;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableOverride;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPreventInactivePeople;
+        protected global::Rock.Web.UI.Controls.NumberBox nbAutoSelectDaysBack;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbReuseCode;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbUseSameOptions;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbHidePhotos;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPreventDuplicateCheckin;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpSearch;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSearchType;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMaxResults;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMinPhoneLength;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMaxPhoneLength;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPhoneSearchType;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpAdvanced;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSearchRegex;
+        protected global::Rock.Web.UI.Controls.NumberBox nbRefreshInterval;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAgeRequired;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbGradeRequired;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDisplayLocCount;
+        //protected global::Rock.Web.UI.Controls.PanelWidget wpCustom;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+
+
+        #endregion
 
         #region Control Methods
 

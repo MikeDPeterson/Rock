@@ -37,6 +37,14 @@ namespace RockWeb.Blocks.Administration
     [Description( "Lists pages in Rock." )]
     public partial class Pages : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.Grid rGrid;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbPageName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLayout;
+
+        #endregion
         #region Fields
 
         private bool canConfigure = false;

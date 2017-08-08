@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GatewayStep2Return.aspx.cs" Inherits="GatewayStep2Return" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="GatewayStep2Return" Codebehind="GatewayStep2Return.aspx.cs" %>
 
 <!DOCTYPE html>
 

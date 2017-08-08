@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SharedStoryList.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.SharedStory.SharedStoryList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.SharedStory.SharedStoryList" Codebehind="SharedStoryList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlSettings" runat="server">
     <ContentTemplate>

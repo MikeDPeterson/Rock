@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MessageDetailLava.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Podcast.MessageDetailLava" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Podcast.MessageDetailLava" Codebehind="MessageDetailLava.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server" ChildrenAsTriggers="false" UpdateMode="Conditional">
     <ContentTemplate>

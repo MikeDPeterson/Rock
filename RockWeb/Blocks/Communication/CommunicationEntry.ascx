@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CommunicationEntry.ascx.cs" Inherits="RockWeb.Blocks.Communication.CommunicationEntry" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Communication.CommunicationEntry" Codebehind="CommunicationEntry.ascx.cs" %>
 <%@ Register src="CommunicationDetail.ascx" TagName="communicationDetail" TagPrefix="cd" %>
 
 <script>

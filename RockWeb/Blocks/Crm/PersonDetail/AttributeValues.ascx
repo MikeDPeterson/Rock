@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AttributeValues.ascx.cs" Inherits="RockWeb.Blocks.Crm.PersonDetail.AttributeValues" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Crm.PersonDetail.AttributeValues" Codebehind="AttributeValues.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlAttributeValues" runat="server" class="context-attribute-values">
 <ContentTemplate>

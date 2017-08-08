@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PersonViewedSummary.ascx.cs" Inherits="RockWeb.Blocks.Security.PersonViewedSummary" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Security.PersonViewedSummary" Codebehind="PersonViewedSummary.ascx.cs" %>
 <%@ Import Namespace="Rock" %>
 
 <asp:UpdatePanel ID="upPersonViewed" runat="server">

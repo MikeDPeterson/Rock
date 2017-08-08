@@ -41,6 +41,19 @@ namespace RockWeb.Blocks.CheckIn.Config
     [Description( "Configure Check-in areas and groups." )]
     public partial class CheckinAreas : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDeleteWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalid;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSaveSuccess;
+        protected global::Rock.Web.UI.Controls.CheckinArea checkinArea;
+        protected global::Rock.Web.UI.Controls.CheckinGroup checkinGroup;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdAddCheckinLabel;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCheckinLabel;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdLocationPicker;
+        protected global::Rock.Web.UI.Controls.LocationItemPicker locationPicker;
+
+        #endregion
 
         #region Properties
 

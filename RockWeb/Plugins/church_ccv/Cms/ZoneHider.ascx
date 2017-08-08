@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ZoneHider.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Cms.ZoneHider" ViewStateMode="Disabled" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Cms.ZoneHider" ViewStateMode="Disabled" Codebehind="ZoneHider.ascx.cs" %>
 
 <asp:UpdatePanel ID="upDetail" runat="server">
     <ContentTemplate>

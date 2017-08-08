@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AccountDetail.ascx.cs" Inherits="RockWeb.Blocks.Finance.AccountDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Finance.AccountDetail" Codebehind="AccountDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="pnlAccountListUpdatePanel" runat="server">
     <ContentTemplate>

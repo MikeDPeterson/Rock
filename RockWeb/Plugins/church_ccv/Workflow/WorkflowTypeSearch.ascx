@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WorkflowTypeSearch.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Workflow.WorkflowTypeSearch" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Workflow.WorkflowTypeSearch" Codebehind="WorkflowTypeSearch.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

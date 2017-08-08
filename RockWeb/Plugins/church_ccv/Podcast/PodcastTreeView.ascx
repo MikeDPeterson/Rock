@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PodcastTreeView.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Podcast.PodcastTreeView" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Podcast.PodcastTreeView" Codebehind="PodcastTreeView.ascx.cs" %>
 
 <asp:UpdatePanel ID="upCategoryTree" runat="server" UpdateMode="Conditional" ChildrenAsTriggers="false">
     <ContentTemplate>

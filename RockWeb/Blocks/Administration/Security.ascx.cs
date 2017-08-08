@@ -40,6 +40,16 @@ namespace RockWeb.Blocks.Administration
     [Description( "Displays security settings for a specific entity." )]
     public partial class Security : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid rGrid;
+        protected global::Rock.Web.UI.Controls.Grid rGridParentRules;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRoles;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppUser;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Fields
 
         private ISecured iSecured;

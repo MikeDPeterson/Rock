@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AttendanceHistoryList.ascx.cs" Inherits="RockWeb.Blocks.Checkin.AttendanceHistoryList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Checkin.AttendanceHistoryList" Codebehind="AttendanceHistoryList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upAttendanceHistory" runat="server">
     <ContentTemplate>

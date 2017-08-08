@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ZoneBlocks.ascx.cs" Inherits="RockWeb.Blocks.Administration.ZoneBlocks" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Administration.ZoneBlocks" Codebehind="ZoneBlocks.ascx.cs" %>
 <script type="text/javascript">
 </script>
 <asp:UpdatePanel ID="upPages" runat="server">

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ConnectionTypeDetail.ascx.cs" Inherits="RockWeb.Blocks.Connection.ConnectionTypeDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Connection.ConnectionTypeDetail" Codebehind="ConnectionTypeDetail.ascx.cs" %>
 
 <script type="text/javascript">
     function clearActiveDialog() {

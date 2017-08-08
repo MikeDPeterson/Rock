@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Tags.ascx.cs" Inherits="RockWeb.Blocks.Core.Tags" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Core.Tags" Codebehind="Tags.ascx.cs" %>
 
 <div class="row">
     <div class="col-md-12">

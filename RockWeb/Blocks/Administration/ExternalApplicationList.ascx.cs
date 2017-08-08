@@ -39,6 +39,12 @@ namespace RockWeb.Blocks.Administration
     [Description( "Will list all of the defined type values with the type of External Application.  This provides a way for users to select any one of these files." )]
     public partial class ExternalApplicationList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gExternalApplication;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

@@ -40,6 +40,17 @@ namespace RockWeb.Blocks.Administration
     [Description( "Displays the blocks for a given zone." )]
     public partial class ZoneBlocks : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gPageBlocks;
+        protected global::Rock.Web.UI.Controls.Grid gLayoutBlocks;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbBlockName;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlBlockType;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+
+        #endregion
+
         #region Fields
 
         private Rock.Web.Cache.PageCache _Page = null;

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ExceptionDetail.ascx.cs" Inherits="RockWeb.Blocks.Core.ExceptionDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Core.ExceptionDetail" Codebehind="ExceptionDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="upExcpetionDetail" runat="server">
     <ContentTemplate>

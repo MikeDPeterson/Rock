@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RockBookList.ascx.cs" Inherits="RockWeb.Plugins.com_mineCartStudio.Cms.RockBookList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.com_mineCartStudio.Cms.RockBookList" Codebehind="RockBookList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

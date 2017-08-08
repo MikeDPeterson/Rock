@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RockControlGallery.ascx.cs" Inherits="RockWeb.Blocks.Examples.RockControlGallery" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Examples.RockControlGallery" Codebehind="RockControlGallery.ascx.cs" %>
 <script type="text/javascript">
     function pageLoad() {
         prettyPrint();

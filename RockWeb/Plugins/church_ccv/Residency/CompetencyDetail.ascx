@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CompetencyDetail.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Residency.CompetencyDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Residency.CompetencyDetail" Codebehind="CompetencyDetail.ascx.cs" %>
 
 <!-- just to help do css intellisense at design time  -->
 <link rel="stylesheet" type="text/css" href="~/Themes/Rock/Styles/bootstrap.css" visible="false" />

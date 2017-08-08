@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SiteList.ascx.cs" Inherits="RockWeb.Blocks.Cms.SiteList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Cms.SiteList" Codebehind="SiteList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upSites" runat="server">
     <ContentTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TagList.ascx.cs" Inherits="RockWeb.Blocks.Core.TagList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Core.TagList" Codebehind="TagList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upPanel" runat="server">
     <ContentTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="HtmlContentApproval.ascx.cs" Inherits="RockWeb.Blocks.Cms.HtmlContentApproval" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Cms.HtmlContentApproval" Codebehind="HtmlContentApproval.ascx.cs" %>
 
 <asp:UpdatePanel ID="upContent" runat="server">
     <ContentTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MultiPersonSelect.ascx.cs" Inherits="RockWeb.Blocks.CheckIn.MultiPersonSelect" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.CheckIn.MultiPersonSelect" Codebehind="MultiPersonSelect.ascx.cs" %>
 
 <script type="text/javascript">
     Sys.Application.add_load(function () {

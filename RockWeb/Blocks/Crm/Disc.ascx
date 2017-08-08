@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Disc.ascx.cs" Inherits="Rockweb.Blocks.Crm.Disc" ViewStateMode="Enabled" EnableViewState="true" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="Rockweb.Blocks.Crm.Disc" ViewStateMode="Enabled" EnableViewState="true" Codebehind="Disc.ascx.cs" %>
 
 <script type="text/javascript">
     ///<summary>

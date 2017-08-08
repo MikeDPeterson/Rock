@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PurchasedPackages.ascx.cs" Inherits="RockWeb.Blocks.Store.PurchasedPackages" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Store.PurchasedPackages" Codebehind="PurchasedPackages.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

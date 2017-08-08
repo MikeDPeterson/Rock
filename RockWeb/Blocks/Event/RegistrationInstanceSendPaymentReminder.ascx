@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RegistrationInstanceSendPaymentReminder.ascx.cs" Inherits="RockWeb.Blocks.Event.RegistrationInstancePaymentReminder" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Event.RegistrationInstancePaymentReminder" Codebehind="RegistrationInstanceSendPaymentReminder.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

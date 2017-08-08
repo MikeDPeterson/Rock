@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RegistrationInstanceLinkageDetail.ascx.cs" Inherits="RockWeb.Blocks.Event.RegistrationInstanceLinkageDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Event.RegistrationInstanceLinkageDetail" Codebehind="RegistrationInstanceLinkageDetail.ascx.cs" %>
 
 <script type="text/javascript">
     function clearActiveDialog() {

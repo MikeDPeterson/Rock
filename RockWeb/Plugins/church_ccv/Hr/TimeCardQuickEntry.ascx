@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TimeCardQuickEntry.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Hr.TimeCardQuickEntry" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Hr.TimeCardQuickEntry" Codebehind="TimeCardQuickEntry.ascx.cs" %>
 <script runat="server">
 
 

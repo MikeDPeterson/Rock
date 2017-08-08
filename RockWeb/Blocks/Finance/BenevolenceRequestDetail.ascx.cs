@@ -40,6 +40,35 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage("Benevolence Request Statement Page", "The page which summarises a benevolence request for printing", true)]
     public partial class BenevolenceRequestDetail : Rock.Web.UI.RockBlock
     {
+
+        protected global::Rock.Web.UI.Controls.Grid gResults;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbFirstName;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbLastName;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbGovernmentId;
+        protected global::Rock.Web.UI.Controls.EmailBox ebEmail;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbRequestText;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbSummary;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbProvidedNextSteps;
+        protected global::Rock.Web.UI.Controls.DatePicker dpRequestDate;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbHomePhone;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbCellPhone;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbWorkPhone;
+        protected global::Rock.Web.UI.Controls.LocationAddressPicker lapAddress;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlRequestStatus;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlConnectionStatus;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlCaseWorker;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlResultType;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbResultSummary;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbAmount;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdAddResult;
+        protected global::Rock.Web.UI.Controls.ConfirmPageUnload confirmExit;
+
+
+
         #region Properties
         private List<int> DocumentsState { get; set; }
         #endregion

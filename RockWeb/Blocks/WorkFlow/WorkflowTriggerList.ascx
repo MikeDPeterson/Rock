@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WorkflowTriggerList.ascx.cs" Inherits="RockWeb.Blocks.WorkFlow.WorkflowTriggerList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.WorkFlow.WorkflowTriggerList" Codebehind="WorkflowTriggerList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upWorkflowTrigger" runat="server">
     <ContentTemplate>

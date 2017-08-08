@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ContentChannelItemPersonalListLava.ascx.cs" Inherits="RockWeb.Blocks.Cms.ContentChannelItemPersonalListLava" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Cms.ContentChannelItemPersonalListLava" Codebehind="ContentChannelItemPersonalListLava.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

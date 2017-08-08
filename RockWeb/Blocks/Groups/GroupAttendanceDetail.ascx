@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GroupAttendanceDetail.ascx.cs" Inherits="RockWeb.Blocks.Groups.GroupAttendanceDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Groups.GroupAttendanceDetail" Codebehind="GroupAttendanceDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="pnlContent" runat="server">
     <Triggers>

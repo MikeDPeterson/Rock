@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GroupMembers.ascx.cs" Inherits="RockWeb.Blocks.Crm.PersonDetail.GroupMembers" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Crm.PersonDetail.GroupMembers" Codebehind="GroupMembers.ascx.cs" %>
 
 <asp:UpdatePanel ID="upGroupMembers" runat="server">
     <ContentTemplate>

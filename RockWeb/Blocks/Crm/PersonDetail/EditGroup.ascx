@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EditGroup.ascx.cs" Inherits="RockWeb.Blocks.Crm.PersonDetail.EditGroup" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Crm.PersonDetail.EditGroup" Codebehind="EditGroup.ascx.cs" %>
 
 <asp:UpdatePanel ID="upEditGroup" runat="server">
     <ContentTemplate>

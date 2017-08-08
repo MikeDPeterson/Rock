@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ConnectionRequests.ascx.cs" Inherits="RockWeb.Blocks.Crm.PersonDetail.ConnectionRequests" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Crm.PersonDetail.ConnectionRequests" Codebehind="ConnectionRequests.ascx.cs" %>
 <asp:UpdatePanel ID="upPanel" runat="server">
     <ContentTemplate>
 

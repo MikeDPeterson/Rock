@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="RestKeyList.ascx.cs" Inherits="RockWeb.Blocks.Security.RestKeyList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Security.RestKeyList" Codebehind="RestKeyList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlRestKeys" runat="server">
     <ContentTemplate>

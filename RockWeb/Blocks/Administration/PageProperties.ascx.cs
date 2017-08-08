@@ -40,6 +40,39 @@ namespace RockWeb.Blocks.Administration
     [Description( "Displays the page properties." )]
     public partial class PageProperties : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PagePicker ppParentPage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPageName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPageTitle;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbBrowserTitle;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSite;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlLayout;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMenuIcon;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPageTitle;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPageBreadCrumb;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPageIcon;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPageDescription;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlMenuWhen;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMenuDescription;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMenuChildPages;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbBreadCrumbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbBreadCrumbIcon;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRequiresEncryption;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableViewState;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIncludeAdminFooter;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowIndexing;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbCacheDuration;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbBodyCssClass;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbPageRouteWarning;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPageRoute;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceHeaderContent;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbExportChildren;
+
+        #endregion
+
         #region Fields
 
         private int? _pageId = null;

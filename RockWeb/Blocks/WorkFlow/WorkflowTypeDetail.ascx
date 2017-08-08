@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="WorkflowTypeDetail.ascx.cs" Inherits="RockWeb.Blocks.WorkFlow.WorkflowTypeDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.WorkFlow.WorkflowTypeDetail" Codebehind="WorkflowTypeDetail.ascx.cs" %>
 
 
 <script type="text/javascript">

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EditLabel.ascx.cs" Inherits="RockWeb.Blocks.CheckIn.Config.EditLabel" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.CheckIn.Config.EditLabel" Codebehind="EditLabel.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlDevice" runat="server">
     <ContentTemplate>
@@ -12,11 +12,11 @@
             <div class="panel-body">
 
                 <asp:HiddenField ID="hfBinaryFileId" runat="server" />
-                <asp:Panel ID="pnlOpenFile" runat="server" Visible="false" class="row">
+                <asp:Panel ID="pnlOpenFile" runat="server" Visible="false" CssClass="row">
                     <div class="col-md-6">
                         <Rock:RockControlWrapper ID="rcwLabelFile" runat="server" Label="Open Label File">
                             <Rock:ButtonDropDownList ID="ddlLabel" runat="server" />
-                            <asp:LinkButton ID="lbOpenLabel" runat="server" Text="Open" CssClass="btn btn-default margin-l-sm" OnClick="btnOpen_Click" />
+                            <Rock:LinkButton ID="lbOpenLabel" runat="server" Text="Open" CssClass="btn btn-default margin-l-sm" OnClick="btnOpen_Click" />
                         </Rock:RockControlWrapper>
                     </div>
                     <div class="col-md-6">
@@ -35,17 +35,17 @@
 
                         <Rock:RockControlWrapper ID="rcwPrint" runat="server" Label="Test Print to Device">
                             <Rock:ButtonDropDownList ID="ddlDevice" runat="server" />
-                            <asp:LinkButton ID="btnPrint" runat="server" Text="Print" CssClass="btn btn-default margin-l-sm" OnClick="btnPrint_Click" />
+                            <Rock:LinkButton ID="btnPrint" runat="server" Text="Print" CssClass="btn btn-default margin-l-sm" OnClick="btnPrint_Click" />
                         </Rock:RockControlWrapper>
 
                         <div class="well">
                             <h4>Label Viewer</h4>
                             <div class="form-inline">
                                 <Rock:RockDropDownList ID="ddlPrintDensity" runat="server" Label="Print Density">
-                                    <asp:ListItem Text="6 dpmm (152 dpi)" Value="6"></asp:ListItem>
-                                    <asp:ListItem Selected="True" Text="8 dpmm (203 dpi)" Value="8"></asp:ListItem>
-                                    <asp:ListItem Text="12 dpmm (300 dpi)" Value="12"></asp:ListItem>
-                                    <asp:ListItem Text="24 dpmm (600 dpi)" Value="24"></asp:ListItem>
+                                    <Rock:ListItem Text="6 dpmm (152 dpi)" Value="6"></Rock:ListItem>
+                                    <Rock:ListItem Selected="True" Text="8 dpmm (203 dpi)" Value="8"></Rock:ListItem>
+                                    <Rock:ListItem Text="12 dpmm (300 dpi)" Value="12"></Rock:ListItem>
+                                    <Rock:ListItem Text="24 dpmm (600 dpi)" Value="24"></Rock:ListItem>
                                 </Rock:RockDropDownList>
                                 <Rock:RockControlWrapper ID="rcwLabelSize" runat="server" Label="Label Size" FormGroupCssClass="margin-l-md">
                                     <Rock:NumberBox ID="nbLabelWidth" runat="server" CssClass="input-width-xs" Text="4" NumberType="Double"></Rock:NumberBox> X
@@ -53,7 +53,7 @@
                                 </Rock:RockControlWrapper>
                                 <Rock:RockControlWrapper ID="rcwShowLabel" runat="server" Label="Show Label" Help="(0 = first label, 1 = second label, etc.)" FormGroupCssClass="margin-l-md">
                                     <Rock:NumberBox ID="nbShowLabel" runat="server" CssClass="input-width-xs" Text="0" NumberType="Integer" ></Rock:NumberBox> 
-                                    <asp:LinkButton ID="lbRedraw" runat="server" Text="Redraw" CssClass="btn btn-default margin-l-lg" OnClick="btnRedraw_Click" />
+                                    <Rock:LinkButton ID="lbRedraw" runat="server" Text="Redraw" CssClass="btn btn-default margin-l-lg" OnClick="btnRedraw_Click" />
                                 </Rock:RockControlWrapper>
                             </div>
                             <div class="margin-t-md">

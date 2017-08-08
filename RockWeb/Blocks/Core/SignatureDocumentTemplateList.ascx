@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SignatureDocumentTemplateList.ascx.cs" Inherits="RockWeb.Blocks.Core.SignatureDocumentTemplateList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Core.SignatureDocumentTemplateList" Codebehind="SignatureDocumentTemplateList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upSettings" runat="server">
     <ContentTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="STGroupMemberDetail.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Groups.STGroupMemberDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Groups.STGroupMemberDetail" Codebehind="STGroupMemberDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="upDetail" runat="server">
     <ContentTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EntityTypes.ascx.cs" Inherits="RockWeb.Blocks.Core.EntityTypes" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Core.EntityTypes" Codebehind="EntityTypes.ascx.cs" %>
 
 <script type="text/javascript">
     function clearActiveDialog() {

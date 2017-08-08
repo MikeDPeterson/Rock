@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TransactionEntry.Ccv.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Finance.TransactionEntryCcv" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Finance.TransactionEntryCcv" Codebehind="TransactionEntry.Ccv.ascx.cs" %>
 
 <%-- Set UpdateMode to Conditional and use a child UpdatePanel for btnSubmit so that the vue.js stuff works better --%>
 <asp:UpdatePanel ID="upPayment" runat="server" UpdateMode="Conditional">

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Welcome.ascx.cs" Inherits="RockWeb.Blocks.CheckIn.Welcome" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.CheckIn.Welcome" Codebehind="Welcome.ascx.cs" %>
 
 <asp:UpdatePanel ID="upContent" runat="server">
     <Triggers>

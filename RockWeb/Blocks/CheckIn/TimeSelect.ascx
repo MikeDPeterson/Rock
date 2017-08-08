@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="TimeSelect.ascx.cs" Inherits="RockWeb.Blocks.CheckIn.TimeSelect" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.CheckIn.TimeSelect" Codebehind="TimeSelect.ascx.cs" %>
 <asp:UpdatePanel ID="upContent" runat="server">
 <ContentTemplate>
 

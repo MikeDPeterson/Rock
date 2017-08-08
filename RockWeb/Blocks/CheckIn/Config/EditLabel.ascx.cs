@@ -41,6 +41,22 @@ namespace RockWeb.Blocks.CheckIn.Config
     [Description( "Allows editing contents of a label and printing test labels." )]
     public partial class EditLabel : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwLabelFile;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList ddlLabel;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceLabel;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwPrint;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList ddlDevice;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrintDensity;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwLabelSize;
+        protected global::Rock.Web.UI.Controls.NumberBox nbLabelWidth;
+        protected global::Rock.Web.UI.Controls.NumberBox nbLabelHeight;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwShowLabel;
+        protected global::Rock.Web.UI.Controls.NumberBox nbShowLabel;
+
+        #endregion
+
         #region Properties
         Regex regexPrintWidth = new Regex( @"\^PW(\d+)" );
         Regex regexPrintHeight = new Regex( @"\^LL(\d+)" );

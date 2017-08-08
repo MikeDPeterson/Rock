@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CheckinScheduledLocations.ascx.cs" Inherits="RockWeb.Blocks.CheckIn.CheckinScheduledLocations" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.CheckIn.CheckinScheduledLocations" Codebehind="CheckinScheduledLocations.ascx.cs" %>
 
 <asp:UpdatePanel ID="upCheckinScheduleBuilder" runat="server">
     <ContentTemplate>

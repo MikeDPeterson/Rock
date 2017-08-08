@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="DPSOffenderDetail.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.SafetySecurity.DPSOffenderDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.SafetySecurity.DPSOffenderDetail" Codebehind="DPSOffenderDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

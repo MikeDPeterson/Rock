@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ExternalApplicationList.ascx.cs" Inherits="RockWeb.Blocks.Administration.ExternalApplicationList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.Administration.ExternalApplicationList" Codebehind="ExternalApplicationList.ascx.cs" %>
 
 <asp:UpdatePanel ID="upBinaryFile" runat="server">
     <ContentTemplate>
@@ -26,7 +26,7 @@
                                     <%# Eval( "Description" ) %>
                                 </ItemTemplate>
                             </Rock:RockTemplateField>
-                            <asp:HyperLinkField Text="Download" />
+                            <Rock:HyperLinkField Text="Download" />
                         </Columns>
                     </Rock:Grid>
                 </div>

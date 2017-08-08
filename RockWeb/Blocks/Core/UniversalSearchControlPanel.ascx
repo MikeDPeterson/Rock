@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="UniversalSearchControlPanel.ascx.cs" Inherits="RockWeb.Blocks.Core.UniversalSearchControlPanel" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Core.UniversalSearchControlPanel" Codebehind="UniversalSearchControlPanel.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

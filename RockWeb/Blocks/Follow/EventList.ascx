@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EventList.ascx.cs" Inherits="RockWeb.Blocks.Follow.EventList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Follow.EventList" Codebehind="EventList.ascx.cs" %>
 
 <asp:UpdatePanel ID="pnlEventListUpdatePanel" runat="server">
     <ContentTemplate>

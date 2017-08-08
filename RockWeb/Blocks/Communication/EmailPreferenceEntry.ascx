@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="EmailPreferenceEntry.ascx.cs" Inherits="RockWeb.Blocks.Communication.EmailPreferenceEntry" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Communication.EmailPreferenceEntry" Codebehind="EmailPreferenceEntry.ascx.cs" %>
 
 <asp:UpdatePanel ID="upSettings" runat="server">
     <ContentTemplate>

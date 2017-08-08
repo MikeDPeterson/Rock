@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SyncedGroupTypes.ascx.cs" Inherits="RockWeb.Plugins.com_mineCartStudio.PCOSync.SyncedGroupTypes" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.com_mineCartStudio.PCOSync.SyncedGroupTypes" Codebehind="SyncedGroupTypes.ascx.cs" %>
 
 <asp:UpdatePanel ID="upSettings" runat="server">
     <ContentTemplate>

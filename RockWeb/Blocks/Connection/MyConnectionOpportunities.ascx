@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MyConnectionOpportunities.ascx.cs" Inherits="RockWeb.Blocks.Connection.MyConnectionOpportunities" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Connection.MyConnectionOpportunities" Codebehind="MyConnectionOpportunities.ascx.cs" %>
 <%@ Import namespace="Rock" %>
 <script>
     Sys.Application.add_load(function () {

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CompetencyPersonProjectDetail.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Residency.CompetencyPersonProjectDetail" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Residency.CompetencyPersonProjectDetail" Codebehind="CompetencyPersonProjectDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="upCompetencyPersonProjectDetail" runat="server">
     <ContentTemplate>

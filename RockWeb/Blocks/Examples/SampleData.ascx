@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SampleData.ascx.cs" Inherits="RockWeb.Blocks.Examples.SampleData" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Examples.SampleData" Codebehind="SampleData.ascx.cs" %>
 <%@ Reference Control="~/Blocks/Event/RegistrationTemplateDetail.ascx" %>
 
 <script src="/SignalR/hubs"></script>

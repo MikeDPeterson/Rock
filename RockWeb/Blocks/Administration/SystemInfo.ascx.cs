@@ -43,6 +43,12 @@ namespace RockWeb.Blocks.Administration
     [Description( "Displays system information on the installed version of Rock." )]
     public partial class SystemInfo : Rock.Web.UI.RockBlock
     {
+        #region Rock Control
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Fields
 
         private string _catalog = String.Empty;

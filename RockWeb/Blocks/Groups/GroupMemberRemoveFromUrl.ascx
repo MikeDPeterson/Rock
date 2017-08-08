@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GroupMemberRemoveFromUrl.ascx.cs" Inherits="RockWeb.Blocks.Groups.GroupMemberRemoveFromUrl" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Groups.GroupMemberRemoveFromUrl" Codebehind="GroupMemberRemoveFromUrl.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

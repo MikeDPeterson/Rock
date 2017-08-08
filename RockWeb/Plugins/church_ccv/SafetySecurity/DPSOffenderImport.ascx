@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="DPSOffenderImport.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.SafetySecurity.DPSOffenderImport" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.SafetySecurity.DPSOffenderImport" Codebehind="DPSOffenderImport.ascx.cs" %>
 
 <script src="/SignalR/hubs"></script>
 <script type="text/javascript">

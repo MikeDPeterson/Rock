@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AccountPersonList.ascx.cs" Inherits="RockWeb.Plugins.com_mineCartStudio.PCOSync.AccountPersonList" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.com_mineCartStudio.PCOSync.AccountPersonList" Codebehind="AccountPersonList.ascx.cs" %>
 
 
 <asp:UpdatePanel ID="upnlSettings" runat="server">

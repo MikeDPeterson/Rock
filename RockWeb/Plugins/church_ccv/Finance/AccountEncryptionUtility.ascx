@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AccountEncryptionUtility.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Finance.AccountEncryptionUtility" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Finance.AccountEncryptionUtility" Codebehind="AccountEncryptionUtility.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

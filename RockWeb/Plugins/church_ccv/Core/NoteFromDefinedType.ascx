@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="NoteFromDefinedType.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Core.NoteFromDefinedType" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Core.NoteFromDefinedType" Codebehind="NoteFromDefinedType.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PageParameterSelection.ascx.cs" Inherits="RockWeb.Plugins.church_ccv.Cms.PageParameterSelection" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Cms.PageParameterSelection" Codebehind="PageParameterSelection.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

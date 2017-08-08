@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CalendarDimensionSettings.ascx.cs" Inherits="RockWeb.Blocks.Reporting.CalendarDimensionSettings" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Reporting.CalendarDimensionSettings" Codebehind="CalendarDimensionSettings.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>

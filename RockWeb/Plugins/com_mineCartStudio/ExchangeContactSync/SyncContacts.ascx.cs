@@ -49,6 +49,11 @@ namespace RockWeb.Plugins.com_mineCartStudio.ExchangeContactSync
     public partial class SyncContacts : Rock.Web.UI.RockBlock
     {
 
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotice;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbFollowing;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbStaff;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpGroup;
+
         #region Fields
 
         private string _keyPrefix = string.Empty;

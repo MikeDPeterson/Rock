@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="AttendanceAnalytics.ascx.cs" Inherits="RockWeb.Blocks.CheckIn.AttendanceAnalytics" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.CheckIn.AttendanceAnalytics" Codebehind="AttendanceAnalytics.ascx.cs" %>
 
 <style>
     .group-checkboxes .rock-check-box-list label,
