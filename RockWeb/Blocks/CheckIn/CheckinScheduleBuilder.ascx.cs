@@ -38,6 +38,16 @@ namespace RockWeb.Blocks.CheckIn
     [Description( "Helps to build schedules to be used for checkin." )]
     public partial class CheckinScheduleBuilder : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.CategoryPicker pCategory;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotification;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker ddlGroupType;
+        protected global::Rock.Web.UI.Controls.LocationItemPicker pkrParentLocation;
+        protected global::Rock.Web.UI.Controls.Grid gGroupLocationSchedule;
+
+        #endregion
 
         #region Control Methods
 

@@ -36,6 +36,11 @@ namespace RockWeb.Blocks.CheckIn
     [LinkedPage( "Next Page (Family Check-in)", "", false, "", "", 5, "FamilyNextPage" )]
     public partial class FamilySelect : CheckInBlock
     {
+        #region Rock Control
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+
+        #endregion
         protected override void OnLoad( EventArgs e )
         {
             base.OnLoad( e );

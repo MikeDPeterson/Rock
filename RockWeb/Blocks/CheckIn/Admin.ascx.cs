@@ -43,6 +43,16 @@ namespace RockWeb.Blocks.CheckIn
     [BooleanField( "Enable Kiosk Match By Name", "Enable a kiosk match by computer name by doing reverseIP lookup to get computer name based on IP address", false, "", 8, "EnableReverseLookup" )]
     public partial class Admin : CheckInBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTheme;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlKiosk;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCheckinType;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblPrimaryGroupTypes;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblAlternateGroupTypes;
+
+        #endregion
         protected override void OnLoad( EventArgs e )
         {
             RockPage.AddScriptLink( "~/Blocks/CheckIn/Scripts/geo-min.js" );

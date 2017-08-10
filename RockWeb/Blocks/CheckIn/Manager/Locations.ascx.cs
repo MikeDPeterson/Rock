@@ -47,6 +47,16 @@ namespace RockWeb.Blocks.CheckIn.Manager
     [DefinedValueField( Rock.SystemGuid.DefinedType.CHART_STYLES, "Chart Style", order: 4, defaultValue: Rock.SystemGuid.DefinedValue.CHART_STYLE_ROCK )]
     public partial class Locations : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockUpdatePanel upnlContent;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarning;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSearch;
+        protected global::Rock.Web.UI.Controls.Toggle tglHeadingRoom;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfThreshold;
+        protected global::Rock.Web.UI.Controls.NumberBox nbThreshold;
+
+        #endregion
         #region Fields
 
         private string _configuredMode = "L";

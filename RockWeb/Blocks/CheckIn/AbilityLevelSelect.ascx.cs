@@ -38,6 +38,11 @@ namespace RockWeb.Blocks.CheckIn
     [LinkedPage( "Previous Page (Family Check-in)", "The page to navigate back to if none of the people and schedules have been processed.", false, "", "", 8, "FamilyPreviousPage" )]
     public partial class AbilityLevelSelect : CheckInBlockMultiPerson
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+
+        #endregion
         private string _personAbilityLevelGuid;
         private bool _shouldLowlight = true;
 

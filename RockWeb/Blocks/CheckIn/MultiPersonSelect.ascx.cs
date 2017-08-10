@@ -33,6 +33,11 @@ namespace RockWeb.Blocks.CheckIn
     [Description("Lists people who match the selected family and provides option of selecting multiple.")]
     public partial class MultiPersonSelect : CheckInBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+
+        #endregion
         bool _hidePhotos = false;
 
         protected override void OnInit( EventArgs e )

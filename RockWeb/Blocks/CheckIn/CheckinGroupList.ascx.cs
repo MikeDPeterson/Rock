@@ -44,6 +44,11 @@ namespace RockWeb.Blocks.Checkin
     [BooleanField( "Allow Campus Filter", "Should block add an option to allow filtering attendance counts and percentage by campus?", false, "", 2 )]
     public partial class CheckinGroupList : Rock.Web.UI.RockBlock
     {
+        #region Rock Control
+
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlCampus;
+
+        #endregion
         #region Fields
 
         // used for private variables

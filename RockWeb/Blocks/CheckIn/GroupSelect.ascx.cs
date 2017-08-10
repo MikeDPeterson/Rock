@@ -34,6 +34,11 @@ namespace RockWeb.Blocks.CheckIn
     [Description("Displays a list of groups that a person is configured to checkin to.")]
     public partial class GroupSelect : CheckInBlockMultiPerson
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+
+        #endregion
         /// <summary>
         /// Determines if the block requires that a selection be made. This is used to determine if user should
         /// be redirected to this block or not.

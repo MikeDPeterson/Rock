@@ -40,6 +40,14 @@ namespace RockWeb.Blocks.CheckIn.Manager
     [LinkedPage("Manager Page", "Page used to manage check-in locations")]
     public partial class Person : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockLiteral lEmail;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwFamily;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwCheckinHistory;
+        protected global::Rock.Web.UI.Controls.Grid gHistory;
+        
+        #endregion
         #region Fields
 
         // used for private variables

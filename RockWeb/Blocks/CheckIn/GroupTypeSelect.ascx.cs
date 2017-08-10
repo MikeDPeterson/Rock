@@ -36,6 +36,11 @@ namespace RockWeb.Blocks.CheckIn
     [BooleanField( "Select All and Skip", "Select this option if end-user should never see screen to select group types, all group types will automatically be selected and all the groups in all types will be available.", false, "", 8, "SelectAll" )]
     public partial class GroupTypeSelect : CheckInBlockMultiPerson
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+
+        #endregion
         /// <summary>
         /// Determines if the block requires that a selection be made. This is used to determine if user should
         /// be redirected to this block or not.

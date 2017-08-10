@@ -58,33 +58,6 @@ namespace RockWeb.Blocks.CheckIn {
         protected global::System.Web.UI.WebControls.HiddenField hfFilterUrl;
         
         /// <summary>
-        /// btnGroupByWeek control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGroupByWeek;
-        
-        /// <summary>
-        /// btnGroupByMonth control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGroupByMonth;
-        
-        /// <summary>
-        /// btnGroupByYear control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGroupByYear;
-        
-        /// <summary>
         /// rptGroupTypes control.
         /// </summary>
         /// <remarks>
@@ -92,24 +65,6 @@ namespace RockWeb.Blocks.CheckIn {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptGroupTypes;
-        
-        /// <summary>
-        /// btnShowByChart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnShowByChart;
-        
-        /// <summary>
-        /// btnShowByAttendees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnShowByAttendees;
         
         /// <summary>
         /// btnApply control.
@@ -148,51 +103,6 @@ namespace RockWeb.Blocks.CheckIn {
         protected global::System.Web.UI.WebControls.Panel pnlShowByChart;
         
         /// <summary>
-        /// btnGraphByTotal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGraphByTotal;
-        
-        /// <summary>
-        /// btnGraphByGroup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGraphByGroup;
-        
-        /// <summary>
-        /// btnGraphByCampus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGraphByCampus;
-        
-        /// <summary>
-        /// btnGraphByLocation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGraphByLocation;
-        
-        /// <summary>
-        /// btnGraphByTime control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnGraphByTime;
-        
-        /// <summary>
         /// lShowChartAttendanceGrid control.
         /// </summary>
         /// <remarks>
@@ -218,33 +128,6 @@ namespace RockWeb.Blocks.CheckIn {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlShowByAttendees;
-        
-        /// <summary>
-        /// btnViewAttendees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink btnViewAttendees;
-        
-        /// <summary>
-        /// btnViewParentsOfAttendees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink btnViewParentsOfAttendees;
-        
-        /// <summary>
-        /// btnViewChildrenOfAttendees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink btnViewChildrenOfAttendees;
         
         /// <summary>
         /// pnlByVisitOptions control.

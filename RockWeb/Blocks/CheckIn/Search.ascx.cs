@@ -33,6 +33,15 @@ namespace RockWeb.Blocks.CheckIn
     [Description("Displays keypad for searching on phone numbers.")]
     public partial class Search : CheckInBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPhone;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtName;
+        protected global::Rock.Web.UI.Controls.BootstrapButton lbSearch;
+
+        #endregion
+
         protected override void OnInit( EventArgs e )
         {
             base.OnInit( e );

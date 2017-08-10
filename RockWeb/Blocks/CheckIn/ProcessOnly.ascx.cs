@@ -34,6 +34,11 @@ namespace RockWeb.Blocks.CheckIn
 
     public partial class ProcessOnly : CheckInBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+
+        #endregion
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Load" /> event.
         /// </summary>

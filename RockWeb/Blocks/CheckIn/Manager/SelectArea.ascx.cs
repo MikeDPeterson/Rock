@@ -43,8 +43,13 @@ namespace RockWeb.Blocks.CheckIn.Manager
     [LinkedPage( "Location Page", "Page used to display locations", order: 2 )]
     public partial class SelectArea : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockUpdatePanel upnlContent;
+
+        #endregion
         #region Fields
-    
+
         #endregion
 
         #region Properties

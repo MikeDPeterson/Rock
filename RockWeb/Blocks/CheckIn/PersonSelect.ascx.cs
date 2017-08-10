@@ -33,6 +33,11 @@ namespace RockWeb.Blocks.CheckIn
     [Description("Lists people who match the selected family to pick to checkin.")]
     public partial class PersonSelect : CheckInBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+
+        #endregion
         protected override void OnLoad( EventArgs e )
         {
             base.OnLoad( e );

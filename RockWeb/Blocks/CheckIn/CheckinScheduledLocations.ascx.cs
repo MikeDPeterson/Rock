@@ -39,6 +39,11 @@ namespace RockWeb.Blocks.CheckIn
     [Description( "Helps to enable/disable schedules associated with the configured group types at a kiosk" )]
     public partial class CheckinScheduledLocations : Rock.CheckIn.CheckInBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gGroupLocationSchedule;
+
+        #endregion
         #region Control Methods
 
         /// <summary>

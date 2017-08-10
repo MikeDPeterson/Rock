@@ -42,6 +42,17 @@ namespace RockWeb.Blocks.Checkin
     [ContextAware]
     public partial class AttendanceHistoryList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAttendanceGroup;
+        protected global::Rock.Web.UI.Controls.SchedulePicker spSchedule;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlDidAttend;
+        protected global::Rock.Web.UI.Controls.Grid gHistory;
+
+        #endregion
         #region Fields
 
         private Person _person = null;

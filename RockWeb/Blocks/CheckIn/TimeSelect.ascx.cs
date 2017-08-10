@@ -33,6 +33,11 @@ namespace RockWeb.Blocks.CheckIn
     [Description("Displays a list of times to checkin for.")]
     public partial class TimeSelect : CheckInBlock
     {
+        #region Rock Control
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+
+        #endregion
         protected override void OnLoad( EventArgs e )
         {
             base.OnLoad( e );

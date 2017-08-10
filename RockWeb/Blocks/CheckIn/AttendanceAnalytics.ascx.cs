@@ -49,6 +49,37 @@ namespace RockWeb.Blocks.CheckIn
     [DefinedValueField( Rock.SystemGuid.DefinedType.CHART_STYLES, "Chart Style", "", true, false, Rock.SystemGuid.DefinedValue.CHART_STYLE_ROCK, "", 4 )]
     public partial class AttendanceAnalytics : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GroupTypePicker ddlAttendanceType;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupTypeWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDateRangeWarning;
+        protected global::Rock.Web.UI.Controls.SlidingDateRangePicker drpSlidingDateRange;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfGroupBy;
+        protected global::Rock.Web.UI.Controls.SchedulePicker spSchedules;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList clbCampuses;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupsWarning;
+        protected global::Rock.Web.UI.Controls.DataViewPicker dvpDataView;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfShowBy;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfGraphBy;
+        protected global::Rock.Web.UI.Controls.LineChart lcAttendance;
+        protected global::Rock.Web.UI.Controls.BarChart bcAttendance;
+        protected global::Rock.Web.UI.Controls.Grid gChartAttendance;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfViewBy;
+        protected global::Rock.Web.UI.Controls.RockRadioButton radAllAttendees;
+        protected global::Rock.Web.UI.Controls.RockRadioButton radByVisit;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNthVisit;
+        protected global::Rock.Web.UI.Controls.RockRadioButton radByPattern;
+        protected global::Rock.Web.UI.Controls.NumberBox tbPatternXTimes;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPatternAndMissed;
+        protected global::Rock.Web.UI.Controls.NumberBox tbPatternMissedXTimes;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMissedDateRangeRequired;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpPatternDateRange;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbAttendeesError;
+        protected global::Rock.Web.UI.Controls.Grid gAttendeesAttendance;
+        
+        #endregion
+
         #region Fields
 
         private RockContext _rockContext = null;

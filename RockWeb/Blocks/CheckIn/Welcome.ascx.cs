@@ -40,6 +40,14 @@ namespace RockWeb.Blocks.CheckIn
     [TextField( "Check-in Button Text", "The text to display on the check-in button.", false, Key = "CheckinButtonText" )]
     public partial class Welcome : CheckInBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfRefreshTimerSeconds;
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarning;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPIN;
+
+        #endregion
+
         protected override void OnInit( EventArgs e )
         {
             base.OnInit( e );
