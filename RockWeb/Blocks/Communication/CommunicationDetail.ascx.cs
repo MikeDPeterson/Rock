@@ -50,6 +50,22 @@ namespace RockWeb.Blocks.Communication
 
     public partial class CommunicationDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.Grid gPending;
+        protected global::Rock.Web.UI.Controls.Grid gDelivered;
+        protected global::Rock.Web.UI.Controls.Grid gFailed;
+        protected global::Rock.Web.UI.Controls.Grid gCancelled;
+        protected global::Rock.Web.UI.Controls.Grid gOpened;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpEvents;
+        protected global::Rock.Web.UI.Controls.RockLiteral lDetails;
+        protected global::Rock.Web.UI.Controls.Grid gActivity;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+
+        #endregion
+
         #region Fields
 
         private bool _editingApproved = false;

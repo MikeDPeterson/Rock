@@ -46,6 +46,15 @@ namespace RockWeb.Blocks.Communication
     [TextField( "Reasons to Exclude", "A delimited list of the Inactive Reasons to exclude from Reason list", false, "No Activity,Deceased", "", 5)]
     public partial class EmailPreferenceEntry : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblEmailPreference;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlInactiveReason;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbInactiveNote;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Fields
 
         private Person _person = null;

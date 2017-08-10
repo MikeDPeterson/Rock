@@ -40,6 +40,15 @@ namespace RockWeb.Blocks.Communication
     [LinkedPage("Detail Page")]
     public partial class TemplateList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppCreatedBy;
+        protected global::Rock.Web.UI.Controls.ComponentPicker cpMedium;
+        protected global::Rock.Web.UI.Controls.Grid gCommunication;
+
+        #endregion
 
         #region Fields
 

@@ -45,6 +45,13 @@ namespace RockWeb.Blocks.Communication
     [Description( "Used for editing a communication template that can be selected when creating a new communication, SMS, etc. to people." )]
     public partial class TemplateDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+
+        #endregion
+
         #region Fields
 
         private bool _canEdit = false;

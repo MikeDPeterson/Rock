@@ -138,7 +138,7 @@
                     </section>
 
                     <Rock:PanelWidget ID="wpMessageDetails" runat="server" Title="Message Details">
-                        <asp:Literal ID="lDetails" runat="server" />
+                        <Rock:RockLiteral ID="lDetails" runat="server" />
                     </Rock:PanelWidget>
 
                     <Rock:PanelWidget ID="wpEvents" runat="server" Title="Activity" Expanded="false">

@@ -38,6 +38,20 @@ namespace RockWeb.Blocks.Communication
     [Description( "Allows the administration of a system email." )]
     public partial class SystemEmailDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbFromName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbFrom;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTo;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbCc;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbBcc;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbSubject;
+        protected global::Rock.Web.UI.Controls.CodeEditor tbBody;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

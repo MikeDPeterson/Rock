@@ -58,6 +58,18 @@ namespace RockWeb.Blocks.Communication
 	[BooleanField( "Show Attachment Uploader", "Should the attachment uploader be shown for email communications.", true, "", 7 )]
     public partial class CommunicationEntry : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidTransport;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbBulk;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAddPerson;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTemplate;
+        protected global::Rock.Web.UI.Controls.DateTimePicker dtpFutureSend;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbTestResult;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+
+        #endregion
 
         #region Fields
 

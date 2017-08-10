@@ -41,6 +41,15 @@ namespace RockWeb.Blocks.Communication
     [LinkedPage( "Detail Page" )]
     public partial class SystemEmailList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.Grid gEmailTemplates;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

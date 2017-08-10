@@ -43,6 +43,20 @@ namespace RockWeb.Blocks.Communication
     [LinkedPage( "Detail Page" )]
     public partial class CommunicationList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSubject;
+        protected global::Rock.Web.UI.Controls.ComponentPicker cpMedium;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppSender;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbContent;
+        protected global::Rock.Web.UI.Controls.Grid gCommunication;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+
+        #endregion
+
         private bool canApprove = false;
 
         #region Control Methods
