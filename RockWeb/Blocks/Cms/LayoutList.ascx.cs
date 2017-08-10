@@ -40,6 +40,13 @@ namespace RockWeb.Blocks.Cms
     [LinkedPage("Detail Page")]
     public partial class LayoutList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gLayouts;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

@@ -40,6 +40,15 @@ namespace RockWeb.Blocks.Crm
     [Description("Displays the details for a specific layout.")]
     public partial class LayoutDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbLayoutName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLayout;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+
+        #endregion
 
         #region Fields
 

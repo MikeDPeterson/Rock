@@ -47,6 +47,12 @@ namespace RockWeb.Blocks.Cms
     [BooleanField( "Include RSS Link", "Flag indicating that an RSS link should be included in the page header.", true, "Feed" )]
     public partial class RSSFeedItem : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRssItem;
+
+        #endregion
+
         #region Private Properties
 
         private string TemplateCacheKey

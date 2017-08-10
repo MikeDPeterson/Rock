@@ -44,6 +44,37 @@ namespace RockWeb.Blocks.Cms
     [Description("Displays the details for a content channel.")]
     public partial class ContentChannelDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlContentChannel;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.ModalAlert maContentChannelWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlChannelType;
+        protected global::Rock.Web.UI.Controls.Grid gChildContentChannels;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlContentControlType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRootImageDirectory;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRequireApproval;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIndexChannel;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbContentChannelItemPublishingPoint;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbItemsManuallyOrdered;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbChildItemsManuallyOrdered;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableRss;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbChannelUrl;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbItemUrl;
+        protected global::Rock.Web.UI.Controls.NumberBox nbTimetoLive;
+        protected global::Rock.Web.UI.Controls.Grid gItemAttributes;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.ModalAlert modalAlert;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgChildContentChannel;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlChildContentChannel;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgItemAttributes;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtItemAttributes;
+        
+        #endregion
 
         #region Properties
 

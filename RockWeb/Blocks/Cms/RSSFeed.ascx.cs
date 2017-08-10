@@ -49,6 +49,12 @@ namespace RockWeb.Blocks.Cms
     [LinkedPage("Detail Page")]
     public partial class RSSFeed : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRSSFeed;
+
+        #endregion
+
         #region Private Properties
 
         private string TemplateCacheKey

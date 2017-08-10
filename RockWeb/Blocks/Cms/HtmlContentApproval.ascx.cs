@@ -37,6 +37,18 @@ namespace RockWeb.Blocks.Cms
     [SecurityAction( Authorization.APPROVE, "The roles and/or users that have access to approve HTML content." )]
     public partial class HtmlContentApproval : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gContentListFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSiteFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlApprovedFilter;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppApprovedByFilter;
+        protected global::Rock.Web.UI.Controls.Grid gContentList;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdPreview;
+
+        #endregion
+
         #region Fields
 
         private bool _canApprove = false;

@@ -31,6 +31,12 @@ namespace RockWeb.Blocks.Cms
     [TextField("Network", "The network to compare to in the format of '192.168.0.0/24'. See http://www.ipaddressguide.com/cidr for assistance in calculating CIDR addresses.", false, "", order:2)]
     public partial class Redirect : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbAlert;
+
+        #endregion
+
         protected override void OnInit( EventArgs e )
         {
             base.OnInit( e );

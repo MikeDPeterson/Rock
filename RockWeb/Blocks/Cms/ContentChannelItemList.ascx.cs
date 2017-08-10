@@ -49,6 +49,17 @@ namespace RockWeb.Blocks.Cms
     [ContentChannelField("Content Channel", "If set the block will ignore content channel query parameters", false)]
     public partial class ContentChannelItemList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDateRange;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gItems;
+
+        #endregion
+
         #region Fields
 
         private int? _channelId = null;

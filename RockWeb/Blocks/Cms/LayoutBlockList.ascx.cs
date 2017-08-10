@@ -39,6 +39,13 @@ namespace RockWeb.Blocks.Cms
     [Description("Lists blocks that are on a given site layout.")]
     public partial class LayoutBlockList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gLayoutBlocks;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -46,6 +46,13 @@ namespace RockWeb.Blocks.Cms
 
     public partial class ThemeStyler : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessages;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceOverrides;
+
+        #endregion
+
         #region Fields
 
         private string _themeName = string.Empty;

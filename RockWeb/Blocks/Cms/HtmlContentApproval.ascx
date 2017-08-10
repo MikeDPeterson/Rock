@@ -15,9 +15,9 @@
                         <Rock:GridFilter ID="gContentListFilter" runat="server">
                             <Rock:RockDropDownList ID="ddlSiteFilter" runat="server" Label="Site" />
                             <Rock:RockDropDownList ID="ddlApprovedFilter" runat="server" Label="Approval Status">
-                                <asp:ListItem Text="All" Value="All"></asp:ListItem>
-                                <asp:ListItem Text="Approved" Value="Approved"></asp:ListItem>
-                                <asp:ListItem Text="Unapproved" Value="Unapproved"></asp:ListItem>
+                                <Rock:ListItem Text="All" Value="All"></Rock:ListItem>
+                                <Rock:ListItem Text="Approved" Value="Approved"></Rock:ListItem>
+                                <Rock:ListItem Text="Unapproved" Value="Unapproved"></Rock:ListItem>
                             </Rock:RockDropDownList>
                             <Rock:PersonPicker ID="ppApprovedByFilter" runat="server" Label="Approved By" />
                         </Rock:GridFilter>

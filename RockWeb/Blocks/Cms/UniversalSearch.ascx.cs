@@ -56,6 +56,21 @@ namespace RockWeb.Blocks.Cms
     [BooleanField("Show Scores", "Enables the display of scores for help with debugging.", category: "CustomSetting" )]
     public partial class UniversalSearch : RockBlockCustomSettings
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSearch;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblModelFilter;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSearchType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbResultsPerPage;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowRefinedSearch;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowScores;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblEnabledModels;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbBaseFieldFilters;
+
+        #endregion
+
         #region Fields
 
         private const int _defaultItemsPerPage = 20;

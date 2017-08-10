@@ -40,6 +40,13 @@ namespace RockWeb.Blocks.Cms
     [LinkedPage("Detail Page")]
     public partial class ContentChannelTypeList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gContentChannelType;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

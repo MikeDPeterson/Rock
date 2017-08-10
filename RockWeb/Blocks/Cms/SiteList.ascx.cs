@@ -37,6 +37,12 @@ namespace RockWeb.Blocks.Cms
     [LinkedPage("Detail Page")]
     public partial class SiteList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gSites;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -78,6 +78,17 @@ namespace RockWeb.Blocks.Cms
     
     public partial class LinkListLava : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarningValues;
+        protected global::Rock.Web.UI.Controls.Grid gLinks;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgLink;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblLinkType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLink;
+
+        #endregion
+
         #region Fields
 
         bool _canEdit = false;

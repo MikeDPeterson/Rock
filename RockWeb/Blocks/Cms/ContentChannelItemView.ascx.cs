@@ -47,6 +47,19 @@ namespace RockWeb.Blocks.Cms
     [ContentChannelTypesField( "Content Channel Types Exclude", "Select content channel types to exclude from this block. Note that this setting is only effective if 'Content Channel Types Include' has no specific content channel types selected.", false, key: "ContentChannelTypesExclude", order: 3 )]
     public partial class ContentChannelItemView : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Toggle tglStatus;
+        protected global::Rock.Web.UI.Controls.GridFilter gfFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDateRange;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppCreatedBy;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gContentChannelItems;
+
+        #endregion
+
         #region Fields
 
         private const string STATUS_FILTER_SETTING = "ContentChannelItemView_StatusFilter";

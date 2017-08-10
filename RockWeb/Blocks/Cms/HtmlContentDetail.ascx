@@ -17,14 +17,14 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Edit HTML">
                 <Content>
 
-                    <asp:UpdatePanel runat="server" ID="upnlEdit">
+                    <Rock:RockUpdatePanel runat="server" ID="upnlEdit">
                         <ContentTemplate>
-                            <asp:HiddenField ID="hfVersion" runat="server" />
+                            <Rock:HiddenFieldWithClass ID="hfVersion" runat="server" />
                             <asp:Panel ID="pnlEdit" runat="server" Visible="false">
                                 <Rock:NotificationBox ID="nbInvalidHtml" runat="server" NotificationBoxType="Warning" Visible="false" />
 
                                 <!-- Approval -->
-                                <asp:UpdatePanel ID="upnlApproval" runat="server">
+                                <Rock:RockUpdatePanel ID="upnlApproval" runat="server">
                                     <ContentTemplate>
 
                                         <div class="alert alert-info">
@@ -42,7 +42,7 @@
                                             <asp:HiddenField ID="hfApprovalStatus" runat="server" />
                                         </div>
                                     </ContentTemplate>
-                                </asp:UpdatePanel>
+                                </Rock:RockUpdatePanel>
 
                                 <div class="pull-right">
                                     <asp:Literal runat="server" ID="lVersion" Text="Version X | " />
@@ -76,12 +76,12 @@
                                     </Rock:Grid>
                                 </div>
 
-                                <asp:LinkButton runat="server" ID="lbReturnToEdit" CssClass="btn btn-primary" Text="Back" OnClick="lbReturnToEdit_Click" />
+                                <Rock:LinkButton runat="server" ID="lbReturnToEdit" CssClass="btn btn-primary" Text="Back" OnClick="lbReturnToEdit_Click" />
 
                             </asp:Panel>
 
                         </ContentTemplate>
-                    </asp:UpdatePanel>
+                    </Rock:RockUpdatePanel>
                 </Content>
             </Rock:ModalDialog>
         </asp:Panel>

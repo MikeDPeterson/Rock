@@ -21,7 +21,7 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Channel Configuration" OnCancelScript="clearDialog();">
                 <Content>
 
-                    <asp:UpdatePanel ID="upnlEdit" runat="server">
+                    <Rock:UpdatePanel ID="upnlEdit" runat="server">
                         <ContentTemplate>
 
                             <Rock:NotificationBox ID="nbError" runat="server" Heading="Error" Title="Query Error!" NotificationBoxType="Danger" Visible="false" />
@@ -98,7 +98,7 @@
                             </div>
 
                         </ContentTemplate>
-                    </asp:UpdatePanel>
+                    </Rock:UpdatePanel>
                 </Content>
             </Rock:ModalDialog>
 

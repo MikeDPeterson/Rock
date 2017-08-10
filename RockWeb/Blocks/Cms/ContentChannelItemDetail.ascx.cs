@@ -49,6 +49,29 @@ namespace RockWeb.Blocks.Cms
     [ContentChannelField("Content Channel", "If set the block will ignore content channel query parameters", false)]
     public partial class ContentChannelItemDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlContentChannel;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.NumberBox nbPriority;
+        protected global::Rock.Web.UI.Controls.DatePicker dpStart;
+        protected global::Rock.Web.UI.Controls.DateTimePicker dtpStart;
+        protected global::Rock.Web.UI.Controls.DatePicker dpExpire;
+        protected global::Rock.Web.UI.Controls.DateTimePicker dtpExpire;
+        protected global::Rock.Web.UI.Controls.HtmlEditor htmlContent;
+        protected global::Rock.Web.UI.Controls.Grid gChildItems;
+        protected global::Rock.Web.UI.Controls.Grid gParentItems;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgAddChild;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAddNewItemChannel;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAddExistingItemChannel;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAddExistingItem;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgRemoveChild;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfRemoveChildItem;
+
+        #endregion
 
         #region Fields
 

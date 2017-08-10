@@ -48,6 +48,29 @@ namespace RockWeb.Blocks.Cms
 
     public partial class PublicProfileEdit : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotAuthorized;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroup;
+        protected global::Rock.Web.UI.Controls.ImageEditor imgPhoto;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTitle;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbNickName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSuffix;
+        protected global::Rock.Web.UI.Controls.BirthdayPicker bpBirthDay;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblRole;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblGender;
+        protected global::Rock.Web.UI.Controls.YearPicker ypGraduation;
+        protected global::Rock.Web.UI.Controls.GradePicker ddlGradePicker;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbEmail;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblEmailPreference;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsMailingAddress;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsPhysicalAddress;
+        
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

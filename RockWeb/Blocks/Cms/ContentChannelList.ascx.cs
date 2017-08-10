@@ -41,6 +41,14 @@ namespace RockWeb.Blocks.Cms
     [LinkedPage( "Detail Page" )]
     public partial class ContentChannelList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlType;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gContentChannels;
+
+        #endregion
 
         #region Control Methods
 

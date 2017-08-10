@@ -43,6 +43,40 @@ namespace RockWeb.Blocks.Cms
     [Description( "Displays the details of a specific site." )]
     public partial class SiteDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDefaultPageNotice;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbSiteName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlTheme;
+        protected global::Rock.Web.UI.Controls.PagePicker ppDefaultPage;
+        protected global::Rock.Web.UI.Controls.PagePicker ppLoginPage;
+        protected global::Rock.Web.UI.Controls.PagePicker ppChangePasswordPage;
+        protected global::Rock.Web.UI.Controls.PagePicker ppCommunicationPage;
+        protected global::Rock.Web.UI.Controls.PagePicker ppRegistrationPage;
+        protected global::Rock.Web.UI.Controls.PagePicker ppPageNotFoundPage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbSiteDomains;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbErrorPage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbGoogleAnalytics;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRequireEncryption;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableMobileRedirect;
+        protected global::Rock.Web.UI.Controls.PagePicker ppMobilePage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbExternalURL;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRedirectTablets;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnablePageViews;
+        protected global::Rock.Web.UI.Controls.NumberBox nbPageViewRetentionPeriodDays;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbAllowedFrameDomains;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowIndexing;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableIndexing;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbIndexStartingLocation;
+        protected global::Rock.Web.UI.Controls.CodeEditor cePageHeaderContent;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdThemeCompile;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

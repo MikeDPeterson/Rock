@@ -41,6 +41,15 @@ namespace RockWeb.Blocks.Cms
     [BooleanField("Show Page Id", "Enables the hiding of the page id column.", true)]
     public partial class PageList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gPagesFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLayoutFilter;
+        protected global::Rock.Web.UI.Controls.Grid gPages;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

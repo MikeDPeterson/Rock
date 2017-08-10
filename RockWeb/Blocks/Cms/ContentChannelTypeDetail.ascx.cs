@@ -41,6 +41,22 @@ namespace RockWeb.Blocks.Cms
     [Description("Displays the details for a content channel type.")]
     public partial class ContentChannelTypeDetail : RockBlock, IDetailBlock
     {
+        #region Rock Control
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlDateRangeType;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIncludeTime;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDisablePriority;
+        protected global::Rock.Web.UI.Controls.Grid gChannelAttributes;
+        protected global::Rock.Web.UI.Controls.Grid gItemAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgChannelAttributes;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtChannelAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgItemAttributes;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtItemAttributes;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

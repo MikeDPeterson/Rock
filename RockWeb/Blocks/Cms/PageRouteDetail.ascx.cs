@@ -40,6 +40,17 @@ namespace RockWeb.Blocks.Cms
     [Description("Displays the details of a page route.")]
     public partial class PageRouteDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.PagePicker ppPage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lSite;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbRoute;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

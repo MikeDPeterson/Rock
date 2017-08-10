@@ -39,6 +39,13 @@ namespace RockWeb.Blocks.Cms
     [LinkedPage("Detail Page")]
     public partial class PageRouteList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gPageRoutes;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

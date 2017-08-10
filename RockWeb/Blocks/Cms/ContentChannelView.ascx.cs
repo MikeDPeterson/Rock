@@ -67,6 +67,27 @@ namespace RockWeb.Blocks.Cms
 
     public partial class ContentChannelView : RockBlockCustomSettings
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbContentError;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlChannel;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblStatus;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceTemplate;
+        protected global::Rock.Web.UI.Controls.NumberBox nbCount;
+        protected global::Rock.Web.UI.Controls.NumberBox nbCacheDuration;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSetPageTitle;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDebug;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMergeContent;
+        protected global::Rock.Web.UI.Controls.PagePicker ppDetailPage;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbQueryParamFiltering;
+        protected global::Rock.Web.UI.Controls.KeyValueList kvlOrder;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSetRssAutodiscover;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMetaDescriptionAttribute;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMetaImageAttribute;
+        
+        #endregion
+        
         #region Fields
 
         private readonly string ITEM_TYPE_NAME = "Rock.Model.ContentChannelItem";

@@ -43,6 +43,16 @@ namespace RockWeb.Blocks.Cms
     [LinkedPage("Theme Styler Page", "Page to use for the theme styler page.")]
     public partial class ThemeList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessages;
+        protected global::Rock.Web.UI.Controls.Grid gThemes;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdThemeCompile;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdThemeClone;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNewThemeName;
+
+        #endregion
+
         #region Fields
 
         // used for private variables
