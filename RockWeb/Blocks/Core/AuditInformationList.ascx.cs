@@ -40,6 +40,18 @@ namespace RockWeb.Blocks.Core
 
     public partial class AuditInformationList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker etpEntityTypeFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEntityIdFilter;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppWhoFilter;
+        protected global::Rock.Web.UI.Controls.Grid gAuditInformationList;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdProperties;
+        protected global::Rock.Web.UI.Controls.Grid gProperties;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

@@ -39,6 +39,19 @@ namespace RockWeb.Blocks.Core
     [TextField("Workflow Button Text", "The button text to show for the rerun workflow button.", false, "Rerun Workflow", category:"Advanced", order: 1)]
     public partial class BinaryFileDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWorkflowSuccess;
+        protected global::Rock.Web.UI.Controls.FileUploader fsFile;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbMimeType;
+        protected global::Rock.Web.UI.Controls.BinaryFileTypePicker ddlBinaryFileType;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

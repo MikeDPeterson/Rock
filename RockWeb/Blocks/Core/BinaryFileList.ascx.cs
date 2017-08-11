@@ -37,6 +37,17 @@ namespace RockWeb.Blocks.Core
     [BinaryFileTypeField]
     public partial class BinaryFileList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter fBinaryFile;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbType;
+        protected global::Rock.Web.UI.Controls.RockCheckBox dbIncludeTemporary;
+        protected global::Rock.Web.UI.Controls.Grid gBinaryFile;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+
+        #endregion
+
         private BinaryFileType binaryFileType = null;
 
         #region Control Methods

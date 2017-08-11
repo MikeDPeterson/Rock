@@ -53,6 +53,23 @@ namespace RockWeb.Blocks.Core
 
     public partial class Attributes : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker ddlEntityType;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategoriesFilter;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAnalyticsEnabled;
+        protected global::Rock.Web.UI.Controls.Grid rGrid;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdAttribute;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker ddlAttrEntityType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbAttrQualifierField;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbAttrQualifierValue;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtAttribute;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdAttributeValue;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Fields
 
         private bool _configuredType = true;
