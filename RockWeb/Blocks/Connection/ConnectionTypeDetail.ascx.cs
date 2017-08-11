@@ -43,6 +43,45 @@ namespace RockWeb.Blocks.Connection
     [Description( "Displays the details of the given Connection Type for editing." )]
     public partial class ConnectionTypeDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRequired;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.NumberBox nbDaysUntilRequestIdle;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbFutureFollowUp;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbFullActivityList;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRequiresPlacementGroup;
+        protected global::Rock.Web.UI.Controls.Grid gAttributes;
+        protected global::Rock.Web.UI.Controls.Grid gActivityTypes;
+        protected global::Rock.Web.UI.Controls.Grid gStatuses;
+        protected global::Rock.Web.UI.Controls.Grid gWorkflows;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgAttribute;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectionActivityTypes;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfConnectionTypeAddConnectionActivityTypeGuid;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbConnectionActivityTypeName;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectionStatuses;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfConnectionTypeAddConnectionStatusGuid;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbConnectionStatusName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbConnectionStatusDescription;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsCritical;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsDefault;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectionWorkflow;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfAddConnectionWorkflowGuid;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlWorkflowType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrimaryQualifier;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSecondaryQualifier;
+
+        #endregion
+
         #region Properties
 
         private List<Attribute> AttributesState { get; set; }

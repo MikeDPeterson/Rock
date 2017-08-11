@@ -139,15 +139,6 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
         
         /// <summary>
-        /// hfWorkflowGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfWorkflowGuid;
-        
-        /// <summary>
         /// valWorkflowDetails control.
         /// </summary>
         /// <remarks>
@@ -175,15 +166,6 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.ValidationSummary valGroupConfig;
         
         /// <summary>
-        /// hfGroupConfigGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfGroupConfigGuid;
-        
-        /// <summary>
         /// divUseGroupsOfTypeNote control.
         /// </summary>
         /// <remarks>
@@ -200,14 +182,5 @@ namespace RockWeb.Blocks.Connection {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary valConnectorGroup;
-        
-        /// <summary>
-        /// hfConnectorGroupGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfConnectorGroupGuid;
     }
 }

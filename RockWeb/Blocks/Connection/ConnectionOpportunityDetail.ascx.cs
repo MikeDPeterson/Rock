@@ -43,6 +43,48 @@ namespace RockWeb.Blocks.Connection
     [BooleanField( "Show Edit", "", true, "", 2 )]
     public partial class ConnectionOpportunityDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbIncorrectOpportunity;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotAllowedToEdit;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidGroupTypes;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.HtmlEditor htmlSummary;
+        protected global::Rock.Web.UI.Controls.HtmlEditor htmlDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPublicName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.ImageUploader imgupPhoto;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpAttributes;
+        protected global::Rock.Web.UI.Controls.Grid gConnectionOpportunityGroupConfigs;
+        protected global::Rock.Web.UI.Controls.Grid gConnectionOpportunityGroups;
+        protected global::Rock.Web.UI.Controls.Grid gConnectionOpportunityConnectorGroups;
+        protected global::Rock.Web.UI.Controls.Grid gConnectionOpportunityWorkflows;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgWorkflowDetails;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfWorkflowGuid;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlWorkflowType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrimaryQualifier;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSecondaryQualifier;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgGroupDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidGroupType;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpOpportunityGroup;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgGroupConfigDetails;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfGroupConfigGuid;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupRole;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupMemberStatus;
+        protected global::Rock.Web.UI.Controls.Toggle tglUseAllGroupsOfGroupType;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectorGroupDetails;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfConnectorGroupGuid;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpGroup;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        
+        #endregion
+
         #region Fields
 
         public int _connectionTypeId = 0;

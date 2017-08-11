@@ -39,6 +39,15 @@ namespace RockWeb.Blocks.Connection
     [LinkedPage( "Detail Page" )]
     public partial class ConnectionOpportunityList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbActive;
+        protected global::Rock.Web.UI.Controls.Grid gConnectionOpportunities;
+
+        #endregion
+
         #region Fields
 
         private ConnectionType _connectionType = null;

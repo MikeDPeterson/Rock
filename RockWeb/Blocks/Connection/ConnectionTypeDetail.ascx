@@ -141,14 +141,14 @@
 
         <Rock:ModalDialog ID="dlgConnectionActivityTypes" runat="server" ScrollbarEnabled="false" SaveButtonText="Add" OnSaveClick="btnAddConnectionActivityType_Click" Title="Create Activity" ValidationGroup="ConnectionActivityType">
             <Content>
-                <asp:HiddenField ID="hfConnectionTypeAddConnectionActivityTypeGuid" runat="server" />
+                <Rock:HiddenFieldWithClass ID="hfConnectionTypeAddConnectionActivityTypeGuid" runat="server" />
                 <Rock:DataTextBox ID="tbConnectionActivityTypeName" SourceTypeName="Rock.Model.ConnectionActivityType, Rock" PropertyName="Name" Label="Activity Name" runat="server" ValidationGroup="ConnectionActivityType" />
             </Content>
         </Rock:ModalDialog>
 
         <Rock:ModalDialog ID="dlgConnectionStatuses" runat="server" ScrollbarEnabled="false" SaveButtonText="Add" OnSaveClick="btnAddConnectionStatus_Click" Title="Create Status" ValidationGroup="ConnectionStatus">
             <Content>
-                <asp:HiddenField ID="hfConnectionTypeAddConnectionStatusGuid" runat="server" />
+                <Rock:HiddenFieldWithClass ID="hfConnectionTypeAddConnectionStatusGuid" runat="server" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:DataTextBox ID="tbConnectionStatusName" SourceTypeName="Rock.Model.ConnectionStatus, Rock" PropertyName="Name" Label="Name" runat="server" ValidationGroup="ConnectionStatus" />
@@ -172,7 +172,7 @@
         <Rock:ModalDialog ID="dlgConnectionWorkflow" runat="server" Title="Select Workflow" OnSaveClick="dlgConnectionWorkflow_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="ConnectionWorkflow">
             <Content>
 
-                <asp:HiddenField ID="hfAddConnectionWorkflowGuid" runat="server" />
+                <Rock:HiddenFieldWithClass ID="hfAddConnectionWorkflowGuid" runat="server" />
 
                 <asp:ValidationSummary ID="valConnectionWorkflowSummary" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="ConnectionWorkflow" />
 
@@ -180,15 +180,15 @@
                     <div class="col-md-6">
                         <Rock:RockDropDownList ID="ddlTriggerType" runat="server" Label="Launch Workflow When" 
                             OnSelectedIndexChanged="ddlTriggerType_SelectedIndexChanged" AutoPostBack="true" Required="true" ValidationGroup="ConnectionWorkflow" >
-                            <asp:ListItem Value="0" Text="Request Started" />
-                            <asp:ListItem Value="8" Text="Request Assigned" />
-                            <asp:ListItem Value="7" Text="Request Transferred" />
-                            <asp:ListItem Value="1" Text="Request Connected" />
-                            <asp:ListItem Value="5" Text="Placement Group Assigned" />
-                            <asp:ListItem Value="2" Text="Status Changed" />
-                            <asp:ListItem Value="3" Text="State Changed" />
-                            <asp:ListItem Value="4" Text="Activity Added" />
-                            <asp:ListItem Value="6" Text="Manual" />
+                            <Rock:ListItem Value="0" Text="Request Started" />
+                            <Rock:ListItem Value="8" Text="Request Assigned" />
+                            <Rock:ListItem Value="7" Text="Request Transferred" />
+                            <Rock:ListItem Value="1" Text="Request Connected" />
+                            <Rock:ListItem Value="5" Text="Placement Group Assigned" />
+                            <Rock:ListItem Value="2" Text="Status Changed" />
+                            <Rock:ListItem Value="3" Text="State Changed" />
+                            <Rock:ListItem Value="4" Text="Activity Added" />
+                            <Rock:ListItem Value="6" Text="Manual" />
                         </Rock:RockDropDownList>
                     </div>
                     <div class="col-md-6">

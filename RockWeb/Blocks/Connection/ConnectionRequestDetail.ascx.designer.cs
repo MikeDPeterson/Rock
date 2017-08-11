@@ -265,15 +265,6 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.ValidationSummary valConnectorGroup;
         
         /// <summary>
-        /// hfAddConnectionRequestActivityGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfAddConnectionRequestActivityGuid;
-        
-        /// <summary>
         /// phAttributeFilters control.
         /// </summary>
         /// <remarks>

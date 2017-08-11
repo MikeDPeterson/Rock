@@ -48,6 +48,54 @@ namespace RockWeb.Blocks.Connection
     [LinkedPage( "Group Detail Page", "Page used to display group details.", order: 3 )]
     public partial class ConnectionRequestDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlCampus;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlOpportunity;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlState;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.RockLiteral lContactInfo;
+        protected global::Rock.Web.UI.Controls.RockLiteral lConnector;
+        protected global::Rock.Web.UI.Controls.RockLiteral lRequestDate;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPlacementGroup;
+        protected global::Rock.Web.UI.Controls.RockLiteral lComments;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdWorkflowLaunched;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwRequirements;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblManualRequirements;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRequirementsErrors;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppRequestor;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlConnectorEdit;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblState;
+        protected global::Rock.Web.UI.Controls.DatePicker dpFollowUp;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbComments;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPlacementGroup;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPlacementGroupRole;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPlacementGroupStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCampus;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRequirementsWarning;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTransferOpportunity;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTransferStatus;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbClearConnector;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTransferNote;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpConnectionRequestWorkflow;
+        protected global::Rock.Web.UI.Controls.Grid gConnectionRequestWorkflows;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpConnectionRequestActivities;
+        protected global::Rock.Web.UI.Controls.Grid gConnectionRequestActivities;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectionRequestActivities;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfAddConnectionRequestActivityGuid;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlActivity;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlActivityConnector;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNote;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgSearch;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSearchName;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampus;
+
+        #endregion
 
         #region Fields
 

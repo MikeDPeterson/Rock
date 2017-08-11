@@ -53,6 +53,13 @@ namespace RockWeb.Blocks.Connection
 
     public partial class OpportunitySearch : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSearchName;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampus;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

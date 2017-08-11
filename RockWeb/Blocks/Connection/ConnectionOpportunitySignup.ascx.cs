@@ -47,6 +47,19 @@ namespace RockWeb.Blocks.Connection
     [DefinedValueField( "8522BADD-2871-45A5-81DD-C76DA07E2E7E", "Record Status", "The record status to use for new individuals (default: 'Pending'.)", true, false, "283999EC-7346-42E3-B807-BCE9B2BABB49", "", 6 )]
     public partial class ConnectionOpportunitySignup : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.EmailBox tbEmail;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnHome;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnMobile;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbComments;
+
+        #endregion
+
         #region Fields
 
         DefinedValueCache _homePhone = DefinedValueCache.Read( Rock.SystemGuid.DefinedValue.PERSON_PHONE_TYPE_HOME );
