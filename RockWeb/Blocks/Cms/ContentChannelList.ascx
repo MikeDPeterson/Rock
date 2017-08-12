@@ -24,7 +24,7 @@
                         <Columns>
                             <Rock:RockBoundField DataField="Name" HeaderText="Channel" SortExpression="Name" />
                             <Rock:RockBoundField DataField="ContentChannelType" HeaderText="Type" SortExpression="ContentChannelType" />
-                            <Rock:HyperLinkField DataNavigateUrlFields="ChannelUrl" DataNavigateUrlFormatString="{0}" DataTextField="ChannelUrl" SortExpression="ChannelUrl" HeaderText="Channel Url" />
+                            <global::asp:HyperLinkField DataNavigateUrlFields="ChannelUrl" DataNavigateUrlFormatString="{0}" DataTextField="ChannelUrl" SortExpression="ChannelUrl" HeaderText="Channel Url" />
                             <Rock:BadgeField InfoMin="1" DataField="TotalItems" HeaderText="Total Items" SortExpression="TotalItems" DataFormatString="{0:N0}" ItemStyle-HorizontalAlign="Right" />
                             <Rock:BadgeField InfoMin="1" DataField="ActiveItems" HeaderText="Active Items" SortExpression="ActiveItems" DataFormatString="{0:N0}" ItemStyle-HorizontalAlign="Right" />
                             <Rock:DateField DataField="ItemLastCreated" HeaderText="Last Item Created" SortExpression="ItemLastCreated" FormatAsElapsedTime="true" />

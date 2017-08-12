@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="false" Inherits="RockWeb.Blocks.Cms.HtmlContentDetail" Codebehind="HtmlContentDetail.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.Cms.HtmlContentDetail" Codebehind="HtmlContentDetail.ascx.cs" %>
 
 <asp:UpdatePanel runat="server" ID="upnlHtmlContent" ChildrenAsTriggers="false" UpdateMode="Conditional">
     <ContentTemplate>
@@ -17,14 +17,14 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Edit HTML">
                 <Content>
 
-                    <Rock:RockUpdatePanel runat="server" ID="upnlEdit">
+                    <global::asp:UpdatePanel runat="server" ID="upnlEdit">
                         <ContentTemplate>
-                            <Rock:HiddenFieldWithClass ID="hfVersion" runat="server" />
-                            <asp:Panel ID="pnlEdit" runat="server" Visible="false">
+                            <global::asp:HiddenField ID="hfVersion" runat="server" />
+                            <global::asp:Panel ID="pnlEdit" runat="server" Visible="false">
                                 <Rock:NotificationBox ID="nbInvalidHtml" runat="server" NotificationBoxType="Warning" Visible="false" />
 
                                 <!-- Approval -->
-                                <Rock:RockUpdatePanel ID="upnlApproval" runat="server">
+                                <global::asp:UpdatePanel ID="upnlApproval" runat="server">
                                     <ContentTemplate>
 
                                         <div class="alert alert-info">
@@ -42,7 +42,7 @@
                                             <asp:HiddenField ID="hfApprovalStatus" runat="server" />
                                         </div>
                                     </ContentTemplate>
-                                </Rock:RockUpdatePanel>
+                                </UpdatePanel>
 
                                 <div class="pull-right">
                                     <asp:Literal runat="server" ID="lVersion" Text="Version X | " />
@@ -57,9 +57,9 @@
                                 
                                 <Rock:RockCheckBox ID="cbOverwriteVersion" runat="server" Text="Don't save as a new version" />
 
-                            </asp:Panel>
+                            </Panel>
 
-                            <asp:Panel ID="pnlVersionGrid" runat="server" Visible="false" >
+                            <global::asp:Panel ID="pnlVersionGrid" runat="server" Visible="false" >
 
                                 <div class="grid">
                                     <Rock:Grid ID="gVersions" runat="server" DataKeyNames="Id" DisplayType="Full" ShowActionRow="false" AllowPaging="true" PageSize="10">
@@ -78,10 +78,10 @@
 
                                 <Rock:LinkButton runat="server" ID="lbReturnToEdit" CssClass="btn btn-primary" Text="Back" OnClick="lbReturnToEdit_Click" />
 
-                            </asp:Panel>
+                            </Panel>
 
                         </ContentTemplate>
-                    </Rock:RockUpdatePanel>
+                    </UpdatePanel>
                 </Content>
             </Rock:ModalDialog>
         </asp:Panel>

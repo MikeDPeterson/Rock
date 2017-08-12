@@ -85,15 +85,6 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.CheckBoxList cblCampus;
         
         /// <summary>
-        /// phAttributes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAttributes;
-        
-        /// <summary>
         /// lvDefaultConnectors control.
         /// </summary>
         /// <remarks>
@@ -139,33 +130,6 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
         
         /// <summary>
-        /// valWorkflowDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valWorkflowDetails;
-        
-        /// <summary>
-        /// valGroupDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valGroupDetails;
-        
-        /// <summary>
-        /// valGroupConfig control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valGroupConfig;
-        
-        /// <summary>
         /// divUseGroupsOfTypeNote control.
         /// </summary>
         /// <remarks>
@@ -173,14 +137,5 @@ namespace RockWeb.Blocks.Connection {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divUseGroupsOfTypeNote;
-        
-        /// <summary>
-        /// valConnectorGroup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valConnectorGroup;
     }
 }

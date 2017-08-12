@@ -18,9 +18,9 @@
                         <Rock:RockDropDownList ID="ddlAttendanceGroup" runat="server" Label="Group" />
                         <Rock:SchedulePicker ID="spSchedule" runat="server" Label="Schedule" />
                         <Rock:RockDropDownList ID="ddlDidAttend" runat="server" Label="Attended">
-                            <Rock:ListItem Text="[All]" Value=""></Rock:ListItem>
-                            <Rock:ListItem Text="Did Attend" Value="1"></Rock:ListItem>
-                            <Rock:ListItem Text="Did Not Attend" Value="0"></Rock:ListItem>
+                            <global::asp:ListItem Text="[All]" Value="" />
+                            <global::asp:ListItem Text="Did Attend" Value="1" />
+                            <global::asp:ListItem Text="Did Not Attend" Value="0" />
                         </Rock:RockDropDownList>
                     </Rock:GridFilter>
                     <Rock:Grid ID="gHistory" runat="server" DisplayType="Full" AllowSorting="true" EmptyDataText="No Attendance Found" OnRowDataBound="gHistory_RowDataBound" >

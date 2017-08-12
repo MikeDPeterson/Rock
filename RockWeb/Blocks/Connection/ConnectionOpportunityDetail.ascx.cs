@@ -82,6 +82,7 @@ namespace RockWeb.Blocks.Connection
         protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfConnectorGroupGuid;
         protected global::Rock.Web.UI.Controls.GroupPicker gpGroup;
         protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributes;
         
         #endregion
 

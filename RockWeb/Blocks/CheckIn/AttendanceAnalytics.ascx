@@ -56,9 +56,9 @@
                                 <div class="js-group-by">
                                     <Rock:HiddenFieldWithClass ID="hfGroupBy" CssClass="js-hidden-selected" runat="server" />
                                     <div class="btn-group">
-                                        <Rock:LinkButton ID="btnGroupByWeek" runat="server" CssClass="btn btn-xs btn-default active" Text="Week" data-val="0" OnClick="btnGroupBy_Click" />
-                                        <Rock:LinkButton ID="btnGroupByMonth" runat="server" CssClass="btn btn-xs btn-default" Text="Month" data-val="1" OnClick="btnGroupBy_Click" />
-                                        <Rock:LinkButton ID="btnGroupByYear" runat="server" CssClass="btn btn-xs btn-default" Text="Year" data-val="2" OnClick="btnGroupBy_Click" />
+                                        <global::asp:LinkButton ID="btnGroupByWeek" runat="server" CssClass="btn btn-xs btn-default active" Text="Week" data-val="0" OnClick="btnGroupBy_Click" />
+                                        <global::asp:LinkButton ID="btnGroupByMonth" runat="server" CssClass="btn btn-xs btn-default" Text="Month" data-val="1" OnClick="btnGroupBy_Click" />
+                                        <global::asp:LinkButton ID="btnGroupByYear" runat="server" CssClass="btn btn-xs btn-default" Text="Year" data-val="2" OnClick="btnGroupBy_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -93,12 +93,12 @@
                                     <div class="js-show-by">
                                         <Rock:HiddenFieldWithClass ID="hfShowBy" CssClass="js-hidden-selected" runat="server" />
                                         <div class="btn-group">
-                                            <Rock:LinkButton ID="btnShowByChart" runat="server" CssClass="btn btn-default active" data-val="0" OnClick="btnShowByChart_Click">
+                                            <global::asp:LinkButton ID="btnShowByChart" runat="server" CssClass="btn btn-default active" data-val="0" OnClick="btnShowByChart_Click">
                                                     <i class="fa fa-line-chart"></i> Chart
-                                            </Rock:LinkButton>
-                                            <Rock:LinkButton ID="btnShowByAttendees" runat="server" CssClass="btn btn-default" data-val="1" OnClick="btnShowByAttendees_Click">
+                                            </LinkButton>
+                                            <global::asp:LinkButton ID="btnShowByAttendees" runat="server" CssClass="btn btn-default" data-val="1" OnClick="btnShowByAttendees_Click">
                                                     <i class="fa fa-users"></i> Attendees
-                                            </Rock:LinkButton>
+                                            </LinkButton>
                                         </div>
                                     </div>
                                 </div>
@@ -126,11 +126,11 @@
                                                     <div class="js-graph-by">
                                                         <Rock:HiddenFieldWithClass ID="hfGraphBy" CssClass="js-hidden-selected" runat="server" />
                                                         <div class="btn-group">
-                                                            <Rock:LinkButton ID="btnGraphByTotal" runat="server" CssClass="btn btn-xs btn-default active" Text="Total" data-val="0" OnClick="btnGraphBy_Click" />
-                                                            <Rock:LinkButton ID="btnGraphByGroup" runat="server" CssClass="btn btn-xs btn-default" Text="Group" data-val="1" OnClick="btnGraphBy_Click" />
-                                                            <Rock:LinkButton ID="btnGraphByCampus" runat="server" CssClass="btn btn-xs btn-default" Text="Campus" data-val="2" OnClick="btnGraphBy_Click" />
-                                                            <Rock:LinkButton ID="btnGraphByLocation" runat="server" CssClass="btn btn-xs btn-default" Text="Location" data-val="4" OnClick="btnGraphBy_Click" />
-                                                            <Rock:LinkButton ID="btnGraphByTime" runat="server" CssClass="btn btn-xs btn-default" Text="Schedule" data-val="3" OnClick="btnGraphBy_Click" />
+                                                            <global::asp:LinkButton ID="btnGraphByTotal" runat="server" CssClass="btn btn-xs btn-default active" Text="Total" data-val="0" OnClick="btnGraphBy_Click" />
+                                                            <global::asp:LinkButton ID="btnGraphByGroup" runat="server" CssClass="btn btn-xs btn-default" Text="Group" data-val="1" OnClick="btnGraphBy_Click" />
+                                                            <global::asp:LinkButton ID="btnGraphByCampus" runat="server" CssClass="btn btn-xs btn-default" Text="Campus" data-val="2" OnClick="btnGraphBy_Click" />
+                                                            <global::asp:LinkButton ID="btnGraphByLocation" runat="server" CssClass="btn btn-xs btn-default" Text="Location" data-val="4" OnClick="btnGraphBy_Click" />
+                                                            <global::asp:LinkButton ID="btnGraphByTime" runat="server" CssClass="btn btn-xs btn-default" Text="Schedule" data-val="3" OnClick="btnGraphBy_Click" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -168,15 +168,15 @@
                                             <div class="js-view-by">
                                                 <Rock:HiddenFieldWithClass ID="hfViewBy" CssClass="js-hidden-selected" runat="server" />
                                                 <div class="btn-group">
-                                                    <Rock:HyperLink ID="btnViewAttendees" runat="server" CssClass="btn btn-default btn-sm active" data-val="0">
+                                                    <glocal::asp:HyperLink ID="btnViewAttendees" runat="server" CssClass="btn btn-default btn-sm active" data-val="0">
                                                         Attendees
-                                                    </Rock:HyperLink>
-                                                    <Rock:HyperLink ID="btnViewParentsOfAttendees" runat="server" CssClass="btn btn-default btn-sm" data-val="1">
+                                                    </HyperLink>
+                                                    <global::asp:HyperLink ID="btnViewParentsOfAttendees" runat="server" CssClass="btn btn-default btn-sm" data-val="1">
                                                         Parents of Attendees
-                                                    </Rock:HyperLink>
-                                                    <Rock:HyperLink ID="btnViewChildrenOfAttendees" runat="server" CssClass="btn btn-default btn-sm" data-val="2">
+                                                    </HyperLink>
+                                                    <global::asp:HyperLink ID="btnViewChildrenOfAttendees" runat="server" CssClass="btn btn-default btn-sm" data-val="2">
                                                         Children of Attendees
-                                                    </Rock:HyperLink>
+                                                    </HyperLink>
                                                 </div>
                                             </div>
                                         </div>
@@ -188,13 +188,13 @@
                                                 <Rock:RockRadioButton ID="radByVisit" runat="server" GroupName="grpFilterBy" Text="By Visit" CssClass="js-attendees-by-visit" />
                                                 <asp:Panel ID="pnlByVisitOptions" runat="server" CssClass="js-attendees-by-visit-options padding-l-lg form-inline">
                                                     <Rock:RockDropDownList ID="ddlNthVisit" CssClass="input-width-md" runat="server">
-                                                        <Rock:ListItem />
-                                                        <Rock:ListItem Text="1st" Value="1" />
-                                                        <Rock:ListItem Text="2nd" Value="2" />
-                                                        <Rock:ListItem Text="3rd" Value="3" />
-                                                        <Rock:ListItem Text="4th" Value="4" />
-                                                        <Rock:ListItem Text="5th" Value="5" />
-                                                        <Rock:ListItem Text="No" Value="0" />
+                                                        <global::asp:ListItem />
+                                                        <global::asp:ListItem Text="1st" Value="1" />
+                                                        <global::asp:ListItem Text="2nd" Value="2" />
+                                                        <global::asp:ListItem Text="3rd" Value="3" />
+                                                        <global::asp:ListItem Text="4th" Value="4" />
+                                                        <global::asp:ListItem Text="5th" Value="5" />
+                                                        <global::asp:ListItem Text="No" Value="0" />
                                                     </Rock:RockDropDownList>
                                                     <span>visit</span>
                                                 </asp:Panel>
@@ -228,14 +228,14 @@
                                 <Rock:Grid ID="gAttendeesAttendance" runat="server" AllowSorting="true" RowItemText="Attendee" OnRowDataBound="gAttendeesAttendance_RowDataBound" ExportSource="ColumnOutput" ExportFilename="AttendanceAnalytics">
                                     <Columns>
                                         <Rock:SelectField />
-                                        <Rock:HyperLinkField DataNavigateUrlFields="ParentId" DataTextField="Parent" HeaderText="Parent" SortExpression="Parent.LastName, Parent.NickName"/>
+                                        <global::asp:HyperLinkField DataNavigateUrlFields="ParentId" DataTextField="Parent" HeaderText="Parent" SortExpression="Parent.LastName, Parent.NickName"/>
                                         <Rock:RockBoundField DataField="Parent" HeaderText="Parent" Visible="false" ExcelExportBehavior="AlwaysInclude" />
                                         <Rock:RockBoundField DataField="Parent.Email" HeaderText="Parent Email" Visible="false" ExcelExportBehavior="AlwaysInclude" />
-                                        <Rock:HyperLinkField DataNavigateUrlFields="ChildId" DataTextField="Child" HeaderText="Child" SortExpression="Child.LastName, Child.NickName"/>
+                                        <global::asp:HyperLinkField DataNavigateUrlFields="ChildId" DataTextField="Child" HeaderText="Child" SortExpression="Child.LastName, Child.NickName"/>
                                         <Rock:RockBoundField DataField="Child" HeaderText="Child" Visible="false" ExcelExportBehavior="AlwaysInclude" />
                                         <Rock:RockBoundField DataField="Child.Email" HeaderText="Child Email" Visible="false" ExcelExportBehavior="AlwaysInclude" />
                                         <Rock:RockBoundField DataField="Child.Age" HeaderText="Child Age" Visible="false" ExcelExportBehavior="AlwaysInclude" />
-                                        <Rock:HyperLinkField DataNavigateUrlFields="PersonId" DataTextField="Person" HeaderText="Name" SortExpression="Person.LastName, Person.NickName"/>
+                                        <global::asp:HyperLinkField DataNavigateUrlFields="PersonId" DataTextField="Person" HeaderText="Name" SortExpression="Person.LastName, Person.NickName"/>
                                         <Rock:RockBoundField DataField="Person" HeaderText="Person" Visible="false" ExcelExportBehavior="AlwaysInclude" />
                                         <Rock:RockBoundField DataField="Person.Email" HeaderText="Email" Visible="false" ExcelExportBehavior="AlwaysInclude" />
                                         <Rock:RockBoundField DataField="Person.Age" HeaderText="Age" Visible="false" ExcelExportBehavior="AlwaysInclude" />

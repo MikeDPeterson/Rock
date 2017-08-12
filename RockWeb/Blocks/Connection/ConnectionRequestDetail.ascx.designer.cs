@@ -256,15 +256,6 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.LinkButton btnTransferCancel;
         
         /// <summary>
-        /// valConnectorGroup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valConnectorGroup;
-        
-        /// <summary>
         /// phAttributeFilters control.
         /// </summary>
         /// <remarks>
