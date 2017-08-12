@@ -54,6 +54,7 @@ namespace RockWeb.Blocks.Core
         protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
         protected global::Rock.Web.UI.Controls.DataTextBox tbHighlightColor;
         protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::System.Web.UI.WebControls.HiddenField hfIdValue;
 
         #endregion
 

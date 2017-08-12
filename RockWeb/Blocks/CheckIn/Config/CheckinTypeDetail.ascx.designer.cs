@@ -67,24 +67,6 @@ namespace RockWeb.Blocks.CheckIn.Config {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlEditDetails;
         
         /// <summary>
-        /// wpCustom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PanelWidget wpCustom;
-        
-        /// <summary>
-        /// phAttributeEdits control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeEdits;
-        
-        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

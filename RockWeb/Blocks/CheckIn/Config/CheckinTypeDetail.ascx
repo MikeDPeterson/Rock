@@ -111,9 +111,9 @@
                             </div>
                         </Rock:PanelWidget>
 
-                        <asp:PanelWidget ID="wpCustom" runat="server" Title="Custom Settings">
-                            <asp:PlaceHolder ID="phAttributeEdits" runat="server" EnableViewState="false"></asp:PlaceHolder>
-                        </asp:PanelWidget>
+                        <glboal::asp:PanelWidget ID="wpCustom" runat="server" Title="Custom Settings">
+                            <global::asp:PlaceHolder ID="phAttributeEdits" runat="server" EnableViewState="false"></global::asp:PlaceHolder>
+                        </PanelWidget>
 
                         <div class="actions">
                             <asp:LinkButton ID="btnSave" runat="server" AccessKey="s" Text="Save" CssClass="btn btn-primary" OnClick="btnSave_Click" />

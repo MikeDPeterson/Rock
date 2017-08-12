@@ -31,42 +31,6 @@ namespace RockWeb.Blocks.Core {
         protected global::System.Web.UI.WebControls.Panel pnlList;
         
         /// <summary>
-        /// lEntityQualifier control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lEntityQualifier;
-        
-        /// <summary>
-        /// lCategories control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lCategories;
-        
-        /// <summary>
-        /// lDefaultValue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lDefaultValue;
-        
-        /// <summary>
-        /// lValue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lValue;
-        
-        /// <summary>
         /// hfActiveDialog control.
         /// </summary>
         /// <remarks>
@@ -74,24 +38,6 @@ namespace RockWeb.Blocks.Core {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
-        
-        /// <summary>
-        /// valSummaryTop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valSummaryTop;
-        
-        /// <summary>
-        /// pnlEntityTypeQualifier control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlEntityTypeQualifier;
         
         /// <summary>
         /// hfIdValues control.
