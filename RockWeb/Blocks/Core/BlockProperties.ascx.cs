@@ -40,6 +40,17 @@ namespace RockWeb.Blocks.Core
     [Description( "Allows you to administrate a block's properties." )]
     public partial class BlockProperties : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbBlockName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbCssClass;
+        protected global::Rock.Web.UI.Controls.CodeEditor cePreHtml;
+        protected global::Rock.Web.UI.Controls.CodeEditor cePostHtml;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbCacheDuration;
+
+        #endregion
+
         #region Fields
 
         private readonly List<string> _tabs = new List<string> { "Basic Settings", "Advanced Settings" };

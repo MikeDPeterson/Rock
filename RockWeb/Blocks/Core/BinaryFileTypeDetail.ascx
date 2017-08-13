@@ -40,7 +40,7 @@
                                 <div class="grid">
                                     <Rock:Grid ID="gBinaryFileAttributes" runat="server" AllowPaging="false" DisplayType="Light" ShowHeader="false">
                                         <Columns>
-                                            <asp:BoundField DataField="Name" />
+                                            <global::asp:BoundField DataField="Name" />
                                             <Rock:EditField OnClick="gBinaryFileAttributes_Edit" />
                                             <Rock:DeleteField OnClick="gBinaryFileAttributes_Delete" />
                                         </Columns>

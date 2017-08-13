@@ -36,6 +36,27 @@ namespace RockWeb.Blocks.Core
     [Description( "Displays all details of a binary file type." )]
     public partial class BinaryFileTypeDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowCaching;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRequiresViewSecurity;
+        protected global::Rock.Web.UI.Controls.ComponentPicker cpStorageType;
+        protected global::Rock.Web.UI.Controls.Grid gBinaryFileAttributes;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMaxWidth;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMaxHeight;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPreferredColorDepth;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPreferredRequired;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPreferredFormat;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPreferredResolution;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtBinaryFileAttributes;
+
+        #endregion
+
         #region Fields
 
         private List<Attribute> BinaryFileAttributesState { get; set; }

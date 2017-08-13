@@ -93,9 +93,9 @@
 
         <Rock:ModalDialog ID="mdAttributeValue" runat="server" Title="Attribute Value" OnCancelScript="clearActiveDialog();" ValidationGroup="AttributeValue">
             <Content>
-                <asp:HiddenField ID="hfIdValues" runat="server" />
-                <asp:ValidationSummary ID="ValidationSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="AttributeValue" />
-                <asp:PlaceHolder ID="phEditControls" runat="server" EnableViewState="false" />
+                <global::asp:HiddenField ID="hfIdValues" runat="server" />
+                <global::asp:ValidationSummary ID="ValidationSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="AttributeValue" />
+                <global::asp:PlaceHolder ID="phEditControls" runat="server" EnableViewState="false" />
             </Content>
         </Rock:ModalDialog>
 

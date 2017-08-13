@@ -36,6 +36,17 @@ namespace RockWeb.Blocks.Core
     [LinkedPage("Detail Page")]
     public partial class BlockTypeList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNameFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPathFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCategoryFilter;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbExcludeSystem;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gBlockTypes;
+
+        #endregion
 
         #region Base Control Methods
 

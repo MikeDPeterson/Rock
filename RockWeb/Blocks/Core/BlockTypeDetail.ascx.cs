@@ -35,6 +35,18 @@ namespace RockWeb.Blocks.Core
     [Description( "Shows the details of a selected block type." )]
     public partial class BlockTypeDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPath;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblStatus;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPages;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>
