@@ -36,7 +36,21 @@ namespace RockWeb.Blocks.Core
 
     [LinkedPage("Detail Page")]
     public partial class DeviceList : RockBlock
-    { 
+    {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter fDevice;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlDeviceType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbIPAddress;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrintTo;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrinter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrintFrom;
+        protected global::Rock.Web.UI.Controls.Grid gDevice;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -37,6 +37,28 @@ namespace RockWeb.Blocks.Core
     [DefinedValueField( Rock.SystemGuid.DefinedType.MAP_STYLES, "Map Style", "The map theme that should be used for styling the GeoPicker map.", true, false, Rock.SystemGuid.DefinedValue.MAP_STYLE_ROCK )]
     public partial class DeviceDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDuplicateDevice;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIpAddress;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlDeviceType;
+        protected global::Rock.Web.UI.Controls.GeoPicker geopPoint;
+        protected global::Rock.Web.UI.Controls.GeoPicker geopFence;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrintTo;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrinter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrintFrom;
+        protected global::Rock.Web.UI.Controls.Grid gLocations;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdLocationPicker;
+        protected global::Rock.Web.UI.Controls.LocationItemPicker locationPicker;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfAddLocationId;
+
+        #endregion
+
         #region Properties
 
         private Dictionary<int, string> Locations

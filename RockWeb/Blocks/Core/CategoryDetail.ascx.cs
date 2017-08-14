@@ -45,6 +45,26 @@ namespace RockWeb.Blocks.Core
     [CategoryField( "Exclude Categories", "Select any category that you need to exclude from the parent category picker", true, required:false, category: "CustomSetting" )]
     public partial class CategoryDetail : RockBlockCustomSettings, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpParentCategory;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbHighlightColor;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblEntityTypeName;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblEntityTypeQualifierColumn;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblEntityTypeQualifierValue;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdCategoryDetailConfig;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRootCategoryEntityTypeWarning;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpRootCategoryDetail;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpExcludeCategoriesDetail;
+
+        #endregion
+
         #region Control Methods
 
         private int entityTypeId = 0;

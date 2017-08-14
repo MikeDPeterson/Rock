@@ -43,6 +43,12 @@ namespace RockWeb.Blocks.Core
     [BooleanField( "Display Query Strings", "Select to always display query strings. Default behavior will only display the query string when it's passed to the page.", order: 2 )]
     public partial class DateRangeContextSetter : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.SlidingDateRangePicker drpSlidingDateRange;
+
+        #endregion
+
         /// <summary>
         /// The context preference name
         /// </summary>

@@ -38,6 +38,16 @@ namespace RockWeb.Blocks.Core
     [DefinedTypeField( "Defined Type", "If a Defined Type is set, only its Defined Values will be displayed (regardless of the querystring parameters).", required: false, defaultValue: "" )]
     public partial class DefinedValueList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarningValues;
+        protected global::Rock.Web.UI.Controls.Grid gDefinedValues;
+        protected global::Rock.Web.UI.Controls.ModalDialog modalValue;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbValueName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbValueDescription;
+
+        #endregion
+
         #region Private Variables
 
         private DefinedType _definedType = null;

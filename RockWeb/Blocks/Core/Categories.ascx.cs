@@ -46,6 +46,24 @@ namespace RockWeb.Blocks.Core
     [BooleanField( "Enable Hierarchy", "When set allows you to drill down through the category hierarchy.", true, "", 3)]
     public partial class Categories : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker entityTypeFilter;
+        protected global::Rock.Web.UI.Controls.Grid gCategories;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdDetails;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker entityTypePicker;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEntityQualifierField;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEntityQualifierValue;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.CategoryPicker catpParentCategory;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbHighlightColor;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Fields
 
         int _entityTypeId = 0;

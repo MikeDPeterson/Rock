@@ -43,6 +43,19 @@ namespace RockWeb.Blocks.Core
     [BooleanField( "Support Ordering", "Should user be allowed to re-order list of components?", true, "", 2 )]
     public partial class Components : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdAlert;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblActive;
+        protected global::Rock.Web.UI.Controls.Grid rGrid;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdEditComponent;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbValidationError;
+
+        #endregion
+
         #region Private Variables
 
         private bool _supportOrdering = true;

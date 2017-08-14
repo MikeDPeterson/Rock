@@ -41,6 +41,15 @@ namespace RockWeb.Blocks.Core
     [CategoryField( "Categories", "If block should only display Defined Types from specific categories, select the categories here.", true, "Rock.Model.DefinedType", order: 1 )]
     public partial class DefinedTypeList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter tFilter;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gDefinedType;
+
+        #endregion
+
         #region Control Methods
 
         private List<Guid> _categoryGuids = null;

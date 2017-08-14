@@ -42,6 +42,21 @@ namespace RockWeb.Blocks.Core
     [DefinedTypeField( "Defined Type", "If a Defined Type is set, only details for it will be displayed (regardless of the querystring parameters).", required: false, defaultValue: "" )]
     public partial class DefinedTypeDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTypeName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTypeDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbHelpText;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcHelpText;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarningAttributes;
+        protected global::Rock.Web.UI.Controls.Grid gDefinedTypeAttributes;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtDefinedTypeAttributes;
+
+        #endregion
 
         #region Fields
 
