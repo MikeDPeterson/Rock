@@ -1,8 +1,8 @@
-/bin/*/*.dll
-/bin/*.dll
-/bin/*.pdb
-/bin/*.xml
-/content/
+/[Bb]in/*/*.dll
+/[Bb]in/*.dll
+/[Bb]in/*.pdb
+/[Bb]in/*.xml
+/[Cc]ontent/
 
 /*.suo
 /*.user
