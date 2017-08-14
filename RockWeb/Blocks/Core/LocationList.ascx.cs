@@ -39,6 +39,16 @@ namespace RockWeb.Blocks.Core
     [LinkedPage( "Detail Page" )]
     public partial class LocationList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtStreetAddress1;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCity;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbNotGeocoded;
+        protected global::Rock.Web.UI.Controls.Grid rGrid;
+
+        #endregion
+
         #region Fields
 
 

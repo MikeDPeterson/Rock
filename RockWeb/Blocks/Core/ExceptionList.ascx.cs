@@ -53,6 +53,20 @@ namespace RockWeb.Blocks.Administration
     [CustomDropdownListField( "Legend Position", "Select the position of the Legend (corner)", "ne,nw,se,sw", false, "ne", Order = 4 )]
     public partial class ExceptionList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.LineChart lcExceptions;
+        protected global::Rock.Web.UI.Controls.BarChart bcExceptions;
+        protected global::Rock.Web.UI.Controls.GridFilter fExceptionList;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSite;
+        protected global::Rock.Web.UI.Controls.PagePicker ppPage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppUser;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtStatusCode;
+        protected global::Rock.Web.UI.Controls.SlidingDateRangePicker sdpDateRange;
+        protected global::Rock.Web.UI.Controls.Grid gExceptionList;
+
+        #endregion
+
         #region Control Methods
 
 

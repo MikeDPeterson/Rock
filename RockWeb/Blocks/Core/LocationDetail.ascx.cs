@@ -50,6 +50,29 @@ namespace RockWeb.Blocks.Core
 
     public partial class LocationDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.LocationPicker gpParentLocation;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLocationType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrinter;
+        protected global::Rock.Web.UI.Controls.ImageEditor imgImage;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbGeoPointLocked;
+        protected global::Rock.Web.UI.Controls.GeoPicker geopPoint;
+        protected global::Rock.Web.UI.Controls.GeoPicker geopFence;
+        protected global::Rock.Web.UI.Controls.NumberBox nbSoftThreshold;
+        protected global::Rock.Web.UI.Controls.NumberBox nbFirmThreshold;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+
+        #endregion
+
         private int? _personId = null;
 
         private int? LocationTypeValueId

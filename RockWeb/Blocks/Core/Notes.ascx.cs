@@ -52,6 +52,12 @@ namespace RockWeb.Blocks.Core
     [NoteTypeField("Note Types", "Optional list of note types to limit display to", true, "", "", "", false, "", "", 12)]
     public partial class Notes : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NoteContainer notesTimeline;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

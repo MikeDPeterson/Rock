@@ -45,6 +45,14 @@ namespace RockWeb.Blocks.Core
     [Description( "Allows installed plugins to be viewed or removed and new ones to be added from the Rock Quarry server." )]
     public partial class PluginManager : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.Grid gPackageList;
+        protected global::Rock.Web.UI.Controls.Grid gvPackageVersions;
+
+        #endregion
+
         #region Fields
         WebProjectManager nuGetService = null;
         private string rockPackageId = "Rock";

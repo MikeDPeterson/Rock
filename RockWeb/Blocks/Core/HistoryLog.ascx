@@ -25,7 +25,7 @@
                     <Rock:Grid ID="gHistory" runat="server" AllowSorting="true" RowItemText="Change">
                         <Columns>
                             <Rock:RockBoundField DataField="Category" SortExpression="Category" HeaderText="Category" />
-                            <asp:HyperLinkField DataTextField="PersonName" DataNavigateUrlFields="CreatedByPersonId" SortExpression="PersonName" DataNavigateUrlFormatString="~/Person/{0}" HeaderText="Who" />
+                            <global::asp:HyperLinkField DataTextField="PersonName" DataNavigateUrlFields="CreatedByPersonId" SortExpression="PersonName" DataNavigateUrlFormatString="~/Person/{0}" HeaderText="Who" />
                             <Rock:RockBoundField DataField="Summary" SortExpression="Summary" HeaderText="Did" HtmlEncode="false" />
                             <Rock:RockTemplateField HeaderText="What">
                                 <ItemTemplate><%# FormatCaption( (int)Eval("CategoryId"), Eval( "Caption" ).ToString(), (int)Eval( "RelatedEntityId" ), (int)Eval("EntityId") ) %></ItemTemplate>

@@ -35,6 +35,16 @@ namespace RockWeb.Blocks.Core
     [EnumField( "Merge Templates Ownership", "Set this to limit to merge templates depending on ownership type. Note: If the user has EDIT authorization to this block, both Global and Personal templates will be shown regardless of this setting.", typeof( MergeTemplateOwnership ), true, "Personal" )]
     public partial class MergeTemplateList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPersonFilter;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowGlobalMergeTemplates;
+        protected global::Rock.Web.UI.Controls.Grid gMergeTemplates;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

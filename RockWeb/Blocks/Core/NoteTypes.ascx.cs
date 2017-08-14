@@ -41,6 +41,24 @@ namespace RockWeb.Blocks.Core
     [Description( "Allows note types to be managed." )]
     public partial class NoteTypes : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbOrdering;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker entityTypeFilter;
+        protected global::Rock.Web.UI.Controls.Grid rGrid;
+        protected global::Rock.Web.UI.Controls.ModalDialog modalDetails;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker entityTypePicker;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbUserSelectable;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbCssClass;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfIdValue;
+
+        #endregion
+
         #region Fields
 
         bool _canConfigure = false;

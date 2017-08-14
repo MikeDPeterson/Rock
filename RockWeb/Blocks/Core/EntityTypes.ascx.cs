@@ -38,6 +38,21 @@ namespace RockWeb.Blocks.Core
     [Description( "Administer the IEntity entity types." )]
     public partial class EntityTypes : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSearch;
+        protected global::Rock.Web.UI.Controls.Grid gEntityTypes;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbFriendlyName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCommon;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarning;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfEntityTypeId;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

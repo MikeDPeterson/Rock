@@ -157,24 +157,6 @@ namespace RockWeb.Blocks.Core {
         protected global::System.Web.UI.WebControls.Literal lblInstalledVersion;
         
         /// <summary>
-        /// lbCommand control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbCommand;
-        
-        /// <summary>
-        /// lbUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbUpdate;
-        
-        /// <summary>
         /// pnlPackage control.
         /// </summary>
         /// <remarks>
@@ -254,23 +236,5 @@ namespace RockWeb.Blocks.Core {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl iInstalledIcon;
-        
-        /// <summary>
-        /// lbInstall control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbInstall;
-        
-        /// <summary>
-        /// lbUpdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbUpdate;
     }
 }

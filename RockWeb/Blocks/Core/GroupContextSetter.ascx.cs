@@ -43,6 +43,11 @@ namespace RockWeb.Blocks.Core
     [BooleanField( "Include GroupType Children", "Include all children of the grouptype selected", false, "", order: 5 )]
     public partial class GroupContextSetter : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSelectGroupTypeWarning;
+
+        #endregion
         #region Base Control Methods
 
         protected override void OnInit( EventArgs e )

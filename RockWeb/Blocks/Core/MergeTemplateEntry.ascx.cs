@@ -43,6 +43,18 @@ namespace RockWeb.Blocks.Core
 
     public partial class MergeTemplateEntry : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNumberOfRecords;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCombineFamilyMembers;
+        protected global::Rock.Web.UI.Controls.MergeTemplatePicker mtPicker;
+        protected global::Rock.Web.UI.Controls.Grid gPreview;
+        protected global::Rock.Web.UI.Controls.RockLiteral lShowMergeFields;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMergeError;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

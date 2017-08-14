@@ -45,6 +45,21 @@ namespace RockWeb.Blocks.Core
     [EnumField( "Merge Templates Ownership", "Set this to restrict if the merge template must be a Personal or Global merge template. Note: If the user has EDIT authorization to this block, both Global and Personal templates can be edited regardless of this setting.", typeof( MergeTemplateOwnership ), true, "Global" )]
     public partial class MergeTemplateDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMergeTemplateType;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbFileTypeWarning;
+        protected global::Rock.Web.UI.Controls.FileUploader fuTemplateBinaryFile;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

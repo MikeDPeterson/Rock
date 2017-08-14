@@ -42,6 +42,12 @@ namespace RockWeb.Blocks.Core
     [BooleanField( "Display Query Strings", "Select to always display query strings. Default behavior will only display the query string when it's passed to the page.", false, "", order: 5 )]
     public partial class PersonContextSetter : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSelectGroupWarning;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

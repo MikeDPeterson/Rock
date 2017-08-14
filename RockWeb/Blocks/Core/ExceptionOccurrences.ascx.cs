@@ -49,6 +49,12 @@ namespace RockWeb.Blocks.Administration
     [LinkedPage( "Detail Page" )]
     public partial class ExceptionOccurrences : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gExceptionOccurrences;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>
