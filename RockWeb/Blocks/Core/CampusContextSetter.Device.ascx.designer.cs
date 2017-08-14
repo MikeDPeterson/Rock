@@ -10,7 +10,7 @@
 namespace RockWeb.Blocks.Core {
     
     
-    public partial class CampusContextSetter {
+    public partial class CampusContextSetterDevice {
         
         /// <summary>
         /// upnlContent control.

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Core.Categories" Codebehind="Categories.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.Core.Categories" Codebehind="Categories.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>
@@ -36,9 +36,9 @@
         <Rock:ModalDialog ID="mdDetails" runat="server" Title="Category" ValidationGroup="EntityTypeName">
             <Content>
 
-                <asp:HiddenField ID="hfIdValue" runat="server" />
+                <global::asp:HiddenField ID="hfIdValue" runat="server" />
 
-                <asp:Panel ID="pnlEntityInfo" runat="server" CssClass="well">
+                <global::asp:Panel ID="pnlEntityInfo" runat="server" CssClass="well">
                     <Rock:EntityTypePicker ID="entityTypePicker" runat="server" Label="Entity Type" Required="true" />
 
                     <div class="row">
@@ -49,7 +49,7 @@
                             <Rock:RockTextBox ID="tbEntityQualifierValue" runat="server" Label="Qualifier Value" />
                         </div>
                     </div>
-                </asp:Panel>
+                </Panel>
 
                 <div class="row">
                     <div class="col-md-6">

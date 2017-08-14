@@ -35,6 +35,22 @@ namespace RockWeb.Blocks.Core
     [Description( "Displays the details of a particular campus." )]
     public partial class CampusDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbCampusName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbCampusCode;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppCampusLeader;
+        protected global::Rock.Web.UI.Controls.KeyValueList kvlServiceTimes;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbUrl;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPhoneNumber;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

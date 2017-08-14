@@ -35,6 +35,13 @@ namespace RockWeb.Blocks.Core
     [LinkedPage("Detail Page")] 
     public partial class Campuses : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gCampuses;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>
