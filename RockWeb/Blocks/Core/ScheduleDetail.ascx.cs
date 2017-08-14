@@ -38,6 +38,22 @@ namespace RockWeb.Blocks.Core
     [Description( "Displays the details of the given schedule." )]
     public partial class ScheduleDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DataTextBox tbScheduleName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbScheduleDescription;
+        protected global::Rock.Web.UI.Controls.NumberBox nbStartOffset;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.NumberBox nbEndOffset;
+        protected global::Rock.Web.UI.Controls.ScheduleBuilder sbSchedule;
+        protected global::Rock.Web.UI.Controls.HelpBlock hbSchedulePreview;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbExclusions;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>
@@ -243,7 +259,7 @@ namespace RockWeb.Blocks.Core
 <div style='white-space: pre' Font-Names='Consolas' Font-Size='9'><br />" + sbSchedule.iCalendarContent + "</div>";
 
             iCalendar calendar = iCalendar.LoadFromStream( new StringReader( sbSchedule.iCalendarContent ) ).First() as iCalendar;
-            DDay.iCal.Event calendarEvent = calendar.Events[0] as Event;
+            DDay.iCal.Event calendarEvent = calendar.Events[0] as DDay.iCal.Event;
 
             if ( calendarEvent.DTStart != null )
             {

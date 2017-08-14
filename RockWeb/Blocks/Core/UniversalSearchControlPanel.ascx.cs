@@ -44,6 +44,26 @@ namespace RockWeb.Blocks.Core
     [Description( "Block to configure Rock's universal search features." )]
     public partial class UniversalSearchControlPanel : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblEnabled;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessages;
+        protected global::Rock.Web.UI.Controls.RockLiteral lIndexLocation;
+        protected global::Rock.Web.UI.Controls.RockLiteral lSmartSearchEntities;
+        protected global::Rock.Web.UI.Controls.RockLiteral lSearchType;
+        protected global::Rock.Web.UI.Controls.RockLiteral lSmartSearchFilterCriteria;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblSmartSearchEntities;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSearchType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSmartSearchFieldCriteria;
+        protected global::Rock.Web.UI.Controls.Grid gEntityList;
+        protected global::Rock.Web.UI.Controls.ModalAlert maMessages;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdEditEntityType;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnabledIndexing;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfIdValue;
+
+        #endregion
+
         #region Fields
 
         // used for private variables
@@ -126,7 +146,7 @@ namespace RockWeb.Blocks.Core
                 }
             }
 
-            tbSmartSearchFieldCrieria.Text = Rock.Web.SystemSettings.GetValue( "core_SmartSearchUniversalSearchFieldCriteria" );
+            tbSmartSearchFieldCriteria.Text = Rock.Web.SystemSettings.GetValue( "core_SmartSearchUniversalSearchFieldCriteria" );
 
             var searchType = ((int)SearchType.Wildcard).ToString();
 
@@ -149,7 +169,7 @@ namespace RockWeb.Blocks.Core
         protected void lbSmartSearchSave_Click( object sender, EventArgs e )
         {
             Rock.Web.SystemSettings.SetValue( "core_SmartSearchUniversalSearchEntities", string.Join(",", cblSmartSearchEntities.SelectedValues.Select( n => n.ToString() ).ToArray() ));
-            Rock.Web.SystemSettings.SetValue( "core_SmartSearchUniversalSearchFieldCriteria", tbSmartSearchFieldCrieria.Text );
+            Rock.Web.SystemSettings.SetValue( "core_SmartSearchUniversalSearchFieldCriteria", tbSmartSearchFieldCriteria.Text );
             Rock.Web.SystemSettings.SetValue( "core_SmartSearchUniversalSearchSearchType", ddlSearchType.SelectedValue );
 
             ShowSmartSearchView();

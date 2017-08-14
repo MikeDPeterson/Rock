@@ -41,6 +41,13 @@ namespace RockWeb.Blocks.Core
     [LinkedPage("Detail Page")]
     public partial class SignatureDocumentTemplateList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gSignatureDocumentTemplate;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -42,6 +42,18 @@ namespace RockWeb.Blocks.Core
     [Description( "List of dates that schedules are not active for an entire category." )]
     public partial class ScheduleCategoryExclusionList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid rGrid;
+        protected global::Rock.Web.UI.Controls.ModalDialog modalDetails;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpExclusion;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfIdValue;
+
+        #endregion
+
         #region Fields
 
         int? _categoryId = null;

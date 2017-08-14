@@ -63,7 +63,7 @@
                         </div>
                         <div class="col-md-6">
                             <Rock:RockDropDownList ID="ddlSearchType" runat="server" Label="Search Type" />
-                            <Rock:RockTextBox ID="tbSmartSearchFieldCrieria" runat="server" Label="Field Critieria" Help="The field criteria to apply to Smart Search search. This field used the same syntax as the 'search' Lava command (field^value|field^value1,value2)." />
+                            <Rock:RockTextBox ID="tbSmartSearchFieldCriteria" runat="server" Label="Field Critieria" Help="The field criteria to apply to Smart Search search. This field used the same syntax as the 'search' Lava command (field^value|field^value1,value2)." />
                         </div>
                     </div>
 
@@ -103,7 +103,7 @@
 
         <Rock:ModalDialog ID="mdEditEntityType" runat="server" Title="Entity Type Details" OnCancelScript="clearActiveDialog();">
             <Content>
-                <asp:HiddenField ID="hfIdValue" runat="server" />
+                <global::asp:HiddenField ID="hfIdValue" runat="server" />
                 <Rock:RockCheckBox ID="cbEnabledIndexing" runat="server" Label="Enable Indexing" />
 
             </Content>

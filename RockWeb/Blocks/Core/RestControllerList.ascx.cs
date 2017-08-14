@@ -39,6 +39,11 @@ namespace RockWeb.Blocks.Administration
     [LinkedPage( "Detail Page" )]
     public partial class RestControllerList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gControllers;
+
+        #endregion
 
         #region Base Control Methods
 

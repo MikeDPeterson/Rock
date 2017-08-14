@@ -39,6 +39,12 @@ namespace RockWeb.Blocks.Core
     [Description( "Block for viewing entities with a selected tag" )]
     public partial class TagReport : Rock.Web.UI.RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gReport;
+
+        #endregion
 
         #region Properties
 

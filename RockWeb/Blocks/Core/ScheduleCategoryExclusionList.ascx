@@ -29,7 +29,7 @@
 
         <Rock:ModalDialog ID="modalDetails" runat="server" Title="Schedule Exclusion" ValidationGroup="Exclusion">
             <Content>
-                <asp:HiddenField ID="hfIdValue" runat="server" />
+                <global::asp:HiddenField ID="hfIdValue" runat="server" />
                 <div class="row">
                     <div class="col-sm-6">
                         <Rock:RockTextBox ID="tbTitle" runat="server" Label="Title" Required="true" ValidationGroup="Exclusion" />

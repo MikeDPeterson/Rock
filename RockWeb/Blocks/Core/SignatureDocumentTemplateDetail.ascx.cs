@@ -49,6 +49,19 @@ namespace RockWeb.Blocks.Core
         Rock.SystemGuid.SystemEmail.DIGITAL_SIGNATURE_INVITE, "", 1 )]
     public partial class SignatureDocumentTemplateDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTypeName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTypeDescription;
+        protected global::Rock.Web.UI.Controls.ComponentPicker cpProvider;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTemplate;
+        protected global::Rock.Web.UI.Controls.BinaryFileTypePicker bftpFileType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSystemEmail;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

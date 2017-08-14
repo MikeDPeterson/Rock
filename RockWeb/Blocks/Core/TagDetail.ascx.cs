@@ -37,6 +37,23 @@ namespace RockWeb.Blocks.Core
     [Description( "Block for administrating a tag." )]
     public partial class TagDetail : Rock.Web.UI.RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlEntityType;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblScope;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppOwner;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlEntityType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEntityTypeQualifierColumn;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEntityTypeQualifierValue;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditError;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        
+        #endregion
+
         #region Fields
 
         private bool _canConfigure = false;

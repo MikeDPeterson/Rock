@@ -41,6 +41,12 @@ namespace RockWeb.Blocks.Administration
     [LinkedPage( "Detail Page" )]
     public partial class RestActionList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblWarning;
+        protected global::Rock.Web.UI.Controls.Grid gActions;
+
+        #endregion
 
         #region Base Control Methods
 

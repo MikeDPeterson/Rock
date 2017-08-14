@@ -39,6 +39,17 @@ namespace RockWeb.Blocks.Core
     [LinkedPage( "Detail Page" )]
     public partial class TagList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlEntityType;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblScope;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppOwner;
+        protected global::Rock.Web.UI.Controls.Grid rGrid;
+
+        #endregion
+
         #region Fields
 
         private bool _canConfigure = false;

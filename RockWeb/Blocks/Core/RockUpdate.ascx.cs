@@ -45,6 +45,17 @@ namespace RockWeb.Blocks.Core
     [Description( "Handles checking for and performing upgrades to the Rock system." )]
     public partial class RockUpdate : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbVersionIssue;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRepoWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbBackupMessage;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIncludeStats;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMoreUpdatesAvailable;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrors;
+
+        #endregion
+
         #region Fields
 
         WebProjectManager nuGetService = null;

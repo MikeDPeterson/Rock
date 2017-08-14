@@ -42,6 +42,13 @@ namespace RockWeb.Blocks.Core
     [ContextAware( typeof( Person ) )]
     public partial class SignatureDocumentList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarningValues;
+        protected global::Rock.Web.UI.Controls.Grid gSignatureDocuments;
+
+        #endregion
+
         #region Properties 
 
         protected Person TargetPerson { get; private set; }

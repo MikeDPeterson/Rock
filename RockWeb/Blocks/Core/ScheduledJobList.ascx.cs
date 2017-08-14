@@ -38,6 +38,13 @@ namespace RockWeb.Blocks.Administration
     [LinkedPage("Detail Page")]
     public partial class ScheduledJobList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gScheduledJobs;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

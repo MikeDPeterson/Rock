@@ -37,6 +37,25 @@ namespace RockWeb.Blocks.Administration
     [Description( "Displays the details of the given scheduled job." )]
     public partial class ScheduledJobDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbActive;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNotificationStatus;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbNotificationEmails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbJobTypeError;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlJobTypes;
+        protected global::Rock.Web.UI.Controls.DynamicControlsPanel phAttributes;
+        protected global::Rock.Web.UI.Controls.DynamicControlsPanel phAttributesReadOnly;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbCronExpression;
+        protected global::Rock.Web.UI.Controls.RockLiteral lCronExpressionDesc;
+        protected global::Rock.Web.UI.Controls.RockLiteral lLastStatusMessage;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

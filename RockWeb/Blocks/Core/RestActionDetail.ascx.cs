@@ -20,6 +20,7 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.UI;
 
+
 using Rock;
 using Rock.Data;
 using Rock.Model;
@@ -35,6 +36,15 @@ namespace RockWeb.Blocks.Administration
     [Description( "Detail block for a REST Action that can be used to test the REST action." )]
     public partial class RestActionDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfUrl;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblLoadAttributes;
+        protected global::Rock.Web.UI.Controls.CodeEditor tbPayload;
+        protected global::Rock.Web.UI.Controls.KeyValueList lstParameterValues;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

@@ -43,6 +43,23 @@ namespace RockWeb.Blocks.Core
 
     public partial class SignatureDocumentDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatusLastUpdated;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlDocumentType;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rbStatus;
+        protected global::Rock.Web.UI.Controls.FileUploader fuDocument;
+        protected global::Rock.Web.UI.Controls.RockLiteral lDocumentKey;
+        protected global::Rock.Web.UI.Controls.RockLiteral lRequestDate;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAppliesTo;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAssignedTo;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppSignedBy;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>
