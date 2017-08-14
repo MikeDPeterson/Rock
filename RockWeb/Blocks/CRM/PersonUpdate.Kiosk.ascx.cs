@@ -67,6 +67,21 @@ namespace RockWeb.Blocks.Crm
     [BooleanField( "Enable Debug", "Shows the fields available to merge in lava.", false, "", 13 )]
     public partial class PersonUpdateKiosk : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSearch;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPhone;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.EmailBox tbEmail;
+        protected global::Rock.Web.UI.Controls.DatePicker dpBirthdate;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbHomePhone;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pngMobilePhone;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbOtherUpdates;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

@@ -42,6 +42,12 @@ namespace RockWeb.Blocks.Crm
     [BooleanField( "Allow Staff", "If checked, staff members will also be allowed to upload new photos for themselves.", false )]
     public partial class PhotoUpload : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarning;
+
+        #endregion
+
         #region Fields
 
         /// <summary>

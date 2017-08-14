@@ -66,6 +66,20 @@ namespace RockWeb.Blocks.Crm.PersonDetail
     [AttributeCategoryField( "Attribute Categories", "The Person Attribute Categories to display attributes from", true, "Rock.Model.Person", false, "", "", 17 )]
     public partial class AddGroup : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbValidation;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbGroupName;
+        protected global::Rock.Web.UI.Controls.NewGroupMembers nfmMembers;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMaritalStatus;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbHomeless;
+        protected global::Rock.Web.UI.Controls.NewGroupContactInfo nfciContactInfo;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessages;
+
+        #endregion
+
         #region Fields
 
         private GroupTypeCache _groupType = null;

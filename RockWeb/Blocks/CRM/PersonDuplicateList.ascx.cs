@@ -42,6 +42,12 @@ namespace RockWeb.Blocks.Crm
     [LinkedPage( "Detail Page", order: 3 )]
     public partial class PersonDuplicateList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         /// <summary>
         /// Gets the Confidence Score HTML include bootstrap label
         /// </summary>

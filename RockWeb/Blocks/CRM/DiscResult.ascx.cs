@@ -42,6 +42,13 @@ namespace Rockweb.Blocks.Crm
     [Description( "View the results of a DISC assessment." )]
     public partial class DiscResult : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlAssessmentDate;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

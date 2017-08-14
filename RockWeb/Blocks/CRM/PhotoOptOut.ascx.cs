@@ -40,6 +40,13 @@ namespace RockWeb.Blocks.Crm
 
     public partial class PhotoOptOut : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Fields
 
         #endregion

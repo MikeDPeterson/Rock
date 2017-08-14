@@ -41,6 +41,17 @@ namespace RockWeb.Blocks.Crm.PersonDetail
     [Description( "Block for displaying the history of changes to a particular user." )]
     public partial class PersonHistory : PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlDateAdded;
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppWhoFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSummary;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.Grid gHistory;
+
+        #endregion
 
         #region Fields
 

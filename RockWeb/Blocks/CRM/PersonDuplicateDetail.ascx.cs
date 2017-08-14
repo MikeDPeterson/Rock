@@ -42,6 +42,13 @@ namespace RockWeb.Blocks.Crm
     [BooleanField( "Include Inactive", "Set to true to also include potential matches when both records are inactive.", false, order: 2 )]
     public partial class PersonDuplicateDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoDuplicatesMessage;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

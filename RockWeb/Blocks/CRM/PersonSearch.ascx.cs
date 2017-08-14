@@ -44,6 +44,13 @@ namespace RockWeb.Blocks.Crm
     [BooleanField("Show Performance", "Displays how long the search took.", false, "", 2 )]
     public partial class PersonSearch : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotice;
+        protected global::Rock.Web.UI.Controls.Grid gPeople;
+
+        #endregion
+
         #region Fields
 
         private DefinedValueCache _inactiveStatus = null;

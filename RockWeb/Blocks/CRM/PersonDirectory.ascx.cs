@@ -58,6 +58,14 @@ namespace RockWeb.Blocks.Crm
     [IntegerField( "Max Results", "The maximum number of results to show on the page.", true, 1500)]
     public partial class PersonDirectory : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbValidation;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+
+        #endregion
+
         #region Fields
 
         private Guid? _dataViewGuid = null;

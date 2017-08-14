@@ -39,6 +39,15 @@ namespace RockWeb.Blocks.Crm.PersonDetail
     [Description( "Person key attributes (Person Detail Page)." )]
     public partial class KeyAttributes : Rock.Web.UI.PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfAttributeOrder;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgKeyAttribute;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCategories;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblAttributes;
+
+        #endregion
+
         #region Fields
 
         // View modes

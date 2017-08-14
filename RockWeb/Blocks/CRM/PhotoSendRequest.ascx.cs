@@ -41,6 +41,19 @@ namespace RockWeb.Blocks.Crm
     [IntegerField( "Maximum Recipients", "The maximum number of recipients allowed before communication will need to be approved", false, 300 )]
     public partial class PhotoSendRequest : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblRoles;
+        protected global::Rock.Web.UI.Controls.NumberBox nbAge;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblConnectionStatus;
+        protected global::Rock.Web.UI.Controls.NumberBox nbUpdatedLessThan;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbTestResult;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbConfirmMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSuccess;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

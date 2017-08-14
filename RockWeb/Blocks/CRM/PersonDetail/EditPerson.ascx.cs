@@ -44,6 +44,36 @@ namespace RockWeb.Blocks.Crm.PersonDetail
     [Description( "Allows you to edit a person." )]
     public partial class EditPerson : Rock.Web.UI.PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRecordStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlReason;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbInactiveReasonNote;
+        protected global::Rock.Web.UI.Controls.ImageEditor imgPhoto;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTitle;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbNickName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbMiddleName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSuffix;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlConnectionStatus;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblGender;
+        protected global::Rock.Web.UI.Controls.BirthdayPicker bpBirthDay;
+        protected global::Rock.Web.UI.Controls.GradePicker ddlGradePicker;
+        protected global::Rock.Web.UI.Controls.YearPicker ypGraduation;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMaritalStatus;
+        protected global::Rock.Web.UI.Controls.DatePicker dpAnniversaryDate;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbEmail;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsEmailActive;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblEmailPreference;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGivingGroup;
+        protected global::Rock.Web.UI.Controls.Grid grdPreviousNames;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdPreviousName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPreviousLastName;
+
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>

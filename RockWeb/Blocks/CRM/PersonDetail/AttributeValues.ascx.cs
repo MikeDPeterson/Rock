@@ -44,6 +44,11 @@ namespace RockWeb.Blocks.Crm.PersonDetail
     [TextField("Attribute Order", "The order to use for displaying attributes.  Note: this value is set through the block's UI and does not need to be set here.", false, "", "", 1)]
     public partial class AttributeValues : PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfAttributeOrder;
+
+        #endregion
 
         #region Fields
 

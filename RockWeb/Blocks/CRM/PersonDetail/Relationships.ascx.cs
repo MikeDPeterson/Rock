@@ -40,6 +40,14 @@ namespace RockWeb.Blocks.Crm.PersonDetail
     [BooleanField( "Create Group", "Should group be created if a group/role cannot be found for the current person.", true )]
     public partial class Relationships : Rock.Web.UI.PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalDialog modalAddPerson;
+        protected global::Rock.Web.UI.Controls.GroupRolePicker grpRole;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+
+        #endregion
+
         /// <summary>
         /// Gets or sets a value indicating whether this instance can edit.
         /// </summary>

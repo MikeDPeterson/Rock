@@ -42,6 +42,34 @@ namespace RockWeb.Blocks.Crm.PersonDetail
 
     public partial class EditGroup : PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidGroup;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbGroupName;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRecordStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlReason;
+        protected global::Rock.Web.UI.Controls.Grid gLocations;
+        protected global::Rock.Web.UI.Controls.ConfirmPageUnload confirmExit;
+        protected global::Rock.Web.UI.Controls.ModalDialog modalAddPerson;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNewPersonTitle;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNewPersonFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNewPersonLastName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNewPersonSuffix;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNewPersonConnectionStatus;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblNewPersonRole;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblNewPersonGender;
+        protected global::Rock.Web.UI.Controls.DatePicker dpNewPersonBirthDate;
+        protected global::Rock.Web.UI.Controls.GradePicker ddlGradePicker;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNewPersonMaritalStatus;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRemoveOtherGroups;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfActiveTab;
+        protected global::System.Web.UI.WebControls.ValidationSummary valSummaryAddPerson;
+
+        #endregion
+
         private GroupTypeCache _groupType = null;
         private bool _isFamilyGroupType = false;
         private Group _group = null;

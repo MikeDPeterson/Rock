@@ -43,6 +43,15 @@ namespace RockWeb.Blocks.Crm
 
     public partial class PhotoVerify : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowAll;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbConfigError;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

@@ -49,6 +49,44 @@ namespace RockWeb.Blocks.Crm
     [IntegerField( "Display Count", "The initial number of individuals to display prior to expanding list", false, 0, "", 1  )]
     public partial class BulkUpdate : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAddPerson;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTitle;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGender;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMaritalStatus;
+        protected global::Rock.Web.UI.Controls.GradePicker ddlGradePicker;
+        protected global::Rock.Web.UI.Controls.YearPicker ypGraduation;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSuffix;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRecordStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlInactiveReason;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbInactiveReasonNote;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlIsEmailActive;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlEmailPreference;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEmailNote;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlFollow;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSystemNote;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlReviewReason;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbReviewReasonNote;
+        protected global::Rock.Web.UI.Controls.PanelWidget pwNote;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNoteType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNote;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsAlert;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsPrivate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupAction;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpGroup;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupRole;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupMemberStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTagAction;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTagList;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+
+        protected global::System.Web.UI.WebControls.Panel pnlGroupMemberAttributes;
+
+        #endregion
+
         #region Fields
 
         DateTime _gradeTransitionDate = new DateTime( RockDateTime.Today.Year, 6, 1 );

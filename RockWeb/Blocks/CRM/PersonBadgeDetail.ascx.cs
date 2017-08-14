@@ -36,6 +36,14 @@ namespace RockWeb.Blocks.Crm
 
     public partial class PersonBadgeDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.ComponentPicker compBadgeType;
+
+        #endregion
 
         #region Properties
 

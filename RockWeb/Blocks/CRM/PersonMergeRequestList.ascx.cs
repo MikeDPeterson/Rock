@@ -42,6 +42,13 @@ namespace RockWeb.Blocks.Crm
 
     public partial class PersonMergeRequestList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

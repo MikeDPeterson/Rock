@@ -76,51 +76,6 @@ namespace RockWeb.Blocks.Crm.PersonDetail {
         protected global::System.Web.UI.WebControls.LinkButton lbMoved;
         
         /// <summary>
-        /// cbMailing control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbMailing;
-        
-        /// <summary>
-        /// cbLocation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbLocation;
-        
-        /// <summary>
-        /// lbEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbEdit;
-        
-        /// <summary>
-        /// lbSave control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbSave;
-        
-        /// <summary>
-        /// lbCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbCancel;
-        
-        /// <summary>
         /// pnlAttributes control.
         /// </summary>
         /// <remarks>
@@ -175,15 +130,6 @@ namespace RockWeb.Blocks.Crm.PersonDetail {
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
         
         /// <summary>
-        /// hfActiveTab control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfActiveTab;
-        
-        /// <summary>
         /// liNewPerson control.
         /// </summary>
         /// <remarks>
@@ -200,15 +146,6 @@ namespace RockWeb.Blocks.Crm.PersonDetail {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl liExistingPerson;
-        
-        /// <summary>
-        /// valSummaryAddPerson control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valSummaryAddPerson;
         
         /// <summary>
         /// divNewPerson control.

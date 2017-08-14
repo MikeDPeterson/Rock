@@ -37,6 +37,13 @@ namespace RockWeb.Blocks.Finance
 
     public partial class BankAccountList : PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

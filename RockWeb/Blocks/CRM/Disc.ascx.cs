@@ -71,6 +71,12 @@ namespace Rockweb.Blocks.Crm
     [BooleanField("Always Allow Retakes", "Determines if the retake button should be shown.", false, order:5)]
     public partial class Disc : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

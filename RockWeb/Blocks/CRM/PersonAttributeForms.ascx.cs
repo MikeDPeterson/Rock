@@ -55,6 +55,23 @@ namespace RockWeb.Blocks.Crm
 
     public partial class PersonAttributeForms : RockBlockCustomSettings
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMain;
+        protected global::Rock.Web.UI.Controls.BootstrapButton lbNext;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDisplayProgressBar;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSaveValues;
+        protected global::Rock.Web.UI.Controls.WorkflowTypePicker wtpWorkflow;
+        protected global::Rock.Web.UI.Controls.PagePicker ppDonePage;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgField;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPersonAttributes;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbUsePersonCurrentValue;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRequireInInitialEntry;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceAttributePreText;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceAttributePostText;
+
+        #endregion
+
         #region Fields
 
         private string _mode = "VIEW";

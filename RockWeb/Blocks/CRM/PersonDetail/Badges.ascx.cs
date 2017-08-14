@@ -37,6 +37,12 @@ namespace RockWeb.Blocks.Crm.PersonDetail
     [PersonBadgesField( "Badges" )]
     public partial class Badges : Rock.Web.UI.PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PersonProfileBadgeList blBadges;
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>

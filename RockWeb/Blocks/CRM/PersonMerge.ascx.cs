@@ -43,6 +43,19 @@ namespace RockWeb.Blocks.Crm
     [LinkedPage( "Person Detail Page" )]
     public partial class PersonMerge : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotAuthorized;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMergeRequestSuccess;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMergeRequestAlreadySubmitted;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEntitySetNote;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoteSavedSuccess;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAdd;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbPeople;
+        protected global::Rock.Web.UI.Controls.Grid gValues;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSecurityNotice;
+
+        #endregion
 
         #region Fields
 

@@ -38,6 +38,13 @@ namespace RockWeb.Blocks.Crm
     [LinkedPage("Detail Page")]
     public partial class PersonBadgeList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gPersonBadge;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

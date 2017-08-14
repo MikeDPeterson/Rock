@@ -57,6 +57,14 @@ Because the contents of this setting will be rendered inside a &lt;ul&gt; elemen
     [BooleanField( "Allow Following", "Should people be able to follow a person by selecting the star on the person's photo?", true, "", 7)]
     public partial class Bio : PersonBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidPerson;
+        protected global::Rock.Web.UI.Controls.PersonProfileBadgeList blStatus;
+        protected global::Rock.Web.UI.Controls.TagList taglPersonTags;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

@@ -38,6 +38,12 @@ namespace RockWeb.Blocks.Crm
     [IntegerField( "Session Count", "The number of sessions to show per page.", true, 20, "", 1 )]
     public partial class PersonPageViews : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDateFilter;
+
+        #endregion
+
         #region Fields
 
         private DateTime startDate = DateTime.MinValue;
