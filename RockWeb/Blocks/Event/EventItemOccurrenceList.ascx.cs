@@ -50,6 +50,17 @@ namespace RockWeb.Blocks.Event
     [LinkedPage( "Content Item Detail Page", "The page for viewing details about a content item", true, "", "", 3 )]
     public partial class EventItemOccurrenceList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDate;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampus;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbContact;
+        protected global::Rock.Web.UI.Controls.Grid gCalendarItemOccurrenceList;
+
+        #endregion
+
         #region Properties
 
         private EventItem _eventItem = null;

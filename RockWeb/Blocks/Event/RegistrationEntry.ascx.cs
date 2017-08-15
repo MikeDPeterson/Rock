@@ -59,6 +59,46 @@ namespace RockWeb.Blocks.Event
     [SystemEmailField( "Confirm Account Template", "Confirm Account Email Template", false, Rock.SystemGuid.SystemEmail.SECURITY_CONFIRM_ACCOUNT, "", 7 )]
     public partial class RegistrationEntry : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMain;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWaitingList;
+        protected global::Rock.Web.UI.Controls.NumberUpDown numHowMany;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbType;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblFamilyOptions;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlFamilyMembers;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDigitalSignature;
+        protected global::Rock.Web.UI.Controls.BootstrapButton lbRegistrantNext;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbYourFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbYourLastName;
+        protected global::Rock.Web.UI.Controls.EmailBox tbConfirmationEmail;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbUpdateEmail;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblRegistrarFamilyOptions;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDiscountCode;
+        protected global::Rock.Web.UI.Controls.RockLiteral lTotalCost;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPreviouslyPaid;
+        protected global::Rock.Web.UI.Controls.RockLiteral lMinimumDue;
+        protected global::Rock.Web.UI.Controls.CurrencyBox nbAmountPaid;
+        protected global::Rock.Web.UI.Controls.RockLiteral lRemainingDue;
+        protected global::Rock.Web.UI.Controls.RockLiteral lAmountDue;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblSavedCC;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCreditCard;
+        protected global::Rock.Web.UI.Controls.MonthYearPicker mypExpiration;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCVV;
+        protected global::Rock.Web.UI.Controls.AddressControl acBillingAddress;
+        protected global::Rock.Web.UI.Controls.BootstrapButton lbSummaryNext;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSaveAccount;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtSaveAccount;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtUserName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtPassword;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtPasswordConfirm;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSaveAccount;
+
+        #endregion
+
         #region Fields
 
         private bool _saveNavigationHistory = false;

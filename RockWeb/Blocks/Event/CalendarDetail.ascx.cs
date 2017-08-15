@@ -45,6 +45,25 @@ namespace RockWeb.Blocks.Event
     [Description( "Displays the details of the given Event Calendar." )]
     public partial class CalendarDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbActive;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.Grid gAttributes;
+        protected global::Rock.Web.UI.Controls.Grid gContentChannels;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgAttribute;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgContentChannel;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlContentChannel;
+
+        #endregion
+
         #region Properties
 
         private List<Attribute> AttributesState { get; set; }

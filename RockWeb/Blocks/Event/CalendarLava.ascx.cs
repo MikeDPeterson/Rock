@@ -66,6 +66,20 @@ namespace RockWeb.Blocks.Event
 
     public partial class CalendarLava : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwCampus;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwCategory;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDateRange;
+        protected global::Rock.Web.UI.Controls.BootstrapButton btnDay;
+        protected global::Rock.Web.UI.Controls.BootstrapButton btnWeek;
+        protected global::Rock.Web.UI.Controls.BootstrapButton btnMonth;
+
+    
+
+        #endregion
+
         #region Fields
 
         private int _calendarId = 0;

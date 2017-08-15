@@ -113,7 +113,7 @@
                     </div>
 
                     <Rock:PanelWidget ID="wpAttributes" runat="server" Title="Attribute Values">
-                        <asp:PlaceHolder ID="phAttributes" runat="server" EnableViewState="false"></asp:PlaceHolder>
+                        <global::asp:PlaceHolder ID="phAttributes" runat="server" EnableViewState="false" />
                     </Rock:PanelWidget>
 
                     <div class="actions">
@@ -129,7 +129,7 @@
 
         <Rock:ModalDialog ID="dlgAudience" runat="server" ScrollbarEnabled="false" ValidationGroup="Audience" SaveButtonText="Add" OnCancelScript="clearActiveDialog();" OnSaveClick="btnSaveAudience_Click" Title="Select Audience">
             <Content>
-                <asp:ValidationSummary ID="vsAudience" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Audience" />
+                <global::asp:ValidationSummary ID="vsAudience" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Audience" />
                 <Rock:RockDropDownList ID="ddlAudience" runat="server" Label="Select Audience" ValidationGroup="Audience" Required="true" DataValueField="Id" DataTextField="Value" />
             </Content>
         </Rock:ModalDialog>

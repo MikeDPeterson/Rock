@@ -10,7 +10,7 @@
 namespace RockWeb.Blocks.Event {
     
     
-    public partial class RegistrationInstancePaymentReminder {
+    public partial class RegistrationInstanceSendPaymentReminder {
         
         /// <summary>
         /// upnlContent control.

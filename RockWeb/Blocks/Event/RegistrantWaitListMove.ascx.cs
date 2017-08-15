@@ -43,6 +43,18 @@ namespace RockWeb.Blocks.Event
     [Description( "Moves the person from the wait list to be a full registrant." )]
     public partial class RegistrantWaitListMove : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbUpdate;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFromName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFromEmail;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFromSubject;
+        protected global::Rock.Web.UI.Controls.Toggle tglEmailBodyView;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceEmailMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

@@ -130,15 +130,6 @@ namespace RockWeb.Blocks.Event {
         protected global::System.Web.UI.WebControls.Literal lFormsReadonly;
         
         /// <summary>
-        /// rFees control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rFees;
-        
-        /// <summary>
         /// btnEdit control.
         /// </summary>
         /// <remarks>
@@ -173,68 +164,5 @@ namespace RockWeb.Blocks.Event {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
-        
-        /// <summary>
-        /// hfFormGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfFormGuid;
-        
-        /// <summary>
-        /// hfAttributeGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfAttributeGuid;
-        
-        /// <summary>
-        /// ValidationSummaryAttribute control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummaryAttribute;
-        
-        /// <summary>
-        /// hfDiscountGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfDiscountGuid;
-        
-        /// <summary>
-        /// ValidationSummaryDiscount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummaryDiscount;
-        
-        /// <summary>
-        /// hfFeeGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfFeeGuid;
-        
-        /// <summary>
-        /// ValidationSummaryFee control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummaryFee;
     }
 }

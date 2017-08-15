@@ -48,6 +48,15 @@ namespace RockWeb.Blocks.Event
 
     public partial class RegistrantDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.Toggle tglWaitList;
+        protected global::Rock.Web.UI.Controls.CurrencyBox cbCost;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDiscountApplies;
+        protected global::Rock.Web.UI.Controls.FileUploader fuSignedDocument;
+
+        #endregion
 
         #region Properties
 

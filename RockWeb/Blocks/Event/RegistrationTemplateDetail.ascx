@@ -90,9 +90,9 @@
                                     <div class="col-xs-6">
                                         <Rock:RockCheckBoxList ID="cblNotify" runat="server" Label="Notify" RepeatDirection="Vertical"
                                             Help="Who should be notified when new people are registered?">
-                                            <asp:ListItem Value="1" Text="Registration Contact" />
-                                            <asp:ListItem Value="2" Text="Group Followers" />
-                                            <asp:ListItem Value="4" Text="Group Leaders" />
+                                            <global::asp:ListItem Value="1" Text="Registration Contact" />
+                                            <global::asp:ListItem Value="2" Text="Group Followers" />
+                                            <global::asp:ListItem Value="4" Text="Group Leaders" />
                                         </Rock:RockCheckBoxList>
                                     </div>
                                     <div class="col-xs-6">
@@ -353,14 +353,14 @@
                             <Rock:RockLiteral ID="lCost" runat="server" Label="Cost" />
                             <Rock:RockLiteral ID="lMinimumInitialPayment" runat="server" Label="Minimum Initial Payment" />
                             <Rock:RockControlWrapper ID="rcwFees" runat="server" Label="Fees">
-                                <asp:Repeater ID="rFees" runat="server">
+                                <global::asp:Repeater ID="rFees" runat="server">
                                     <ItemTemplate>
                                         <div class="row">
                                             <div class="col-xs-4"><%# Eval("Name") %></div>
                                             <div class="col-xs-8"><%# FormatFeeCost( Eval("CostValue").ToString() ) %></div>
                                         </div>
                                     </ItemTemplate>
-                                </asp:Repeater>
+                                </Repeater>
                             </Rock:RockControlWrapper>
                         </div>
                     </div>
@@ -387,9 +387,9 @@
 
         <Rock:ModalDialog ID="dlgField" runat="server" Title="Form Field" OnSaveClick="dlgField_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Field">
             <Content>
-                <asp:HiddenField ID="hfFormGuid" runat="server" />
-                <asp:HiddenField ID="hfAttributeGuid" runat="server" />
-                <asp:ValidationSummary ID="ValidationSummaryAttribute" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Field" />
+                <global::asp:HiddenField ID="hfFormGuid" runat="server" />
+                <global::asp:HiddenField ID="hfAttributeGuid" runat="server" />
+                <global::asp:ValidationSummary ID="ValidationSummaryAttribute" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Field" />
                 <div class="row">
                     <div class="col-md-3">
                         <Rock:RockDropDownList ID="ddlFieldSource" runat="server" Label="Source" AutoPostBack="true" OnSelectedIndexChanged="ddlFieldSource_SelectedIndexChanged" ValidationGroup="Field" />
@@ -425,14 +425,14 @@
 
         <Rock:ModalDialog ID="dlgDiscount" runat="server" Title="Discount Code" OnSaveClick="dlgDiscount_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Discount">
             <Content>
-                <asp:HiddenField ID="hfDiscountGuid" runat="server" />
-                <asp:ValidationSummary ID="ValidationSummaryDiscount" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Discount" />
+                <global::asp:HiddenField ID="hfDiscountGuid" runat="server" />
+                <global::asp:ValidationSummary ID="ValidationSummaryDiscount" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Discount" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:RockTextBox ID="tbDiscountCode" runat="server" CssClass="input-width-xl" Label="Discount Code" ValidationGroup="Discount" Required="true" />
                         <Rock:RockRadioButtonList ID="rblDiscountType" runat="server" Label="Discount Type" RepeatDirection="Horizontal" AutoPostBack="true" OnSelectedIndexChanged="rblDiscountType_SelectedIndexChanged">
-                            <asp:ListItem Text="Percentage" Value="Percentage" />
-                            <asp:ListItem Text="Amount" Value="Amount" />
+                            <global::asp:ListItem Text="Percentage" Value="Percentage" />
+                            <global::asp:ListItem Text="Amount" Value="Amount" />
                         </Rock:RockRadioButtonList>
                         <Rock:NumberBox ID="nbDiscountPercentage" runat="server" AppendText="%" CssClass="input-width-md" Label="Discount Percentage" NumberType="Integer" ValidationGroup="Discount"  />
                         <Rock:CurrencyBox ID="cbDiscountAmount" runat="server" CssClass="input-width-md" Label="Discount Amount" ValidationGroup="Discount" />
@@ -453,8 +453,8 @@
 
         <Rock:ModalDialog ID="dlgFee" runat="server" Title="Fee" OnSaveClick="dlgFee_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Fee">
             <Content>
-                <asp:HiddenField ID="hfFeeGuid" runat="server" />
-                <asp:ValidationSummary ID="ValidationSummaryFee" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Fee" />
+                <global::asp:HiddenField ID="hfFeeGuid" runat="server" />
+                <global::asp:ValidationSummary ID="ValidationSummaryFee" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Fee" />
                 <Rock:RockTextBox ID="tbFeeName" runat="server" Label="Name" ValidationGroup="Fee" Required="true" />
                 <Rock:RockRadioButtonList ID="rblFeeType" runat="server" Label="Options" ValidationGroup="Fee" RepeatDirection="Horizontal" AutoPostBack="true" OnSelectedIndexChanged="rblFeeType_SelectedIndexChanged" />
                 <Rock:CurrencyBox ID="cCost" runat="server" Label="Cost" ValidationGroup="Fee" />

@@ -361,6 +361,113 @@ namespace RockWeb.Blocks.Event
 {{ 'Global' | Attribute:'EmailFooter' }}", "", 3 )]
     public partial class RegistrationTemplateDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbValidationError;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.PanelWidget pwDetails;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpGroupType;
+        protected global::Rock.Web.UI.Controls.GroupRolePicker rpGroupTypeRole;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupMemberStatus;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMultipleRegistrants;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMaxRegistrants;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblRegistrantsInSameFamily;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowCurrentFamilyMembers;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbWaitListEnabled;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblNotify;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAddPersonNote;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbLoginRequired;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowGroupPlacement;
+        protected global::Rock.Web.UI.Controls.Toggle tglSetCostOnTemplate;
+        protected global::Rock.Web.UI.Controls.CurrencyBox cbCost;
+        protected global::Rock.Web.UI.Controls.CurrencyBox cbMinimumInitialPayment;
+        protected global::Rock.Web.UI.Controls.FinancialGatewayPicker fgpFinancialGateway;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtBatchNamePrefix;
+        protected global::Rock.Web.UI.Controls.WorkflowActionTypePicker wtpRegistrationWorkflow;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowExternalUpdates;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSignatureDocumentTemplate;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDisplayInLine;
+        protected global::Rock.Web.UI.Controls.Grid gFields;
+        protected global::Rock.Web.UI.Controls.Grid gFees;
+        protected global::Rock.Web.UI.Controls.Grid gDiscounts;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRegistrationTerm;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRegistrantTerm;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFeeTerm;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDiscountCodeTerm;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSuccessTitle;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceSuccessText;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbConfirmationFromName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbConfirmationFromEmail;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbConfirmationSubject;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceConfirmationEmailTemplate;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbReminderFromName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbReminderFromEmail;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbReminderSubject;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceReminderEmailTemplate;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPaymentReminderFromName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPaymentReminderFromEmail;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPaymentReminderSubject;
+        protected global::Rock.Web.UI.Controls.CodeEditor cePaymentReminderEmailTemplate;
+        protected global::Rock.Web.UI.Controls.NumberBox nbPaymentReminderTimeSpan;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbWaitListTransitionFromName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbWaitListTransitionFromEmail;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbWaitListTransitionSubject;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceWaitListTransitionEmailTemplate;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lGroupType;
+        protected global::Rock.Web.UI.Controls.RockLiteral lWorkflowType;
+        protected global::Rock.Web.UI.Controls.RockLiteral lRequiredSignedDocument;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwForms;
+        protected global::Rock.Web.UI.Controls.RockLiteral lCost;
+        protected global::Rock.Web.UI.Controls.RockLiteral lMinimumInitialPayment;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwFees;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfHasRegistrations;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgField;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlFieldSource;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPersonField;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPersonField;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPersonAttributes;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupTypeAttributes;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbInternalField;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRequireInInitialEntry;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCommonValue;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowOnGrid;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbUsePersonCurrentValue;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowOnWaitList;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtRegistrationAttribute;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceAttributePreText;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceAttributePostText;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgDiscount;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDiscountCode;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblDiscountType;
+        protected global::Rock.Web.UI.Controls.NumberBox nbDiscountPercentage;
+        protected global::Rock.Web.UI.Controls.CurrencyBox cbDiscountAmount;
+        protected global::Rock.Web.UI.Controls.NumberBox nbDiscountMaxUsage;
+        protected global::Rock.Web.UI.Controls.NumberBox nbDiscountMaxRegistrants;
+        protected global::Rock.Web.UI.Controls.NumberBox nbDiscountMinRegistrants;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDiscountDateRange;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgFee;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList tbFeeName;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblFeeType;
+        protected global::Rock.Web.UI.Controls.CurrencyBox cCost;
+        protected global::Rock.Web.UI.Controls.KeyValueList kvlMultipleFees;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowMultiple;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDiscountApplies;
+
+        protected global::System.Web.UI.WebControls.Repeater rFees;
+        protected global::System.Web.UI.WebControls.HiddenField hfFormGuid;
+        protected global::System.Web.UI.WebControls.HiddenField hfAttributeGuid;
+        protected global::System.Web.UI.WebControls.HiddenField hfDiscountGuid;
+        protected global::System.Web.UI.WebControls.HiddenField hfFeeGuid;
+
+        #endregion
+
 
         #region Properties
 

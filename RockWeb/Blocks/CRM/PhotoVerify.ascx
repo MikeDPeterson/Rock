@@ -38,7 +38,7 @@
                                 <HeaderTemplate>Status
                                 </HeaderTemplate>
                                 <ItemTemplate>
-                                    <asp:Literal runat="server" ID="lStatus"></asp:Literal>
+                                    <global::asp:Literal runat="server" ID="lStatus" />
                                 </ItemTemplate>
                             </Rock:RockTemplateField>
                             <Rock:DeleteField OnClick="rGrid_Delete" />

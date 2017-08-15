@@ -36,6 +36,10 @@ namespace RockWeb.Blocks.Event
     [LinkedPage( "Detail Page" )]
     public partial class RegistrationInstanceActiveList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+        protected global::Rock.Web.UI.Controls.Grid gRegInstances;
+
+        #endregion
 
         #region Base Control Methods
 

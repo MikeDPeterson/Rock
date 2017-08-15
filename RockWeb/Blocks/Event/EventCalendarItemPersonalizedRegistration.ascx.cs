@@ -47,6 +47,14 @@ namespace RockWeb.Blocks.Event
     [BooleanField("Start Registration At Beginning", "Should the registration start at the beginning (true) or start at the confirmation page (false). This will depend on whether you would like the registrar to have to walk through the registration process to complete any required items.", true, order: 4)]
     public partial class EventCalendarItemPersonalizedRegistration : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblRegistrants;
+        protected global::Rock.Web.UI.Controls.EmailBox ebEmailReminder;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

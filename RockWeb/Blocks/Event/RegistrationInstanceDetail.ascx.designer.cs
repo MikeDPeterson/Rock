@@ -292,51 +292,6 @@ namespace RockWeb.Blocks.Event {
         protected global::System.Web.UI.WebControls.Panel pnlRegistrations;
         
         /// <summary>
-        /// lRegisteredBy control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lRegisteredBy;
-        
-        /// <summary>
-        /// lRegistrants control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lRegistrants;
-        
-        /// <summary>
-        /// lDiscount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lDiscount;
-        
-        /// <summary>
-        /// lCost control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lCost;
-        
-        /// <summary>
-        /// lBalance control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lBalance;
-        
-        /// <summary>
         /// pnlRegistrants control.
         /// </summary>
         /// <remarks>
@@ -344,87 +299,6 @@ namespace RockWeb.Blocks.Event {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlRegistrants;
-        
-        /// <summary>
-        /// phRegistrantFormFieldFilters control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phRegistrantFormFieldFilters;
-        
-        /// <summary>
-        /// lRegistrant control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lRegistrant;
-        
-        /// <summary>
-        /// lGroup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lGroup;
-        
-        /// <summary>
-        /// lStreet1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lStreet1;
-        
-        /// <summary>
-        /// lStreet2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lStreet2;
-        
-        /// <summary>
-        /// lCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lCity;
-        
-        /// <summary>
-        /// lState control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lState;
-        
-        /// <summary>
-        /// lPostalCode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lPostalCode;
-        
-        /// <summary>
-        /// lCountry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lCountry;
         
         /// <summary>
         /// pnlPayments control.
@@ -436,24 +310,6 @@ namespace RockWeb.Blocks.Event {
         protected global::System.Web.UI.WebControls.Panel pnlPayments;
         
         /// <summary>
-        /// lRegistrar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lRegistrar;
-        
-        /// <summary>
-        /// lRegistrants control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lRegistrants;
-        
-        /// <summary>
         /// pnlLinkages control.
         /// </summary>
         /// <remarks>
@@ -461,24 +317,6 @@ namespace RockWeb.Blocks.Event {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlLinkages;
-        
-        /// <summary>
-        /// lCalendarItem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lCalendarItem;
-        
-        /// <summary>
-        /// lContentItem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lContentItem;
         
         /// <summary>
         /// pnlWaitList control.
@@ -490,33 +328,6 @@ namespace RockWeb.Blocks.Event {
         protected global::System.Web.UI.WebControls.Panel pnlWaitList;
         
         /// <summary>
-        /// phWaitListFormFieldFilters control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phWaitListFormFieldFilters;
-        
-        /// <summary>
-        /// lWaitListOrder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lWaitListOrder;
-        
-        /// <summary>
-        /// lWaitListIndividual control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lWaitListIndividual;
-        
-        /// <summary>
         /// pnlGroupPlacement control.
         /// </summary>
         /// <remarks>
@@ -524,15 +335,6 @@ namespace RockWeb.Blocks.Event {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlGroupPlacement;
-        
-        /// <summary>
-        /// lRegistrant control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lRegistrant;
         
         /// <summary>
         /// lbPlaceInGroup control.

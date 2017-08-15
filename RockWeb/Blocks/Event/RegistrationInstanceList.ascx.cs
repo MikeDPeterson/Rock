@@ -40,6 +40,16 @@ namespace RockWeb.Blocks.Event
     [LinkedPage( "Detail Page" )]
     public partial class RegistrationInstanceList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlActiveFilter;
+        protected global::Rock.Web.UI.Controls.Grid gInstances;
+
+        #endregion
+
         #region Private Variables
 
         private RegistrationTemplate _template = null;

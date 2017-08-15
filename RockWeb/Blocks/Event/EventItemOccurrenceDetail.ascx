@@ -56,7 +56,7 @@
                             <Rock:RockTextBox ID="tbLocation" runat="server" Label="Location Description" />
                             <Rock:RockControlWrapper ID="rcwSchedule" runat="server" Label="Schedule" >
                                 <Rock:ScheduleBuilder ID="sbSchedule" runat="server" ValidationGroup="Schedule" AllowMultiSelect="true" Required="true" OnSaveSchedule="sbSchedule_SaveSchedule"/>
-                                <asp:Literal ID="lScheduleText" runat="server" />
+                                <global::asp:Literal ID="lScheduleText" runat="server" />
                             </Rock:RockControlWrapper>
                             <Rock:RockLiteral ID="lRegistration" runat="server" Label="Registration Instance - Group" CssClass="margin-b-none" />
                             <asp:LinkButton ID="lbEditRegistration" runat="server" CssClass="btn btn-default btn-xs margin-b-md" OnClick="lbEditRegistration_Click" ><i class="fa fa-pencil"></i> Edit</asp:LinkButton>
@@ -93,7 +93,7 @@
 
         <Rock:ModalDialog ID="dlgNewLinkage" runat="server" Title="New Registration Instance" SaveButtonText="OK" OnSaveClick="dlgNewLinkage_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="NewLinkage">
             <Content>
-                <asp:ValidationSummary ID="vsNewLinkage" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="NewLinkage" />
+                <global::asp:ValidationSummary ID="vsNewLinkage" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="NewLinkage" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:RockDropDownList ID="ddlNewLinkageTemplate" runat="server" Label="Registration Template" ValidationGroup="NewLinkage" Required="true" AutoPostBack="true" OnSelectedIndexChanged="ddlNewLinkageTemplate_SelectedIndexChanged" />
@@ -108,7 +108,7 @@
 
         <Rock:ModalDialog ID="dlgEditLinkage" runat="server" Title="Edit Registration Instance" SaveButtonText="OK" OnSaveClick="dlgEditLinkage_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="EditLinkage">
             <Content>
-                <asp:ValidationSummary ID="vsEditLinkage" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="EditLinkage" />
+                <global::asp:ValidationSummary ID="vsEditLinkage" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="EditLinkage" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:RockLiteral ID="lEditLinkageTemplate" runat="server" Label="Registration Template" />
@@ -131,7 +131,7 @@
 
         <Rock:ModalDialog ID="dlgExistingLinkage" runat="server" Title="Existing Registration Instance" SaveButtonText="OK" OnSaveClick="dlgExistingLinkage_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="ExistingLinkage">
             <Content>
-                <asp:ValidationSummary ID="vsExistingLinkage" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="ExistingLinkage" />
+                <global::asp:ValidationSummary ID="vsExistingLinkage" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="ExistingLinkage" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:RockDropDownList ID="ddlExistingLinkageTemplate" runat="server" Label="Registration Template" ValidationGroup="ExistingLinkage" 

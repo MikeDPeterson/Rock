@@ -54,6 +54,61 @@ namespace RockWeb.Blocks.Event
     [BooleanField( "Display Discount Codes", "Display the discount code used with a payment", false, "", 9 )]
     public partial class RegistrationInstanceDetail : Rock.Web.UI.RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.RegistrationInstanceEditor rieDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lName;
+        protected global::Rock.Web.UI.Controls.RockLiteral lMaxAttendees;
+        protected global::Rock.Web.UI.Controls.RockLiteral lWorkflowType;
+        protected global::Rock.Web.UI.Controls.RockLiteral lCost;
+        protected global::Rock.Web.UI.Controls.RockLiteral lMinimumInitialPayment;
+        protected global::Rock.Web.UI.Controls.RockLiteral lAccount;
+        protected global::Rock.Web.UI.Controls.RockLiteral lDetails;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfHasPayments;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdRegistrationsGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter fRegistrations;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpRegistrationDateRange;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRegistrationPaymentStatus;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRegistrationRegisteredByFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRegistrationRegisteredByLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRegistrationRegistrantFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRegistrationRegistrantLastName;
+        protected global::Rock.Web.UI.Controls.Grid gRegistrations;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdRegistrantsGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter fRegistrants;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpRegistrantDateRange;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRegistrantFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRegistrantLastName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlInGroup;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSignedDocument;
+        protected global::Rock.Web.UI.Controls.Grid gRegistrants;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdPaymentsGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter fPayments;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpPaymentDateRange;
+        protected global::Rock.Web.UI.Controls.Grid gPayments;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdLinkagesGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter fLinkages;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampus;
+        protected global::Rock.Web.UI.Controls.Grid gLinkages;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdWaitListWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter fWaitList;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpWaitListDateRange;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbWaitListFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbWaitListLastName;
+        protected global::Rock.Web.UI.Controls.Grid gWaitList;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpGroupPlacementParentGroup;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGroupPlacementGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gGroupPlacements;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phRegistrantFormFieldFilters;
+        protected global::System.Web.UI.WebControls.PlaceHolder phWaitListFormFieldFilters;
+
+        #endregion
+
         #region Fields
 
         private List<FinancialTransactionDetail> RegistrationPayments;

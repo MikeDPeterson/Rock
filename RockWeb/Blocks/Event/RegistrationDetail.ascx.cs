@@ -54,6 +54,54 @@ namespace RockWeb.Blocks.Event
     [TextField( "Batch Name Prefix", "The batch prefix name to use when creating a new batch", false, "Event Registration", "", 7 )]
     public partial class RegistrationDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlCost;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlBalance;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.EmailBox ebConfirmationEmail;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroup;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlDiscountCode;
+        protected global::Rock.Web.UI.Controls.NumberBox nbDiscountPercentage;
+        protected global::Rock.Web.UI.Controls.CurrencyBox cbDiscountAmount;
+        protected global::Rock.Web.UI.Controls.RockLiteral lName;
+        protected global::Rock.Web.UI.Controls.RockLiteral lConfirmationEmail;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbConfirmationQueued;
+        protected global::Rock.Web.UI.Controls.RockLiteral lGroup;
+        protected global::Rock.Web.UI.Controls.RockLiteral lDiscountCode;
+        protected global::Rock.Web.UI.Controls.RockLiteral lDiscountPercent;
+        protected global::Rock.Web.UI.Controls.RockLiteral lDiscountAmount;
+        protected global::Rock.Web.UI.Controls.RockLiteral lTotalCost;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPreviouslyPaid;
+        protected global::Rock.Web.UI.Controls.RockLiteral lRemainingDue;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbPaymentError;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPayee;
+        protected global::Rock.Web.UI.Controls.CurrencyBox cbPaymentAmount;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCurrencyType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCreditCardType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTransactionCode;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCreditCard;
+        protected global::Rock.Web.UI.Controls.MonthYearPicker mypExpiration;
+        protected global::Rock.Web.UI.Controls.NumberBox txtCVV;
+        protected global::Rock.Web.UI.Controls.AddressControl acBillingAddress;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSummary;
+        protected global::Rock.Web.UI.Controls.Grid gPayments;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfHasPayments;
+        protected global::Rock.Web.UI.Controls.ModalAlert maSignatureRequestSent;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdMoveRegistration;
+        protected global::Rock.Web.UI.Controls.RockLiteral lCurrentRegistrationInstance;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNewRegistrationInstance;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowAll;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMoveGroup;
+
+        #endregion
 
         #region Fields
 

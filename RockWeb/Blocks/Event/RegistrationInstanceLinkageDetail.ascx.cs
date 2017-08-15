@@ -44,6 +44,24 @@ namespace RockWeb.Blocks.Event
 
     public partial class RegistrationInstanceLinkageDetail : Rock.Web.UI.RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockLiteral lLinkageEventItemOccurrence;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupTypeWarning;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpLinkageGroup;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLinkagePublicName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLinkageUrlSlug;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgAddCalendarItemPage1;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoCalendar;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCalendar;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgAddCalendarItemPage2;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpLinkageDateRange;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgAddCalendarItemPage3;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoLinkage;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCalendarItem;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCalendarItemOccurrence;
+
+        #endregion
 
         #region Base Control Methods
 

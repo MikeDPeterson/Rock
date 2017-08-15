@@ -40,8 +40,21 @@ namespace RockWeb.Blocks.Event
     [DisplayName( "Registration Instance Send Payment Reminder" )]
     [Category( "Event" )]
     [Description( "Sends payment reminders for paid registrations that have a remaining balance." )]
-    public partial class RegistrationInstancePaymentReminder : Rock.Web.UI.RockBlock
+    public partial class RegistrationInstanceSendPaymentReminder : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox txtFromName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtFromEmail;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtFromSubject;
+        protected global::Rock.Web.UI.Controls.Toggle tglEmailBodyView;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceEmailMessage;
+        protected global::Rock.Web.UI.Controls.Grid gRegistrations;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessages;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

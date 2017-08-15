@@ -46,6 +46,34 @@ namespace RockWeb.Blocks.Event
 
     public partial class EventItemDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlApproved;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbValidation;
+        protected global::Rock.Web.UI.Controls.RockLiteral lSummary;
+        protected global::Rock.Web.UI.Controls.RockLiteral lCalendar;
+        protected global::Rock.Web.UI.Controls.RockLiteral lAudiences;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsApproved;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbSummary;
+        protected global::Rock.Web.UI.Controls.HtmlEditor htmlDescription;
+        protected global::Rock.Web.UI.Controls.Grid gAudiences;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCalendars;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDetailUrl;
+        protected global::Rock.Web.UI.Controls.ImageUploader imgupPhoto;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgAudience;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAudience;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributes;
+
+        #endregion
+
         #region Properties
 
         public int? _calendarId = null;

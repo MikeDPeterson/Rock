@@ -45,6 +45,11 @@ namespace RockWeb.Blocks.Event
     [LinkedPage("Detail Page")]
     public partial class CalendarContentChannelItemList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+
+        #endregion
 
         #region Properties
 

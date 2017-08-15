@@ -41,6 +41,21 @@ namespace RockWeb.Blocks.Event
     [LinkedPage( "Detail Page" )]
     public partial class EventItemList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlApprovalStatus;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampus;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblAudience;
+        protected global::Rock.Web.UI.Controls.Grid gEventCalendarItems;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeFilters;
+
+        #endregion
+
         #region Private Variables
 
         private EventCalendar _eventCalendar = null;

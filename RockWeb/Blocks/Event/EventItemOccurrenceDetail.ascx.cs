@@ -50,6 +50,41 @@ namespace RockWeb.Blocks.Event
     [LinkedPage( "Group Detail Page", "The page for viewing details about a group", true, "", "", 2 )]
     public partial class EventItemOccurrenceDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lOccurrenceNotes;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCampus;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLocation;
+        protected global::Rock.Web.UI.Controls.ScheduleBuilder sbSchedule;
+        protected global::Rock.Web.UI.Controls.RockLiteral lRegistration;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppContact;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnPhone;
+        protected global::Rock.Web.UI.Controls.EmailBox tbEmail;
+        protected global::Rock.Web.UI.Controls.HtmlEditor htmlOccurrenceNote;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgNewLinkage;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNewLinkageTemplate;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpNewLinkageGroup;
+        protected global::Rock.Web.UI.Controls.RegistrationInstanceEditor rieNewLinkage;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgEditLinkage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lEditLinkageTemplate;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpEditLinkageGroup;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEditLinkagePublicName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEditLinkageUrlSlug;
+        protected global::Rock.Web.UI.Controls.RegistrationInstanceEditor rieEditLinkage;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgExistingLinkage;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlExistingLinkageTemplate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlExistingLinkageInstance;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpExistingLinkageGroup;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbExistingLinkagePublicName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbExistingLinkageUrlSlug;
+
+        protected global::System.Web.UI.WebControls.Literal lScheduleText;
+
+        #endregion
+
         #region Properties
 
         public EventItemOccurrenceGroupMap LinkageState { get; set; }
