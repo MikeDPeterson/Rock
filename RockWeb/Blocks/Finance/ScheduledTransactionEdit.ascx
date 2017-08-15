@@ -107,8 +107,8 @@
                                                     <Rock:RockTextBox ID="txtRoutingNumber" runat="server" Label="Routing #" />
                                                     <Rock:RockTextBox ID="txtAccountNumber" runat="server" Label="Account #" />
                                                     <Rock:RockRadioButtonList ID="rblAccountType" runat="server" RepeatDirection="Horizontal" Label="Account Type">
-                                                        <asp:ListItem Text="Checking" Selected="true" />
-                                                        <asp:ListItem Text="Savings" />
+                                                        <glboal::asp:ListItem Text="Checking" Selected="true" />
+                                                        <global::asp:ListItem Text="Savings" />
                                                     </Rock:RockRadioButtonList>
                                                     <asp:Image ID="imgCheck" runat="server" ImageUrl="<%$ Fingerprint:~/Assets/Images/check-image.png %>" />
                                                 </div>

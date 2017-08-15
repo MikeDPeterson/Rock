@@ -142,7 +142,7 @@
                             <asp:Panel ID="pnlRefunds" runat="server">
                                 <Rock:Grid ID="gRefunds" runat="server" RowItemText="Refund" DisplayType="Light">
                                     <Columns>
-                                        <asp:HyperLinkField DataTextField="TransactionDateTime" DataNavigateUrlFields="Id" HeaderText="Refunds" />
+                                        <global::asp:HyperLinkField DataTextField="TransactionDateTime" DataNavigateUrlFields="Id" HeaderText="Refunds" />
                                         <Rock:RockBoundField DataField="TransactionCode" />
                                         <Rock:CurrencyField DataField="TotalAmount" ItemStyle-HorizontalAlign="Right" />
                                     </Columns>
@@ -152,7 +152,7 @@
                             <asp:Panel ID="pnlRelated" runat="server">
                                 <Rock:Grid ID="gRelated" runat="server" RowItemText="Transaction" DisplayType="Light">
                                     <Columns>
-                                        <asp:HyperLinkField DataTextField="TransactionDateTime" DataNavigateUrlFields="Id" HeaderText="Related Transactions" />
+                                        <global::asp:HyperLinkField DataTextField="TransactionDateTime" DataNavigateUrlFields="Id" HeaderText="Related Transactions" />
                                         <Rock:RockBoundField DataField="TransactionCode" />
                                         <Rock:CurrencyField DataField="TotalAmount" ItemStyle-HorizontalAlign="Right" />
                                     </Columns>
@@ -183,8 +183,8 @@
 
         <Rock:ModalDialog ID="mdAccount" runat="server" Title="Account" OnSaveClick="mdAccount_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Account">
             <Content>
-                <asp:ValidationSummary ID="valSummaryAccount" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Account" />
-                <asp:HiddenField ID="hfAccountGuid" runat="server" />
+                <global::asp:ValidationSummary ID="valSummaryAccount" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Account" />
+                <global::asp:HiddenField ID="hfAccountGuid" runat="server" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:AccountPicker ID="apAccount" runat="server" Label="Account" Required="true" ValidationGroup="Account" />
@@ -202,7 +202,7 @@
 
         <Rock:ModalDialog ID="mdRefund" runat="server" Title="Refund" OnSaveClick="mdRefund_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Refund">
             <Content>
-                <asp:ValidationSummary ID="valSummaryRefund" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Refund" />
+                <global::asp:ValidationSummary ID="valSummaryRefund" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Refund" />
                 <Rock:NotificationBox ID="nbRefundError" runat="server" NotificationBoxType="Danger" Visible="false" />
                 <div class="row">
                     <div class="col-md-6">

@@ -40,6 +40,28 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage( "Person Profile Page", "The page used to view the details of a business contact" )]
     public partial class BusinessDetail : Rock.Web.UI.RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRecordStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlReason;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbBusinessName;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbPhone;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSms;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbUnlisted;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEmail;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblEmailPreference;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCampus;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.Grid gContactList;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdAddContact;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppContact;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfModalOpen;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

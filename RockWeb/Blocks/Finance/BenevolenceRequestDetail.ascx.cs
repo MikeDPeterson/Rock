@@ -40,6 +40,7 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage("Benevolence Request Statement Page", "The page which summarises a benevolence request for printing", true)]
     public partial class BenevolenceRequestDetail : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
 
         protected global::Rock.Web.UI.Controls.Grid gResults;
         protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
@@ -67,7 +68,7 @@ namespace RockWeb.Blocks.Finance
         protected global::Rock.Web.UI.Controls.ModalDialog mdAddResult;
         protected global::Rock.Web.UI.Controls.ConfirmPageUnload confirmExit;
 
-
+        #endregion
 
         #region Properties
         private List<int> DocumentsState { get; set; }

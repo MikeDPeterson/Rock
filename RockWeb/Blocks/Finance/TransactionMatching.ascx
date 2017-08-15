@@ -88,11 +88,11 @@
                             
                             <Rock:NotificationBox ID="nbSaveError" runat="server" NotificationBoxType="Danger" Dismissable="true" Text="Warning. Unable to save..." />
                             <Rock:RockControlWrapper ID="rcwAccountSplit" runat="server" Label="Account Split" Help="Enter the amount that should be allocated to each account. The total must match the amount shown on the transaction image">
-                                <asp:Repeater ID="rptAccounts" runat="server">
+                                <global::asp:Repeater ID="rptAccounts" runat="server">
                                     <ItemTemplate>
                                         <Rock:CurrencyBox ID="cbAccountAmount" runat="server" Label='<%#Eval( "Name" )%>' data-account-id='<%#Eval("Id")%>' CssClass="js-account-amount" onkeydown="javascript:return handleAmountBoxKeyPress(this, event.keyCode);" onkeyup="javascript:handleAmountBoxKeyUp(event.keyCode)" />
                                     </ItemTemplate>
-                                </asp:Repeater>
+                                </Repeater>
                             </Rock:RockControlWrapper>
 
                             <%-- note: using disabled instead of readonly so that we can set the postback value in javascript --%>

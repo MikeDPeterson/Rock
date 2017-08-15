@@ -50,6 +50,32 @@ namespace RockWeb.Blocks.Finance
     [BooleanField( "Hide View By Options", "Should the View By options be hidden (Giver, Adults, Children, Family)?", Order = 2 )]
     public partial class GivingAnalytics : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.SlidingDateRangePicker drpSlidingDateRange;
+        protected global::Rock.Web.UI.Controls.NumberRangeEditor nreAmount;
+        protected global::Rock.Web.UI.Controls.DataViewPicker dvpDataView;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCurrencyTypes;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblTransactionSource;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfShowBy;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfGroupBy;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfGraphBy;
+        protected global::Rock.Web.UI.Controls.LineChart lcAmount;
+        protected global::Rock.Web.UI.Controls.BarChart bcAmount;
+        protected global::Rock.Web.UI.Controls.Grid gChartAmount;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfViewBy;
+        protected global::Rock.Web.UI.Controls.RockRadioButton radAllGivers;
+        protected global::Rock.Web.UI.Controls.RockRadioButton radFirstTime;
+        protected global::Rock.Web.UI.Controls.RockRadioButton radByPattern;
+        protected global::Rock.Web.UI.Controls.NumberBox tbPatternXTimes;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPatternAndMissed;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpPatternDateRange;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblDataViewAction;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGiversError;
+        protected global::Rock.Web.UI.Controls.Grid gGiversGifts;
+
+        #endregion
+
         #region Fields
 
         private RockContext _rockContext = null;

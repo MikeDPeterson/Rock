@@ -57,6 +57,15 @@ namespace RockWeb.Blocks.Examples
     [BooleanField( "Enable Giving", "If true, the giving data will be loaded otherwise it will be skipped.", true, "", 4 )]
     public partial class SampleData : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPassword;
+        protected global::Rock.Web.UI.Controls.BootstrapButton bbtnLoadData;
+
+        #endregion
+
         #region Fields
 
         /// <summary>

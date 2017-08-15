@@ -17,9 +17,9 @@
                     <Rock:GridFilter ID="gfBusinessFilter" runat="server">
                         <Rock:RockTextBox ID="tbBusinessName" runat="server" Label="Business Name"></Rock:RockTextBox>  <!-- this should search by "contains" not necessarily an exact match -->
                         <Rock:RockDropDownList ID="ddlActiveFilter" runat="server" Label="Active Status">
-                            <asp:ListItem Text="[All]" Value="all"></asp:ListItem>
-                            <asp:ListItem Text="Active" Value="active"></asp:ListItem>
-                            <asp:ListItem Text="Inactive" Value="inactive"></asp:ListItem>
+                            <global::asp:ListItem Text="[All]" Value="all" />
+                            <global::asp:ListItem Text="Active" Value="active" />
+                            <global::asp:ListItem Text="Inactive" Value="inactive" />
                         </Rock:RockDropDownList>
                     </Rock:GridFilter>
 

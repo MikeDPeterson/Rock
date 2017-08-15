@@ -39,6 +39,19 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage( "Detail Page" )]
     public partial class AccountList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rAccountFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtAccountName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlIsPublic;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlIsActive;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlIsTaxDeductible;
+        protected global::Rock.Web.UI.Controls.Grid rGridAccount;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

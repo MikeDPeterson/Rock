@@ -36,6 +36,15 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage( "Detail Page" )]
     public partial class BusinessList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfBusinessFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbBusinessName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlActiveFilter;
+        protected global::Rock.Web.UI.Controls.Grid gBusinessList;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

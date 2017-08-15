@@ -41,6 +41,22 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage( "Audit Page", "Page used to display the history of changes to a batch." )]
     public partial class BatchDetail : Rock.Web.UI.RockBlock, IDetailBlock
     {
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlBatchId;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlCampus;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.DateTimePicker dtpStart;
+        protected global::Rock.Web.UI.Controls.DateTimePicker dtpEnd;
+        protected global::Rock.Web.UI.Controls.CurrencyBox tbControlAmount;
+        protected global::Rock.Web.UI.Controls.CampusPicker campCampus;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbAccountingCode;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbNote;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.Grid gAccounts;
+        protected global::Rock.Web.UI.Controls.Grid gCurrencyTypes;
+
         #region Control Methods
 
         /// <summary>

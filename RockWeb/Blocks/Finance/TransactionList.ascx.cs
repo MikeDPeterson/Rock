@@ -48,6 +48,30 @@ namespace RockWeb.Blocks.Finance
     [DefinedValueField( Rock.SystemGuid.DefinedType.FINANCIAL_TRANSACTION_TYPE, "Transaction Types", "Optional list of transation types to limit the list to (if none are selected all types will be included).", false, true, "", "", 5 )]
     public partial class TransactionList : Rock.Web.UI.RockBlock, ISecondaryBlock, IPostBackEventHandler
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlOptions;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbClosedWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gfTransactions;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.NumberRangeEditor nreAmount;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTransactionCode;
+        protected global::Rock.Web.UI.Controls.AccountPicker apAccount;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTransactionType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCurrencyType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCreditCardType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSourceType;
+        protected global::Rock.Web.UI.Controls.CampusPicker campCampus;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gTransactions;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+        protected global::Rock.Web.UI.Controls.HighlightLabel lbFiltered;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgReassign;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppReassign;
+
+        #endregion
+
         private bool _isExporting = false;
 
         #region Fields

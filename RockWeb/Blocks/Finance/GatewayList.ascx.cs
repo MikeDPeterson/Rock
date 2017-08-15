@@ -41,6 +41,13 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage( "Detail Page" )]
     public partial class GatewayList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid rGridGateway;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

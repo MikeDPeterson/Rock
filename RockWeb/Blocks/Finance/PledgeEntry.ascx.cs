@@ -63,6 +63,22 @@ namespace RockWeb.Blocks.Finance
     [GroupTypeField( "Select Group Type", "Optional Group Type that if selected will display a selection of groups that current user belongs to that can then be associated with the pledge", false, "", "", 12 )]
     public partial class PledgeEntry : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroup;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEmail;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDateRange;
+        protected global::Rock.Web.UI.Controls.CurrencyBox tbTotalAmount;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlFrequency;
+        protected global::Rock.Web.UI.Controls.RockLiteral lNote;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDuplicatePledgeWarning;
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>

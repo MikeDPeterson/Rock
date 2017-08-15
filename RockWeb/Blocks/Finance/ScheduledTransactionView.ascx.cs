@@ -43,6 +43,13 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage("Update Page", "The page used to update in existing scheduled transaction.")]
     public partial class ScheduledTransactionView : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.Grid gAccountsView;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+
+        #endregion
 
         #region Properties
 

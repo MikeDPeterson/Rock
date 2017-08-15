@@ -36,6 +36,19 @@ namespace RockWeb.Blocks.Finance
     [Description( "Displays the details of the given financial gateway." )]
     public partial class GatewayDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.ComponentPicker cpGatewayType;
+        protected global::Rock.Web.UI.Controls.TimePicker tpBatchTimeOffset;
+
+        #endregion
+
         #region Control Methods
 
         public int GatewayId

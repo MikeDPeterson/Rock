@@ -34,6 +34,28 @@ namespace RockWeb.Blocks.Finance
     [Description( "Displays the details of the given financial account." )]
     public partial class AccountDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsPublic;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.CodeEditor cePublicDescription;
+        protected global::Rock.Web.UI.Controls.AccountPicker apParentAccount;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAccountType;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPublicName;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbUrl;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbGLCode;
+        protected global::Rock.Web.UI.Controls.DatePicker dtpStartDate;
+        protected global::Rock.Web.UI.Controls.DatePicker dtpEndDate;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsTaxDeductible;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

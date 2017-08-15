@@ -31,33 +31,6 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.Panel pnlView;
         
         /// <summary>
-        /// phAttributeFilters control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeFilters;
-        
-        /// <summary>
-        /// lName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lName;
-        
-        /// <summary>
-        /// lResults control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lResults;
-        
-        /// <summary>
         /// pnlSummary control.
         /// </summary>
         /// <remarks>

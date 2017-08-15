@@ -39,6 +39,24 @@ namespace RockWeb.Blocks.Finance
     [BooleanField( "Show Accounting Code", "Should the accounting code column be displayed.", false, "", 1 )]
     public partial class BatchList : Rock.Web.UI.RockBlock, IPostBackEventHandler
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert maWarningDialog;
+        protected global::Rock.Web.UI.Controls.GridFilter gfBatchFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpBatchDate;
+        protected global::Rock.Web.UI.Controls.CampusPicker campCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTransactionType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbAccountingCode;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSourceType;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gBatchList;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+
+        #endregion
+
         #region Fields
 
         private RockDropDownList ddlAction;

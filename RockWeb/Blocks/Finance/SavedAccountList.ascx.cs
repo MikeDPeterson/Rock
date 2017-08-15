@@ -34,6 +34,12 @@ namespace RockWeb.Blocks.Finance
     [Description( "List of a person's saved accounts that can be used to delete an account." )]
     public partial class SavedAccountList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gSavedAccounts;
+
+        #endregion
 
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.

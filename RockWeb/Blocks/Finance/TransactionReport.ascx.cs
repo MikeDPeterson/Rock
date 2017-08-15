@@ -43,6 +43,14 @@ namespace RockWeb.Blocks.Finance
     [DefinedValueField( Rock.SystemGuid.DefinedType.FINANCIAL_TRANSACTION_TYPE, "Transaction Types", "Optional list of transation types to limit the list to (if none are selected all types will be included).", false, true, "", "", 5 )]
     public partial class TransactionReport : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpFilterDates;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblAccounts;
+        protected global::Rock.Web.UI.Controls.Grid gTransactions;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

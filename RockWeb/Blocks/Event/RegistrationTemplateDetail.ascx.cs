@@ -468,7 +468,6 @@ namespace RockWeb.Blocks.Event
 
         #endregion
 
-
         #region Properties
 
         private List<RegistrationTemplateForm> FormState { get; set; }

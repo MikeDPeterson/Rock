@@ -66,6 +66,19 @@ namespace RockWeb.Blocks.Finance
 
     public partial class TransactionEntryKiosk : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbBlockConfigErrors;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSearch;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPhone;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.EmailBox tbEmail;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbAccountEntry;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

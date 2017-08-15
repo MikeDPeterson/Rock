@@ -149,6 +149,67 @@ TransactionAcountDetails: [
 
     public partial class TransactionEntry : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList btnAddAccount;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList btnFrequency;
+        protected global::Rock.Web.UI.Controls.DatePicker dtpStartDate;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCommentEntry;
+        protected global::Rock.Web.UI.Controls.Toggle tglGiveAsOption;
+        protected global::Rock.Web.UI.Controls.RockLiteral txtCurrentName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtLastName;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList cblBusiness;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtBusinessName;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbPhone;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtEmail;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblSavedAccount;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCreditCard;
+        protected global::Rock.Web.UI.Controls.MonthYearPicker mypExpiration;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCVV;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbBillingAddress;
+        protected global::Rock.Web.UI.Controls.AddressControl acBillingAddress;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtAccountName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtRoutingNumber;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtAccountNumber;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblAccountType;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSelectionMessage;
+        protected global::Rock.Web.UI.Controls.TermDescription tdNameConfirm;
+        protected global::Rock.Web.UI.Controls.TermDescription tdPhoneConfirm;
+        protected global::Rock.Web.UI.Controls.TermDescription tdEmailConfirm;
+        protected global::Rock.Web.UI.Controls.TermDescription tdAddressConfirm;
+        protected global::Rock.Web.UI.Controls.TermDescription tdAmount;
+        protected global::Rock.Web.UI.Controls.TermDescription tdTotalConfirm;
+        protected global::Rock.Web.UI.Controls.TermDescription tdPaymentMethodConfirm;
+        protected global::Rock.Web.UI.Controls.TermDescription tdAccountNumberConfirm;
+        protected global::Rock.Web.UI.Controls.TermDescription tdWhenConfirm;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbConfirmationMessage;
+        protected global::Rock.Web.UI.Controls.TermDescription tdScheduleId;
+        protected global::Rock.Web.UI.Controls.TermDescription tdTransactionCodeReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdNameReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdPhoneReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdEmailReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdAddressReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdAccountAmountReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdTotalReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdPaymentMethodReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdAccountNumberReceipt;
+        protected global::Rock.Web.UI.Controls.TermDescription tdWhenReceipt;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSaveAccount;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtSaveAccount;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtUserName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtPassword;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtPasswordConfirm;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSaveAccount;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSuccessMessage;
+
+        #endregion
+
         #region Fields
 
         private Person _targetPerson = null;

@@ -44,6 +44,25 @@ namespace RockWeb.Blocks.Finance
     [LinkedPage( "Add Business Link", "Select the page where a new business can be added. If specified, a link will be shown which will open in a new window when clicked" )]
     public partial class TransactionMatching : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwAddNewBusiness;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwAddNewFamily;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoUnmatchedTransactionsRemaining;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoTransactionImageWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbIsInProcess;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlIndividual;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppSelectNew;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSaveError;
+        protected global::Rock.Web.UI.Controls.CurrencyBox cbTotalAmount;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSummary;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdAccountsPersonalFilter;
+        protected global::Rock.Web.UI.Controls.AccountPicker apPersonalAccounts;
+
+        protected global::System.Web.UI.WebControls.Repeater rptAccounts;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

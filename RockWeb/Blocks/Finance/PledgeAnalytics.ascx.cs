@@ -41,6 +41,18 @@ namespace RockWeb.Blocks.Finance
     [Description( "Used to look at pledges using various criteria." )]
     public partial class PledgeAnalytics : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.AccountPicker apAccount;
+        protected global::Rock.Web.UI.Controls.SlidingDateRangePicker drpSlidingDateRange;
+        protected global::Rock.Web.UI.Controls.NumberRangeEditor nrePledgeAmount;
+        protected global::Rock.Web.UI.Controls.NumberRangeEditor nrePercentComplete;
+        protected global::Rock.Web.UI.Controls.NumberRangeEditor nreAmountGiven;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblInclude;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

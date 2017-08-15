@@ -49,15 +49,6 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.Literal lTitle;
         
         /// <summary>
-        /// lCurrencyType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lCurrencyType;
-        
-        /// <summary>
         /// pnlSummary control.
         /// </summary>
         /// <remarks>

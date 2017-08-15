@@ -42,6 +42,39 @@ namespace RockWeb.Blocks.Examples
     [DefinedValueField( Rock.SystemGuid.DefinedType.MAP_STYLES, "Map Style", "The map theme that should be used for styling the GeoPicker map.", true, false, Rock.SystemGuid.DefinedValue.MAP_STYLE_ROCK )]
     public partial class RockControlGallery : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gExample;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlDataExample;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlExample;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlExampleCheckmark;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblExample;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblExampleHorizontal;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblExample;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblExampleHorizontal;
+        protected global::Rock.Web.UI.Controls.RangeSlider rsSlider;
+        protected global::Rock.Web.UI.Controls.RangeSlider rsSlider2;
+        protected global::Rock.Web.UI.Controls.MonthYearPicker mypExample;
+        protected global::Rock.Web.UI.Controls.MonthDayPicker mdpExample;
+        protected global::Rock.Web.UI.Controls.SlidingDateRangePicker sdrpExample;
+        protected global::Rock.Web.UI.Controls.BirthdayPicker bdaypExample;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gpGroupType;
+        protected global::Rock.Web.UI.Controls.GroupTypesPicker gpGroupTypes;
+        protected global::Rock.Web.UI.Controls.CampusesPicker campsExample;
+        protected global::Rock.Web.UI.Controls.ScheduleBuilder schedbExample;
+        protected global::Rock.Web.UI.Controls.GeoPicker geopExamplePoint;
+        protected global::Rock.Web.UI.Controls.GeoPicker geopExamplePolygon;
+        protected global::Rock.Web.UI.Controls.MergeFieldPicker mfpExample;
+        protected global::Rock.Web.UI.Controls.BinaryFileTypePicker bftpExample;
+        protected global::Rock.Web.UI.Controls.BinaryFilePicker bfpExample;
+        protected global::Rock.Web.UI.Controls.FileUploader fuprExampleContentFile;
+        protected global::Rock.Web.UI.Controls.Toggle toggleShowPreview;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtExample;
+        protected global::Rock.Web.UI.Controls.HtmlEditor htmlEditorLight;
+
+
+        #endregion
+
         private Regex specialCharsRegex = new Regex( "[^a-zA-Z0-9-]" );
 
         /// <summary>

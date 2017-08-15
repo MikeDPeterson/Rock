@@ -83,6 +83,35 @@ achieve our mission.  We are so grateful for your commitment.
 
     public partial class ScheduledTransactionEdit : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList btnAddAccount;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList btnFrequency;
+        protected global::Rock.Web.UI.Controls.DatePicker dtpStartDate;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblSavedCC;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCardName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtCreditCard;
+        protected global::Rock.Web.UI.Controls.MonthYearPicker mypExpiration;
+        protected global::Rock.Web.UI.Controls.NumberBox txtCVV;
+        protected global::Rock.Web.UI.Controls.AddressControl acBillingAddress;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblSavedAch;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtRoutingNumber;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtAccountNumber;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblAccountType;
+        protected global::Rock.Web.UI.Controls.TermDescription tdName;
+        protected global::Rock.Web.UI.Controls.TermDescription tdAddress;
+        protected global::Rock.Web.UI.Controls.TermDescription tdTotal;
+        protected global::Rock.Web.UI.Controls.TermDescription tdPaymentMethod;
+        protected global::Rock.Web.UI.Controls.TermDescription tdAccountNumber;
+        protected global::Rock.Web.UI.Controls.TermDescription tdWhen;
+        protected global::Rock.Web.UI.Controls.TermDescription tdScheduleId;
+        protected global::Rock.Web.UI.Controls.TermDescription tdTransactionCode;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Fields
 
         protected bool FluidLayout { get; set; }

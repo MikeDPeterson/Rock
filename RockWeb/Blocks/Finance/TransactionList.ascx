@@ -18,8 +18,8 @@
                     <h1 class="panel-title"><i class="fa fa-credit-card"></i> <asp:Literal ID="lTitle" runat="server"></asp:Literal></h1>
                     
                         <Rock:ButtonDropDownList ID="bddlOptions" runat="server" FormGroupCssClass="panel-options pull-right" Title="Options" SelectionStyle="Checkmark" OnSelectionChanged="bddlOptions_SelectionChanged">
-                            <asp:ListItem Text="Show Images" Value="1" />
-                            <asp:ListItem Text="Show Summary" Value="0" />
+                            <global::asp:ListItem Text="Show Images" Value="1" />
+                            <global::asp:ListItem Text="Show Summary" Value="0" />
                         </Rock:ButtonDropDownList>
                     
                 </div>
@@ -54,7 +54,7 @@
                                 <Rock:CurrencyField DataField="TotalAmount" HeaderText="Amount" SortExpression="TotalAmount" />
                                 <Rock:RockTemplateField HeaderText="Currency Type" >
                                     <ItemTemplate>
-                                        <asp:Literal ID="lCurrencyType" runat="server" />
+                                        <global::asp:Literal ID="lCurrencyType" runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField>
                                 <Rock:RockBoundField DataField="TransactionCode" HeaderText="Transaction Code" SortExpression="TransactionCode" ColumnPriority="DesktopSmall" />                

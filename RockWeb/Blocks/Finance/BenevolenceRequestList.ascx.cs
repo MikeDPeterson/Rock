@@ -45,6 +45,24 @@ namespace RockWeb.Blocks.Finance
     [SecurityRoleField( "Case Worker Role", "The security role to draw case workers from", true, Rock.SystemGuid.Group.GROUP_BENEVOLENCE )]
     public partial class BenevolenceRequestList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDate;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbGovernmentId;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCaseWorker;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlResult;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeFilters;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

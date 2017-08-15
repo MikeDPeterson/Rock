@@ -47,6 +47,18 @@ namespace RockWeb.Blocks.Finance
     [ContextAware]
     public partial class PledgeList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gfPledges;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppFilterPerson;
+        protected global::Rock.Web.UI.Controls.AccountPicker apFilterAccount;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpLastModifiedDates;
+        protected global::Rock.Web.UI.Controls.Grid gPledges;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

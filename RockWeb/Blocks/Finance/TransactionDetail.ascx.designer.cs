@@ -256,24 +256,6 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
         
         /// <summary>
-        /// valSummaryAccount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valSummaryAccount;
-        
-        /// <summary>
-        /// hfAccountGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfAccountGuid;
-        
-        /// <summary>
         /// phAccountAttributeEdits control.
         /// </summary>
         /// <remarks>
@@ -281,14 +263,5 @@ namespace RockWeb.Blocks.Finance {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder phAccountAttributeEdits;
-        
-        /// <summary>
-        /// valSummaryRefund control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valSummaryRefund;
     }
 }

@@ -46,6 +46,18 @@ namespace RockWeb.Blocks.Finance
     [ContextAware]
     public partial class ScheduledTransactionList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.NumberRangeEditor nreAmount;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlFrequency;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAccount;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIncludeInactive;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         private bool _isExporting = false;
 
         #region Properties

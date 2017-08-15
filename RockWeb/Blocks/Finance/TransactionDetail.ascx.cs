@@ -48,6 +48,44 @@ namespace RockWeb.Blocks.Finance
     [TextField( "Refund Batch Name Suffix", "The suffix to append to new batch name when refunding transactions. If left blank, the batch name will be the same as the original transaction's batch name.", false, " - Refund", "", 3 )]
     public partial class TransactionDetail : Rock.Web.UI.RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlBatchId;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAuthorizedPerson;
+        protected global::Rock.Web.UI.Controls.DateTimePicker dtTransactionDateTime;
+        protected global::Rock.Web.UI.Controls.CurrencyBox tbSingleAccountAmount;
+        protected global::Rock.Web.UI.Controls.Grid gAccountsEdit;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTransactionType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSourceType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCurrencyType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCreditCardType;
+        protected global::Rock.Web.UI.Controls.FinancialGatewayPicker gpPaymentGateway;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTransactionCode;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsRefund;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRefundReasonEdit;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRefundSummaryEdit;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbSummary;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.Grid gAccountsView;
+        protected global::Rock.Web.UI.Controls.Grid gRefunds;
+        protected global::Rock.Web.UI.Controls.Grid gRelated;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdAccount;
+        protected global::Rock.Web.UI.Controls.AccountPicker apAccount;
+        protected global::Rock.Web.UI.Controls.CurrencyBox tbAccountAmount;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbAccountSummary;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdRefund;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRefundError;
+        protected global::Rock.Web.UI.Controls.CurrencyBox tbRefundAmount;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRefundReason;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRefundSummary;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbProcess;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfAccountGuid;
+
+        #endregion
+
         #region Properties
 
         private Control _focusControl = null;

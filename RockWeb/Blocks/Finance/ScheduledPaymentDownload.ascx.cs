@@ -44,6 +44,14 @@ namespace RockWeb.Blocks.Finance
     [SystemEmailField( "Receipt Email", "The system email to use to send the receipts.", false, "", "", 2 )]
     public partial class ScheduledPaymentDownload : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.FinancialGatewayPicker gpGateway;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSuccess;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+
+        #endregion
 
         #region Base Control Methods
 

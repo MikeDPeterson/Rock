@@ -38,6 +38,19 @@ namespace RockWeb.Blocks.Finance
     [GroupTypeField( "Select Group Type", "Optional Group Type that if selected will display a list of groups that pledge can be associated to for selected user", false, "", "", 1 )]
     public partial class PledgeDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.DateRangePicker dpDateRange;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroup;
+        protected global::Rock.Web.UI.Controls.AccountPicker apAccount;
+        protected global::Rock.Web.UI.Controls.CurrencyBox tbAmount;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlFrequencyType;
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Load" /> event.
         /// </summary>
