@@ -41,6 +41,26 @@ namespace RockWeb.Blocks.Groups
     [Description( "Displays the details of the given group requirement type for editing." )]
     public partial class GroupRequirementTypeDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPositiveLabel;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbNegativeLabel;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbWarningLabel;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCanExpire;
+        protected global::Rock.Web.UI.Controls.NumberBox nbExpireInDays;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfRequirementCheckType;
+        protected global::Rock.Web.UI.Controls.DataViewPicker dpDataView;
+        protected global::Rock.Web.UI.Controls.DataViewPicker dpWarningDataView;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceSqlExpression;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceWarningSqlExpression;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbCheckboxLabel;
+
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

@@ -117,6 +117,44 @@ namespace RockWeb.Blocks.Groups
 
     public partial class GroupFinder : RockBlockCustomSettings
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotice;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPageSize;
+        protected global::Rock.Web.UI.Controls.Grid gGroups;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpGroupType;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpGeofenceGroupType;
+        protected global::Rock.Web.UI.Controls.DataViewPicker dvpDataView;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblSchedule;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbFilterCampus;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCampusContext;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblAttributes;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowMap;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMapStyle;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMapHeight;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowFence;
+        protected global::Rock.Web.UI.Controls.ValueList vlPolygonColors;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceMapInfo;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMapInfoDebug;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowLavaOutput;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceLavaOutput;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbLavaOutputDebug;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowGrid;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowSchedule;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowDescription;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowCount;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowAge;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbProximity;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSortByDistance;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPageSizes;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblGridAttributes;
+        protected global::Rock.Web.UI.Controls.PagePicker ppGroupDetailPage;
+        protected global::Rock.Web.UI.Controls.PagePicker ppRegisterPage;
+
+        #endregion
 
         #region Private Variables
         private Guid _targetPersonGuid = Guid.Empty;

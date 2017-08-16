@@ -32,17 +32,17 @@
                                 <Rock:RockCheckBoxList ID="cblGroupMemberStatus" runat="server" Label="Group Member Status" RepeatDirection="Horizontal" />
                                 <Rock:CampusPicker ID="cpCampusFilter" runat="server" Label="Family Campus" />
                                 <Rock:RockCheckBoxList ID="cblGenderFilter" runat="server" RepeatDirection="Horizontal" Label="Gender">
-                                    <asp:ListItem Text="Male" Value="Male" />
-                                    <asp:ListItem Text="Female" Value="Female" />
-                                    <asp:ListItem Text="Unknown" Value="Unknown" />
+                                    <global::asp:ListItem Text="Male" Value="Male" />
+                                    <global::asp:ListItem Text="Female" Value="Female" />
+                                    <global::asp:ListItem Text="Unknown" Value="Unknown" />
                                 </Rock:RockCheckBoxList>
                                 <Rock:RockDropDownList ID="ddlRegistration" runat="server" Label="Registration" DataTextField="Name" DataValueField="Id" />
                                 <Rock:RockDropDownList ID="ddlSignedDocument" runat="server" Label="Signed Document" >
-                                    <asp:ListItem Text="" Value="" />
-                                    <asp:ListItem Text="Yes" Value="Yes" />
-                                    <asp:ListItem Text="No" Value="No" />
+                                    <global::asp:ListItem Text="" Value="" />
+                                    <global::asp:ListItem Text="Yes" Value="Yes" />
+                                    <global::asp:ListItem Text="No" Value="No" />
                                 </Rock:RockDropDownList>
-                                <asp:PlaceHolder ID="phAttributeFilters" runat="server" />
+                                <global::asp:PlaceHolder ID="phAttributeFilters" runat="server" />
                             </Rock:GridFilter>
                             <Rock:Grid ID="gGroupMembers" runat="server" DisplayType="Full" AllowSorting="true" OnRowSelected="gGroupMembers_Edit" CssClass="js-grid-group-members" >
                                 <Columns>
@@ -51,7 +51,7 @@
                                     <Rock:DefinedValueField DataField="ConnectionStatusValueId" HeaderText="Connection Status" SortExpression="Person.ConnectionStatusValue.Value"/>
                                     <Rock:RockTemplateFieldUnselected HeaderText="Registration">
                                         <ItemTemplate>
-                                            <asp:Literal ID="lRegistration" runat="server"></asp:Literal>
+                                            <global::asp:Literal ID="lRegistration" runat="server" />
                                         </ItemTemplate>
                                     </Rock:RockTemplateFieldUnselected>
                                     <Rock:RockBoundField DataField="GroupRole" HeaderText="Role" SortExpression="GroupRole.Name" />
@@ -78,7 +78,7 @@
                 Title="<i class='fa fa-share'></i> Place Elsewhere" OnSaveClick="mdPlaceElsewhere_SaveClick"
                 SaveButtonText="Place">
                 <Content>
-                    <asp:ValidationSummary ID="vsPlaceElsewhere" runat="server" ValidationGroup="vgPlaceElsewhere" HeaderText="Please Correct the Following" CssClass="alert alert-danger" />
+                    <global::asp:ValidationSummary ID="vsPlaceElsewhere" runat="server" ValidationGroup="vgPlaceElsewhere" HeaderText="Please Correct the Following" CssClass="alert alert-danger" />
                     <Rock:RockLiteral ID="lWorkflowTriggerName" runat="server" Label="Workflow Trigger" />
                     <Rock:RockControlWrapper ID="rcwSelectMemberTrigger" runat="server" Label="Select Workflow Trigger">
                         <Rock:HiddenFieldWithClass ID="hfPlaceElsewhereTriggerId" CssClass="js-hidden-selected" runat="server" />
@@ -93,7 +93,7 @@
                         </div>
                     </Rock:RockControlWrapper>
                     <Rock:NotificationBox ID="nbPlaceElsewhereWarning" runat="server" NotificationBoxType="Warning" />
-                    <asp:HiddenField ID="hfPlaceElsewhereGroupMemberId" runat="server" />
+                    <global::asp:HiddenField ID="hfPlaceElsewhereGroupMemberId" runat="server" />
                     <Rock:RockLiteral ID="lPlaceElsewhereGroupMemberName" runat="server" Label="Group Member" />
                     <Rock:RockLiteral ID="lWorkflowName" runat="server" Label="Workflow" />
                     <Rock:RockTextBox ID="tbPlaceElsewhereNote" runat="server" Label="Note" Rows="4" TextMode="MultiLine" ValidationGroup="vgPlaceElsewhere" />

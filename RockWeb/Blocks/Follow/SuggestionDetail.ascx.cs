@@ -40,6 +40,20 @@ namespace RockWeb.Blocks.Follow
     [Description( "Block for editing the following suggestion types." )]
     public partial class SuggestionDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.ComponentPicker cpSuggestionType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbReasonNote;
+        protected global::Rock.Web.UI.Controls.NumberBox nbReminderDays;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceNotificationFormat;
+
+        #endregion
+
         #region Control Methods
 
         public int SuggestionId { get; set; }

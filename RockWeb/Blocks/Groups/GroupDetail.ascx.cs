@@ -55,6 +55,90 @@ namespace RockWeb.Blocks.Groups
     [LinkedPage( "Content Item Page", "The page to display registration details.", false, "", "", 9 )]
     public partial class GroupDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlIsPrivate;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlCampus;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRoleLimitWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotAllowedToEdit;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidParentGroup;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupCapacityMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbInactivateChildGroups;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsPublic;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGeneral;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlGroupType;
+        protected global::Rock.Web.UI.Controls.RockLiteral lGroupType;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsSecurityRole;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpParentGroup;
+        protected global::Rock.Web.UI.Controls.NumberBox nbGroupCapacity;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlCampus;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlSignatureDocumentTemplate;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpMeetingDetails;
+        protected global::Rock.Web.UI.Controls.Grid gLocations;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblScheduleSelect;
+        protected global::Rock.Web.UI.Controls.DayOfWeekPicker dowWeekly;
+        protected global::Rock.Web.UI.Controls.TimePicker timeWeekly;
+        protected global::Rock.Web.UI.Controls.SchedulePicker spSchedule;
+        protected global::Rock.Web.UI.Controls.ScheduleBuilder sbSchedule;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGroupAttributes;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGroupMemberAttributes;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcGroupMemberAttributesInherited;
+        protected global::Rock.Web.UI.Controls.Grid gGroupMemberAttributesInherited;
+        protected global::Rock.Web.UI.Controls.Grid gGroupMemberAttributes;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGroupRequirements;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMembersMustMeetRequirementsOnAdd;
+        protected global::Rock.Web.UI.Controls.Grid gGroupRequirements;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGroupSync;
+        protected global::Rock.Web.UI.Controls.DataViewPicker dvpSyncDataview;
+        protected global::Rock.Web.UI.Controls.RockCheckBox rbCreateLoginDuringSync;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlWelcomeEmail;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlExitEmail;
+        protected global::Rock.Web.UI.Controls.Grid gMemberWorkflowTriggers;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwLinkedRegistrations;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwEventItemOccurrences;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwContentItems;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgGroupMemberAttribute;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtGroupMemberAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgLocations;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMember;
+        protected global::Rock.Web.UI.Controls.LocationPicker locpGroupLocation;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLocationType;
+        protected global::Rock.Web.UI.Controls.SchedulePicker spSchedules;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdGroupRequirement;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDuplicateGroupRequirement;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupRequirementType;
+        protected global::Rock.Web.UI.Controls.GroupRolePicker grpGroupRequirementGroupRole;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgMemberWorkflowTriggers;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidWorkflowType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTriggerName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTriggerIsActive;
+        protected global::Rock.Web.UI.Controls.WorkflowTypePicker wtpWorkflowType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerFromStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerToStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerFromRole;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerToRole;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTriggerFirstTime;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTriggerPlacedElsewhereShowNote;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTriggerPlacedElsewhereRequireNote;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phGroupAttributes;
+        protected global::System.Web.UI.WebControls.Panel pnlSchedule;
+        protected global::System.Web.UI.WebControls.HiddenField hfAddLocationGroupGuid;
+        protected global::System.Web.UI.WebControls.HiddenField hfGroupRequirementGuid;
+        protected global::System.Web.UI.WebControls.HiddenField hfTriggerGuid;
+
+        #endregion
+
         #region Constants
 
         private const string MEMBER_LOCATION_TAB_TITLE = "Member Location";

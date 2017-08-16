@@ -56,6 +56,23 @@ namespace RockWeb.Blocks.Groups
     [CodeEditorField( "Edit Group Member Post-HTML", "HTML to display after the edit group member panel.", CodeEditorMode.Html, CodeEditorTheme.Rock, 200, false, "", "HTML Wrappers", 14 )]
     public partial class GroupDetailLava : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DayOfWeekPicker dowWeekly;
+        protected global::Rock.Web.UI.Controls.TimePicker timeWeekly;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMember;
+        protected global::Rock.Web.UI.Controls.LocationPicker locpGroupLocation;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLocationType;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupMemberErrorMessage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppGroupMemberPerson;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupRole;
+        
+        #endregion
+
         #region Fields
 
         // used for private variables

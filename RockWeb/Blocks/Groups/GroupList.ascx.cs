@@ -51,6 +51,16 @@ namespace RockWeb.Blocks.Groups
     [ContextAware]
     public partial class GroupList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpGroupType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlActiveFilter;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gGroups;
+
+        #endregion
+
         private int _groupTypesCount = 0;
         private bool _showGroupPath = false;
 

@@ -49,6 +49,13 @@ namespace RockWeb.Blocks.Groups
     [LinkedPage( "Detail Page", order: 9 )]
     public partial class GroupTreeView : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Toggle tglHideInactiveGroups;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCountsType;
+
+        #endregion
+
         #region Fields
 
         private string _groupId = string.Empty;

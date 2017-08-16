@@ -45,6 +45,13 @@ namespace RockWeb.Blocks.Groups
     [TextField("Error Message", "The text to display when a valid person key is NOT provided", false, "There was a problem with your registration.  Please try to register again.")]
     public partial class GroupMemberLink : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lSuccess;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

@@ -37,6 +37,17 @@ namespace RockWeb.Blocks.Groups
     [LinkedPage( "Detail Page" )]
     public partial class GroupTypeList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPurpose;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlIsSystem;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlShowInNavigation;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gGroupType;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

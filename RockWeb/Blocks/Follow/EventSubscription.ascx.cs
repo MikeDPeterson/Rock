@@ -40,6 +40,11 @@ namespace RockWeb.Blocks.Follow
     [Description( "Block for users to select which following events they would like to subscribe to." )]
     public partial class EventSubscription : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSaved;
+
+        #endregion
 
         #region Fields
 

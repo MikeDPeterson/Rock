@@ -35,7 +35,13 @@ namespace RockWeb.Blocks.Groups
     [TextField("Error Message", "The text to display when a valid group member key is NOT provided", false, "Sorry, there was a problem confirming your registration.  Please try to register again.")]
     public partial class GroupSimpleRegisterConfirm : Rock.Web.UI.RockBlock
     {
-         #region overridden control methods
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
+        #region overridden control methods
 
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.

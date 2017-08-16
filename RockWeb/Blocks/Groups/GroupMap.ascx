@@ -66,7 +66,7 @@
                                 <div class="form-group margin-l-sm js-connection-status" style="display:none">
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" class="js-connection-status-cb" data-item='<%# Eval("Id") %>' data-color='<%# Eval("Color") %>' /> <i class="fa fa-circle" style='color:#<%# Eval("Color") %>'></i> <%# Eval("Name") %>
+                                            <input type="checkbox" class="js-connection-status-cb" data-item='<%# Eval("Id") %>' data-color='<%# Eval("Color") %>' /> <i class="fa fa-circle" style='color:<%# Eval("Color") %>'></i> <%# Eval("Name") %>
                                         </label>
                                     </div>
                                 </div>

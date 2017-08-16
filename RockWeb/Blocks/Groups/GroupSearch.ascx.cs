@@ -38,6 +38,12 @@ namespace RockWeb.Blocks.Groups
 
     public partial class GroupSearch : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gGroups;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

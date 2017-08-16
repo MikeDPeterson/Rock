@@ -39,6 +39,17 @@ namespace RockWeb.Blocks.Groups
     [BooleanField( "Allow Campus Filter", "Should block add an option to allow filtering attendance counts and percentage by campus?", false, "", 2 )]
     public partial class GroupAttendanceList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlCampus;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLocation;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSchedule;
+        protected global::Rock.Web.UI.Controls.Grid gOccurrences;
+
+        #endregion
+
         #region Private Variables
 
         private RockContext _rockContext = null;

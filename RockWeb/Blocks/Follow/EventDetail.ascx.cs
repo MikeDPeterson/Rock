@@ -39,6 +39,20 @@ namespace RockWeb.Blocks.Follow
     [Description( "Block for editing following event types." )]
     public partial class EventDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.ComponentPicker cpEventType;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRequireNotification;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSendOnFriday;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceNotificationFormat;
+
+        #endregion
 
         #region Properties
 

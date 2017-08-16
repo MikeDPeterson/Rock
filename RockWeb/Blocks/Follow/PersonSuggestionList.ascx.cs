@@ -41,6 +41,11 @@ namespace RockWeb.Blocks.Follow
 
     public partial class PersonSuggestionList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gSuggestions;
+
+        #endregion
 
         #region Base Control Methods
 

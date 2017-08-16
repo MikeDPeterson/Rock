@@ -68,6 +68,24 @@ namespace RockWeb.Blocks.Groups
     [WorkflowTypeField( "Alert Note Re-Route Workflow", "If the person has an alert note, a workflow to run instead of registering them to the group. A GroupMember with the person and group will be set as the workflow 'Entity' when processing is started.", false, false, "", "", 11 )]
     public partial class GroupRegistration : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotice;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnHome;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnCell;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSms;
+        protected global::Rock.Web.UI.Controls.EmailBox tbEmail;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSpouseFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSpouseLastName;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnSpouseCell;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSpouseSms;
+        protected global::Rock.Web.UI.Controls.EmailBox tbSpouseEmail;
+        
+        #endregion
+
         #region Fields
 
         RockContext _rockContext = null;

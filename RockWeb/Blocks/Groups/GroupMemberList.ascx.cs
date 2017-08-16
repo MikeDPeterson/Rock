@@ -47,6 +47,35 @@ namespace RockWeb.Blocks.Groups
     [BooleanField( "Show Date Added", "Should the date that person was added to the group be displayed for each group member?", false, "", 6 )]
     public partial class GroupMemberList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlSyncStatus;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRoleWarning;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblRole;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblGroupMemberStatus;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampusFilter;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblGenderFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRegistration;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSignedDocument;
+        protected global::Rock.Web.UI.Controls.Grid gGroupMembers;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdPlaceElsewhere;
+        protected global::Rock.Web.UI.Controls.RockLiteral lWorkflowTriggerName;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwSelectMemberTrigger;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfPlaceElsewhereTriggerId;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbPlaceElsewhereWarning;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPlaceElsewhereGroupMemberName;
+        protected global::Rock.Web.UI.Controls.RockLiteral lWorkflowName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPlaceElsewhereNote;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeFilters;
+        protected global::System.Web.UI.WebControls.HiddenField hfPlaceElsewhereGroupMemberId;
+
+        #endregion
+
         #region Private Variables
 
         private DefinedValueCache _inactiveStatus = null;

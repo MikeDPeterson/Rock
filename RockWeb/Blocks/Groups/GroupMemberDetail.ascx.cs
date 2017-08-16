@@ -44,6 +44,33 @@ namespace RockWeb.Blocks.Groups
     [BooleanField( "Show 'Move to another group' button", "Set to false to hide the 'Move to another group' button", true, "", 1, "ShowMoveToOtherGroup" )]
     public partial class GroupMemberDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hfDateAdded;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert maSignatureRequestSent;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppGroupMemberPerson;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsNotified;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupRole;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNote;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblStatus;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwLinkedRegistrations;
+        protected global::Rock.Web.UI.Controls.FileUploader fuSignedDocument;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwRequirements;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRequirementsErrors;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblManualRequirements;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRecheckedNotification;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdMoveGroupMember;
+        protected global::Rock.Web.UI.Controls.RockLiteral lCurrentGroup;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpMoveGroupMember;
+        protected global::Rock.Web.UI.Controls.GroupRolePicker grpMoveGroupMember;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMoveGroupMemberMoveNotes;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMoveGroupMemberWarning;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

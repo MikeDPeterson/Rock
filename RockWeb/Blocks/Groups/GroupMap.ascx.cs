@@ -100,6 +100,14 @@ namespace RockWeb.Blocks.Groups
 ", "", 7 )]
     public partial class GroupMap : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowAllGroups;
+        protected global::Rock.Web.UI.Controls.GroupTypesPicker gtpGroupType;
+        protected global::Rock.Web.UI.Controls.CampusesPicker cpCampuses;
+
+        #endregion
+
         #region Fields
 
         protected string _groupColor = string.Empty;

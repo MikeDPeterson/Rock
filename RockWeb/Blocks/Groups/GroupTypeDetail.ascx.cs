@@ -41,6 +41,92 @@ namespace RockWeb.Blocks.Groups
     [Description( "Displays the details of the given group type for editing." )]
     public partial class GroupTypes : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupTypePurpose;
+        protected global::Rock.Web.UI.Controls.Grid gChildGroupTypes;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpInheritedGroupType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupCapacityRule;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbGroupsRequireCampus;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblLocationSelectionModes;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowMultipleLocations;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableLocationSchedules;
+        protected global::Rock.Web.UI.Controls.Grid gLocationTypes;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDontInactivateMembers;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableIndexing;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTakesAttendance;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbWeekendService;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSendAttendanceReminder;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblScheduleTypes;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbGroupAttendanceRequiresLocation;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbGroupAttendanceRequiresSchedule;
+        protected global::Rock.Web.UI.Controls.Grid gScheduleExclusions;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAttendanceRule;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrintTo;
+        protected global::Rock.Web.UI.Controls.Grid gGroupTypeRoles;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcGroupMemberAttributesInherited;
+        protected global::Rock.Web.UI.Controls.Grid gGroupMemberAttributesInherited;
+        protected global::Rock.Web.UI.Controls.Grid gGroupMemberAttributes;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcGroupAttributesInherited;
+        protected global::Rock.Web.UI.Controls.Grid gGroupAttributesInherited;
+        protected global::Rock.Web.UI.Controls.Grid gGroupAttributes;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcGroupTypeAttributesInherited;
+        protected global::Rock.Web.UI.Controls.Grid gGroupTypeAttributesInherited;
+        protected global::Rock.Web.UI.Controls.Grid gGroupTypeAttributes;
+        protected global::Rock.Web.UI.Controls.Grid gMemberWorkflowTriggers;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbGroupTerm;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbGroupMemberTerm;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowInGroupList;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowInNavigation;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowConnectionStatus;
+        protected global::Rock.Web.UI.Controls.ModalAlert modalAlert;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgGroupTypeRoles;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbRoleName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbRoleDescription;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsLeader;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbReceiveRequirementsNotifications;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCanView;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCanEdit;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMinimumRequired;
+        protected global::Rock.Web.UI.Controls.NumberBox nbMaximumAllowed;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgChildGroupType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlChildGroupType;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgScheduleExclusion;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpScheduleExclusion;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgLocationType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLocationType;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgGroupTypeAttribute;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtGroupTypeAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgGroupAttribute;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtGroupAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgGroupMemberAttribute;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtGroupMemberAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgMemberWorkflowTriggers;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidWorkflowType;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTriggerName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTriggerIsActive;
+        protected global::Rock.Web.UI.Controls.WorkflowTypePicker wtpWorkflowType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerFromStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerToStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerFromRole;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerToRole;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTriggerFirstTime;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTriggerPlacedElsewhereShowNote;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTriggerPlacedElsewhereRequireNote;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfRoleGuid;
+        protected global::System.Web.UI.WebControls.HiddenField hfScheduleExclusion;
+        protected global::System.Web.UI.WebControls.HiddenField hfTriggerGuid;
+
+        #endregion
+
         #region Properties
 
         private List<int> ChildGroupTypesList { get; set; }

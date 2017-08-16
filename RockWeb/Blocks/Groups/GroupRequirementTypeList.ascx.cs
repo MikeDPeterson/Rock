@@ -39,6 +39,13 @@ namespace RockWeb.Blocks.Groups
     [LinkedPage( "Detail Page" )]
     public partial class GroupRequirementTypeList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

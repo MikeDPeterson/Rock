@@ -47,6 +47,23 @@ namespace RockWeb.Blocks.Groups
 
     public partial class GroupAttendanceDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlCampus;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotice;
+        protected global::Rock.Web.UI.Controls.RockLiteral lOccurrenceDate;
+        protected global::Rock.Web.UI.Controls.DatePicker dpOccurrenceDate;
+        protected global::Rock.Web.UI.Controls.RockLiteral lLocation;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLocation;
+        protected global::Rock.Web.UI.Controls.RockLiteral lSchedule;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSchedule;
+        protected global::Rock.Web.UI.Controls.RockLiteral lDidAttendCount;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbDidNotMeet;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAddPerson;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbPrintRosterWarning;
+
+        #endregion
+
         #region Private Variables
 
         private RockContext _rockContext = null;

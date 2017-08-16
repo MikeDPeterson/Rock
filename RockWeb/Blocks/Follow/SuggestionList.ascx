@@ -16,9 +16,9 @@
                         <Columns>
                             <Rock:ReorderField />
                             <Rock:RockBoundField DataField="Name" HeaderText="Name" />
-                            <asp:TemplateField HeaderText="Suggestion Type">
+                            <global::asp:TemplateField HeaderText="Suggestion Type">
                                 <ItemTemplate><%# GetComponentName( Eval( "EntityType") )%></ItemTemplate>
-                            </asp:TemplateField>
+                            </TemplateField>
                             <Rock:BoolField DataField="IsActive" HeaderText="Active" />
                             <Rock:DeleteField OnClick="rGridSuggestion_Delete" />
                         </Columns>

@@ -46,6 +46,16 @@ namespace RockWeb.Blocks.Groups
     [BooleanField( "Load Current Person from Page", "If set to true the form will autopopulate fields fro mthe person profile", false, key: "LoadPerson" )]
     public partial class GroupSimpleRegister : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox txtFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtEmail;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSuccess;
+
+        #endregion
+
         #region overridden control methods
 
         /// <summary>
