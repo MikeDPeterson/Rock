@@ -44,6 +44,16 @@ namespace RockWeb.Blocks.Reporting
     [BooleanField( "GivingMonthUseSundayDate", "", false, "CustomSetting", 1 )]
     public partial class CalendarDimensionSettings : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DatePicker dpStartDate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList monthDropDownList;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbGivingMonthUseSundayDate;
+        protected global::Rock.Web.UI.Controls.DatePicker dpEndDate;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGenerateSuccess;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

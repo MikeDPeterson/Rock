@@ -40,6 +40,21 @@ namespace RockWeb.Blocks.Prayer
     [IntegerField( "Flag Limit", "The number of flags a prayer request has to get from the prayer team before it is automatically unapproved.", false, 1, "Flagging", 4 )]
     public partial class PrayerSession : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSelectCategories;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCategories;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblNumber;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblPrayerCountTotal;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblUrgent;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblCategory;
+        protected global::Rock.Web.UI.Controls.NoteContainer notesComments;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdFlag;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfIdValue;
+
+        #endregion
+
         #region Fields
         private bool _enableCommunityFlagging = false;
         private string _categoryGuidString = string.Empty;

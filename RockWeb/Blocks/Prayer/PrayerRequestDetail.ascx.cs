@@ -42,6 +42,31 @@ namespace RockWeb.Blocks.Prayer
     [BooleanField( "Require Last Name", "Require that a last name be entered", true, "", 3 )]
     public partial class PrayerRequestDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlCategory;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppRequestor;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.DatePicker dpExpirationDate;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblFlaggedMessage;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsPublic;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsUrgent;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowComments;
+        protected global::Rock.Web.UI.Controls.CategoryPicker catpCategory;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbText;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbAnswer;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblFlaggedMessageRO;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblUrgent;
+        protected global::Rock.Web.UI.Controls.Badge badgePrayerCount;
+
+
+        #endregion
+
         #region Properties
 
         /// <summary>

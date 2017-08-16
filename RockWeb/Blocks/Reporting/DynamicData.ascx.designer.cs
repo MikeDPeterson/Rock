@@ -49,15 +49,6 @@ namespace RockWeb.Blocks.Reporting {
         protected global::System.Web.UI.WebControls.Panel pnlEditModel;
         
         /// <summary>
-        /// upnlEdit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel upnlEdit;
-        
-        /// <summary>
         /// ddlHideShow control.
         /// </summary>
         /// <remarks>

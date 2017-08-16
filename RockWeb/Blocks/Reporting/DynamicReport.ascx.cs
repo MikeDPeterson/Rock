@@ -50,6 +50,23 @@ namespace RockWeb.Blocks.Reporting
     [TextField( "PersonIdField", "If this isn't a Person report, but there is a person id field, specify the name of the field", false, "", "CustomSetting" )]
     public partial class DynamicReport : RockBlockCustomSettings
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbConfigurationWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbFiltersError;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbReportErrors;
+        protected global::Rock.Web.UI.Controls.Grid gReport;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdConfigure;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtResultsTitle;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtResultsIconCssClass;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtFilterIconCssClass;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtFilterTitle;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlReport;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPersonIdField;
+        protected global::Rock.Web.UI.Controls.Grid grdDataFilters;
+
+        #endregion
+
         /// <summary>
         /// Gets the settings tool tip.
         /// </summary>

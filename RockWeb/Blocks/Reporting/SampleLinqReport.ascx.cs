@@ -45,6 +45,12 @@ namespace RockWeb.Blocks.Reporting
     [Description( "Sample Block that executes a Linq statment and displays the result (if any)." )]
     public partial class SampleLinqReport : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gReport;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

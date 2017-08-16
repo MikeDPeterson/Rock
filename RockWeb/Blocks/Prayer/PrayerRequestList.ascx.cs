@@ -42,6 +42,22 @@ namespace RockWeb.Blocks.Prayer
     [BooleanField( "Show Prayer Count", "If enabled, the block will show the current prayer count for each request in the list.", false, "", 2 )]
     public partial class PrayerRequestList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDateRange;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlApprovedFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlUrgentFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPublicFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlActiveFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAllowCommentsFilter;
+        protected global::Rock.Web.UI.Controls.CategoryPicker catpPrayerCategoryFilter;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowExpired;
+        protected global::Rock.Web.UI.Controls.ModalAlert maGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gPrayerRequests;
+
+        #endregion
+
         #region Fields
 
         /// <summary>

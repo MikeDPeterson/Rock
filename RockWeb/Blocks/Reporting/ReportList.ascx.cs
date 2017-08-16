@@ -41,6 +41,12 @@ namespace RockWeb.Blocks.Reporting
     [LinkedPage("Detail Page", "Detail page to show report.", true, "", "", 1)]
     public partial class ReportList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

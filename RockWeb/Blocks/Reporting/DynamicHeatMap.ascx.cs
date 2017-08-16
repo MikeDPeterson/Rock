@@ -51,6 +51,22 @@ namespace RockWeb.Blocks.Reporting
     [BooleanField( "Show Save Location", "Adds a button which will save the selected shape as a named location's geofence ", defaultValue: false, order: 9 )]
     public partial class DynamicHeatMap : RockBlockCustomSettings
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlUserDataView;
+        protected global::Rock.Web.UI.Controls.CampusesPicker cpCampuses;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpGroupToMap;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowCampusLocations;
+        protected global::Rock.Web.UI.Controls.RangeSlider rsDataPointRadius;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdConfigure;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlBlockConfigDataView;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfLocationSavePath;
+        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfLocationId;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdSaveLocation;
+        protected global::Rock.Web.UI.Controls.LocationItemPicker lpLocation;
+
+        #endregion
+
         /// <summary>
         /// Gets the settings tool tip.
         /// </summary>

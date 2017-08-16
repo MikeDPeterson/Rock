@@ -60,6 +60,22 @@ namespace RockWeb.Blocks.Prayer
     [BooleanField( "Enable Debug", "Outputs the object graph to help create your liquid syntax.", false, "On Save Behavior", 14 )]
     public partial class PrayerRequestEntry : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEmail;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlCategory;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbRequest;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsUrgent;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowComments;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowPublicDisplay;
+        protected global::Rock.Web.UI.Controls.BootstrapButton lbSave;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Properties
         public int? PrayerRequestEntityTypeId { get; private set; }
         

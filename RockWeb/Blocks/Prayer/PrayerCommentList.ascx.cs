@@ -39,6 +39,16 @@ namespace RockWeb.Blocks.Prayer
     [CategoryField( "Category Selection", "A top level category. Only prayer requests comments under this category will be shown.", false, "Rock.Model.PrayerRequest", "", "", false, "", "Category Selection", 1, "PrayerRequestCategory" )]
     public partial class PrayerCommentsList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDateRange;
+        protected global::Rock.Web.UI.Controls.CategoryPicker catpPrayerCategoryFilter;
+        protected global::Rock.Web.UI.Controls.ModalAlert maGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gPrayerComments;
+
+        #endregion
+
         #region Fields
 
         /// <summary>

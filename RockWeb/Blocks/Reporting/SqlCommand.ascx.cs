@@ -44,6 +44,16 @@ namespace RockWeb.Blocks.Reporting
     [Description( "Block to execute a sql command and display the result (if any)." )]
     public partial class SqlCommand : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.CodeEditor tbQuery;
+        protected global::Rock.Web.UI.Controls.Toggle tQuery;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSuccess;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+        protected global::Rock.Web.UI.Controls.Grid gReport;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

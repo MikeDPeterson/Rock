@@ -38,6 +38,19 @@ namespace RockWeb.Blocks.Reporting
     [Description( "Displays the details of a particular metric value." )]
     public partial class MetricValueDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMetricValueType;
+        protected global::Rock.Web.UI.Controls.DatePicker dpMetricValueDateTime;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbValueRequired;
+        protected global::Rock.Web.UI.Controls.NumberBox tbYValue;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbXValue;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbNote;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

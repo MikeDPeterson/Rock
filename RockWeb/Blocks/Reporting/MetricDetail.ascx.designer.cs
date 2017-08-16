@@ -94,15 +94,6 @@ namespace RockWeb.Blocks.Reporting {
         protected global::System.Web.UI.WebControls.Panel pnlDataviewSourceType;
         
         /// <summary>
-        /// hfUniqueScheduleId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfUniqueScheduleId;
-        
-        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>
@@ -155,14 +146,5 @@ namespace RockWeb.Blocks.Reporting {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnDelete;
-        
-        /// <summary>
-        /// hfMetricPartitionGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfMetricPartitionGuid;
     }
 }

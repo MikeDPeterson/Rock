@@ -66,6 +66,31 @@ namespace RockWeb.Blocks.Reporting
     [BooleanField( "Show Grid Filter", "Show filtering controls that are dynamically generated to match the columns of the dynamic data.", true, "CustomSetting" )]
     public partial class DynamicData : RockBlockCustomSettings
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDesc;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceQuery;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbStoredProcedure;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbColumns;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbParams;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPersonReport;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowCommunicate;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowMergePerson;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowBulkUpdate;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowExcelExport;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowMergeTemplate;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowGridFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbUrlMask;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbMergeFields;
+        protected global::Rock.Web.UI.Controls.NumberBox nbTimeout;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceFormattedOutput;
+        protected global::Rock.Web.UI.Controls.CodeEditor cePageTitleLava;
+
+        #endregion
+
         #region Fields
 
         private Dictionary<int, string> _sortExpressions = new Dictionary<int, string>();

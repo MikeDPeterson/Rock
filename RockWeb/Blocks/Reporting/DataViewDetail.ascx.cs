@@ -46,6 +46,27 @@ namespace RockWeb.Blocks.Reporting
     [IntegerField( "Database Timeout", "The number of seconds to wait before reporting a database timeout.", false, 180, order: 3 )]
     public partial class DataViewDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblEditDataViewId;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker etpEntityType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTransform;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblDataViewId;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGridError;
+        protected global::Rock.Web.UI.Controls.Grid gReport;
+        protected global::Rock.Web.UI.Controls.ModalDialog modalPreview;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbPreviewError;
+        protected global::Rock.Web.UI.Controls.Grid gPreview;
+
+        #endregion
+
         #region Properties
 
         private const string _ViewStateKeyShowResults = "ShowResults";

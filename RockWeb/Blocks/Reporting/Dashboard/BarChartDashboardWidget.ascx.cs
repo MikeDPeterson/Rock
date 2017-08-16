@@ -29,6 +29,12 @@ namespace RockWeb.Blocks.Reporting.Dashboard
     [Description( "Bar Chart Dashboard Widget" )]
     public partial class BarChartDashboardWidget : LineBarPointsChartDashboardWidget
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.BarChart flotChart;
+
+        #endregion
+
         protected override void OnInit( System.EventArgs e )
         {
             base.OnInit( e );

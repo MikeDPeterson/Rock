@@ -45,6 +45,16 @@ namespace RockWeb.Blocks.Reporting
     [MetricCategoriesField( "Metric Categories", "Select the metric categories to display (note: only metrics in those categories with a campus and scheudle partition will displayed).", true, "", "", 3 )]
     public partial class ServiceMetricsEntry : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlCampus;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlWeekend;
+        protected global::Rock.Web.UI.Controls.ButtonDropDownList bddlService;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMetricsSaved;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNote;
+
+        #endregion
+
         #region Fields
 
         private int? _selectedCampusId { get; set; }

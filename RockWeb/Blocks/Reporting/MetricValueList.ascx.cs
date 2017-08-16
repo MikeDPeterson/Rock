@@ -41,6 +41,18 @@ namespace RockWeb.Blocks.Reporting
     [LinkedPage( "Detail Page" )]
     public partial class MetricValueList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gfMetricValues;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGoalMeasure;
+        protected global::Rock.Web.UI.Controls.Grid gMetricValues;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phMetricValuePartitions;
+
+        #endregion
+
         #region fields
 
         private Dictionary<int, IQueryable<IEntity>> _entityTypeEntityLookupQry = null;

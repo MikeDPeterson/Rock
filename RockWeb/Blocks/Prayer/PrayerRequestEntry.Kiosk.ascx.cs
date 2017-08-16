@@ -57,6 +57,21 @@ namespace RockWeb.Blocks.Prayer
     [LinkedPage( "Homepage", "Homepage of the kiosk.", true, "", "", 13 )]
     public partial class PrayerRequestEntryKiosk : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbFirstName;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbLastName;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbEmail;
+        protected global::Rock.Web.UI.Controls.RockDropDownList bddlCategory;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbRequest;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsUrgent;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowComments;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowPublicDisplay;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+
+        #endregion
+
         #region Properties
         public int? PrayerRequestEntityTypeId { get; private set; }
         

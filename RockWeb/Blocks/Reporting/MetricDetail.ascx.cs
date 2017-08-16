@@ -47,6 +47,51 @@ namespace RockWeb.Blocks.Reporting
     [BooleanField( "Combine Chart Series" )]
     public partial class MetricDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlScheduleFriendlyText;
+        protected global::Rock.Web.UI.Controls.HighlightLabel ltLastRunDateTime;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbSubtitle;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppMetricChampionPerson;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpMetricCategories;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAdminPerson;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbYAxisLabel;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsCumulative;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableAnalytics;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSourceType;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceSourceSql;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlDataView;
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwSchedule;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblScheduleSelect;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSchedule;
+        protected global::Rock.Web.UI.Controls.ScheduleBuilder sbSchedule;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdMetricPartitionsGridWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox mdMetricPartitionsEntityTypeWarning;
+        protected global::Rock.Web.UI.Controls.PanelWidget pwMetricPartitions;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMetricValuesWarning;
+        protected global::Rock.Web.UI.Controls.Grid gMetricPartitions;
+        protected global::Rock.Web.UI.Controls.LineChart lcMetricsChart;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdMetricPartitionDetail;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbMetricPartitionLabel;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker etpMetricPartitionEntityType;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMetricPartitionIsRequired;
+        protected global::Rock.Web.UI.Controls.PanelWidget pwMetricPartitionAdvanced;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbMetricPartitionEntityTypeQualifierColumn;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbMetricPartitionEntityTypeQualifierValue;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMetricPartitionDefinedTypePicker;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfUniqueScheduleId;
+        protected global::System.Web.UI.WebControls.HiddenField hfMetricPartitionGuid;
+
+        #endregion
+
         #region Properties
 
         private List<MetricPartition> MetricPartitionsState { get; set; }

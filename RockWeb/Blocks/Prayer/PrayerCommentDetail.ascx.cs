@@ -39,6 +39,13 @@ namespace RockWeb.Blocks.Prayer
     [TextField( "Title", "The title of the notes/comments section.", false, "Comments", "Behavior", 0 )]
     public partial class PrayerCommentDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbText;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbCaption;
+
+        #endregion
+
         #region Private BlockType Attributes
         private IEntity contextEntity = null;
         private NoteTypeCache noteType;

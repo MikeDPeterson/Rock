@@ -96,7 +96,7 @@
         <!-- Modal for flag confirmation -->
         <Rock:ModalDialog ID="mdFlag" runat="server" Title="Flag as Inappropriate?" ValidationGroup="EntityTypeName" >
             <Content>
-                <asp:HiddenField ID="hfIdValue" runat="server" />
+                <global::asp:HiddenField ID="hfIdValue" runat="server" />
                 <p>Once a request is flagged a certain number of times it will be temporarily removed and presented to the prayer administrator for review.</p>
             </Content>
         </Rock:ModalDialog>

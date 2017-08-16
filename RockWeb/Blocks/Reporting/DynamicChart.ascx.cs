@@ -80,6 +80,15 @@ order by YValue desc
     [BooleanField( "Pie Show Labels", "If this is a pie chart, specify if labels show be shown", true, "", order: 11 )]
     public partial class DynamicChart : Rock.Reporting.Dashboard.DashboardWidget
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbConfigurationWarning;
+        protected global::Rock.Web.UI.Controls.LineChart lcLineChart;
+        protected global::Rock.Web.UI.Controls.PieChart pcPieChart;
+        protected global::Rock.Web.UI.Controls.BarChart bcBarChart;
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>

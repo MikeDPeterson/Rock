@@ -43,6 +43,23 @@ namespace RockWeb.Blocks.Reporting
     [LinkedPage("Data View Page", "The page to edit data views", true, "", "", 1)]
     public partial class ReportDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.EntityTypePicker etpEntityType;
+        protected global::Rock.Web.UI.Controls.DataViewPicker ddlDataView;
+        protected global::Rock.Web.UI.Controls.KeyValueList kvSortFields;
+        protected global::Rock.Web.UI.Controls.NumberBox nbFetchTop;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.Grid gReport;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

@@ -42,6 +42,13 @@ namespace RockWeb.Blocks.Reporting.Dashboard
     [LinkedPage( "Detail Page", "Select the page to navigate to when the chart is clicked", false, Order = 8 )]
     public partial class PieChartDashboardWidget : DashboardWidget
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMetricWarning;
+        protected global::Rock.Web.UI.Controls.PieChart pcChart;
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>
