@@ -44,6 +44,24 @@ namespace RockWeb.Blocks.Security
         "The type of location that address should use.", false, Rock.SystemGuid.DefinedValue.GROUP_LOCATION_TYPE_HOME, "", 14 )]
     public partial class AccountEdit : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ImageEditor imgPhoto;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTitle;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbNickName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSuffix;
+        protected global::Rock.Web.UI.Controls.BirthdayPicker bpBirthDay;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblGender;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbEmail;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblEmailPreference;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsMailingAddress;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsPhysicalAddress;
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>

@@ -120,8 +120,8 @@
             OnSaveClick="dlgPackage_SaveClick" OnCancelScript="clearActiveDialog();">
             <Content>
 
-                <asp:HiddenField ID="hfDefinedValueId" runat="server" />
-                <asp:ValidationSummary ID="valSummaryPackage" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Package" />
+                <global::asp:HiddenField ID="hfDefinedValueId" runat="server" />
+                <global::asp:ValidationSummary ID="valSummaryPackage" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Package" />
 
                 <div class="row">
                     <div class="col-md-6">

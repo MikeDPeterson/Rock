@@ -36,6 +36,20 @@ namespace RockWeb.Blocks.Utility
     [Description( "Block to be used as part of the RockFileBrowser HtmlEditor Plugin" )]
     public partial class HtmlEditorFileBrowser : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdRenameFolder;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbOrigFolderName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRenameFolderName;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdCreateFolder;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNewFolderName;
+        protected global::Rock.Web.UI.Controls.FileUploader fuprFileUpload;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoFilesInfo;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

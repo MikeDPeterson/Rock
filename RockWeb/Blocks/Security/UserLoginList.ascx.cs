@@ -39,6 +39,32 @@ namespace RockWeb.Blocks.Security
     [ContextAware]
     public partial class UserLoginList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert maGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbUserNameFilter;
+        protected global::Rock.Web.UI.Controls.ComponentPicker compProviderFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpCreated;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpLastLogin;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlIsConfirmedFilter;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLockedOutFilter;
+        protected global::Rock.Web.UI.Controls.Grid gUserLogins;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbUserName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsConfirmed;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsLockedOut;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsRequirePasswordChange;
+        protected global::Rock.Web.UI.Controls.ComponentPicker compProvider;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPassword;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPasswordConfirm;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfIdValue;
+
+        #endregion
+
         #region Fields
 
         private int? _personId = null;

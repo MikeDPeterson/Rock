@@ -39,6 +39,12 @@ namespace RockWeb.Blocks.Utility
     [Description( "Template block for developers to use to start a new list block." )]
     public partial class StarkList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

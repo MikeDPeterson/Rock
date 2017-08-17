@@ -41,6 +41,13 @@ namespace RockWeb.Blocks.Security
     [LinkedPage( "Detail Page" )]
     public partial class PersonViewedSummary : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gViewedBy;
+        protected global::Rock.Web.UI.Controls.Grid gViewed;
+
+        #endregion
+
         #region Fields
 
         private int? personId = null;

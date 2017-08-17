@@ -39,7 +39,22 @@ namespace RockWeb.Blocks.Security.BackgroundCheck
 
     [LinkedPage("Workflow Detail Page", "The page to view details about the background check workflow")]
     public partial class RequestList : RockBlock, ISecondaryBlock
-    { 
+    {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter fRequest;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpRequestDates;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpResponseDates;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRecordFound;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gRequest;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgResponse;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbResponseXml;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

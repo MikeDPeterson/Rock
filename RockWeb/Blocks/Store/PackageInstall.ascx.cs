@@ -47,6 +47,13 @@ namespace RockWeb.Blocks.Store
     [LinkedPage( "Link Organization Page", "Page to allow the user to link an organization to the store.", false, "", "")]
     public partial class PackageInstall : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox txtUsername;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtPassword;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

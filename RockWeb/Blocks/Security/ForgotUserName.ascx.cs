@@ -46,6 +46,12 @@ namespace RockWeb.Blocks.Security
     [SystemEmailField( "Forgot Username Email Template", "Email Template to send", false, Rock.SystemGuid.SystemEmail.SECURITY_FORGOT_USERNAME, "", 4, "EmailTemplate" )]
     public partial class ForgotUserName : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEmail;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

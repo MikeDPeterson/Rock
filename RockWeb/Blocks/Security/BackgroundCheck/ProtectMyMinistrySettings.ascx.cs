@@ -39,6 +39,38 @@ namespace RockWeb.Blocks.Security.BackgroundCheck
 
     public partial class ProtectMyMinistrySettings : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlMode;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlActive;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotification;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbUserNameNew;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPasswordNew;
+        protected global::Rock.Web.UI.Controls.RockLiteral lUserName;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPassword;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPackages;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbUserName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPassword;
+        protected global::Rock.Web.UI.Controls.UrlLinkBox urlWebHook;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbActive;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbTestMode;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarningValues;
+        protected global::Rock.Web.UI.Controls.Grid gDefinedValues;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgPackage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPackageName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDefaultCounty;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSendCounty;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDefaultState;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSendState;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMVRJurisdication;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSendStateMVR;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfDefinedValueId;
+
+        #endregion
+
         private const string GET_STARTED_URL = "http://www.rockrms.com/Redirect/PMMSignup";
         private const string PROMOTION_IMAGE_URL = "https://rockrms.blob.core.windows.net/resources/pmm-integration/pmm-integration-banner.png";
 

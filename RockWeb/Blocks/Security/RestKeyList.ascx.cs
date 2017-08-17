@@ -36,6 +36,12 @@ namespace RockWeb.Blocks.Security
     [LinkedPage( "Detail Page" )]
     public partial class RestKeyList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gRestKeyList;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -42,6 +42,14 @@ namespace RockWeb.Blocks.Store
     [Description( "Links a Rock organization to the store." )]
     public partial class LinkOrganization : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox txtUsername;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtPassword;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblOrganizations;
+
+        #endregion
+
         #region Fields
 
         // used for private variables

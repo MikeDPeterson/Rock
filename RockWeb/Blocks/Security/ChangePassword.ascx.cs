@@ -37,6 +37,13 @@ namespace RockWeb.Blocks.Security
     [TextField( "Change Password Not Supported Caption", "", false, "Changing your password is not supported.", "Captions", 2 )]
     public partial class ChangePassword : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbOldPassword;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPassword;
+
+        #endregion
 
         #region Base Control Methods
 

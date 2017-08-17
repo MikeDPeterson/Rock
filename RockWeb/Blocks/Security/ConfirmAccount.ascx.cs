@@ -44,6 +44,14 @@ namespace RockWeb.Blocks.Security
     [LinkedPage( "New Account Page", "Page to navigate to when user selects 'Create New Account' option (if blank will use 'NewAccount' page route)" )]
     public partial class ConfirmAccount : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox tbConfirmationCode;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPassword;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

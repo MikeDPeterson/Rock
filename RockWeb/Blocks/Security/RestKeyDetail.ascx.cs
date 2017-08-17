@@ -35,6 +35,15 @@ namespace RockWeb.Blocks.Security
     [Description( "Displays the details of the given REST API Key." )]
     public partial class RestKeyDetail : Rock.Web.UI.RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbKey;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

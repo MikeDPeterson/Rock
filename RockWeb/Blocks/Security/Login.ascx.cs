@@ -57,6 +57,14 @@ Sorry, your account has been locked.  Please contact our office at {{ 'Global' |
     [LinkedPage( "Redirect Page", "Page to redirect user to upon successful login. The 'returnurl' query string will always override this setting for database authenticated logins. Redirect Page Setting will override third-party authentication 'returnurl'.", false, "", "", 10 )]
     public partial class Login : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox tbUserName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPassword;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbRememberMe;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

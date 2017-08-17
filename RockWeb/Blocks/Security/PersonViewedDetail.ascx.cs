@@ -35,6 +35,12 @@ namespace RockWeb.Blocks.Security
     [Description( "Block for displaying details about who viewed your profile or whose profile you viewed. Details include when the profile was viewed and the source of the view." )]
     public partial class PersonViewedDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Grid gViewDetails;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

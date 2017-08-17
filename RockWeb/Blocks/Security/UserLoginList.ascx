@@ -24,21 +24,21 @@
                         <Rock:DateRangePicker ID="drpCreated" runat="server" Label="Created" />
                         <Rock:DateRangePicker ID="drpLastLogin" runat="server" Label="Last Login" />
                         <Rock:RockDropDownList ID="ddlIsConfirmedFilter" runat="server" Label="Is Confirmed">
-                            <asp:ListItem Value="" Text="" />
-                            <asp:ListItem Value="true" Text="Yes" />
-                            <asp:ListItem Value="false" Text="No" />
+                            <global::asp:ListItem Value="" Text="" />
+                            <global::asp:ListItem Value="true" Text="Yes" />
+                            <global::asp:ListItem Value="false" Text="No" />
                         </Rock:RockDropDownList>
                         <Rock:RockDropDownList ID="ddlLockedOutFilter" runat="server" Label="Is Locked Out">
-                            <asp:ListItem Value="" Text="" />
-                            <asp:ListItem Value="true" Text="Yes" />
-                            <asp:ListItem Value="false" Text="No" />
+                            <global::asp:ListItem Value="" Text="" />
+                            <global::asp:ListItem Value="true" Text="Yes" />
+                            <global::asp:ListItem Value="false" Text="No" />
                         </Rock:RockDropDownList>
                     </Rock:GridFilter>
 
                     <Rock:Grid ID="gUserLogins" runat="server" AllowSorting="true" RowItemText="Login">
                         <Columns>
                             <Rock:RockBoundField DataField="UserName" HeaderText="Username" SortExpression="Name" />
-                            <asp:HyperLinkField DataNavigateUrlFields="PersonId" DataTextField="PersonName" DataNavigateUrlFormatString="~/Person/{0}" HeaderText="Person" />
+                            <global::asp:HyperLinkField DataNavigateUrlFields="PersonId" DataTextField="PersonName" DataNavigateUrlFormatString="~/Person/{0}" HeaderText="Person" />
                             <Rock:RockBoundField DataField="ProviderName" HeaderText="Provider" SortExpression="EntityType.FriendlyName" />
                             <Rock:DateField DataField="CreatedDateTime" HeaderText="Created" SortExpression="CreatedDateTime" />
                             <Rock:DateField DataField="LastLoginDateTime" HeaderText="Last Login" SortExpression="LastLoginDateTime" />
@@ -60,8 +60,8 @@
         <Rock:ModalDialog ID="dlgDetails" runat="server" Title="Login" OnSaveClick="dlgDetails_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Login">
             <Content>
 
-                <asp:HiddenField ID="hfIdValue" runat="server" />
-                <asp:ValidationSummary ID="valUserLoginSummary" runat="server" ValidationGroup="Login"  CssClass="alert alert-danger" HeaderText="Please correct the following"/>
+                <global::asp:HiddenField ID="hfIdValue" runat="server" />
+                <global::asp:ValidationSummary ID="valUserLoginSummary" runat="server" ValidationGroup="Login"  CssClass="alert alert-danger" HeaderText="Please correct the following"/>
                 <Rock:NotificationBox ID="nbErrorMessage" runat="server" NotificationBoxType="Danger" />
                 <div class="row">
                     <div class="col-md-6">

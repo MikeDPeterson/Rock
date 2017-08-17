@@ -44,6 +44,12 @@ namespace RockWeb.Blocks.Security
         "The type of location that address should use.", false, Rock.SystemGuid.DefinedValue.GROUP_LOCATION_TYPE_HOME, "", 14 )]
     public partial class AccountDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotAuthorized;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

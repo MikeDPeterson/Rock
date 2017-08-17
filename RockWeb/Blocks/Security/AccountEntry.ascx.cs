@@ -61,6 +61,21 @@ namespace RockWeb.Blocks.Security
     [DefinedValueField( Rock.SystemGuid.DefinedType.PERSON_PHONE_TYPE, "Phone Types Required", "The phone numbers that are required.", false, true, order: 18 )]
     public partial class AccountEntry : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockTextBox tbUserName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPassword;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPasswordConfirm;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.EmailBox tbEmail;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGender;
+        protected global::Rock.Web.UI.Controls.BirthdayPicker bdaypBirthDay;
+        protected global::Rock.Web.UI.Controls.AddressControl acAddress;
+        protected global::Rock.Web.UI.Controls.Grid gDuplicates;
+
+        #endregion
+
         #region Fields
 
         private PlaceHolder[] PagePanels = new PlaceHolder[6];
