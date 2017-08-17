@@ -42,6 +42,14 @@ namespace RockWeb.Blocks.WorkFlow
     [LinkedPage( "Detail Page", "Page used to view status of a workflow." )]
     public partial class MyWorkflows : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Toggle tglRole;
+        protected global::Rock.Web.UI.Controls.Toggle tglDisplay;
+        protected global::Rock.Web.UI.Controls.Grid gWorkflows;
+
+        #endregion
+
         #region Fields
 
         private const string ROLE_TOGGLE_SETTING = "MyWorkflows_RoleToggle";

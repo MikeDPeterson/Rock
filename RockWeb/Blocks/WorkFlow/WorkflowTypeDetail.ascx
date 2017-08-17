@@ -87,7 +87,7 @@
                                     <Rock:ReorderField />
                                     <Rock:RockBoundField DataField="Name" HeaderText="Attribute" />
                                     <Rock:RockBoundField DataField="Description" HeaderText="Description" />
-                                     <Rock:RockBoundField DataField="Key" HeaderText="Key" />
+                                    <Rock:RockBoundField DataField="Key" HeaderText="Key" />
                                     <Rock:RockBoundField DataField="FieldType" HeaderText="Field Type" />
                                     <Rock:BoolField DataField="IsRequired" HeaderText="Required" />
                                     <Rock:EditField OnClick="gAttributes_Edit" />
@@ -167,7 +167,7 @@
 
         <Rock:ModalDialog ID="dlgActivityAttribute" runat="server" Title="Activity Attributes" OnSaveClick="dlgActivityAttribute_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="ActivityAttributes">
             <Content>
-                <asp:HiddenField ID="hfActivityTypeGuid" runat="server" />
+                <global::asp:HiddenField ID="hfActivityTypeGuid" runat="server" />
                 <Rock:AttributeEditor ID="edtActivityAttributes" runat="server" ShowActions="false" ValidationGroup="ActivityAttributes" />
             </Content>
         </Rock:ModalDialog>

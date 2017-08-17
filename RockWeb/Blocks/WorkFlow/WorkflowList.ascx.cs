@@ -44,6 +44,22 @@ namespace RockWeb.Blocks.WorkFlow
     [WorkflowTypeField("Default WorkflowType", "The default workflow type to use. If provided the query string will be ignored.")]
     public partial class WorkflowList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gfWorkflows;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbName;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppInitiator;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbStatus;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpActivated;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpCompleted;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblState;
+        protected global::Rock.Web.UI.Controls.Grid gWorkflows;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeFilters;
+
+        #endregion
+
         #region Fields
 
         private bool _canView = false;

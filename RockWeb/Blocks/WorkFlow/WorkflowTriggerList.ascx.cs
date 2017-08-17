@@ -35,6 +35,15 @@ namespace RockWeb.Blocks.WorkFlow
     [LinkedPage("Detail Page")]
     public partial class WorkflowTriggerList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter gfWorkflowTrigger;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIncludeInactive;
+        protected global::Rock.Web.UI.Controls.Grid gWorkflowTrigger;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -41,6 +41,26 @@ namespace RockWeb.Blocks.WorkFlow
     [Description( "Displays the details of a workflow instance." )]
     public partial class WorkflowDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotAuthorized;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblWorkflowId;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlState;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.TermDescription tdName;
+        protected global::Rock.Web.UI.Controls.TermDescription tdInitiator;
+        protected global::Rock.Web.UI.Controls.TermDescription tdStatus;
+        protected global::Rock.Web.UI.Controls.TermDescription tdActivatedWhen;
+        protected global::Rock.Web.UI.Controls.TermDescription tdLastProcessed;
+        protected global::Rock.Web.UI.Controls.TermDescription tdCompletedWhen;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppInitiator;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbStatus;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsCompleted;
+        protected global::Rock.Web.UI.Controls.Grid gLog;
+
+        #endregion
 
         #region Fields
 

@@ -44,6 +44,15 @@ namespace RockWeb.Blocks.WorkFlow
     [WorkflowTypeField( "Workflow Type", "Type of workflow to start." )]
     public partial class WorkflowEntry : Rock.Web.UI.RockBlock, IPostBackEventHandler
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblWorkflowId;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblDateAdded;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.NoteContainer ncWorkflowNotes;
+
+        #endregion
+
         #region Fields
 
         private RockContext _rockContext = null;

@@ -39,6 +39,21 @@ namespace RockWeb.Blocks.WorkFlow
     [Description( "Displays the details of the given workflow trigger." )]
     public partial class WorkflowTriggerDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblTriggerType;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlEntityType;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlWorkflowType;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbWorkflowName;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlQualifierColumn;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPreviousQualifierValue;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbQualifierValueAlt;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbQualifierValue;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

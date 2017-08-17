@@ -77,6 +77,39 @@ This {{ Workflow.WorkflowType.WorkTerm }} does not currently require your attent
 {% endif %}", "", 3 )]
     public partial class WorkflowTypeDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlInactive;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbValidationError;
+        protected global::Rock.Web.UI.Controls.PanelWidget pwDetails;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsPersisted;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbWorkTerm;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpCategory;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbNumberPrefix;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbIconCssClass;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbProcessingInterval;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlLoggingLevel;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceNoActionMessage;
+        protected global::Rock.Web.UI.Controls.CodeEditor ceSummaryViewText;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpAttributes;
+        protected global::Rock.Web.UI.Controls.Grid gAttributes;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.SecurityButton btnSecurity;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgAttribute;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtAttributes;
+        protected global::Rock.Web.UI.Controls.ModalDialog dlgActivityAttribute;
+        protected global::Rock.Web.UI.Controls.AttributeEditor edtActivityAttributes;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfActivityTypeGuid;
+
+        #endregion
+
         #region Properties
 
         private List<Attribute> AttributesState { get; set; }
