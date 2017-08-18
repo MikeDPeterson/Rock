@@ -48,6 +48,14 @@ namespace RockWeb.Plugins.church_ccv.Core
     [WorkflowTypeField( "Notification Workflow", "Workflow to launch when a note is added to a person. (Workflow assumes the note is being set to a person, and will fail if not.)", false, false, "", "", 11 )]
     public partial class NoteFromDefinedType : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlNoteValueList;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbOtherText;
+        protected global::Rock.Web.UI.Controls.NoteContainer noteList;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>
@@ -196,7 +204,7 @@ namespace RockWeb.Plugins.church_ccv.Core
             try
             {
                 List<string> workflowErrors;
-                var workflow = Workflow.Activate( workflowType, workflowType.Name );
+                var workflow = Rock.Model.Workflow.Activate( workflowType, workflowType.Name );
                 new WorkflowService( rockContext ).Process( workflow, note, out workflowErrors );
             }
             catch (Exception ex)

@@ -40,6 +40,11 @@ namespace RockWeb.Plugins.church_ccv.Finance
 
     public partial class AccountEncryptionUtility : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+
+        #endregion
 
         #region Base Control Methods
 

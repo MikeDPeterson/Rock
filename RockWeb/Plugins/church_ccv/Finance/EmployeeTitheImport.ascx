@@ -24,7 +24,7 @@
                             <Rock:RockBoundField HeaderText="Column" DataField="CampusCode" />
                             <Rock:RockTemplateField HeaderText="Account">
                                 <ItemTemplate>
-                                    <asp:HiddenField ID="hfCampusCode" runat="server" />
+                                    <global:asp:HiddenField ID="hfCampusCode" runat="server" />
                                     <Rock:RockDropDownList ID="ddlAccount" runat="server" />
                                 </ItemTemplate>
                             </Rock:RockTemplateField>

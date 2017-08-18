@@ -38,6 +38,18 @@ namespace RockWeb.Plugins.church_ccv.Era
     [Description( "This block lists eRA losses based on filters." )]
     public partial class EraLossList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfList;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDates;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPastor;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbShowProcessed;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+        protected global::Rock.Web.UI.Controls.ModalAlert maUpdatedMessage;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

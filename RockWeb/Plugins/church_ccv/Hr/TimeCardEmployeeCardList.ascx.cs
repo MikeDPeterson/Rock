@@ -32,6 +32,18 @@ namespace RockWeb.Plugins.church_ccv.Hr
     [SystemEmailField( "Approved Email", "The email to send when a time card is approved as part of the bulk-approve. If not specified, an email will not be sent.", false )]
     public partial class TimeCardEmployeeCardList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.HighlightLabel lblPayPeriod;
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlTimeCardStatusFilter;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblPayrollWageType;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbApproveSuccess;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         private AttributeCache employeeNumberAttribute = null;
         private AttributeCache payrollDepartmentAttribute = null;
 

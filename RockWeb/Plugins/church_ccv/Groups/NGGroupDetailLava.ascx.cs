@@ -131,6 +131,16 @@ namespace RockWeb.Plugins.church_ccv.Groups
     [TextField( "Camp Group Ids", "Comma delimited list of Ids for this year's camp. If set, a badge is displayed for each person registered for camp.", false)]
     public partial class NGGroupDetailLava : ToolboxGroupDetailLava
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DayOfWeekPicker dowWeekly;
+        protected global::Rock.Web.UI.Controls.TimePicker timeWeekly;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupMemberErrorMessage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppGroupMemberPerson;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblStatus;
+
+        #endregion
+
         public override UpdatePanel MainPanel { get { return upnlContent; } }
         public override PlaceHolder AttributesPlaceholder { get { return phAttributes; } }
         public override Literal MainViewContent { get { return lContent; } }

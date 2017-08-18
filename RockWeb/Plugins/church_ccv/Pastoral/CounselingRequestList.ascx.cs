@@ -30,6 +30,21 @@ namespace RockWeb.Plugins.church_ccv.Pastoral
     [SecurityRoleField( "Worker Role", "The security role to draw workers from", true, church.ccv.Utility.SystemGuids.Group.GROUP_COUNSELING_WORKERS )]
     public partial class CounselingRequestList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpDate;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlWorker;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlResult;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeFilters;
+
+        #endregion
+
         #region Properties
 
         /// <summary>

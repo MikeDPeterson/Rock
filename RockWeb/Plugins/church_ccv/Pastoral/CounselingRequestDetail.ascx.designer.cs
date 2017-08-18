@@ -49,24 +49,6 @@ namespace RockWeb.Plugins.church_ccv.Pastoral {
         protected global::System.Web.UI.WebControls.ValidationSummary valValidation;
         
         /// <summary>
-        /// phAttributes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phAttributes;
-        
-        /// <summary>
-        /// dlDocuments control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlDocuments;
-        
-        /// <summary>
         /// lbSave control.
         /// </summary>
         /// <remarks>
@@ -92,23 +74,5 @@ namespace RockWeb.Plugins.church_ccv.Pastoral {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbPrint;
-        
-        /// <summary>
-        /// valResultsSummary control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valResultsSummary;
-        
-        /// <summary>
-        /// hfInfoGuid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfInfoGuid;
     }
 }

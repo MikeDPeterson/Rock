@@ -18,7 +18,7 @@
                             <Rock:RockDropDownList ID="ddlWorker" runat="server" Label="Worker" />
                             <Rock:RockDropDownList ID="ddlResult" runat="server" Label="Result" DataTextField="Value" DataValueField="Id" />
                             <Rock:CampusPicker ID="cpCampus" runat="server" Label="Campus" />
-                            <asp:PlaceHolder ID="phAttributeFilters" runat="server" />
+                            <global:asp:PlaceHolder ID="phAttributeFilters" runat="server" />
                         </Rock:GridFilter>
                         <Rock:Grid ID="gList" runat="server" DisplayType="Full" AllowSorting="true" OnRowDataBound="gList_RowDataBound" OnRowSelected="gList_Edit">
                             <Columns>
@@ -26,7 +26,7 @@
                                 <Rock:RockBoundField DataField="Campus.Name" HeaderText="Campus" SortExpression="Campus.Name" />
                                 <Rock:RockTemplateField SortExpression="RequestedByPersonAlias.Person.LastName, RequestedByPersonAlias.Person.NickName, LastName, FirstName" HeaderText="Name">
                                     <ItemTemplate>
-                                        <asp:Literal ID="lName" runat="server" />
+                                        <global:asp:Literal ID="lName" runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField>
                                 <Rock:DefinedValueField DataField="ConnectionStatusValueId" HeaderText="Connection Status" SortExpression="ConnectionStatusValue.Value" ColumnPriority="DesktopSmall" />
@@ -35,7 +35,7 @@
                                 <Rock:RockBoundField DataField="ResultSummary" HeaderText="Result Summary" SortExpression="ResultSummary" ColumnPriority="DesktopLarge" />
                                 <Rock:RockTemplateField HeaderText="Result Specifics" ColumnPriority="DesktopLarge">
                                     <ItemTemplate>
-                                        <asp:Literal ID="lResults" runat="server" />
+                                        <global:asp:Literal ID="lResults" runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField>
                                 <Rock:CurrencyField DataField="TotalAmount" HeaderText="Total Amount" SortExpression="TotalAmount" />

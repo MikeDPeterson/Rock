@@ -42,6 +42,20 @@ namespace RockWeb.Plugins.church_ccv.Groups
     [WorkflowTypeField( "OptOut No Longer Attends Workflow", "The workflow to use when opting out a person due to them no longer attending CCV. The Person will be set as the workflow 'Entity' attribute when processing is started.", false, false, "", "" )]
     public partial class NHGroupMemberDetail : ToolboxGroupMemberDetail, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.ImageEditor imgPhoto;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblActivePendingStatus;
+        protected global::Rock.Web.UI.Controls.EmailBox ebEmailAddress;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnHome;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnMobile;
+        protected global::Rock.Web.UI.Controls.DatePicker dpAnniversaryDate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlOptOutReason;
+        protected global::Rock.Web.UI.Controls.DatePicker dpFollowUpDate;
+
+        #endregion
+
         #region Control Methods
 
         DefinedTypeCache OptOutReasonDefinedType { get; set; }

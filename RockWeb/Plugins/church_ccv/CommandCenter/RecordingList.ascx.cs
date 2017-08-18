@@ -41,6 +41,21 @@ namespace RockWeb.Plugins.church_ccv.CommandCenter
     [LinkedPage("Detail Page")]
     public partial class RecordingList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.DatePicker dtStartDate;
+        protected global::Rock.Web.UI.Controls.DatePicker dtEndDate;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbStream;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbVenue;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLabel;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbRecording;
+        protected global::Rock.Web.UI.Controls.Grid gRecordings;
+
+        #endregion
+
         #region Private Fields
 
         /// <summary>

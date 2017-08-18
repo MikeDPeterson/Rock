@@ -70,16 +70,16 @@
                 <Rock:PanelWidget ID="pwRequest" runat="server" Title="Request Details" Expanded="true">
                     <Rock:DataTextBox ID="dtbRequestText" runat="server" Label="Description of Request" TextMode="MultiLine" Rows="4" SourceTypeName="church.ccv.Pastoral.Model.CareRequest, church.ccv.Pastoral" PropertyName="RequestText" />
                 
-                    <asp:PlaceHolder ID="phAttributes" runat="server" EnableViewState="false"></asp:PlaceHolder>
+                    <global:asp:PlaceHolder ID="phAttributes" runat="server" EnableViewState="false" />
 
                     <Rock:RockControlWrapper ID="rcwDocuments" runat="server" Label="Related Documents">
-                        <asp:DataList ID="dlDocuments" runat="server" CellPadding="4" RepeatDirection="Horizontal" RepeatColumns="4" >
+                        <global:asp:DataList ID="dlDocuments" runat="server" CellPadding="4" RepeatDirection="Horizontal" RepeatColumns="4" >
                             <ItemTemplate>
                                 <div class="margin-r-sm margin-b-sm">
                                     <Rock:FileUploader ID="fileUpDoc" BinaryFileId='<%# Container.DataItem %>' runat="server" OnFileUploaded="fileUpDoc_FileUploaded" OnFileRemoved="fileUpDoc_FileRemoved" /> 
                                 </div>
                             </ItemTemplate>
-                        </asp:DataList>
+                        </DataList>
                     </Rock:RockControlWrapper>
                 </Rock:PanelWidget>
 
@@ -112,8 +112,8 @@
 
         <Rock:ModalDialog ID="mdAddResult" runat="server" ScrollbarEnabled="false" SaveButtonText="Add" OnSaveClick="btnAddResults_Click" Title="Counseling Request Result" ValidationGroup="valResult">
             <Content>
-                <asp:ValidationSummary ID="valResultsSummary" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="valResult" />
-                <asp:HiddenField ID="hfInfoGuid" runat="server" />
+                <global:asp:ValidationSummary ID="valResultsSummary" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="valResult" />
+                <global:asp:HiddenField ID="hfInfoGuid" runat="server" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:RockDropDownList ID="ddlResultType" runat="server" Label="Result Type" ValidationGroup="valResult" SourceTypeName="church.ccv.Pastoral.Model.CareRequest, church.ccv.Pastoral" PropertyName="ResultTypeValue" />

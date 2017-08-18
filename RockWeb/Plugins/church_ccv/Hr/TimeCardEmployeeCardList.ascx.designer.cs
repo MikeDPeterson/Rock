@@ -31,69 +31,6 @@ namespace RockWeb.Plugins.church_ccv.Hr {
         protected global::System.Web.UI.WebControls.Panel pnlView;
         
         /// <summary>
-        /// lEmployeeNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lEmployeeNumber;
-        
-        /// <summary>
-        /// lDepartment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lDepartment;
-        
-        /// <summary>
-        /// lRegularHours control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lRegularHours;
-        
-        /// <summary>
-        /// lOvertimeHours control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lOvertimeHours;
-        
-        /// <summary>
-        /// lPaidVacationHours control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lPaidVacationHours;
-        
-        /// <summary>
-        /// lPaidHolidayHours control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lPaidHolidayHours;
-        
-        /// <summary>
-        /// lPaidSickHours control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lPaidSickHours;
-        
-        /// <summary>
         /// pnlSummary control.
         /// </summary>
         /// <remarks>

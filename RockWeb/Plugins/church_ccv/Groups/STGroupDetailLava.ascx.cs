@@ -37,6 +37,16 @@ namespace RockWeb.Plugins.church_ccv.Groups
     [Description( "Presents the details of a ST group using Lava" )]
     public partial class STGroupDetailLava : ToolboxGroupDetailLava
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DayOfWeekPicker dowWeekly;
+        protected global::Rock.Web.UI.Controls.TimePicker timeWeekly;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupMemberErrorMessage;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppGroupMemberPerson;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblStatus;
+        
+        #endregion
+
         public override UpdatePanel MainPanel { get { return upnlContent; } }
         public override PlaceHolder AttributesPlaceholder { get { return phAttributes; } }
         public override Literal MainViewContent { get { return lContent; } }

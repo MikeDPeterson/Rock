@@ -21,6 +21,12 @@ namespace RockWeb.Plugins.church_ccv.Cms
     [KeyValueListField( "Selection", "A list of parameter names and values.", true, "", "Name", "Value", "", "" )]
     public partial class PageParameterSelection : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSelection;
+
+        #endregion
+
         private string pageParameterName;
 
         #region Base Control Methods

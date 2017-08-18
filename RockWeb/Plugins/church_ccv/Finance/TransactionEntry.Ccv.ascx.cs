@@ -67,6 +67,19 @@ namespace RockWeb.Plugins.church_ccv.Finance
     [SystemEmailField( "Receipt Email", "The system email to use to send the receipt.", false, "", "Email Templates", 27 )]
     public partial class TransactionEntryCcv : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblSavedAccount;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSaveAccount;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtSaveAccount;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtUserName;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtPassword;
+        protected global::Rock.Web.UI.Controls.RockTextBox txtPasswordConfirm;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSaveAccount;
+
+        #endregion
+
         /// <summary>
         /// Gets or sets the giving funds json.
         /// </summary>

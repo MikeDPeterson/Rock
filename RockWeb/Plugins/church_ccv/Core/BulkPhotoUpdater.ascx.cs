@@ -22,6 +22,18 @@ namespace RockWeb.Plugins.church_ccv.Core
     [AttributeField( Rock.SystemGuid.EntityType.PERSON, "Photo Processed Attribute", "A person attribute used to track which person photos have been proceesed.", true, false, "", "" )]
     public partial class BulkPhotoUpdater : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbConfigurationWarning;
+        protected global::Rock.Web.UI.Controls.DataViewPicker dvpDataView;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarning;
+        protected global::Rock.Web.UI.Controls.ImageEditor imgPhoto;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbPhotoError;
+        protected global::Rock.Web.UI.Controls.NumberBox nbShrinkWidth;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPhotoDate;
+
+        #endregion
+
         #region Fields
 
         private Guid? _photoProcessedAttribute = new Guid();

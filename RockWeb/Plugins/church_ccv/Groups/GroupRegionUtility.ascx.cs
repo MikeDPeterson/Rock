@@ -35,6 +35,18 @@ namespace RockWeb.Plugins.church_ccv.Groups
     [Description( "Reorganizes groups to be under the appropriate parent group based on GeoLocation" )]
     public partial class GroupRegionUtility : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GroupPicker gpCurrentParentArea;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpNewParentArea;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpGeofencingGroupType;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpParentGroupType;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpGroupType;
+        protected global::Rock.Web.UI.Controls.Grid grdPreview;
+        protected global::Rock.Web.UI.Controls.GroupTypePicker gtpParentForDelete;
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>

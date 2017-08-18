@@ -40,6 +40,24 @@ namespace RockWeb.Plugins.church_ccv.CommandCenter
     [Description( "Displays the details of a recording." )]
     public partial class RecordingDetail : RockBlock, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbApp;
+        protected global::Rock.Web.UI.Controls.DatePicker dpDate;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbStream;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbVenue;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbLabel;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbRecording;
+        protected global::Rock.Web.UI.Controls.RockTextBox lStarted;
+        protected global::Rock.Web.UI.Controls.RockTextBox lStartResponse;
+        protected global::Rock.Web.UI.Controls.RockTextBox lStopped;
+        protected global::Rock.Web.UI.Controls.RockTextBox lStopResponse;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbStartRecording;
+
+        #endregion
+
         #region Control Methods
 
         protected override void OnInit( EventArgs e )

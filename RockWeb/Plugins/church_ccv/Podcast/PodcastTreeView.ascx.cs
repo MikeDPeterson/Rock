@@ -47,6 +47,16 @@ namespace RockWeb.Plugins.church_ccv.Podcast
     [CategoryField( "Exclude Categories", "Select any category that you need to exclude from the tree view", true, required:false, category: "CustomSetting" )]
     public partial class PodcastTreeView : RockBlockCustomSettings
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarning;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdCategoryTreeConfig;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbRootCategoryEntityTypeWarning;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpRootCategory;
+        protected global::Rock.Web.UI.Controls.CategoryPicker cpExcludeCategories;
+
+        #endregion
+
         public const string CategoryNodePrefix = "C";
 
         /// <summary>

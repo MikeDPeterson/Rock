@@ -40,16 +40,16 @@ c) Run/Apply
 
                 <Rock:Grid ID="grdPreview" runat="server" DataKeyNames="Id" AllowPaging="false">
                     <Columns>
-                        <asp:BoundField DataField="GroupId" HeaderText="GroupId" />
-                        <asp:BoundField DataField="GroupName" HeaderText="GroupName" />
-                        <asp:BoundField DataField="CurrentParentRegion.Id" HeaderText="CurrentParentRegionId" Visible="false" />
-                        <asp:BoundField DataField="CurrentParentRegion.Name" HeaderText="CurrentParentRegionName" />
-                        <asp:BoundField DataField="CurrentParentGroup.Id" HeaderText="CurrentParentGroupId" Visible="false"/>
-                        <asp:BoundField DataField="CurrentParentGroup.Name" HeaderText="CurrentParentGroupName" />
-                        <asp:BoundField DataField="NewParentRegion.Id" HeaderText="NewParentRegionId" Visible="false"/>
-                        <asp:BoundField DataField="NewParentRegion.Name" HeaderText="NewParentRegionName" />
-                        <asp:BoundField DataField="NewParentGroup.Id" HeaderText="NewParentGroupId" Visible="false"/>
-                        <asp:BoundField DataField="NewParentGroup.Name" HeaderText="NewParentGroupName" />
+                        <global:asp:BoundField DataField="GroupId" HeaderText="GroupId" />
+                        <global:asp:BoundField DataField="GroupName" HeaderText="GroupName" />
+                        <global:asp:BoundField DataField="CurrentParentRegion.Id" HeaderText="CurrentParentRegionId" Visible="false" />
+                        <global:asp:BoundField DataField="CurrentParentRegion.Name" HeaderText="CurrentParentRegionName" />
+                        <global:asp:BoundField DataField="CurrentParentGroup.Id" HeaderText="CurrentParentGroupId" Visible="false"/>
+                        <global:asp:BoundField DataField="CurrentParentGroup.Name" HeaderText="CurrentParentGroupName" />
+                        <global:asp:BoundField DataField="NewParentRegion.Id" HeaderText="NewParentRegionId" Visible="false"/>
+                        <global:asp:BoundField DataField="NewParentRegion.Name" HeaderText="NewParentRegionName" />
+                        <global:asp:BoundField DataField="NewParentGroup.Id" HeaderText="NewParentGroupId" Visible="false"/>
+                        <global:asp:BoundField DataField="NewParentGroup.Name" HeaderText="NewParentGroupName" />
                         <Rock:BoolField DataField="RegionChanged" HeaderText="Region Changed" />
                     </Columns>
                 </Rock:Grid>

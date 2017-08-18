@@ -31,6 +31,17 @@ namespace RockWeb.Plugins.church_ccv.Hr
     [SystemEmailField( "UnApproved Email", "The email to send when a time card is un-approved. If not specified, an email will not be sent.", false )]
     public partial class TimeCardDetail : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlblSubTitle;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSubmittedSuccessMessage;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSubmitTo;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbApprovedSuccessMessage;
+        protected global::Rock.Web.UI.Controls.Grid gHistory;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

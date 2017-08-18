@@ -45,6 +45,23 @@ namespace RockWeb.Plugins.church_ccv.Promotions
     [Description( "Lists requested promotions for events." )]
     public partial class PromotionRequestList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DatePicker dpTargetPromoDate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCampus;
+        protected global::Rock.Web.UI.Controls.DateRangePicker drpFutureWeeks;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPromoType;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.Grid gPromotions;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdCampusSelect;
+
+        protected global::System.Web.UI.WebControls.Label lbCampusSelectEventInfo;
+        protected global::System.Web.UI.WebControls.HiddenField hfPromoRequestId;
+        protected global::System.Web.UI.WebControls.PlaceHolder phCampuses;
+
+        #endregion
+
         #region Control Methods
 
         /// <summary>

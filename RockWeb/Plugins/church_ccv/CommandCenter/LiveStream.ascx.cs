@@ -23,6 +23,12 @@ namespace RockWeb.Plugins.church_ccv.CommandCenter
     [CustomDropdownListField( "Screens Per Row", "The number of screens to have per row.", "1,2,3,4", false, "3", Order = 2 )]
     public partial class LiveStream : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox ntbAlert;
+        
+        #endregion
+
         #region Base Control Methods
 
         protected override void OnInit( EventArgs e )

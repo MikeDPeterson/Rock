@@ -41,6 +41,20 @@ namespace RockWeb.Plugins.church_ccv.Groups
     [WorkflowTypeField( "OptOut Reassign To New Coach", "Workflow used when a person should be reassigned to a new coach.", false, false, "", "" )]
     public partial class NGGroupMemberDetail : ToolboxGroupMemberDetail, IDetailBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbErrorMessage;
+        protected global::Rock.Web.UI.Controls.ImageEditor imgPhoto;
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblActivePendingStatus;
+        protected global::Rock.Web.UI.Controls.EmailBox ebEmailAddress;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnHome;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnMobile;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlOptOutReason;
+        protected global::Rock.Web.UI.Controls.DatePicker dpFollowUpDate;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbReassignReason;
+
+        #endregion
+
         #region Control Methods
 
         DefinedTypeCache OptOutReasonDefinedType { get; set; }

@@ -42,6 +42,19 @@ namespace RockWeb.Plugins.church_ccv.Finance
     [TextField( "Default Batch Name Format", defaultValue: "Employee Tithe Import {{ 'Now' | Date:'MM/dd/yyyy' }}" )]
     public partial class EmployeeTitheImport : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.FileUploader fuImport;
+        protected global::Rock.Web.UI.Controls.Grid gMapAccounts;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCurrencyType;
+        protected global::Rock.Web.UI.Controls.Grid gImportPreview;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbImportWarning;
+        protected global::Rock.Web.UI.Controls.DateTimePicker dpBatchDate;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbBatchNameFormat;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSuccess;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

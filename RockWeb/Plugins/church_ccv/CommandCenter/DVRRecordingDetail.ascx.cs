@@ -41,6 +41,16 @@ namespace RockWeb.Plugins.church_ccv.CommandCenter
     [Description( "Displays the details of a Command Center DVR recording." )]
     public partial class DVRRecordingDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox mdWarning;
+        protected global::Rock.Web.UI.Controls.HighlightLabel lblCampus;
+        protected global::Rock.Web.UI.Controls.HighlightLabel lblVenue;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEmailTo;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbEmailMessage;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLink;
+
+        #endregion
 
         Campus _campus;
 

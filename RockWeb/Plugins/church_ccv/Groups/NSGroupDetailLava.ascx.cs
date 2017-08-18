@@ -40,6 +40,13 @@ namespace RockWeb.Plugins.church_ccv.Groups
     [Description( "Presents the details of a NS group using Lava" )]
     public partial class NSGroupDetailLava : ToolboxGroupDetailLava
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DayOfWeekPicker dowWeekly;
+        protected global::Rock.Web.UI.Controls.TimePicker timeWeekly;
+
+        #endregion
+
         public override UpdatePanel MainPanel { get { return upnlContent; } }
         public override PlaceHolder AttributesPlaceholder { get { return phAttributes; } }
         public override Literal MainViewContent { get { return lContent; } }

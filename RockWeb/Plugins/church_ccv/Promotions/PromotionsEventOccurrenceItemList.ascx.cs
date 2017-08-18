@@ -45,9 +45,14 @@ namespace RockWeb.Plugins.church_ccv.Promotions
     [SystemEmailField( "Event Changed Email", "Email that will be sent if this event is altered after a promotion has been created for it.", false)]
     public partial class PromotionsEventOccurrenceItemList : RockBlock, ISecondaryBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+
+        #endregion
 
         #region Properties
-        
+
         private int EventItemOccurrenceId { get; set; }
         private int EventCalendarId { get; set; }
         private int EventItemId { get; set; }

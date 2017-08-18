@@ -40,6 +40,13 @@ namespace RockWeb.Plugins.church_ccv.Hr
     [LinkedPage( "Detail Page" )]
     public partial class TimeCardPayPeriodList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

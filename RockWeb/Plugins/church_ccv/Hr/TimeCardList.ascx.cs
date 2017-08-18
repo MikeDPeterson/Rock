@@ -24,6 +24,13 @@ namespace RockWeb.Plugins.church_ccv.Hr
     [DateField( "First Pay Period Start Date", "The Start Date of the first Payroll Period.  This will determine the daterange of subsequent Pay Periods.", false, "2014-12-15" )]
     public partial class TimeCardList : Rock.Web.UI.RockBlock
     {
+        #region  Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbBlockWarning;
+        protected global::Rock.Web.UI.Controls.Grid gList;
+
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

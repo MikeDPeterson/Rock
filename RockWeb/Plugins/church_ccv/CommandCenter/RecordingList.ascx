@@ -17,15 +17,15 @@
 
         <Rock:Grid ID="gRecordings" runat="server" EmptyDataText="No Recordings Found" AllowSorting="true" OnRowSelected="gRecordings_Edit">
             <Columns>
-                <asp:BoundField HeaderText="Campus" DataField="Campus" SortExpression="Campus" />
-                <asp:BoundField HeaderText="Date" DataField="Date" SortExpression="Date" DataFormatString="{0:MM/dd/yy}" />
-                <asp:BoundField HeaderText="Stream" DataField="StreamName" SortExpression="StreamName" />
-                <asp:BoundField HeaderText="Venue" DataField="Venue" SortExpression="Venue" />
-                <asp:BoundField HeaderText="Label" DataField="Label" SortExpression="Label" />
-                <asp:BoundField HeaderText="Recording" DataField="RecordingName" SortExpression="RecordingName" />
-                <asp:BoundField HeaderText="Started" DataField="StartTime" SortExpression="StartTime" DataFormatString="{0:MM/dd/yy hh:mm:ss tt}" />
-                <asp:BoundField HeaderText="Stopped" DataField="StopTime" SortExpression="StopTime" DataFormatString="{0:MM/dd/yy hh:mm:ss tt}" />
-                <asp:BoundField HeaderText="Length" DataField="Length" />
+                <global::asp:BoundField HeaderText="Campus" DataField="Campus" SortExpression="Campus" />
+                <global::asp:BoundField HeaderText="Date" DataField="Date" SortExpression="Date" DataFormatString="{0:MM/dd/yy}" />
+                <global::asp:BoundField HeaderText="Stream" DataField="StreamName" SortExpression="StreamName" />
+                <global::asp:BoundField HeaderText="Venue" DataField="Venue" SortExpression="Venue" />
+                <global::asp:BoundField HeaderText="Label" DataField="Label" SortExpression="Label" />
+                <global::asp:BoundField HeaderText="Recording" DataField="RecordingName" SortExpression="RecordingName" />
+                <global::asp:BoundField HeaderText="Started" DataField="StartTime" SortExpression="StartTime" DataFormatString="{0:MM/dd/yy hh:mm:ss tt}" />
+                <global::asp:BoundField HeaderText="Stopped" DataField="StopTime" SortExpression="StopTime" DataFormatString="{0:MM/dd/yy hh:mm:ss tt}" />
+                <global::asp:BoundField HeaderText="Length" DataField="Length" />
                 <%--<Rock:LinkButtonField CssClass="btn btn-default btn-sm" OnClick="gRecordings_Start" Text='<i class="fa fa-circle"></i>' />--%> 
                 <%--<Rock:LinkButtonField CssClass="btn btn-default btn-sm" OnClick="gRecordings_Stop" Text='<i class="fa fa-stop"></i>' />--%> 
                 <Rock:DeleteField OnClick="gRecordings_Delete" />

@@ -73,6 +73,21 @@ namespace RockWeb.Plugins.church_ccv.Connection
 , order: 6 )]
     public partial class CCV_MyConnectionOpportunities : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.Toggle tglMyOpportunities;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppRequester;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppConnector;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblStatus;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblState;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampus;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblLastActivity;
+        protected global::Rock.Web.UI.Controls.Grid gRequests;
+
+        #endregion
+
         #region Fields
 
         private const string TOGGLE_SETTING = "MyConnectionOpportunities_Toggle";

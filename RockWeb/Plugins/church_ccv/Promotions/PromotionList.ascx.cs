@@ -45,6 +45,17 @@ namespace RockWeb.Plugins.church_ccv.Promotions
     [LinkedPage( "Detail Page" )]
     public partial class PromotionList : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DatePicker dpTargetPromoDate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPromoType;
+        protected global::Rock.Web.UI.Controls.GridFilter rPromotionsFilter;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbTitle;
+        protected global::Rock.Web.UI.Controls.Grid gPromotionOccurrencesGrid;
+
+        #endregion
+
         /// <summary>
         /// Used by the Promotion Occurrences grid to know which promotion/event to enumerate
         /// </summary>

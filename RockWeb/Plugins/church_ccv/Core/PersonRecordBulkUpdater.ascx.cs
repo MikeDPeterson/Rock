@@ -24,6 +24,17 @@ namespace RockWeb.Plugins.church_ccv.Core
 
     public partial class PersonRecordBulkUpdater : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.DataViewPicker dvpDataview;
+        protected global::Rock.Web.UI.Controls.RockLiteral lRecordCount;
+        protected global::Rock.Web.UI.Controls.DefinedValuePicker dvpConnectionStatus;
+        protected global::Rock.Web.UI.Controls.DefinedValuePicker dvpRecordStatus;
+        protected global::Rock.Web.UI.Controls.DefinedValuePicker dvpRecordStatusReason;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbInactiveReasonNote;
+
+        #endregion
+
         /// <summary>
         /// This holds the reference to the RockMessageHub SignalR Hub context.
         /// </summary>

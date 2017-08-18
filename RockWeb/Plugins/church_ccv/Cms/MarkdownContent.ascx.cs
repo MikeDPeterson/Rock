@@ -15,6 +15,13 @@ namespace RockWeb.Plugins.church_ccv.Cms
     [TextField( "MarkdownContent", category: "CustomSetting" )]
     public partial class MarkdownContent : church.ccv.Web.Cms.BaseContentBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidHtml;
+        protected global::Rock.Web.UI.Controls.MarkdownEditor mdEdit;
+
+        #endregion
+
         /// <summary>
         /// Raises the <see cref="E:System.Web.UI.Control.Init" /> event.
         /// </summary>

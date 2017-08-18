@@ -26,6 +26,37 @@ namespace RockWeb.Plugins.church_ccv.Pastoral
     [LinkedPage("Counseling Request Statement Page", "The page which summarises a counseling request for printing", false)]
     public partial class CounselingRequestDetail : RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.PanelDrawer pdAuditDetails;
+        protected global::Rock.Web.UI.Controls.DatePicker dpRequestDate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlWorker;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbFirstName;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbLastName;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlConnectionStatus;
+        protected global::Rock.Web.UI.Controls.EmailBox ebEmail;
+        protected global::Rock.Web.UI.Controls.LocationAddressPicker lapAddress;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbHomePhone;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbCellPhone;
+        protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbWorkPhone;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbRequestText;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbSummary;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbProvidedNextSteps;
+        protected global::Rock.Web.UI.Controls.Grid gResults;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdAddResult;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlResultType;
+        protected global::Rock.Web.UI.Controls.CurrencyBox dtbAmount;
+        protected global::Rock.Web.UI.Controls.DataTextBox dtbResultSummary;
+        protected global::Rock.Web.UI.Controls.ConfirmPageUnload confirmExit;
+
+        protected global::System.Web.UI.WebControls.HiddenField hfInfoGuid;
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributes;
+        protected global::System.Web.UI.WebControls.DataList dlDocuments;
+
+        #endregion
+
         #region Properties
         private List<int> DocumentsState { get; set; }
         #endregion
