@@ -39,6 +39,7 @@ using Rock.Web.UI.Controls;
 
 using System.Globalization;
 using System.Web;
+using RockWeb.Utility;
 
 namespace RockWeb.Blocks.Examples
 {
