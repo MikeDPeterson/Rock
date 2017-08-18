@@ -111,8 +111,8 @@
                             </div>
                         </Rock:PanelWidget>
 
-                        <glboal::asp:PanelWidget ID="wpCustom" runat="server" Title="Custom Settings">
-                            <global::asp:PlaceHolder ID="phAttributeEdits" runat="server" EnableViewState="false"></global::asp:PlaceHolder>
+                        <Rock:PanelWidget ID="wpCustom" runat="server" Title="Custom Settings">
+                            <global:asp:PlaceHolder ID="phAttributeEdits" runat="server" EnableViewState="false"></global:asp>
                         </PanelWidget>
 
                         <div class="actions">

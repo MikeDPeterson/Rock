@@ -71,9 +71,11 @@ namespace RockWeb.Blocks.CheckIn.Config
         protected global::Rock.Web.UI.Controls.RockCheckBox cbAgeRequired;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbGradeRequired;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbDisplayLocCount;
-        //protected global::Rock.Web.UI.Controls.PanelWidget wpCustom;
+        protected global::Rock.Web.UI.Controls.PanelWidget wpCustom;
         protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
 
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeEdits;
+        
 
         #endregion
 
