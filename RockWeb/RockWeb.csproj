@@ -8738,7 +8738,6 @@
     <Compile Include="Utility\GetChannelFeed.cs" />
     <Compile Include="Utility\GetFile.ashx.cs" />
     <Compile Include="Utility\GetImage.ashx.cs" />
-    <Compile Include="Utility\Global.asax.cs" />
     <Compile Include="Utility\ImageUploader.ashx.cs" />
     <Compile Include="Utility\LavaFileSystem.cs" />
     <Compile Include="Utility\RockMessageHub.cs" />
