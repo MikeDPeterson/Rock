@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RockWeb.Themes.Stark.Layouts {
+namespace RockWeb.Themes.com_ccvstars_External_v5.Layouts {
     
     
     public partial class Error {

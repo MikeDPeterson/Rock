@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="RockWeb.Themes.Stark.Layouts.Error" Codebehind="Error.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="RockWeb.Themes.CCVBlank.Layouts.Error" Codebehind="Error.aspx.cs" %>
 
 <!DOCTYPE html>
 
@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
     <title>Rock - Error</title>
 
-    <link rel="stylesheet" href="<%= Page.ResolveUrl("~/Themes/Stark/Styles/bootstrap.css") %>" />
-    <link rel="stylesheet" href="<%= Page.ResolveUrl("~/Themes/Stark/Styles/theme.css") %>" />
+    <link rel="stylesheet" href="<%= Page.ResolveUrl("~/Themes/CCVBlank/Styles/bootstrap.css") %>" />
+    <link rel="stylesheet" href="<%= Page.ResolveUrl("~/Themes/CCVBlank/Styles/theme.css") %>" />
 
     <script src="<%# ResolveUrl("~/Scripts/jquery-1.12.4.min.js") %>">
         $(document).ready(function () {

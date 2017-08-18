@@ -25,7 +25,7 @@ using Rock;
 using Rock.Data;
 using Rock.Model;
 
-namespace RockWeb.Themes.Stark.Layouts
+namespace RockWeb.Themes.com_ccvstars_External_v5.Layouts
 {
     public partial class Error : System.Web.UI.Page
     {
@@ -50,9 +50,9 @@ namespace RockWeb.Themes.Stark.Layouts
                     try
                     {
                         // check to see if the user is an admin, if so allow them to view the error details
-                        var userLogin = Rock.Model.UserLoginService.GetCurrentUser();
+                        var userLogin = global::Rock.Model.UserLoginService.GetCurrentUser();
                         GroupService service = new GroupService( new RockContext() );
-                        Group adminGroup = service.GetByGuid( new Guid( Rock.SystemGuid.Group.GROUP_ADMINISTRATORS ) );
+                        Group adminGroup = service.GetByGuid( new Guid( global::Rock.SystemGuid.Group.GROUP_ADMINISTRATORS ) );
                         showDetails = userLogin != null && adminGroup.Members.Where( m => m.PersonId == userLogin.PersonId ).Count() > 0;
                     }
                     catch { }
