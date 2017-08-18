@@ -38,7 +38,7 @@ namespace Rock.Model
             var existingControllers = restControllerService.Queryable( "Actions" ).ToList();
             var discoveredControllers = new List<RestController>();
 
-            var config = GlobalConfiguration.Configuration;
+            var config = System.Web.Http.GlobalConfiguration.Configuration;
             var explorer = config.Services.GetApiExplorer();
             foreach(var apiDescription in explorer.ApiDescriptions)
             {

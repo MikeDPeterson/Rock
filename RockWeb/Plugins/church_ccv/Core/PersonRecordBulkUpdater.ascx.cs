@@ -38,7 +38,7 @@ namespace RockWeb.Plugins.church_ccv.Core
         /// <summary>
         /// This holds the reference to the RockMessageHub SignalR Hub context.
         /// </summary>
-        private IHubContext _hubContext = GlobalHost.ConnectionManager.GetHubContext<RockMessageHub>();
+        private IHubContext _hubContext = GlobalHost.ConnectionManager.GetHubContext<RockWeb.Utility.RockMessageHub>();
 
 
         #region Base Control Methods

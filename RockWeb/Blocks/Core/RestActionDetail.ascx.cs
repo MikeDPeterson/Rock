@@ -62,7 +62,7 @@ namespace RockWeb.Blocks.Administration
 
                 if ( restAction != null )
                 {
-                    var config = GlobalConfiguration.Configuration;
+                    var config = System.Web.Http.GlobalConfiguration.Configuration;
                     var explorer = config.Services.GetApiExplorer();
                     var controllerActions = explorer.ApiDescriptions.Where( a => ( a.ActionDescriptor.ControllerDescriptor.ControllerName == restAction.Controller.Name ) );
                     var apiDescription = controllerActions.FirstOrDefault( a => a.ID == restAction.ApiId );

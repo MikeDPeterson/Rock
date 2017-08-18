@@ -184,7 +184,7 @@ namespace RockWeb.Utility
 
                     // Configure Rock Rest API
                     stopwatch.Restart();
-                    GlobalConfiguration.Configure( Rock.Rest.WebApiConfig.Register );
+                    System.Web.Http.GlobalConfiguration.Configure( Rock.Rest.WebApiConfig.Register );
                     if ( System.Web.Hosting.HostingEnvironment.IsDevelopmentEnvironment )
                     {
                         System.Diagnostics.Debug.WriteLine( string.Format( "Configure WebApiConfig - {0} ms", stopwatch.Elapsed.TotalMilliseconds ) );
@@ -257,7 +257,7 @@ namespace RockWeb.Utility
                     //// However, if CSharpNamingConvention is enabled, it needs to be: 
                     //// {{ some_date_value | Date:"MMM dd, yyyy" }}
                     Template.NamingConvention = new DotLiquid.NamingConventions.CSharpNamingConvention();
-                    Template.FileSystem = new RockWeb.LavaFileSystem();
+                    Template.FileSystem = new RockWeb.Utility.LavaFileSystem();
                     Template.RegisterSafeType( typeof( Enum ), o => o.ToString() );
                     Template.RegisterSafeType( typeof( DBNull ), o => null );
                     Template.RegisterFilter( typeof( Rock.Lava.RockFilters ) );
