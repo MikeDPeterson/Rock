@@ -19,7 +19,7 @@ using Microsoft.Owin;
 using Owin;
 using System.Web;
 
-[assembly: OwinStartup(typeof(RockWeb.Startup))]
+[assembly: OwinStartup(typeof(RockWeb.Utility.Startup))]
 namespace RockWeb.Utility
 {
     public class Startup
