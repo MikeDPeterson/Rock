@@ -2,6 +2,8 @@
 /[Bb]in/*.dll
 /[Bb]in/*.pdb
 /[Bb]in/*.xml
+/[Bb]in/*.config
+/[Bb]in/SqlServerTypes/*
 /[Cc]ontent/
 
 /*.suo
