@@ -1,3 +1,4 @@
+/App_Data/Logs/*
 /[Bb]in/*/*.dll
 /[Bb]in/*.dll
 /[Bb]in/*.pdb
