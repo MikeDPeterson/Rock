@@ -38,6 +38,10 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
     [LinkedPage( "Detail Page" )]
     public partial class VolunteerScreening_CharacterReferenceList : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gGrid;
+        #endregion
+
         public object RockTransactionScope { get; private set; }
         
         const int sCharacterReferenceWorkflowId = 203;
@@ -122,7 +126,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
             // get all completed character references
             var charRefWorkflows = new WorkflowService( rockContext ).Queryable( ).AsNoTracking( ).Where( wf => wf.WorkflowTypeId == sCharacterReferenceWorkflowId && wf.Status == "Completed" ).ToList( );
             
-            foreach ( Workflow workflow in charRefWorkflows )
+            foreach ( Rock.Model.Workflow workflow in charRefWorkflows )
             {
                 workflow.LoadAttributes( );
             }
@@ -141,7 +145,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
         /// <summary>
         /// Binds the grid.
         /// </summary>
-        private void BindGrid( RockContext rockContext, List<Workflow> charRefWorkflows )
+        private void BindGrid( RockContext rockContext, List<Rock.Model.Workflow> charRefWorkflows )
         {
             gGrid.DataSource = charRefWorkflows.Select( wf => 
                     new {

@@ -13,7 +13,7 @@
                 <div class="grid grid-panel">
                     <Rock:Grid ID="gList" runat="server" AllowSorting="true" OnRowSelected="gList_Edit" DataKeyNames="Id" ShowConfirmDeleteDialog="false" TooltipField="Description">
                         <Columns>
-                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                            <global:asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                             <Rock:DeleteField OnClick="gList_Delete" />
                         </Columns>
                     </Rock:Grid>

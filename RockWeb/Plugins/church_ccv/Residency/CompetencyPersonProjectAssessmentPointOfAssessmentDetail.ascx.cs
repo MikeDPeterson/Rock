@@ -40,6 +40,12 @@ namespace RockWeb.Plugins.church_ccv.Residency
 
     public partial class CompetencyPersonProjectAssessmentPointOfAssessmentDetail : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.NumberBox tbRating;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbRatingNotes;
+        protected global::Rock.Web.UI.Controls.ModalAlert nbEditModeMessage;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

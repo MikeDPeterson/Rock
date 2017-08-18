@@ -8723,6 +8723,18 @@
     <Compile Include="Themes\Stark\Layouts\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utility\BundleConfig.cs" />
+    <Compile Include="Utility\FileUploader.ashx.cs" />
+    <Compile Include="Utility\GetChannelFeed.cs" />
+    <Compile Include="Utility\GetFile.ashx.cs" />
+    <Compile Include="Utility\GetImage.ashx.cs" />
+    <Compile Include="Utility\Global.asax.cs" />
+    <Compile Include="Utility\ImageUploader.ashx.cs" />
+    <Compile Include="Utility\LavaFileSystem.cs" />
+    <Compile Include="Utility\RockMessageHub.cs" />
+    <Compile Include="Utility\SqlServerTypes\Loader.cs" />
+    <Compile Include="Utility\Startup.cs" />
+    <Compile Include="Utility\SyndicationFileHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

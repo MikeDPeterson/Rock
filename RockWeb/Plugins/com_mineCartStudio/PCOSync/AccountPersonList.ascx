@@ -36,7 +36,7 @@
                             <Rock:RockBoundField DataField="PCOId" HeaderText="PCO Id" SortExpression="PCOId" />
                             <Rock:RockBoundField DataField="RockPermissionLabel" HeaderText="Rock Permissions" SortExpression="RockPermission" HtmlEncode="false" />
                             <Rock:RockBoundField DataField="PCOPermissionLabel" HeaderText="PCO Permissions" SortExpression="PCOPermission" HtmlEncode="false" />
-                            <asp:HyperLinkField ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="grid-columncommand" ItemStyle-CssClass="grid-columncommand"
+                            <global:asp:HyperLinkField ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="grid-columncommand" ItemStyle-CssClass="grid-columncommand"
                                 DataNavigateUrlFields="PersonId" DataTextFormatString="<div class='btn btn-default btn-sm'><i class='fa fa-user'></i></div>" DataTextField="PersonId" />
                             <Rock:DeleteField OnClick="gAccountPerson_Delete" />
                         </Columns>
@@ -48,8 +48,8 @@
             <Rock:ModalDialog ID="modalValue" runat="server" Title="Defined Value" ValidationGroup="Value">
                 <Content>
 
-                    <asp:HiddenField ID="hfAccountPersonId" runat="server" />
-                    <asp:ValidationSummary ID="valSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Value" />
+                    <global:asp:HiddenField ID="hfAccountPersonId" runat="server" />
+                    <global:asp:ValidationSummary ID="valSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Value" />
 
                     <div class="row">
                         <div class="col-md-6">

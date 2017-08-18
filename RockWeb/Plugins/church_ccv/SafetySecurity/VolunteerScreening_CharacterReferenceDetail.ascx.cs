@@ -75,7 +75,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
             int charWorkflowId = PageParameter( "CharacterReferenceWorkflowId" ).AsInteger();
 
             // grab the character reference
-            Workflow charRefWorkflow = new WorkflowService( rockContext ).Queryable( ).AsNoTracking( ).Where( wf => wf.Id == charWorkflowId ).SingleOrDefault( );
+            Rock.Model.Workflow charRefWorkflow = new WorkflowService( rockContext ).Queryable( ).AsNoTracking( ).Where( wf => wf.Id == charWorkflowId ).SingleOrDefault( );
 
             charRefWorkflow.LoadAttributes( );
             

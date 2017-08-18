@@ -31,6 +31,15 @@ namespace RockWeb.Plugins.church_ccv.Reporting
     [SchedulesField( "Schedules", Category = "CustomSetting" )]
     public partial class AttendanceHeadcountsEntry : RockBlockCustomSettings
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMetricsSaved;
+        protected global::Rock.Web.UI.Controls.MetricCategoryPicker mpHeadcountsMetric;
+        protected global::Rock.Web.UI.Controls.SchedulePicker spSchedules;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdConfigure;
+        protected global::Rock.Web.UI.Controls.CampusPicker bddlCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList bddlWeekend;
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

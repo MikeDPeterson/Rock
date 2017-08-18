@@ -40,6 +40,11 @@ namespace RockWeb.Plugins.church_ccv.Residency
     [BooleanField( "Show Delete", "", true )]
     public partial class PersonList : RockBlock, ISecondaryBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gList;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

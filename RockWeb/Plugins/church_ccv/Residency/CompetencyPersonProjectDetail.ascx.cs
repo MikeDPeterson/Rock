@@ -38,6 +38,17 @@ namespace RockWeb.Plugins.church_ccv.Residency
 
     public partial class CompetencyPersonProjectDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlProject;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbMinAssessmentCountOverride;
+        protected global::Rock.Web.UI.Controls.ModalAlert nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbAllProjectsAlreadyAdded;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblPersonName;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblCompetency;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblProject;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblMinAssessmentCountDefault;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

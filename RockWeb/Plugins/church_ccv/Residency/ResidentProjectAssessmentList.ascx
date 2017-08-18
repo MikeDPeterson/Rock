@@ -14,11 +14,11 @@
                     <Rock:Grid ID="gList" runat="server" AllowSorting="true" OnRowSelected="gList_Edit" DataKeyNames="Id" RowItemText="Project Assessments" DisplayType="Light">
                         <Columns>
                             <Rock:DateField DataField="AssessmentDateTime" HeaderText="Date" SortExpression="AssessmentDateTime" />
-                            <asp:BoundField DataField="CompetencyPersonProject.CompetencyPerson.Competency.Track.Name" HeaderText="Track" SortExpression="CompetencyPersonProject.CompetencyPerson.Competency.Track.Name" />
-                            <asp:BoundField DataField="CompetencyPersonProject.CompetencyPerson.Competency.Name" HeaderText="Competency" SortExpression="CompetencyPersonProject.CompetencyPerson.Competency.Name" />
-                            <asp:BoundField DataField="CompetencyPersonProject.Project.Name" HeaderText="Project" SortExpression="CompetencyPersonProject.Project.Name" />
-                            <asp:BoundField DataField="AssessorPerson.FullName" HeaderText="Evaluator" SortExpression="AssessorPerson.FullName" />
-                            <asp:BoundField DataField="OverallRating" HeaderText="Rating" SortExpression="OverallRating" />
+                            <global:asp:BoundField DataField="CompetencyPersonProject.CompetencyPerson.Competency.Track.Name" HeaderText="Track" SortExpression="CompetencyPersonProject.CompetencyPerson.Competency.Track.Name" />
+                            <global:asp:BoundField DataField="CompetencyPersonProject.CompetencyPerson.Competency.Name" HeaderText="Competency" SortExpression="CompetencyPersonProject.CompetencyPerson.Competency.Name" />
+                            <global:asp:BoundField DataField="CompetencyPersonProject.Project.Name" HeaderText="Project" SortExpression="CompetencyPersonProject.Project.Name" />
+                            <global:asp:BoundField DataField="AssessorPerson.FullName" HeaderText="Evaluator" SortExpression="AssessorPerson.FullName" />
+                            <global:asp:BoundField DataField="OverallRating" HeaderText="Rating" SortExpression="OverallRating" />
                         </Columns>
                     </Rock:Grid>
                 </div>

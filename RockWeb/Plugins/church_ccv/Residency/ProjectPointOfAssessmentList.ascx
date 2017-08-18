@@ -14,8 +14,8 @@
                         <Columns>
                             <Rock:ColorField DataField="ProjectPointOfAssessmentColor" ToolTipDataField="PointOfAssessmentTypeValue.Value" />
                             <Rock:ReorderField />
-                            <asp:BoundField DataField="AssessmentOrder" HeaderText="#" />
-                            <asp:BoundField DataField="AssessmentText" HeaderText="Text" />
+                            <global:asp:BoundField DataField="AssessmentOrder" HeaderText="#" />
+                            <global:asp:BoundField DataField="AssessmentText" HeaderText="Text" />
                             <Rock:DeleteField OnClick="gList_Delete" />
                         </Columns>
                     </Rock:Grid>

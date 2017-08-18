@@ -41,6 +41,11 @@ namespace RockWeb.Plugins.church_ccv.Residency
     [LinkedPage( "Person Project Detail Page" )]
     public partial class ResidentGradeDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.DataTextBox tbRatingNotesOverall;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSaveMessage;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

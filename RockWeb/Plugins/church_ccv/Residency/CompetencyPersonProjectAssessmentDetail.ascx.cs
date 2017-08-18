@@ -36,6 +36,15 @@ namespace RockWeb.Plugins.church_ccv.Residency
 
     public partial class CompetencyPersonProjectAssessmentDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.PersonPicker ppAssessor;
+        protected global::Rock.Web.UI.Controls.DateTimePicker dtpAssessmentDateTime;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbRatingNotes;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbResidentComments;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblOverallRating;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

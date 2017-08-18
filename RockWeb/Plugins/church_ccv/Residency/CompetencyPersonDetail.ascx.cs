@@ -38,6 +38,17 @@ namespace RockWeb.Plugins.church_ccv.Residency
     
     public partial class CompetencyPersonDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlTrack;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlPeriod;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlCompetency;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbAllCompetenciesAlreadyAdded;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblPeriod;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblTrack;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblCompetency;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

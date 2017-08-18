@@ -39,6 +39,24 @@ namespace RockWeb.Plugins.church_ccv.Reporting
     [TextField( "GroupIds", Category = "CustomSetting", DefaultValue = "1199222,1199221,1199223,1199220,1790001,1199600,1199601,1199602,1789997,1199224,1199225,1559672,1199226,1790006,1790007,1199227,1199228,1199231,1199232,1199233,1790005,1790008,1199229,1199230,1542108,1199596,1199597,1199598,1199599,1542107" )]
     public partial class AttendanceSpreadSheetTool : RockBlockCustomSettings
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gCheckinAttendanceExport;
+        protected global::Rock.Web.UI.Controls.Grid gHeadcountsExport;
+        protected global::Rock.Web.UI.Controls.Grid gGeneralFundsExport;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSundayDate;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampuses;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblAttendanceTypes;
+        protected global::Rock.Web.UI.Controls.MetricCategoryPicker mpAttendanceMetric;
+        protected global::Rock.Web.UI.Controls.MetricCategoryPicker mpHeadcountsMetric;
+        protected global::Rock.Web.UI.Controls.MetricCategoryPicker mpGeneralFundsMetric;
+        protected global::Rock.Web.UI.Controls.SchedulePicker spSchedules;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdConfigure;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupTypeWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbHeadcountsMetricWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbAttendanceMetricWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGeneralFundsMetricWarning;
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

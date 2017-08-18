@@ -39,6 +39,10 @@ namespace RockWeb.Plugins.church_ccv.Residency
     [BooleanField( "Show Grid Title" )]
     public partial class ResidentProjectAssessmentList : RockBlock, ISecondaryBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gList;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

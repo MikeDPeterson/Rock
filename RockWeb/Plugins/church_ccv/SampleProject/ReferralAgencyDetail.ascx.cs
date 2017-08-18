@@ -29,6 +29,18 @@ namespace RockWeb.Plugins.church_ccv.SampleProject
 
     public partial class ReferralAgencyDetail : Rock.Web.UI.RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlAgencyType;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbContactName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPhoneNumber;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbWebsite;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        #endregion
+
         #region Fields
 
         private ReferralAgency _referralAgency = null;

@@ -45,6 +45,11 @@ namespace RockWeb.Plugins.com_mineCartStudio.PCOSync
     [LinkedPage( "Detail Page" )]
     public partial class AccountList : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gAccount;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

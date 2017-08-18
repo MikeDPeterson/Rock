@@ -44,6 +44,14 @@ namespace RockWeb.Plugins.com_mineCartStudio.PCOSync
 
     public partial class SyncedGroupTypes : RockBlock, ISecondaryBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupType;
+        protected global::Rock.Web.UI.Controls.Grid gGroupType;
+        protected global::Rock.Web.UI.Controls.ModalDialog mdlgGroupType;
+        #endregion
+
+
         #region Fields
 
         FieldTypeCache _pcoAccountFieldType = null;

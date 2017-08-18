@@ -40,6 +40,10 @@ namespace RockWeb.Plugins.church_ccv.Workflow
     [LinkedPage( "WorkflowType Page" )]
     public partial class WorkflowTypeSearch : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gList;
+        #endregion
+
         #region Base Control Methods
 
         //  overrides of the base RockBlock methods (i.e. OnInit, OnLoad)

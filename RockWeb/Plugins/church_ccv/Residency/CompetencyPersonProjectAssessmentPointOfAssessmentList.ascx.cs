@@ -35,6 +35,10 @@ namespace RockWeb.Plugins.church_ccv.Residency
     [LinkedPage( "Detail Page" )]
     public partial class CompetencyPersonProjectAssessmentPointOfAssessmentList : RockBlock, ISecondaryBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gList;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

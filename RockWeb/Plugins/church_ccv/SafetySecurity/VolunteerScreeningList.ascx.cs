@@ -38,6 +38,10 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
     [LinkedPage( "Detail Page" )]
     public partial class VolunteerScreeningList : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gGrid;
+        #endregion
+
         protected Person TargetPerson { get; set; }
                 
         #region Control Methods
@@ -145,7 +149,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
             // get all the volunteer screening instances tied to this person
             var vsQuery = new Service<VolunteerScreening>( rockContext ).Queryable( ).AsNoTracking( );
             var paQuery = new Service<PersonAlias>( rockContext ).Queryable( ).AsNoTracking( );
-            var wfQuery = new Service<Workflow>( rockContext ).Queryable( ).AsNoTracking( );
+            var wfQuery = new Service<Rock.Model.Workflow>( rockContext ).Queryable( ).AsNoTracking( );
             
             var vsForPersonQuery = vsQuery.Join( paQuery, vs => vs.PersonAliasId, pa => pa.Id, ( vs, pa ) => new { VolunteerScreening = vs, PersonAlias = pa } )
                                        .Where( a => a.PersonAlias.PersonId == TargetPerson.Id )

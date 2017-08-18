@@ -34,6 +34,10 @@ namespace RockWeb.Plugins.church_ccv.Residency
     [LinkedPage( "Detail Page" )]
     public partial class ResidentCompetencyProjectList : RockBlock, ISecondaryBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gProjectList;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

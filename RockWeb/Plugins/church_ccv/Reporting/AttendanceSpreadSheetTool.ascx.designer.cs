@@ -58,15 +58,6 @@ namespace RockWeb.Plugins.church_ccv.Reporting {
         protected global::System.Web.UI.WebControls.Panel pnlConfigure;
         
         /// <summary>
-        /// pnlGroups control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlGroups;
-        
-        /// <summary>
         /// rptGroupTypes control.
         /// </summary>
         /// <remarks>

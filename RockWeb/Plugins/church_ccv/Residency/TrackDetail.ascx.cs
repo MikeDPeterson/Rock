@@ -37,6 +37,13 @@ namespace RockWeb.Plugins.church_ccv.Residency
 
     public partial class TrackDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.RockLiteral lblPeriod;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

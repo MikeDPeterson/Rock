@@ -40,6 +40,16 @@ namespace RockWeb.Plugins.com_centralaz.Utility
     [Description( "Allows you to pick a person entity and test your lava." )]
     public partial class LavaTester : Rock.Web.UI.RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.CodeEditor ceLava;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbInstructions;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbEnableDebug;
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.GroupPicker gpGroups;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlWorkflows;
+        protected global::Rock.Web.UI.Controls.WorkflowTypePicker wfpWorkflowType;
+        #endregion
+
         #region Fields
 
         // used for private variables

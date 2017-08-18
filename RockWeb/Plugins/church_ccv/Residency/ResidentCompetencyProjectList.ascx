@@ -13,10 +13,10 @@
 
                     <Rock:Grid ID="gProjectList" runat="server" AllowSorting="true" OnRowSelected="gProjectList_RowSelected" DataKeyNames="Id" RowItemText="Project" DisplayType="Light">
                         <Columns>
-                            <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                            <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                            <asp:BoundField DataField="MinAssessmentCount" HeaderText="Assessments Required" SortExpression="MinAssessmentCount" HeaderStyle-CssClass="span1" />
-                            <asp:BoundField DataField="AssessmentCompleted" HeaderText="Assessments Completed" SortExpression="AssessmentCompleted" HeaderStyle-CssClass="span1" />
+                            <global:asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                            <global:asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                            <global:asp:BoundField DataField="MinAssessmentCount" HeaderText="Assessments Required" SortExpression="MinAssessmentCount" HeaderStyle-CssClass="span1" />
+                            <global:asp:BoundField DataField="AssessmentCompleted" HeaderText="Assessments Completed" SortExpression="AssessmentCompleted" HeaderStyle-CssClass="span1" />
                             <Rock:BadgeField DataField="AssessmentRemaining" HeaderText="Assessments Remaining" SortExpression="AssessmentRemaining" WarningMin="1" SuccessMax="0" SuccessMin="0" DangerMin="9999" InfoMin="9999" />
                         </Columns>
                     </Rock:Grid>

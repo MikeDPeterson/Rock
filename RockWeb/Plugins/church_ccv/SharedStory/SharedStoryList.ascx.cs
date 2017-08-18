@@ -41,8 +41,16 @@ namespace RockWeb.Plugins.church_ccv.SharedStory
     [LinkedPage( "Detail Page", "Page used to display details about a story." )]
     public partial class SharedStoryList : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.GridFilter gfWorkflows;
+        protected global::Rock.Web.UI.Controls.Grid gWorkflows;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbStory;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbDifference;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbScripture;
+        #endregion
+
         #region Fields
-        
+
         private WorkflowType _workflowType = null;
 
         const int sScripture_AttribId = 26542;
@@ -327,7 +335,7 @@ namespace RockWeb.Plugins.church_ccv.SharedStory
             AvailableAttributes = new List<AttributeCache>();
             if ( _workflowType != null )
             {
-                int entityTypeId = new Workflow().TypeId;
+                int entityTypeId = new Rock.Model.Workflow().TypeId;
                 string workflowQualifier = _workflowType.Id.ToString();
                 foreach ( var attributeModel in new AttributeService( new RockContext() ).Queryable()
                     .Where( a =>
@@ -491,7 +499,7 @@ namespace RockWeb.Plugins.church_ccv.SharedStory
                 }
 
                 
-                IQueryable<Workflow> workflows = null;
+                IQueryable<Rock.Model.Workflow> workflows = null;
 
                 var sortProperty = gWorkflows.SortProperty;
                 if ( sortProperty != null )
@@ -513,7 +521,7 @@ namespace RockWeb.Plugins.church_ccv.SharedStory
 
                 gWorkflows.ObjectList = workflowObjectQry.ToList().ToDictionary( k => k.Id.ToString(), v => v as object );
 
-                gWorkflows.EntityTypeId = EntityTypeCache.Read<Workflow>().Id;
+                gWorkflows.EntityTypeId = EntityTypeCache.Read<Rock.Model.Workflow>().Id;
                 var qryGrid = workflows.Select( w => new
                 {
                     w.Id,

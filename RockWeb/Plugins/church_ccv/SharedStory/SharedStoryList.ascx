@@ -17,7 +17,7 @@
                         <Rock:RockTextBox ID="tbStory" runat="server" Label="Story Contents"></Rock:RockTextBox>
                         <Rock:RockTextBox ID="tbDifference" runat="server" Label="Difference Contents"></Rock:RockTextBox>
                         <Rock:RockTextBox ID="tbScripture" runat="server" Label="Scripture Contents"></Rock:RockTextBox>
-                        <asp:PlaceHolder ID="phAttributeFilters" runat="server" />
+                        <global:asp:PlaceHolder ID="phAttributeFilters" runat="server" />
 	                </Rock:GridFilter>
 	                <Rock:Grid ID="gWorkflows" runat="server" AllowSorting="true" DisplayType="Full" OnRowSelected="gWorkflows_Edit">
 	                    <Columns>

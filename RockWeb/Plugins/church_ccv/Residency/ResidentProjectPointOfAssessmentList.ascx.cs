@@ -35,6 +35,10 @@ namespace RockWeb.Plugins.church_ccv.Residency
 
     public partial class ResidentProjectPointOfAssessmentList : RockBlock, ISecondaryBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gList;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -39,6 +39,11 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
     [Description( "Block for users to create, edit, and volunteer screening instances." )]
     public partial class VolunteerScreeningDetail : Rock.Web.UI.RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gCharacterRefs;
+        protected global::Rock.Web.UI.Controls.FileUploader fu_legAppFile;
+        #endregion
+
         private List<int> DocumentsState { get; set; }
         
         // Define the IDs for the various workflows needed
@@ -200,7 +205,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
                             List<int?> attribIds = new AttributeValueService( rockContext ).Queryable( ).AsNoTracking( ).Where( av => av.Attribute.Key == "VolunteerScreeningInstanceId" && av.ValueAsNumeric == vsInstance.Id ).Select( av => av.EntityId ).ToList( );
                             if( attribIds.Count > 0 )
                             { 
-                                Workflow bgCheckWorkflow = new WorkflowService( rockContext ).Queryable( ).AsNoTracking( ).Where( wf => wf.WorkflowTypeId == sBackgroundCheck_WorkflowId && attribIds.Contains( wf.Id ) ).SingleOrDefault( );
+                                Rock.Model.Workflow bgCheckWorkflow = new WorkflowService( rockContext ).Queryable( ).AsNoTracking( ).Where( wf => wf.WorkflowTypeId == sBackgroundCheck_WorkflowId && attribIds.Contains( wf.Id ) ).SingleOrDefault( );
                                 if ( bgCheckWorkflow != null )
                                 {
                                     // since there is one, let them view the date and doc (which may or may not be filled in)
@@ -230,7 +235,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
                 WorkflowService workflowService = new WorkflowService( rockContext );
 
                 // first, get the application workflow
-                Workflow applicationWorkflow = workflowService.Queryable( ).AsNoTracking( ).Where( wf => wf.Id == vsInstance.Application_WorkflowId ).SingleOrDefault( );
+                Rock.Model.Workflow applicationWorkflow = workflowService.Queryable( ).AsNoTracking( ).Where( wf => wf.Id == vsInstance.Application_WorkflowId ).SingleOrDefault( );
 
                 if( applicationWorkflow.Status == "Completed" )
                 {
@@ -258,7 +263,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
                 }
                 
                 // to know if we should show character references, see if any character reference workflows tied to this Screening Instance exist.
-                List<Workflow> charRefWorkflows = new List<Workflow>( );
+                List<Rock.Model.Workflow> charRefWorkflows = new List<Rock.Model.Workflow>( );
                 List<int?> attribIds = new AttributeValueService( rockContext ).Queryable( ).AsNoTracking( ).Where( av => av.Attribute.Key == "VolunteerScreeningInstanceId" && av.ValueAsNumeric == vsInstance.Id ).Select( av => av.EntityId ).ToList( );
                 if( attribIds.Count > 0 )
                 { 
@@ -268,7 +273,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
                 if ( charRefWorkflows.Count > 0 )
                 {
                     // load the attributes for all of the reference workflows
-                    foreach( Workflow workflow in charRefWorkflows )
+                    foreach( Rock.Model.Workflow workflow in charRefWorkflows )
                     {
                         workflow.LoadAttributes( );
                     }
@@ -324,7 +329,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
         {
             var rockContext = new RockContext();
             WorkflowService workflowService = new WorkflowService( rockContext );
-            Workflow workflow = workflowService.Get( e.RowKeyId );
+            Rock.Model.Workflow workflow = workflowService.Get( e.RowKeyId );
             if ( workflow != null )
             {
                 workflowService.Delete( workflow );

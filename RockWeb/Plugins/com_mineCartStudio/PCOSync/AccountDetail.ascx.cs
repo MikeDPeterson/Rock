@@ -50,6 +50,17 @@ namespace RockWeb.Plugins.com_mineCartStudio.PCOSync
         Rock.SystemGuid.DefinedValue.PERSON_CONNECTION_STATUS_ATTENDEE, "", 2, "ConnectionStatus" )]
     public partial class AccountDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.NotificationBox nbAdd;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbApplicationId;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbSecret;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlWelcomeEmailTemplate;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbPermissionDowngrade;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdDeleteWarning;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        #endregion
+
         const string EDIT_MODE = "EDIT";
         const string VIEW_MODE = "VIEW";
         const string ADD_MODE = "ADD";

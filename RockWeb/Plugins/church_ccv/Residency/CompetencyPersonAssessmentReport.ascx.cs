@@ -39,6 +39,16 @@ namespace RockWeb.Plugins.church_ccv.Residency
     /// </summary>
     public partial class CompetencyPersonAssessmentReport : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gAssessmentSummary;
+        protected global::Rock.Web.UI.Controls.Grid gAssessmentDetails;
+        protected global::Rock.Web.UI.Controls.DateRangePicker pDateRange;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbSemesterName;
+        protected global::Rock.Web.UI.Controls.RockLiteral lbSemester;
+        protected global::Rock.Web.UI.Controls.RockLiteral lbCurrentDate;
+        protected global::Rock.Web.UI.Controls.RockLiteral lbYear;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -42,6 +42,10 @@ namespace RockWeb.Plugins.church_ccv.Reporting
     [LinkedPage( "DataView Page" )]
     public partial class DataViewSearch : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gList;
+        #endregion
+
         #region Base Control Methods
 
         //  overrides of the base RockBlock methods (i.e. OnInit, OnLoad)

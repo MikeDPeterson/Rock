@@ -25,6 +25,12 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
 
     public partial class DPSOffenderDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMatchZip;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAge;
+        protected global::Rock.Web.UI.Controls.Grid gPotentialMatches;
+        #endregion
+
         #region Base Control Methods
 
         /// <summary>

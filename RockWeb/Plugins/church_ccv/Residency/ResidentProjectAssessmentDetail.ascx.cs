@@ -35,6 +35,11 @@ namespace RockWeb.Plugins.church_ccv.Residency
 
     public partial class ResidentProjectAssessmentDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gList;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbResidentComments;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

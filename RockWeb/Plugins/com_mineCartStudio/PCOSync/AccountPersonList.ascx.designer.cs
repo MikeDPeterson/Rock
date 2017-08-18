@@ -38,23 +38,5 @@ namespace RockWeb.Plugins.com_mineCartStudio.PCOSync {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfAccountId;
-        
-        /// <summary>
-        /// hfAccountPersonId control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfAccountPersonId;
-        
-        /// <summary>
-        /// valSummaryValue control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary valSummaryValue;
     }
 }

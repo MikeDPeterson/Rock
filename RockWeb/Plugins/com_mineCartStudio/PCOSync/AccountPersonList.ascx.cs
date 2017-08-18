@@ -48,6 +48,23 @@ namespace RockWeb.Plugins.com_mineCartStudio.PCOSync
     [LinkedPage( "Person Profile Page", "Page used for viewing a person's profile. If set a view profile button will show for each group member.", false, "", "", 2, "PersonProfilePage" )]
     public partial class AccountPersonList : RockBlock, ISecondaryBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.Grid gAccountPersons;
+        protected global::Rock.Web.UI.Controls.ModalDialog modalValue;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFirstName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbLastName;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCurrentOnly;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbBlankPCOId;
+        protected global::Rock.Web.UI.Controls.NumberBox nbPCOId;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblRockPermission;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblPCOPermission;
+        protected global::Rock.Web.UI.Controls.NumberBox tbPcoId;
+        protected global::Rock.Web.UI.Controls.RockLiteral lRockValues;
+        protected global::Rock.Web.UI.Controls.RockLiteral lPCOValues;
+
+        #endregion
+
         #region Private Variables
 
         private PCOAccount _account = null;

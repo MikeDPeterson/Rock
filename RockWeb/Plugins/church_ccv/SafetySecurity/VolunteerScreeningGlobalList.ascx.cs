@@ -38,9 +38,18 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
     
     [LinkedPage( "Detail Page" )]
     public partial class VolunteerScreeningGlobalList : RockBlock
-    {                
+    {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.GridFilter rFilter;
+        protected global::Rock.Web.UI.Controls.RockCheckBoxList cblCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlStarsApp;
+        protected global::Rock.Web.UI.Controls.Grid gGrid;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbPersonName;
+        #endregion
+
         #region Control Methods
-        
+
         protected override void OnInit( EventArgs e )
         {
             base.OnInit( e );
@@ -212,7 +221,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
                 // First, we simply join the 3 "core" tables--volunteer screening, personAlias, and workflow.
                 var vsQuery = new Service<VolunteerScreening>( rockContext ).Queryable( ).AsNoTracking( );
                 var paQuery = new Service<PersonAlias>( rockContext ).Queryable( ).AsNoTracking( );
-                var wfQuery = new Service<Workflow>( rockContext ).Queryable( ).AsNoTracking( );
+                var wfQuery = new Service<Rock.Model.Workflow>( rockContext ).Queryable( ).AsNoTracking( );
                 var coreQuery = vsQuery.Join( paQuery, vs => vs.PersonAliasId, pa => pa.Id, ( vs, pa ) => new { VolunteerScreening = vs, PersonName = pa.Person.FirstName + " " + pa.Person.LastName } )
                                        .Join( wfQuery, vs => vs.VolunteerScreening.Application_WorkflowId, wf => wf.Id, ( vs, wf ) => new { VolunteerScreeningWithPerson = vs, Workflow = wf } );
 
@@ -313,7 +322,7 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
             public string Applying { get; set; }
         }
 
-        string IsStars( Workflow workflow, List<ApplyingForStars> starsQueryResult )
+        string IsStars( Rock.Model.Workflow workflow, List<ApplyingForStars> starsQueryResult )
         {
             // JHM 7-10-17
             // HORRIBLE HACK - If the application was sent before we ended testing, we need to support old states and attributes.

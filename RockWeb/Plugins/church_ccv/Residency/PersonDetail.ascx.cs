@@ -34,6 +34,11 @@ namespace RockWeb.Plugins.church_ccv.Residency
 
     public partial class PersonDetail : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.PersonPicker ppPerson;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarning;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -38,6 +38,14 @@ namespace RockWeb.Plugins.church_ccv.Residency
 
     public partial class ProjectPointOfAssessmentDetail : RockBlock, IDetailBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.RockLiteral lblAssessmentOrder;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPointOfAssessmentTypeValue;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbAssessmentText;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbIsPassFail;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

@@ -44,6 +44,14 @@ namespace RockWeb.Plugins.church_ccv.Residency
     [SecurityRoleField( "Residency Grader Security Role", key: "ResidencyGraderSecurityRole" )]
     public partial class ResidentGradeRequest : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSendMessage;
+        protected global::Rock.Web.UI.Controls.DataDropDownList ddlFacilitators;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbUserName;
+        protected global::Rock.Web.UI.Controls.DataTextBox tbPassword;
+        #endregion
+
         #region Control Methods
 
         /// <summary>

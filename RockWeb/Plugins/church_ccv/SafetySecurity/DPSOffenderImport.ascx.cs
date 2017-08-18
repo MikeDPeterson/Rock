@@ -7,7 +7,6 @@ using System.Web.UI.WebControls;
 
 using church.ccv.SafetySecurity.Model;
 using Microsoft.AspNet.SignalR;
-using OfficeOpenXml;
 using Rock;
 using Rock.Attribute;
 using Rock.Data;
@@ -28,10 +27,20 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity
     [LinkedPage( "Detail Page" )]
     public partial class DPSOffenderImport : RockBlock
     {
+        #region RockControls
+        protected global::Rock.Web.UI.Controls.Grid gDpsOffender;
+        protected global::Rock.Web.UI.Controls.FileUploader fuImport;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbMatchZip;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbAge;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbLimitToPotentialMatches;
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbLimitToLocationMatches;
+        #endregion
+
         /// <summary>
         /// This holds the reference to the RockMessageHub SignalR Hub context.
         /// </summary>
-        private IHubContext _hubContext = GlobalHost.ConnectionManager.GetHubContext<RockMessageHub>();
+        private IHubContext _hubContext = GlobalHost.ConnectionManager.GetHubContext<RockWeb.Utility.RockMessageHub>();
 
         #region Base Control Methods
 
