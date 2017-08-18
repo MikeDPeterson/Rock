@@ -92,8 +92,8 @@
       <HintPath>..\packages\EPPlus.4.0.4\lib\net20\EPPlus.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.5.1.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <HintPath>..\packages\HtmlAgilityPack.1.5.1\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.4, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Humanizer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
@@ -8606,21 +8606,18 @@
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\MeasureDashboardCampus.ascx.cs">
       <DependentUpon>MeasureDashboardCampus.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\MeasureDashboardCampus.ascx.designer.cs">
       <DependentUpon>MeasureDashboardCampus.ascx</DependentUpon>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\MeasureDashboardPastor.ascx.cs">
       <DependentUpon>MeasureDashboardPastor.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\MeasureDashboardPastor.ascx.designer.cs">
       <DependentUpon>MeasureDashboardPastor.ascx</DependentUpon>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\StepsTaken.ascx.cs">
       <DependentUpon>StepsTaken.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\StepsTaken.ascx.designer.cs">
       <DependentUpon>StepsTaken.ascx</DependentUpon>
