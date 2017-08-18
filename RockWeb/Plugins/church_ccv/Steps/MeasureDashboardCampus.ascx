@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Steps.MeasureDashboardCampus" Codebehind="MeasureDashboardCampus.ascx.cs" %>
+﻿<%--<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Steps.MeasureDashboardCampus" Codebehind="MeasureDashboardCampus.ascx.cs" %>
 
 <style>
     .measure {
@@ -266,4 +266,4 @@
         </asp:Panel>
 
     </ContentTemplate>
-</asp:UpdatePanel>
+</asp:UpdatePanel>--%>
