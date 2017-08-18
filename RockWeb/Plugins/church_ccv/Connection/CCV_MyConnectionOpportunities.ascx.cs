@@ -76,6 +76,7 @@ namespace RockWeb.Plugins.church_ccv.Connection
         #region Rock Controls
 
         protected global::Rock.Web.UI.Controls.Toggle tglMyOpportunities;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoOpportunities;
         protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
         protected global::Rock.Web.UI.Controls.GridFilter rFilter;
         protected global::Rock.Web.UI.Controls.PersonPicker ppRequester;

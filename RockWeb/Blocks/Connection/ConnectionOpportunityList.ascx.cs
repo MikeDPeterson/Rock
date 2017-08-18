@@ -46,6 +46,8 @@ namespace RockWeb.Blocks.Connection
         protected global::Rock.Web.UI.Controls.RockCheckBox cbActive;
         protected global::Rock.Web.UI.Controls.Grid gConnectionOpportunities;
 
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeFilters;
+
         #endregion
 
         #region Fields

@@ -63,6 +63,8 @@ namespace RockWeb.Plugins.com_mineCartStudio.PCOSync
         protected global::Rock.Web.UI.Controls.RockLiteral lRockValues;
         protected global::Rock.Web.UI.Controls.RockLiteral lPCOValues;
 
+        protected global::System.Web.UI.WebControls.HiddenField hfAccountPersonId;
+
         #endregion
 
         #region Private Variables

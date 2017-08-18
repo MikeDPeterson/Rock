@@ -47,6 +47,8 @@ namespace RockWeb.Plugins.church_ccv.SharedStory
         protected global::Rock.Web.UI.Controls.RockTextBox tbStory;
         protected global::Rock.Web.UI.Controls.RockTextBox tbDifference;
         protected global::Rock.Web.UI.Controls.RockTextBox tbScripture;
+
+        protected global::System.Web.UI.WebControls.PlaceHolder phAttributeFilters;
         #endregion
 
         #region Fields

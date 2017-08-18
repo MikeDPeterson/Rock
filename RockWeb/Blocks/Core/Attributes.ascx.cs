@@ -68,6 +68,10 @@ namespace RockWeb.Blocks.Core
         protected global::Rock.Web.UI.Controls.ModalDialog mdAttributeValue;
         protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
 
+        protected global::System.Web.UI.WebControls.Panel pnlEntityTypeQualifier;
+        protected global::System.Web.UI.WebControls.HiddenField hfIdValues;
+        protected global::System.Web.UI.WebControls.PlaceHolder phEditControls;
+
         #endregion
 
         #region Fields

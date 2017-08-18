@@ -26,6 +26,16 @@ namespace RockWeb.Plugins.church_ccv.SampleProject
     [LinkedPage( "Detail Page" )]
     public partial class ReferralAgencyList : Rock.Web.UI.RockBlock
     {
+        #region Rock Controls
+
+        protected global::Rock.Web.UI.Controls.GridFilter gfSettings;
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlAgencyType;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
+        protected global::Rock.Web.UI.Controls.Grid gAgencies;
+
+        #endregion
+
 
         #region Base Control Methods
 

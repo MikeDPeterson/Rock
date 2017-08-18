@@ -70,6 +70,9 @@ namespace RockWeb.Blocks.Crm
         protected global::Rock.Web.UI.Controls.CodeEditor ceAttributePreText;
         protected global::Rock.Web.UI.Controls.CodeEditor ceAttributePostText;
 
+        protected global::System.Web.UI.WebControls.HiddenField hfFormGuid;
+        protected global::System.Web.UI.WebControls.HiddenField hfAttributeGuid;
+
         #endregion
 
         #region Fields
