@@ -1509,15 +1509,10 @@ namespace Rock.Data
                 }
                 
                 // add configurations that might be in plugin assemblies
-                // JHM 08-21-2017 - This does not work in Rock as a Website OR Webapp. The reason
-                // is the configurations in our plugin models do not implement this.HasEntitySetName( "EntityName" );,
-                // and that causes the below "AddFromAssembly" to throw an exception.
-                // The fix is to implement this.HasEntitySetName( "EntityName" ); on each EntityTypeConfiguration.
-                // It's slightly redundant, since we setup the contraints in the Database (DB First design), and the ETC is used for CodeFirst design.
-                /*foreach ( var assembly in entityTypeList.Select( a => a.Assembly ).Distinct() )
+                foreach ( var assembly in entityTypeList.Select( a => a.Assembly ).Distinct() )
                 {
                     modelBuilder.Configurations.AddFromAssembly( assembly );
-                }*/
+                }
             }
             catch ( Exception ex )
             {
