@@ -20,13 +20,13 @@
                             <Rock:RockTemplateField>
                                 <HeaderTemplate>Description</HeaderTemplate>
                                 <ItemTemplate>
-                                    <global::asp:Label ID="lblDescription" runat="server" />
+                                    <global:asp:Label ID="lblDescription" runat="server" />
                                 </ItemTemplate>
                             </Rock:RockTemplateField>
                             <Rock:RockTemplateField>
                                 <HeaderTemplate>Key</HeaderTemplate>
                                 <ItemTemplate>
-                                    <global::asp:Label ID="lblKey" runat="server" />
+                                    <global:asp:Label ID="lblKey" runat="server" />
                                 </ItemTemplate>
                             </Rock:RockTemplateField>
                             <Rock:DeleteField OnClick="gRestKeyList_Delete" />

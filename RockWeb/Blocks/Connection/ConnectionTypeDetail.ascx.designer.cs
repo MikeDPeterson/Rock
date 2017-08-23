@@ -31,6 +31,15 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.Panel pnlDeleteConfirm;
         
         /// <summary>
+        /// nbDeleteConfirm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDeleteConfirm;
+        
+        /// <summary>
         /// btnDeleteConfirm control.
         /// </summary>
         /// <remarks>
@@ -139,6 +148,51 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlEditDetails;
         
         /// <summary>
+        /// cbActive control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbActive;
+        
+        /// <summary>
+        /// wpAttributes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpAttributes;
+        
+        /// <summary>
+        /// wpActivityTypes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpActivityTypes;
+        
+        /// <summary>
+        /// wpStatuses control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpStatuses;
+        
+        /// <summary>
+        /// wpWorkflow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpWorkflow;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>
@@ -155,6 +209,15 @@ namespace RockWeb.Blocks.Connection {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnCancel;
+        
+        /// <summary>
+        /// modalAlert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.ModalAlert modalAlert;
         
         /// <summary>
         /// hfActiveDialog control.

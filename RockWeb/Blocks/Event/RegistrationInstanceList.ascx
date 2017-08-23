@@ -22,9 +22,9 @@
                             <Rock:GridFilter ID="rFilter" runat="server" OnDisplayFilterValue="rFilter_DisplayFilterValue">
                                 <Rock:DateRangePicker ID="drpDates" runat="server" Label="Date Range" />
                                 <Rock:RockDropDownList ID="ddlActiveFilter" runat="server" Label="Active Status">
-                                    <global::asp:ListItem Text="[All]" Value="all" />
-                                    <global::asp:ListItem Text="Active" Value="active" />
-                                    <global::asp:ListItem Text="Inactive" Value="inactive" />
+                                    <global:asp:ListItem Text="[All]" Value="all" />
+                                    <global:asp:ListItem Text="Active" Value="active" />
+                                    <global:asp:ListItem Text="Inactive" Value="inactive" />
                                 </Rock:RockDropDownList>
                             </Rock:GridFilter>
                             <Rock:Grid ID="gInstances" runat="server" DisplayType="Full" AllowSorting="true" OnRowSelected="gInstances_Edit" RowItemText="Instance" CssClass="js-grid-instances" >

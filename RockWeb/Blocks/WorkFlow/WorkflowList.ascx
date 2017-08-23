@@ -20,10 +20,10 @@
                 	    <Rock:DateRangePicker ID="drpActivated" runat="server" Label="Activated" />
 	                    <Rock:DateRangePicker ID="drpCompleted" runat="server" Label="Completed" />
                         <Rock:RockCheckBoxList ID="cblState" runat="server" Label="State" RepeatDirection="Horizontal">
-                            <global::asp:ListItem Selected="True" Text="Active" Value="Active" />
-                            <global::asp:ListItem Selected="True" Text="Completed" Value="Completed" />
+                            <global:asp:ListItem Selected="True" Text="Active" Value="Active" />
+                            <global:asp:ListItem Selected="True" Text="Completed" Value="Completed" />
                         </Rock:RockCheckBoxList>
-                        <global::asp:PlaceHolder ID="phAttributeFilters" runat="server" />
+                        <global:asp:PlaceHolder ID="phAttributeFilters" runat="server" />
 	                </Rock:GridFilter>
 	                <Rock:Grid ID="gWorkflows" runat="server" AllowSorting="true" DisplayType="Full" OnRowSelected="gWorkflows_Edit">
 	                    <Columns>

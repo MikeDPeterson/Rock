@@ -68,11 +68,11 @@
                         <Rock:PersonPicker ID="ppConnector" runat="server" Label="Connector" />
                         <Rock:RockCheckBoxList ID="cblStatus" runat="server" Label="Status" DataTextField="Name" DataValueField="Id" RepeatDirection="Horizontal" />
                         <Rock:RockCheckBoxList ID="cblState" runat="server" Label="State" RepeatDirection="Horizontal">
-                            <global::asp:ListItem Text="Active" Value="0" />
-                            <global::asp:ListItem Text="Inactive" Value="1" />
-                            <global::asp:ListItem Text="Future Follow Up" Value="2" />
-                            <global::asp:ListItem Text="Future Follow Up (Past Due)" Value="-2" />
-                            <global::asp:ListItem Text="Connected" Value="3" />
+                            <global:asp:ListItem Text="Active" Value="0" />
+                            <global:asp:ListItem Text="Inactive" Value="1" />
+                            <global:asp:ListItem Text="Future Follow Up" Value="2" />
+                            <global:asp:ListItem Text="Future Follow Up (Past Due)" Value="-2" />
+                            <global:asp:ListItem Text="Connected" Value="3" />
                         </Rock:RockCheckBoxList>
                         <Rock:RockCheckBoxList ID="cblCampus" runat="server" Label="Campus" DataTextField="Name" DataValueField="Id" RepeatDirection="Horizontal" />
                         <Rock:RockCheckBoxList ID="cblLastActivity" runat="server" Label="Last Activity" DataTextField="Name" DataValueField="Id" RepeatDirection="Horizontal" />
@@ -90,17 +90,17 @@
                             <Rock:RockBoundField DataField="Connector" HeaderText="Connector" SortExpression="Connector.PersonAlias.Person.LastName,Connector.PersonAlias.Person.NickName" />
                             <Rock:RockBoundField DataField="LastActivity" HeaderText="Last Activity" HtmlEncode="false" />
                             <Rock:RockBoundField DataField="LastActivityNote" HeaderText="Last Activity Note" HtmlEncode="false" />
-                            <global::asp:TemplateField HeaderText="State" SortExpression="ConnectionState" >
+                            <global:asp:TemplateField HeaderText="State" SortExpression="ConnectionState" >
                                 <ItemTemplate>
                                     <%# Eval("StateLabel") %>
                                 </ItemTemplate>
                             </TemplateField>
-                            <global::asp:TemplateField HeaderText="Status" SortExpression="ConnectionStatus.Name">
+                            <global:asp:TemplateField HeaderText="Status" SortExpression="ConnectionStatus.Name">
                                 <ItemTemplate>
                                     <span class='label label-<%# Eval("StatusLabel") %>'><%# Eval("Status") %></span>
                                 </ItemTemplate>
                             </TemplateField>
-                            </global::asp:RockTemplateField>
+                            </global:asp>
                             <Rock:DeleteField OnClick="gRequests_Delete" />
                         </Columns>
                     </Rock:Grid>

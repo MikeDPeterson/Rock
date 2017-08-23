@@ -94,6 +94,15 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.Panel pnlUpdateMessage;
         
         /// <summary>
+        /// nbUpdateMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbUpdateMessage;
+        
+        /// <summary>
         /// pnlResults control.
         /// </summary>
         /// <remarks>
@@ -110,6 +119,15 @@ namespace RockWeb.Blocks.Finance {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlChart;
+        
+        /// <summary>
+        /// rcwGroupBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwGroupBy;
         
         /// <summary>
         /// btnGroupByWeek control.
@@ -137,6 +155,15 @@ namespace RockWeb.Blocks.Finance {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnGroupByYear;
+        
+        /// <summary>
+        /// rcwGraphBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwGraphBy;
         
         /// <summary>
         /// btnGraphByTotal control.
@@ -238,6 +265,15 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.HyperLink btnViewFamily;
         
         /// <summary>
+        /// rcwGiversFilter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwGiversFilter;
+        
+        /// <summary>
         /// pnlByPatternOptions control.
         /// </summary>
         /// <remarks>
@@ -245,6 +281,15 @@ namespace RockWeb.Blocks.Finance {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlByPatternOptions;
+        
+        /// <summary>
+        /// nbMissedDateRangeRequired control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMissedDateRangeRequired;
         
         /// <summary>
         /// btnApplyGiversFilter control.

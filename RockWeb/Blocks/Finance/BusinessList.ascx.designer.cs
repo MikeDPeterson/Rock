@@ -22,6 +22,15 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.UpdatePanel upnlBusinesses;
         
         /// <summary>
+        /// nbWarningMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        
+        /// <summary>
         /// pnlBusinessList control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,14 @@ namespace RockWeb.Blocks.Finance {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlBusinessList;
+        
+        /// <summary>
+        /// mdGridWarning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
     }
 }

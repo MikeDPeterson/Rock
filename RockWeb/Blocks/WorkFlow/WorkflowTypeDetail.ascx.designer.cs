@@ -67,6 +67,15 @@ namespace RockWeb.Blocks.WorkFlow {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlEditDetails;
         
         /// <summary>
+        /// wpAdvancedDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpAdvancedDetails;
+        
+        /// <summary>
         /// lbAddActivityType control.
         /// </summary>
         /// <remarks>

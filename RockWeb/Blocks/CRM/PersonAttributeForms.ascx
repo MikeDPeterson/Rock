@@ -51,8 +51,8 @@
                             Help="Display a progress to the user that indicates how far along they are in filling out multiple forms. Not shown when there is only one form." />
                         <Rock:RockDropDownList ID="ddlSaveValues" runat="server" Label="Save Values"
                             Help="Determines if values should be saved each time user navigates to next form or not saved until the very end. An advantage to saving them on each form, is that those values can then be used in the header or footer of the next page using Lava.">
-                            <global::asp:ListItem Value="PAGE" Text="After Each Page" />
-                            <global::asp:ListItem Value="END" Text="At the End" />
+                            <global:asp:ListItem Value="PAGE" Text="After Each Page" />
+                            <global:asp:ListItem Value="END" Text="At the End" />
                         </Rock:RockDropDownList>
                     </div>
                     <div class="col-md-6">
@@ -88,9 +88,9 @@
 
         <Rock:ModalDialog ID="dlgField" runat="server" Title="Form Field" OnSaveClick="dlgField_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Field">
             <Content>
-                <global::asp:HiddenField ID="hfFormGuid" runat="server" />
-                <global::asp:HiddenField ID="hfAttributeGuid" runat="server" />
-                <global::asp:ValidationSummary ID="ValidationSummaryAttribute" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Field" />
+                <global:asp:HiddenField ID="hfFormGuid" runat="server" />
+                <global:asp:HiddenField ID="hfAttributeGuid" runat="server" />
+                <global:asp:ValidationSummary ID="ValidationSummaryAttribute" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Field" />
                 <div class="row">
                     <div class="col-md-4">
                         <Rock:RockDropDownList ID="ddlPersonAttributes" runat="server" Label="Person Attribute" ValidationGroup="Field" />

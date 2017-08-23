@@ -94,6 +94,141 @@ namespace RockWeb.Blocks.Groups {
         protected global::System.Web.UI.WebControls.ValidationSummary valGroupTypeDetail;
         
         /// <summary>
+        /// wpGeneral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGeneral;
+        
+        /// <summary>
+        /// rcGroupTypes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcGroupTypes;
+        
+        /// <summary>
+        /// rcLocationTypes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcLocationTypes;
+        
+        /// <summary>
+        /// wpAttendanceCheckin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpAttendanceCheckin;
+        
+        /// <summary>
+        /// rcScheduleExclusions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcScheduleExclusions;
+        
+        /// <summary>
+        /// wpRoles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpRoles;
+        
+        /// <summary>
+        /// wpGroupMemberAttributes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGroupMemberAttributes;
+        
+        /// <summary>
+        /// nbGroupMemberAttributes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupMemberAttributes;
+        
+        /// <summary>
+        /// wpGroupAttributes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGroupAttributes;
+        
+        /// <summary>
+        /// NotificationBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox NotificationBox1;
+        
+        /// <summary>
+        /// wpGroupTypeAttributes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpGroupTypeAttributes;
+        
+        /// <summary>
+        /// NotificationBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox NotificationBox2;
+        
+        /// <summary>
+        /// wpMemberWorkflowTriggers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpMemberWorkflowTriggers;
+        
+        /// <summary>
+        /// NotificationBox3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox NotificationBox3;
+        
+        /// <summary>
+        /// wpDisplay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpDisplay;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

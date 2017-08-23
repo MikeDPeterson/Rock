@@ -81,7 +81,7 @@
 
                                         <Rock:RockDropDownList ID="ddlSchedule" runat="server" />
 
-                                        <global::asp:HiddenField ID="hfUniqueScheduleId" runat="server" />
+                                        <global:asp:HiddenField ID="hfUniqueScheduleId" runat="server" />
                                         <Rock:ScheduleBuilder ID="sbSchedule" runat="server" ShowDuration="false" ShowScheduleFriendlyTextAsToolTip="true" />
                                     </Rock:RockControlWrapper>
                                 </div>
@@ -136,7 +136,7 @@
             <!-- Series Partition Detail Modal  -->
             <Rock:ModalDialog ID="mdMetricPartitionDetail" runat="server" Title="Series Partition" ValidationGroup="vg-series-partition" OnSaveClick="mdMetricPartitionDetail_SaveClick">
                 <Content>
-                    <global::asp:HiddenField ID="hfMetricPartitionGuid" runat="server" />
+                    <global:asp:HiddenField ID="hfMetricPartitionGuid" runat="server" />
                     
                     <div class="row">
                         <div class="col-md-6">

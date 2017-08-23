@@ -29,5 +29,14 @@ namespace RockWeb.Blocks.Security.BackgroundCheck {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlContent;
+        
+        /// <summary>
+        /// nbNotice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNotice;
     }
 }

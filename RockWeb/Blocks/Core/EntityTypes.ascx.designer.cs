@@ -22,15 +22,6 @@ namespace RockWeb.Blocks.Core {
         protected global::System.Web.UI.UpdatePanel upMarketingCampaigns;
         
         /// <summary>
-        /// aSecure control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor aSecure;
-        
-        /// <summary>
         /// hfActiveDialog control.
         /// </summary>
         /// <remarks>

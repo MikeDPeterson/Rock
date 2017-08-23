@@ -49,6 +49,15 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.HiddenField hfBatchId;
         
         /// <summary>
+        /// nbWarningMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        
+        /// <summary>
         /// pnlEditDetails control.
         /// </summary>
         /// <remarks>
@@ -119,6 +128,24 @@ namespace RockWeb.Blocks.Finance {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlImages;
+        
+        /// <summary>
+        /// lScheduledTransaction control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteral lScheduledTransaction;
+        
+        /// <summary>
+        /// lProcessedBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteral lProcessedBy;
         
         /// <summary>
         /// lbSave control.
@@ -245,6 +272,15 @@ namespace RockWeb.Blocks.Finance {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink lbNext;
+        
+        /// <summary>
+        /// modalAlert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.ModalAlert modalAlert;
         
         /// <summary>
         /// hfActiveDialog control.

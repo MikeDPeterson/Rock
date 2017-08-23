@@ -16,14 +16,14 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="mdEdit_SaveClick" Title="Chart Dashboard Widget">
                 <Content>
 
-                    <global::asp:UpdatePanel runat="server" ID="upnlEdit">
+                    <global:asp:UpdatePanel runat="server" ID="upnlEdit">
                         <ContentTemplate>
                             <Rock:MetricCategoryPicker ID="mpMetricCategoryPicker"  runat="server" Label="Metric" OnSelectItem="mpMetricCategoryPicker_SelectItem" />
                             <Rock:RockRadioButtonList ID="rblSelectOrContext" runat="server" RepeatDirection="Horizontal" AutoPostBack="true" OnSelectedIndexChanged="rblSelectOrContext_SelectedIndexChanged" >
-                                <global::asp:ListItem Text="Select Partition(s)" Value="0" />
-                                <global::asp:ListItem Text="Get from page context" Value="1" />
+                                <global:asp:ListItem Text="Select Partition(s)" Value="0" />
+                                <global:asp:ListItem Text="Get from page context" Value="1" />
                             </Rock:RockRadioButtonList>
-                            <global::asp:PlaceHolder ID="phMetricValuePartitions" runat="server" />
+                            <global:asp:PlaceHolder ID="phMetricValuePartitions" runat="server" />
 
                             <Rock:RockCheckBox ID="cbCombineValues" runat="server" Text="Combine multiple values to one line when showing values for multiple partition(s)" />
 

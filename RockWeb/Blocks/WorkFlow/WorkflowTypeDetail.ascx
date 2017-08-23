@@ -167,7 +167,7 @@
 
         <Rock:ModalDialog ID="dlgActivityAttribute" runat="server" Title="Activity Attributes" OnSaveClick="dlgActivityAttribute_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="ActivityAttributes">
             <Content>
-                <global::asp:HiddenField ID="hfActivityTypeGuid" runat="server" />
+                <global:asp:HiddenField ID="hfActivityTypeGuid" runat="server" />
                 <Rock:AttributeEditor ID="edtActivityAttributes" runat="server" ShowActions="false" ValidationGroup="ActivityAttributes" />
             </Content>
         </Rock:ModalDialog>

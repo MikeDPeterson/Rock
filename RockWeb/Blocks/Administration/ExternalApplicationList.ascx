@@ -26,7 +26,7 @@
                                     <%# Eval( "Description" ) %>
                                 </ItemTemplate>
                             </Rock:RockTemplateField>
-                            <global::asp:HyperLinkField Text="Download" />
+                            <global:asp:HyperLinkField Text="Download" />
                         </Columns>
                     </Rock:Grid>
                 </div>

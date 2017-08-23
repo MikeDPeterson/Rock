@@ -73,10 +73,10 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Group Finder Configuration" ValidationGroup="GroupFinderSettings">
                 <Content>
 
-                    <global::asp:UpdatePanel ID="upnlEdit" runat="server">
+                    <global:asp:UpdatePanel ID="upnlEdit" runat="server">
                         <ContentTemplate>
 
-                            <glboal::asp:ValidationSummary ID="valSettings" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="GroupFinderSettings" />
+                            <glboal:asp:ValidationSummary ID="valSettings" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="GroupFinderSettings" />
 
                             <Rock:PanelWidget ID="wpFilter" runat="server" Title="Filter Settings" Expanded="true">
                                 <div class="row">
@@ -92,8 +92,8 @@
                                     <div class="col-md-6">
                                         <Rock:RockCheckBoxList ID="cblSchedule" runat="server" Label="Display Schedule Filters" RepeatDirection="Horizontal"
                                             Help="Flags indicating if Day of Week and/or Time of Day filters should be displayed to filter groups with 'Weekly' schedules." ValidationGroup="GroupFinderSettings">
-                                            <global::asp:ListItem Text="Day of Week" Value="Day" />
-                                            <global::asp:ListItem Text="Time of Day" Value="Time" />
+                                            <global:asp:ListItem Text="Day of Week" Value="Day" />
+                                            <global:asp:ListItem Text="Time of Day" Value="Time" />
                                         </Rock:RockCheckBoxList>
                                         <Rock:RockCheckBox ID="cbFilterCampus" runat="server" Label="Display Campus Filter" Text="Yes"
                                             Help="Display the campus filter" ValidationGroup="GroupFinderSettings" />

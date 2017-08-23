@@ -40,6 +40,15 @@ namespace RockWeb.Blocks.Prayer {
         protected global::System.Web.UI.WebControls.Literal lWelcomeInstructions;
         
         /// <summary>
+        /// cbSelectAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbSelectAll;
+        
+        /// <summary>
         /// lbStart control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace RockWeb.Blocks.Prayer {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlNoPrayerRequestsMessage;
+        
+        /// <summary>
+        /// nbNoPrayerRequests control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbNoPrayerRequests;
         
         /// <summary>
         /// pnlPrayer control.

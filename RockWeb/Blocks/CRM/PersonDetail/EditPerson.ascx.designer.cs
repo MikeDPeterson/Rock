@@ -49,6 +49,24 @@ namespace RockWeb.Blocks.Crm.PersonDetail {
         protected global::System.Web.UI.WebControls.Repeater rContactInfo;
         
         /// <summary>
+        /// pwAdvanced control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget pwAdvanced;
+        
+        /// <summary>
+        /// rcwPreviousNames control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwPreviousNames;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

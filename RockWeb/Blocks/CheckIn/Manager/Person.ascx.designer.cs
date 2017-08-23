@@ -67,6 +67,15 @@ namespace RockWeb.Blocks.CheckIn.Manager {
         protected global::System.Web.UI.WebControls.Literal lGrade;
         
         /// <summary>
+        /// rcwPhone control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwPhone;
+        
+        /// <summary>
         /// rptrPhones control.
         /// </summary>
         /// <remarks>

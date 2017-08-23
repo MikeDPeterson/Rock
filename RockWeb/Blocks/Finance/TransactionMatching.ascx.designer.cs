@@ -220,6 +220,24 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.PlaceHolder phPaymentAttributeEdits;
         
         /// <summary>
+        /// rcwAccountSplit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwAccountSplit;
+        
+        /// <summary>
+        /// cbAccountAmount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.CurrencyBox cbAccountAmount;
+        
+        /// <summary>
         /// btnPrevious control.
         /// </summary>
         /// <remarks>

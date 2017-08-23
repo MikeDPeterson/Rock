@@ -103,6 +103,15 @@ namespace RockWeb.Blocks.Groups {
         protected global::System.Web.UI.WebControls.LinkButton lbResendDocumentRequest;
         
         /// <summary>
+        /// NotificationBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox NotificationBox1;
+        
+        /// <summary>
         /// pnlEditDetails control.
         /// </summary>
         /// <remarks>

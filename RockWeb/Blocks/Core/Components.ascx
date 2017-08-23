@@ -22,9 +22,9 @@
                         <Rock:RockTextBox ID="tbName" runat="server" Label="Name" />
                         <Rock:RockTextBox ID="tbDescription" runat="server" Label="Description" />
                         <Rock:RockRadioButtonList ID="rblActive" runat="server" Label="Active" RepeatDirection="Horizontal">
-                            <global::asp:ListItem Value="" Text="All" />
-                            <global::asp:ListItem Value="Yes" Text="Yes" />
-                            <global::asp:ListItem Value="No" Text="No" />
+                            <global:asp:ListItem Value="" Text="All" />
+                            <global:asp:ListItem Value="Yes" Text="Yes" />
+                            <global:asp:ListItem Value="No" Text="No" />
                         </Rock:RockRadioButtonList>
                     </Rock:GridFilter>
 
@@ -53,7 +53,7 @@
         <Rock:ModalDialog ID="mdEditComponent" runat="server" Title="Attribute" OnCancelScript="clearActiveDialog();">
             <Content>
 
-                <global::asp:ValidationSummary runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" />
+                <global:asp:ValidationSummary runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" />
                 <Rock:NotificationBox ID="nbValidationError" runat="server" Title="There is a problem with one or more of the values you entered" NotificationBoxType="Danger" Visible="false" />
                 <fieldset>
                     <asp:PlaceHolder ID="phProperties" runat="server" EnableViewState="false" ></asp:PlaceHolder>

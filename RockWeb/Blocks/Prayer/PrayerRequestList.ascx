@@ -14,33 +14,33 @@
                             <Rock:DateRangePicker ID="drpDateRange" runat="server" Label="Date Range" />
 
                             <Rock:RockDropDownList ID="ddlApprovedFilter" runat="server" Label="Approval Status">
-                                <global::asp:ListItem Text="[All]" Value="all" />
-                                <global::asp:ListItem Text="Approved" Value="approved" />
-                                <glboal::asp:ListItem Text="Unapproved" Value="unapproved" />
+                                <global:asp:ListItem Text="[All]" Value="all" />
+                                <global:asp:ListItem Text="Approved" Value="approved" />
+                                <glboal:asp:ListItem Text="Unapproved" Value="unapproved" />
                             </Rock:RockDropDownList>
 
                             <Rock:RockDropDownList ID="ddlUrgentFilter" runat="server" Label="Urgent Status">
-                                <global::asp:ListItem Text="[All]" Value="all" />
-                                <global::asp:ListItem Text="Urgent" Value="urgent" />
-                                <global::asp:ListItem Text="Non-Urgent" Value="non-urgent" />
+                                <global:asp:ListItem Text="[All]" Value="all" />
+                                <global:asp:ListItem Text="Urgent" Value="urgent" />
+                                <global:asp:ListItem Text="Non-Urgent" Value="non-urgent" />
                             </Rock:RockDropDownList>
 
                             <Rock:RockDropDownList ID="ddlPublicFilter" runat="server" Label="Private/Public">
-                                <global::asp:ListItem Text="[All]" Value="all" />
-                                <global::asp:ListItem Text="Public" Value="public" />
-                                <global::asp:ListItem Text="Non-Public" Value="non-public" />
+                                <global:asp:ListItem Text="[All]" Value="all" />
+                                <global:asp:ListItem Text="Public" Value="public" />
+                                <global:asp:ListItem Text="Non-Public" Value="non-public" />
                             </Rock:RockDropDownList>
 
                             <Rock:RockDropDownList ID="ddlActiveFilter" runat="server" Label="Active Status">
-                                <global::asp:ListItem Text="[All]" Value="all" />
-                                <global::asp:ListItem Text="Active" Value="active" />
-                                <global::asp:ListItem Text="Inactive" Value="inactive" />
+                                <global:asp:ListItem Text="[All]" Value="all" />
+                                <global:asp:ListItem Text="Active" Value="active" />
+                                <global:asp:ListItem Text="Inactive" Value="inactive" />
                             </Rock:RockDropDownList>
 
                             <Rock:RockDropDownList ID="ddlAllowCommentsFilter" runat="server" Label="Commenting">
-                                <global::asp:ListItem Text="[All]" Value="all" />
-                                <global::asp:ListItem Text="Allowed" Value="allow" />
-                                <global::asp:ListItem Text="Not Allowed" Value="unallow" />
+                                <global:asp:ListItem Text="[All]" Value="all" />
+                                <global:asp:ListItem Text="Allowed" Value="allow" />
+                                <global:asp:ListItem Text="Not Allowed" Value="unallow" />
                             </Rock:RockDropDownList>
 
                             <Rock:CategoryPicker ID="catpPrayerCategoryFilter" runat="server" Label="Category" EntityTypeName="Rock.Model.PrayerRequest"/>

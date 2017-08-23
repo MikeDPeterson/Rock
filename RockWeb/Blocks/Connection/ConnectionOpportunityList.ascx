@@ -25,7 +25,7 @@
                         <div class="grid grid-panel">
                             <Rock:GridFilter ID="rFilter" runat="server" OnDisplayFilterValue="rFilter_DisplayFilterValue">
                                 <Rock:RockCheckBox ID="cbActive" runat="server" Label="Active" RepeatDirection="Horizontal" />
-                                <global::asp:PlaceHolder ID="phAttributeFilters" runat="server" />
+                                <global:asp:PlaceHolder ID="phAttributeFilters" runat="server" />
                             </Rock:GridFilter>
                             <Rock:Grid ID="gConnectionOpportunities" runat="server" DisplayType="Full" AllowSorting="true" OnRowSelected="gConnectionOpportunities_Edit">
                                 <Columns>

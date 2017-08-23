@@ -10,9 +10,9 @@
         <h2>
             <asp:Literal runat="server" ID="lUrlPreview" /></h2>
         <Rock:RockRadioButtonList ID="rblLoadAttributes" CssClass="js-load-attributes" runat="server" Label="LoadAttributes=">
-            <global::asp:ListItem Text="false" Selected="True"/>
-            <global::asp:ListItem Text="simple" />
-            <global::asp:ListItem Text="expanded" />
+            <global:asp:ListItem Text="false" Selected="True"/>
+            <global:asp:ListItem Text="simple" />
+            <global:asp:ListItem Text="expanded" />
         </Rock:RockRadioButtonList>
         <Rock:CodeEditor ID="tbPayload" runat="server" Label="Payload" TextMode="MultiLine" Rows="10" EditorMode="JavaScript" />
         <Rock:KeyValueList ID="lstParameterValues" runat="server" Label="Parameter Values" />

@@ -67,6 +67,15 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.HiddenField hfBusinessId;
         
         /// <summary>
+        /// nbWarningMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        
+        /// <summary>
         /// lbSave control.
         /// </summary>
         /// <remarks>

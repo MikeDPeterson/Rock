@@ -22,21 +22,12 @@ namespace RockWeb.Blocks.Administration {
         protected global::System.Web.UI.UpdatePanel upBinaryFile;
         
         /// <summary>
-        /// lAppName control.
+        /// mdGridWarning control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lAppName;
-        
-        /// <summary>
-        /// lVendorName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lVendorName;
+        protected global::Rock.Web.UI.Controls.ModalAlert mdGridWarning;
     }
 }

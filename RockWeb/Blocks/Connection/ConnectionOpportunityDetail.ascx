@@ -83,7 +83,7 @@
                         </div>
 
                         <Rock:PanelWidget ID="wpAttributes" runat="server" Title="Opportunity Attributes">
-                            <global::asp:PlaceHolder ID="phAttributes" runat="server" EnableViewState="false" />
+                            <global:asp:PlaceHolder ID="phAttributes" runat="server" EnableViewState="false" />
                         </Rock:PanelWidget>
 
                         <Rock:PanelWidget ID="wpConnectionOpportunityGroups" runat="server" Title="Placement Groups">
@@ -167,23 +167,23 @@
         <Rock:ModalDialog ID="dlgWorkflowDetails" runat="server" Title="Select Workflow" OnSaveClick="dlgWorkflowDetails_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="WorkflowDetails">
             <Content>
 
-                <global::asp:HiddenField ID="hfWorkflowGuid" runat="server" />
+                <global:asp:HiddenField ID="hfWorkflowGuid" runat="server" />
 
-                <global::asp:ValidationSummary ID="valWorkflowDetails" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="WorkflowDetails" />
+                <global:asp:ValidationSummary ID="valWorkflowDetails" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="WorkflowDetails" />
 
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:RockDropDownList ID="ddlTriggerType" runat="server" Label="Launch Workflow When" 
                             OnSelectedIndexChanged="ddlTriggerType_SelectedIndexChanged" AutoPostBack="true" Required="true" ValidationGroup="WorkflowDetails" >
-                            <global::asp:ListItem Value="0" Text="Request Started" />
-                            <global::asp:ListItem Value="8" Text="Request Assigned" />
-                            <global::asp:ListItem Value="7" Text="Request Transferred" />
-                            <global::asp:ListItem Value="1" Text="Request Connected" />
-                            <global::asp:ListItem Value="5" Text="Placement Group Assigned" />
-                            <global::asp:ListItem Value="2" Text="Status Changed" />
-                            <global::asp:ListItem Value="3" Text="State Changed" />
-                            <global::asp:ListItem Value="4" Text="Activity Added" />
-                            <global::asp:ListItem Value="6" Text="Manual" />
+                            <global:asp:ListItem Value="0" Text="Request Started" />
+                            <global:asp:ListItem Value="8" Text="Request Assigned" />
+                            <global:asp:ListItem Value="7" Text="Request Transferred" />
+                            <global:asp:ListItem Value="1" Text="Request Connected" />
+                            <global:asp:ListItem Value="5" Text="Placement Group Assigned" />
+                            <global:asp:ListItem Value="2" Text="Status Changed" />
+                            <global:asp:ListItem Value="3" Text="State Changed" />
+                            <global:asp:ListItem Value="4" Text="Activity Added" />
+                            <global:asp:ListItem Value="6" Text="Manual" />
                         </Rock:RockDropDownList>
                     </div>
                     <div class="col-md-6">
@@ -206,7 +206,7 @@
 
         <Rock:ModalDialog ID="dlgGroupDetails" runat="server" ValidationGroup="GroupDetails" SaveButtonText="Add" OnSaveClick="dlgGroupDetails_SaveClick" Title="Select Group">
             <Content>
-                <global::asp:ValidationSummary ID="valGroupDetails" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="GroupDetails" />
+                <global:asp:ValidationSummary ID="valGroupDetails" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="GroupDetails" />
                 <Rock:NotificationBox ID="nbInvalidGroupType" runat="server" NotificationBoxType="Danger" Visible="false" Heading="Group Type" />
                 <Rock:GroupPicker ID="gpOpportunityGroup" runat="server" Label="Select Group" ValidationGroup="GroupDetails" />
             </Content>
@@ -214,8 +214,8 @@
 
         <Rock:ModalDialog ID="dlgGroupConfigDetails" runat="server" ValidationGroup="GroupConfig" SaveButtonText="Add" OnSaveClick="dlgGroupConfigDetails_SaveClick" Title="Placement Group Configuration">
             <Content>
-                <global::asp:ValidationSummary ID="valGroupConfig" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="GroupConfig" />
-                <global::asp:HiddenField ID="hfGroupConfigGuid" runat="server" />
+                <global:asp:ValidationSummary ID="valGroupConfig" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="GroupConfig" />
+                <global:asp:HiddenField ID="hfGroupConfigGuid" runat="server" />
                 <div class="row">
                     <div class="col-md-4">
                         <Rock:RockDropDownList ID="ddlGroupType" runat="server" Label="Group Type" OnSelectedIndexChanged="ddlGroupType_SelectedIndexChanged" AutoPostBack="true" Help="The group type that the user will be placed in" Required="true" ValidationGroup="GroupConfig" />
@@ -242,8 +242,8 @@
 
         <Rock:ModalDialog ID="dlgConnectorGroupDetails" runat="server" ValidationGroup="ConnectorGroup" SaveButtonText="Add" OnSaveClick="dlgConnectorGroupDetails_SaveClick" Title="Select Group">
             <Content>
-                <global::asp:ValidationSummary ID="valConnectorGroup" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="ConnectorGroup" />
-                <global::asp:HiddenField ID="hfConnectorGroupGuid" runat="server" />
+                <global:asp:ValidationSummary ID="valConnectorGroup" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="ConnectorGroup" />
+                <global:asp:HiddenField ID="hfConnectorGroupGuid" runat="server" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:GroupPicker ID="gpGroup" runat="server" Label="Connector Group" ValidationGroup="ConnectorGroup" Required="true"  />

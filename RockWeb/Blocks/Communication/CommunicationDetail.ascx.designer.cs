@@ -256,6 +256,15 @@ namespace RockWeb.Blocks.Communication {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl sOpened;
         
         /// <summary>
+        /// wpMessageDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpMessageDetails;
+        
+        /// <summary>
         /// btnApprove control.
         /// </summary>
         /// <remarks>

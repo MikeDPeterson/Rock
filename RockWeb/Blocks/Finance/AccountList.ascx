@@ -16,19 +16,19 @@
                         <Rock:RockTextBox ID="txtAccountName" runat="server" Label="Name" />
                         <Rock:RockDropDownList ID="ddlCampus" runat="server" Label="Campus" Visible="false" />
                         <Rock:RockDropDownList ID="ddlIsPublic" runat="server" Label="Public">
-                            <global::asp:ListItem Text="" Value="" />
-                            <global::asp:ListItem Text="Yes" Value="Yes" />
-                            <global::asp:ListItem Text="No" Value="No" />
+                            <global:asp:ListItem Text="" Value="" />
+                            <global:asp:ListItem Text="Yes" Value="Yes" />
+                            <global:asp:ListItem Text="No" Value="No" />
                         </Rock:RockDropDownList>
                         <Rock:RockDropDownList ID="ddlIsActive" runat="server" Label="Active">
-                            <global::asp:ListItem Text="" Value="" />
-                            <global::asp:ListItem Text="Yes" Value="Yes" />
-                            <global::asp:ListItem Text="No" Value="No" />
+                            <global:asp:ListItem Text="" Value="" />
+                            <global:asp:ListItem Text="Yes" Value="Yes" />
+                            <global:asp:ListItem Text="No" Value="No" />
                         </Rock:RockDropDownList>
                         <Rock:RockDropDownList ID="ddlIsTaxDeductible" runat="server" Label="Tax Deductible">
-                            <global::asp:ListItem Text="" Value="" />
-                            <global::asp:ListItem Text="Yes" Value="Yes" />
-                            <global::asp:ListItem Text="No" Value="No" />
+                            <global:asp:ListItem Text="" Value="" />
+                            <global:asp:ListItem Text="Yes" Value="Yes" />
+                            <global:asp:ListItem Text="No" Value="No" />
                         </Rock:RockDropDownList>
             
                     </Rock:GridFilter>

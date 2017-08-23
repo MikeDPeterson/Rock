@@ -57,7 +57,7 @@
     
         <Rock:ModalDialog ID="dlgAddCalendarItemPage1" runat="server" Title="New Calendar Item" SaveButtonText="Next" OnSaveClick="dlgAddCalendarItemPage1_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="DlgPage1">
             <Content>
-                <global::asp:ValidationSummary ID="vsLinkageAdd" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="DlgPage1" />
+                <global:asp:ValidationSummary ID="vsLinkageAdd" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="DlgPage1" />
                 <Rock:NotificationBox ID="nbNoCalendar" runat="server" NotificationBoxType="Warning" Visible="false" Text="There are not any calendars available for you to add."/>
                 <Rock:RockDropDownList ID="ddlCalendar" runat="server" Label="Select Calendar" Required="true" ValidationGroup="DlgPage1" />
             </Content>

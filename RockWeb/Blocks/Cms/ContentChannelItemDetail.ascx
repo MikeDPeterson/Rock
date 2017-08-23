@@ -167,9 +167,9 @@
 
         <Rock:ModalDialog ID="dlgRemoveChild" runat="server" Title="Remove Child Item" OnCancelScript="clearActiveDialog();" CancelLinkVisible="false" ValidationGroup="RemoveChild" >
             <Content>
-                <global::asp:HiddenField ID="hfRemoveChildItem" runat="server" />
-                <global::asp:LinkButton ID="lbRemoveChildItem" runat="server" CssClass="btn btn-primary btn-block" Text="Remove Child Item" OnClick="lbRemoveChildItem_Click" />
-                <global::asp:LinkButton ID="lbDeleteChildItem" runat="server" CssClass="btn btn-primary btn-block" Text="Delete Child Item" onclick="lbDeleteChildItem_Click"/>
+                <global:asp:HiddenField ID="hfRemoveChildItem" runat="server" />
+                <global:asp:LinkButton ID="lbRemoveChildItem" runat="server" CssClass="btn btn-primary btn-block" Text="Remove Child Item" OnClick="lbRemoveChildItem_Click" />
+                <global:asp:LinkButton ID="lbDeleteChildItem" runat="server" CssClass="btn btn-primary btn-block" Text="Delete Child Item" onclick="lbDeleteChildItem_Click"/>
             </Content>
         </Rock:ModalDialog>
 

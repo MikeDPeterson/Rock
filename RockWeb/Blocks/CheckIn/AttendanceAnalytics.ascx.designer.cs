@@ -58,6 +58,15 @@ namespace RockWeb.Blocks.CheckIn {
         protected global::System.Web.UI.WebControls.HiddenField hfFilterUrl;
         
         /// <summary>
+        /// rcwGroupBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwGroupBy;
+        
+        /// <summary>
         /// rptGroupTypes control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace RockWeb.Blocks.CheckIn {
         protected global::System.Web.UI.WebControls.Panel pnlUpdateMessage;
         
         /// <summary>
+        /// nbUpdateMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbUpdateMessage;
+        
+        /// <summary>
         /// pnlResults control.
         /// </summary>
         /// <remarks>
@@ -101,6 +119,15 @@ namespace RockWeb.Blocks.CheckIn {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlShowByChart;
+        
+        /// <summary>
+        /// rcwGraphBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwGraphBy;
         
         /// <summary>
         /// lShowChartAttendanceGrid control.
@@ -128,6 +155,15 @@ namespace RockWeb.Blocks.CheckIn {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlShowByAttendees;
+        
+        /// <summary>
+        /// rcwAttendeesFilter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwAttendeesFilter;
         
         /// <summary>
         /// pnlByVisitOptions control.
@@ -164,5 +200,68 @@ namespace RockWeb.Blocks.CheckIn {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lPatternAndMissedXBetween;
+        
+        /// <summary>
+        /// lFirstVisitDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteralField lFirstVisitDate;
+        
+        /// <summary>
+        /// lSecondVisitDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteralField lSecondVisitDate;
+        
+        /// <summary>
+        /// lServiceTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteralField lServiceTime;
+        
+        /// <summary>
+        /// lHomeAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteralField lHomeAddress;
+        
+        /// <summary>
+        /// lPhoneNumbers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteralField lPhoneNumbers;
+        
+        /// <summary>
+        /// lAttendanceCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteralField lAttendanceCount;
+        
+        /// <summary>
+        /// lAttendancePercent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteralField lAttendancePercent;
     }
 }

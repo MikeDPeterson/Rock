@@ -16,7 +16,7 @@
                         <Columns>
                             <Rock:ReorderField />
                             <Rock:RockBoundField DataField="Name" HeaderText="Name" />
-                            <global::asp:TemplateField HeaderText="Type" >
+                            <global:asp:TemplateField HeaderText="Type" >
                                 <ItemTemplate><%# GetComponentName( Eval( "EntityType") )%></ItemTemplate>
                             </TemplateField>
                             <Rock:BoolField DataField="IsActive" HeaderText="Active" />

@@ -103,6 +103,15 @@ namespace RockWeb.Blocks.Cms {
         protected global::System.Web.UI.WebControls.PlaceHolder phOccurrences;
         
         /// <summary>
+        /// nbWarningMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbWarningMessage;
+        
+        /// <summary>
         /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>

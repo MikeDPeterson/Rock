@@ -17,14 +17,14 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Edit HTML">
                 <Content>
 
-                    <global::asp:UpdatePanel runat="server" ID="upnlEdit">
+                    <global:asp:UpdatePanel runat="server" ID="upnlEdit">
                         <ContentTemplate>
-                            <global::asp:HiddenField ID="hfVersion" runat="server" />
-                            <global::asp:Panel ID="pnlEdit" runat="server" Visible="false">
+                            <global:asp:HiddenField ID="hfVersion" runat="server" />
+                            <global:asp:Panel ID="pnlEdit" runat="server" Visible="false">
                                 <Rock:NotificationBox ID="nbInvalidHtml" runat="server" NotificationBoxType="Warning" Visible="false" />
 
                                 <!-- Approval -->
-                                <global::asp:UpdatePanel ID="upnlApproval" runat="server">
+                                <global:asp:UpdatePanel ID="upnlApproval" runat="server">
                                     <ContentTemplate>
 
                                         <div class="alert alert-info">
@@ -59,7 +59,7 @@
 
                             </Panel>
 
-                            <global::asp:Panel ID="pnlVersionGrid" runat="server" Visible="false" >
+                            <global:asp:Panel ID="pnlVersionGrid" runat="server" Visible="false" >
 
                                 <div class="grid">
                                     <Rock:Grid ID="gVersions" runat="server" DataKeyNames="Id" DisplayType="Full" ShowActionRow="false" AllowPaging="true" PageSize="10">

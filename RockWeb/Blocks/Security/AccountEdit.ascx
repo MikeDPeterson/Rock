@@ -21,9 +21,9 @@
                     <Rock:RockDropDownList ID="ddlSuffix" CssClass="input-width-md" runat="server" Label="Suffix"/>
                     <Rock:BirthdayPicker ID="bpBirthDay" runat="server" Label="Birthday" />
                     <Rock:RockRadioButtonList ID="rblGender" runat="server" RepeatDirection="Horizontal" Label="Gender">
-                        <global::asp:ListItem Text="Male" Value="Male" />
-                        <global::asp:ListItem Text="Female" Value="Female" />
-                        <global::asp:ListItem Text="Unknown" Value="Unknown" />
+                        <global:asp:ListItem Text="Male" Value="Male" />
+                        <global:asp:ListItem Text="Female" Value="Female" />
+                        <global:asp:ListItem Text="Unknown" Value="Unknown" />
                     </Rock:RockRadioButtonList>
                 </fieldset>
 
@@ -61,9 +61,9 @@
                     <Rock:DataTextBox ID="tbEmail" PrependText="<i class='fa fa-envelope'></i>" runat="server" SourceTypeName="Rock.Model.Person, Rock" PropertyName="Email" />
 
                     <Rock:RockRadioButtonList ID="rblEmailPreference" runat="server" RepeatDirection="Horizontal" Label="Email Preference">
-                        <global::asp:ListItem Text="Email Allowed" Value="EmailAllowed" />
-                        <global::asp:ListItem Text="No Mass Emails" Value="NoMassEmails" />
-                        <global::asp:ListItem Text="Do Not Email" Value="DoNotEmail" />
+                        <global:asp:ListItem Text="Email Allowed" Value="EmailAllowed" />
+                        <global:asp:ListItem Text="No Mass Emails" Value="NoMassEmails" />
+                        <global:asp:ListItem Text="Do Not Email" Value="DoNotEmail" />
                     </Rock:RockRadioButtonList>
 
                 </fieldset>

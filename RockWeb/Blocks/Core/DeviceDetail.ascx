@@ -57,9 +57,9 @@
                                     <h4>Print Settings</h4>
                                     <Rock:RockDropDownList ID="ddlPrintTo" runat="server" Label="Print Using" AutoPostBack="true" OnSelectedIndexChanged="ddlPrintTo_SelectedIndexChanged"
                                         Help="When this device needs to print, should it use the printer configured in next setting (Device Printer), the printer configured for the location (Location Printer), or should the Group Type's 'Print Using' setting determine the printer to use (Group Type)?">
-                                        <global::asp:ListItem Text="Device Printer" Value="1" />
-                                        <global::asp:ListItem Text="Location Printer" Value="2" />
-                                        <global::asp:ListItem Text="Group Type" Value="0" />
+                                        <global:asp:ListItem Text="Device Printer" Value="1" />
+                                        <global:asp:ListItem Text="Location Printer" Value="2" />
+                                        <global:asp:ListItem Text="Group Type" Value="0" />
                                     </Rock:RockDropDownList>
                                     <Rock:RockDropDownList ID="ddlPrinter" runat="server" Label="Printer" DataTextField="Name" DataValueField="Id"
                                         Help="The printer that this device should use for printing" />
@@ -91,7 +91,7 @@
 
         <Rock:ModalDialog ID="mdLocationPicker" runat="server" SaveButtonText="Save" OnSaveClick="btnAddLocation_Click" Title="Select Check-in Location" OnCancelScript="clearActiveDialog();" ValidationGroup="Location">
             <Content ID="mdLocationPickerContent">
-                <global::asp:HiddenField ID="hfAddLocationId" runat="server" />
+                <global:asp:HiddenField ID="hfAddLocationId" runat="server" />
                 <Rock:LocationItemPicker ID="locationPicker" runat="server" Label="Check-in Location" ValidationGroup="Location" />
             </Content>
         </Rock:ModalDialog>

@@ -58,6 +58,15 @@ namespace RockWeb.Blocks.Reporting {
         protected global::System.Web.UI.WebControls.Literal lReadOnlyTitle;
         
         /// <summary>
+        /// hlType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlType;
+        
+        /// <summary>
         /// ValidationSummary1 control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace RockWeb.Blocks.Reporting {
         protected global::System.Web.UI.WebControls.Panel pnlSQLSourceType;
         
         /// <summary>
+        /// nbSQLHelp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbSQLHelp;
+        
+        /// <summary>
         /// pnlDataviewSourceType control.
         /// </summary>
         /// <remarks>
@@ -92,6 +110,15 @@ namespace RockWeb.Blocks.Reporting {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlDataviewSourceType;
+        
+        /// <summary>
+        /// nbDataViewHelp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbDataViewHelp;
         
         /// <summary>
         /// btnSave control.
@@ -121,6 +148,15 @@ namespace RockWeb.Blocks.Reporting {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl fieldsetViewDetails;
         
         /// <summary>
+        /// lMetricChartSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.HighlightLabel lMetricChartSummary;
+        
+        /// <summary>
         /// lblMainDetails control.
         /// </summary>
         /// <remarks>
@@ -146,5 +182,14 @@ namespace RockWeb.Blocks.Reporting {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnDelete;
+        
+        /// <summary>
+        /// rcwAdvanced control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwAdvanced;
     }
 }

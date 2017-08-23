@@ -21,7 +21,7 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Channel Configuration" OnCancelScript="clearDialog();">
                 <Content>
 
-                    <global::asp:UpdatePanel ID="upnlEdit" runat="server">
+                    <global:asp:UpdatePanel ID="upnlEdit" runat="server">
                         <ContentTemplate>
 
                             <Rock:NotificationBox ID="nbError" runat="server" Heading="Error" Title="Query Error!" NotificationBoxType="Danger" Visible="false" />

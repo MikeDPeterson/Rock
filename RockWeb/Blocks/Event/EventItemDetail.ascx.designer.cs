@@ -139,6 +139,15 @@ namespace RockWeb.Blocks.Event {
         protected global::System.Web.UI.WebControls.Literal lApproval;
         
         /// <summary>
+        /// rcwAudiences control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwAudiences;
+        
+        /// <summary>
         /// btnSave control.
         /// </summary>
         /// <remarks>

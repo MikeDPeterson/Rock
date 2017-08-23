@@ -76,6 +76,15 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pnlEditDetails;
         
         /// <summary>
+        /// rcwCampus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwCampus;
+        
+        /// <summary>
         /// cblCampus control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,24 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.CheckBoxList cblCampus;
         
         /// <summary>
+        /// wpConnectionOpportunityGroups control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpConnectionOpportunityGroups;
+        
+        /// <summary>
+        /// wpConnectionOpportunityConnectorGroups control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpConnectionOpportunityConnectorGroups;
+        
+        /// <summary>
         /// lvDefaultConnectors control.
         /// </summary>
         /// <remarks>
@@ -92,6 +119,15 @@ namespace RockWeb.Blocks.Connection {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListView lvDefaultConnectors;
+        
+        /// <summary>
+        /// wpConnectionOpportunityWorkflow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpConnectionOpportunityWorkflow;
         
         /// <summary>
         /// btnSave control.

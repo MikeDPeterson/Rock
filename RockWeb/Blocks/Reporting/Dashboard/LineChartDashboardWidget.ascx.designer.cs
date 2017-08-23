@@ -58,6 +58,24 @@ namespace RockWeb.Blocks.Reporting.Dashboard {
         protected global::System.Web.UI.WebControls.Literal lDashboardSubtitle;
         
         /// <summary>
+        /// nbMetricWarning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMetricWarning;
+        
+        /// <summary>
+        /// flotChart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.LineChart flotChart;
+        
+        /// <summary>
         /// pnlEditModel control.
         /// </summary>
         /// <remarks>
@@ -65,5 +83,50 @@ namespace RockWeb.Blocks.Reporting.Dashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlEditModel;
+        
+        /// <summary>
+        /// mdEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
+        
+        /// <summary>
+        /// mpMetricCategoryPicker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.MetricCategoryPicker mpMetricCategoryPicker;
+        
+        /// <summary>
+        /// rblSelectOrContext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockRadioButtonList rblSelectOrContext;
+        
+        /// <summary>
+        /// cbCombineValues control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockCheckBox cbCombineValues;
+        
+        /// <summary>
+        /// drpSlidingDateRange control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.SlidingDateRangePicker drpSlidingDateRange;
     }
 }

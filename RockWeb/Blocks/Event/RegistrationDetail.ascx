@@ -230,7 +230,7 @@
 
                                     <Rock:Grid ID="gPayments" runat="server" DisplayType="Light" AllowSorting="false" RowItemText="Payment" ExportSource="ColumnOutput" >
                                         <Columns>
-                                            <global::asp:HyperLinkField DataTextField="TransactionDateTime" DataNavigateUrlFields="Id" HeaderText="Date / Time" />
+                                            <global:asp:HyperLinkField DataTextField="TransactionDateTime" DataNavigateUrlFields="Id" HeaderText="Date / Time" />
                                             <Rock:RockBoundField DataField="Details" HeaderText="Details" HtmlEncode="false" />
                                             <Rock:CurrencyField DataField="TotalAmount" HeaderText="Amount" />
                                         </Columns>
@@ -279,7 +279,7 @@
 
         <Rock:ModalDialog ID="mdMoveRegistration" runat="server" Title="Move Registration" ValidationGroup="vgMoveRegistration" CancelLinkVisible="false">
             <Content>
-                <global::asp:ValidationSummary ID="vsMoveRegistration" runat="server" ValidationGroup="vgMoveRegistration" HeaderText="Please Correct the Following" CssClass="alert alert-danger"  />
+                <global:asp:ValidationSummary ID="vsMoveRegistration" runat="server" ValidationGroup="vgMoveRegistration" HeaderText="Please Correct the Following" CssClass="alert alert-danger"  />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:RockLiteral ID="lCurrentRegistrationInstance" runat="server" Label="Current Registration Instance" />

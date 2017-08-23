@@ -56,7 +56,7 @@
                     </Rock:RockTemplateField>
                     <Rock:RockTemplateField HeaderText="Code">
                         <ItemTemplate>
-                            <global::asp:RockLiteral id="lActive" runat="server" /><br />
+                            <global:asp:RockLiteral id="lActive" runat="server" /><br />
                             <%# Eval("Code") %>
                         </ItemTemplate>
                     </Rock:RockTemplateField>

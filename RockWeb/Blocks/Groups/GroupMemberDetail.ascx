@@ -114,7 +114,7 @@
 
         <Rock:ModalDialog ID="mdMoveGroupMember" runat="server" Title="Move Group Member" ValidationGroup="vgMoveGroupMember" Visible="false" CancelLinkVisible="false">
             <Content>
-                <global::asp:ValidationSummary ID="vsMoveGroupMember" runat="server" ValidationGroup="vgMoveGroupMember" HeaderText="Please Correct the Following" CssClass="alert alert-danger"  />
+                <global:asp:ValidationSummary ID="vsMoveGroupMember" runat="server" ValidationGroup="vgMoveGroupMember" HeaderText="Please Correct the Following" CssClass="alert alert-danger"  />
                 <div class="row">
                     <div class="col-md-12">
                         <Rock:RockLiteral ID="lCurrentGroup" runat="server" Label="Current Group" />

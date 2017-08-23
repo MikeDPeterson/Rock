@@ -15,7 +15,7 @@
                     <Rock:Grid ID="rGridGateway" runat="server"  RowItemText="Gateway" OnRowSelected="rGridGateway_Edit" TooltipField="Description" AllowSorting="true">
                         <Columns>
                             <Rock:RockBoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
-                            <glboal::asp:TemplateField HeaderText="Gateway Type" SortExpression="EntityType.Name">
+                            <glboal:asp:TemplateField HeaderText="Gateway Type" SortExpression="EntityType.Name">
                                 <ItemTemplate><%# GetComponentName( Eval( "EntityType") )%></ItemTemplate>
                             </TemplateField>
                             <Rock:BoolField DataField="IsActive" HeaderText="Active" SortExpression="IsActive" />

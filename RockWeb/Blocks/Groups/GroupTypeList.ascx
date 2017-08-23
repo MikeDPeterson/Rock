@@ -13,14 +13,14 @@
                     <Rock:GridFilter ID="rFilter" runat="server" OnDisplayFilterValue="rFilter_DisplayFilterValue">
                         <Rock:RockDropDownList ID="ddlPurpose" runat="server" Label="Purpose"></Rock:RockDropDownList>
                         <Rock:RockDropDownList ID="ddlIsSystem" runat="server" Label="System Group Type">
-                            <glboal::asp:ListItem Value="" Text=" " />
-                            <global::asp:ListItem Value="Yes" Text="Yes" />
-                            <glboal::asp:ListItem Value="No" Text="No" />
+                            <glboal:asp:ListItem Value="" Text=" " />
+                            <global:asp:ListItem Value="Yes" Text="Yes" />
+                            <glboal:asp:ListItem Value="No" Text="No" />
                         </Rock:RockDropDownList>
                         <Rock:RockDropDownList ID="ddlShowInNavigation" runat="server" Label="Shown in Navigation">
-                            <global::asp:ListItem Value="" Text=" " />
-                            <global::asp:ListItem Value="Yes" Text="Yes" />
-                            <global::asp:ListItem Value="No" Text="No" />
+                            <global:asp:ListItem Value="" Text=" " />
+                            <global:asp:ListItem Value="Yes" Text="Yes" />
+                            <global:asp:ListItem Value="No" Text="No" />
                         </Rock:RockDropDownList>
                     </Rock:GridFilter>
                     <Rock:ModalAlert ID="mdGridWarning" runat="server" />

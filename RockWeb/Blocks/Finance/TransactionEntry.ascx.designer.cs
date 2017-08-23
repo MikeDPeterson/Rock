@@ -409,6 +409,15 @@ namespace RockWeb.Blocks.Finance {
         protected global::System.Web.UI.WebControls.LinkButton btnConfirmationPrev;
         
         /// <summary>
+        /// btnConfirmationNext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.BootstrapButton btnConfirmationNext;
+        
+        /// <summary>
         /// pnlSuccess control.
         /// </summary>
         /// <remarks>

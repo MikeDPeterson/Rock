@@ -94,6 +94,15 @@ namespace RockWeb.Blocks.Crm {
         protected global::System.Web.UI.WebControls.LinkButton lbRemoveAllIndividuals;
         
         /// <summary>
+        /// pwIndividualDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget pwIndividualDetails;
+        
+        /// <summary>
         /// phAttributesCol1 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +121,15 @@ namespace RockWeb.Blocks.Crm {
         protected global::System.Web.UI.WebControls.PlaceHolder phAttributesCol2;
         
         /// <summary>
+        /// pwGroup control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget pwGroup;
+        
+        /// <summary>
         /// pnlGroupMemberStatus control.
         /// </summary>
         /// <remarks>
@@ -128,6 +146,15 @@ namespace RockWeb.Blocks.Crm {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder phAttributes;
+        
+        /// <summary>
+        /// pwTag control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget pwTag;
         
         /// <summary>
         /// cvSelection control.

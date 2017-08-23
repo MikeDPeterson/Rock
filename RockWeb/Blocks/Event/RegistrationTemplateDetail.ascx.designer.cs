@@ -76,6 +76,24 @@ namespace RockWeb.Blocks.Event {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divCurrentFamilyMembers;
         
         /// <summary>
+        /// wpPersonFields control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpPersonFields;
+        
+        /// <summary>
+        /// wpDefaultForm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpDefaultForm;
+        
+        /// <summary>
         /// phForms control.
         /// </summary>
         /// <remarks>
@@ -92,6 +110,69 @@ namespace RockWeb.Blocks.Event {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbAddForm;
+        
+        /// <summary>
+        /// wpFees control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpFees;
+        
+        /// <summary>
+        /// wpDiscounts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpDiscounts;
+        
+        /// <summary>
+        /// wpTerms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpTerms;
+        
+        /// <summary>
+        /// wpConfirmation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpConfirmation;
+        
+        /// <summary>
+        /// wpReminder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpReminder;
+        
+        /// <summary>
+        /// wpPaymentReminder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpPaymentReminder;
+        
+        /// <summary>
+        /// wpWaitListTransition control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpWaitListTransition;
         
         /// <summary>
         /// btnSave control.

@@ -102,7 +102,7 @@
                                     </Columns>
                                 </Rock:Grid>
                             </div>
-                            <global::asp:Panel ID="pnlSchedule" runat="server" Visible="false">
+                            <global:asp:Panel ID="pnlSchedule" runat="server" Visible="false">
 
                                 <div class="row">
                                     <div class="col-md-6">
@@ -126,7 +126,7 @@
                         </Rock:PanelWidget>
 
                         <Rock:PanelWidget ID="wpGroupAttributes" runat="server" Title="Group Attribute Values">
-                            <global::asp:PlaceHolder ID="phGroupAttributes" runat="server" EnableViewState="false" />
+                            <global:asp:PlaceHolder ID="phGroupAttributes" runat="server" EnableViewState="false" />
                         </Rock:PanelWidget>
 
                         <Rock:PanelWidget ID="wpGroupMemberAttributes" runat="server" Title="Member Attributes" CssClass="group-type-attribute-panel">
@@ -299,9 +299,9 @@
         <Rock:ModalDialog ID="dlgLocations" runat="server" Title="Group Location" OnSaveClick="dlgLocations_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Location">
             <Content>
 
-                <global::asp:HiddenField ID="hfAddLocationGroupGuid" runat="server" />
+                <global:asp:HiddenField ID="hfAddLocationGroupGuid" runat="server" />
 
-                <global::asp:ValidationSummary ID="valLocationSummary" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Location" />
+                <global:asp:ValidationSummary ID="valLocationSummary" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Location" />
 
                 <ul id="ulNav" runat="server" class="nav nav-pills">
                     <asp:Repeater ID="rptLocationTypes" runat="server">
@@ -333,11 +333,11 @@
         <!-- Group Requirements Modal Dialog -->
         <Rock:ModalDialog ID="mdGroupRequirement" runat="server" Title="Group Requirement" OnSaveClick="mdGroupRequirement_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="vg_GroupRequirement">
             <Content>
-                <global::asp:HiddenField ID="hfGroupRequirementGuid" runat="server" />
+                <global:asp:HiddenField ID="hfGroupRequirementGuid" runat="server" />
 
                 <Rock:NotificationBox id="nbDuplicateGroupRequirement" runat="server" NotificationBoxType="Warning" />
 
-                <global::asp:ValidationSummary ID="vsGroupRequirement" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="vg_GroupRequirement" />
+                <global:asp:ValidationSummary ID="vsGroupRequirement" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="vg_GroupRequirement" />
 
                 <Rock:RockDropDownList ID="ddlGroupRequirementType" runat="server" Label="Group Requirement Type" Required="true" ValidationGroup="vg_GroupRequirement"/>
 
@@ -347,8 +347,8 @@
 
         <Rock:ModalDialog ID="dlgMemberWorkflowTriggers" runat="server" OnSaveClick="dlgMemberWorkflowTriggers_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Trigger">
             <Content>
-                <glboal::asp:HiddenField ID="hfTriggerGuid" runat="server" />
-                <global::asp:ValidationSummary ID="vsTrigger" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Trigger" />
+                <glboal:asp:HiddenField ID="hfTriggerGuid" runat="server" />
+                <global:asp:ValidationSummary ID="vsTrigger" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Trigger" />
                 <Rock:NotificationBox ID="nbInvalidWorkflowType" runat="server" NotificationBoxType="Danger" Visible="false"
                     Text="The Workflow Type is missing or invalid. Make sure you selected a valid Workflow Type (and not a category)." />
                 <div class="row">

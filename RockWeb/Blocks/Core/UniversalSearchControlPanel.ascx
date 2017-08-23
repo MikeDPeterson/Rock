@@ -103,7 +103,7 @@
 
         <Rock:ModalDialog ID="mdEditEntityType" runat="server" Title="Entity Type Details" OnCancelScript="clearActiveDialog();">
             <Content>
-                <global::asp:HiddenField ID="hfIdValue" runat="server" />
+                <global:asp:HiddenField ID="hfIdValue" runat="server" />
                 <Rock:RockCheckBox ID="cbEnabledIndexing" runat="server" Label="Enable Indexing" />
 
             </Content>

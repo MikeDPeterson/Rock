@@ -75,8 +75,8 @@
                             <Rock:SelectField HeaderText="Show as a Filter" DataSelectedField="ShowAsFilter" ShowSelectAll="false" ItemStyle-CssClass="js-select-show-filter" Tooltip="Show filter to user" />
                             <Rock:SelectField HeaderText="Configurable" DataSelectedField="IsConfigurable" ShowSelectAll="false" ItemStyle-CssClass="js-select-configure-filter" Tooltip="Allow this filter to be configured" />
                             <Rock:SelectField HeaderText="Toggle Filter" DataSelectedField="IsTogglable" ShowSelectAll="false" ItemStyle-CssClass="js-select-togglable-filter" Tooltip="Show checkbox so user can choose to include the filter or not" />
-                            <global::asp:BoundField DataField="TitlePath" HeaderText="Title" />
-                            <global::asp:BoundField DataField="Summary" HeaderText="Summary" />
+                            <global:asp:BoundField DataField="TitlePath" HeaderText="Title" />
+                            <global:asp:BoundField DataField="Summary" HeaderText="Summary" />
                         </Columns>
                     </Rock:Grid>
                 </Content>

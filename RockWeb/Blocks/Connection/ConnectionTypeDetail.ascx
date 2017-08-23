@@ -141,14 +141,14 @@
 
         <Rock:ModalDialog ID="dlgConnectionActivityTypes" runat="server" ScrollbarEnabled="false" SaveButtonText="Add" OnSaveClick="btnAddConnectionActivityType_Click" Title="Create Activity" ValidationGroup="ConnectionActivityType">
             <Content>
-                <global::asp:HiddenField ID="hfConnectionTypeAddConnectionActivityTypeGuid" runat="server" />
+                <global:asp:HiddenField ID="hfConnectionTypeAddConnectionActivityTypeGuid" runat="server" />
                 <Rock:DataTextBox ID="tbConnectionActivityTypeName" SourceTypeName="Rock.Model.ConnectionActivityType, Rock" PropertyName="Name" Label="Activity Name" runat="server" ValidationGroup="ConnectionActivityType" />
             </Content>
         </Rock:ModalDialog>
 
         <Rock:ModalDialog ID="dlgConnectionStatuses" runat="server" ScrollbarEnabled="false" SaveButtonText="Add" OnSaveClick="btnAddConnectionStatus_Click" Title="Create Status" ValidationGroup="ConnectionStatus">
             <Content>
-                <global::asp:HiddenField ID="hfConnectionTypeAddConnectionStatusGuid" runat="server" />
+                <global:asp:HiddenField ID="hfConnectionTypeAddConnectionStatusGuid" runat="server" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:DataTextBox ID="tbConnectionStatusName" SourceTypeName="Rock.Model.ConnectionStatus, Rock" PropertyName="Name" Label="Name" runat="server" ValidationGroup="ConnectionStatus" />
@@ -172,23 +172,23 @@
         <Rock:ModalDialog ID="dlgConnectionWorkflow" runat="server" Title="Select Workflow" OnSaveClick="dlgConnectionWorkflow_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="ConnectionWorkflow">
             <Content>
 
-                <global::asp:HiddenField ID="hfAddConnectionWorkflowGuid" runat="server" />
+                <global:asp:HiddenField ID="hfAddConnectionWorkflowGuid" runat="server" />
 
-                <global::asp:ValidationSummary ID="valConnectionWorkflowSummary" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="ConnectionWorkflow" />
+                <global:asp:ValidationSummary ID="valConnectionWorkflowSummary" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="ConnectionWorkflow" />
 
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:RockDropDownList ID="ddlTriggerType" runat="server" Label="Launch Workflow When" 
                             OnSelectedIndexChanged="ddlTriggerType_SelectedIndexChanged" AutoPostBack="true" Required="true" ValidationGroup="ConnectionWorkflow" >
-                            <global::asp:ListItem Value="0" Text="Request Started" />
-                            <global::asp:ListItem Value="8" Text="Request Assigned" />
-                            <global::asp:ListItem Value="7" Text="Request Transferred" />
-                            <global::asp:ListItem Value="1" Text="Request Connected" />
-                            <global::asp:ListItem Value="5" Text="Placement Group Assigned" />
-                            <global::asp:ListItem Value="2" Text="Status Changed" />
-                            <global::asp:ListItem Value="3" Text="State Changed" />
-                            <global::asp:ListItem Value="4" Text="Activity Added" />
-                            <global::asp:ListItem Value="6" Text="Manual" />
+                            <global:asp:ListItem Value="0" Text="Request Started" />
+                            <global:asp:ListItem Value="8" Text="Request Assigned" />
+                            <global:asp:ListItem Value="7" Text="Request Transferred" />
+                            <global:asp:ListItem Value="1" Text="Request Connected" />
+                            <global:asp:ListItem Value="5" Text="Placement Group Assigned" />
+                            <global:asp:ListItem Value="2" Text="Status Changed" />
+                            <global:asp:ListItem Value="3" Text="State Changed" />
+                            <global:asp:ListItem Value="4" Text="Activity Added" />
+                            <global:asp:ListItem Value="6" Text="Manual" />
                         </Rock:RockDropDownList>
                     </div>
                     <div class="col-md-6">

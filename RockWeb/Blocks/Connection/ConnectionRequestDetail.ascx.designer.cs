@@ -238,6 +238,15 @@ namespace RockWeb.Blocks.Connection {
         protected global::System.Web.UI.WebControls.Label asdasd;
         
         /// <summary>
+        /// btnSearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.BootstrapButton btnSearch;
+        
+        /// <summary>
         /// btnTransferSave control.
         /// </summary>
         /// <remarks>
