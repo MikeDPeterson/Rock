@@ -62,6 +62,9 @@ namespace RockWeb.Blocks.Core
         protected global::Rock.Web.UI.Controls.DataTextBox tbHighlightColor;
         protected global::Rock.Web.UI.Controls.NotificationBox nbMessage;
 
+        protected global::System.Web.UI.WebControls.HiddenField hfIdValue;
+        protected global::System.Web.UI.WebControls.Panel pnlEntityInfo;
+
         #endregion
 
         #region Fields

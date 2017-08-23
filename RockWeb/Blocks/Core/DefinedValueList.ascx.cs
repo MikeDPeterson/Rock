@@ -46,6 +46,8 @@ namespace RockWeb.Blocks.Core
         protected global::Rock.Web.UI.Controls.DataTextBox tbValueName;
         protected global::Rock.Web.UI.Controls.DataTextBox tbValueDescription;
 
+        protected global::System.Web.UI.WebControls.HiddenField hfDefinedValueId;
+
         #endregion
 
         #region Private Variables

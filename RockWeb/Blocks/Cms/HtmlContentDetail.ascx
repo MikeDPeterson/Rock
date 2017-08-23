@@ -21,7 +21,7 @@
                         <ContentTemplate>
                             <global:asp:HiddenField ID="hfVersion" runat="server" />
                             <global:asp:Panel ID="pnlEdit" runat="server" Visible="false">
-                                <Rock:NotificationBox ID="nbInvalidHtml" runat="server" NotificationBoxType="Warning" Visible="false" />
+                                <global:Rock:NotificationBox ID="nbInvalidHtml" runat="server" NotificationBoxType="Warning" Visible="false" />
 
                                 <!-- Approval -->
                                 <global:asp:UpdatePanel ID="upnlApproval" runat="server">
@@ -51,11 +51,11 @@
 
                                 <!-- Edit Html -->
 
-                                <Rock:DateRangePicker ID="drpDateRange" runat="server" Label="Display from" />
+                                <global:Rock:DateRangePicker ID="drpDateRange" runat="server" Label="Display from" />
 
-                                <Rock:HtmlEditor ID="htmlEditor" runat="server" ResizeMaxWidth="720" Height="140" />
+                                <global:Rock:HtmlEditor ID="htmlEditor" runat="server" ResizeMaxWidth="720" Height="140" />
                                 
-                                <Rock:RockCheckBox ID="cbOverwriteVersion" runat="server" Text="Don't save as a new version" />
+                                <global:Rock:RockCheckBox ID="cbOverwriteVersion" runat="server" Text="Don't save as a new version" />
 
                             </Panel>
 
@@ -76,7 +76,7 @@
                                     </Rock:Grid>
                                 </div>
 
-                                <Rock:LinkButton runat="server" ID="lbReturnToEdit" CssClass="btn btn-primary" Text="Back" OnClick="lbReturnToEdit_Click" />
+                                <global:asp:LinkButton runat="server" ID="lbReturnToEdit" CssClass="btn btn-primary" Text="Back" OnClick="lbReturnToEdit_Click" />
 
                             </Panel>
 

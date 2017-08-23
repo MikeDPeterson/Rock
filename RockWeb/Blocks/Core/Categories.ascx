@@ -39,7 +39,7 @@
                 <global:asp:HiddenField ID="hfIdValue" runat="server" />
 
                 <global:asp:Panel ID="pnlEntityInfo" runat="server" CssClass="well">
-                    <Rock:EntityTypePicker ID="entityTypePicker" runat="server" Label="Entity Type" Required="true" />
+                    <global:Rock:EntityTypePicker ID="entityTypePicker" runat="server" Label="Entity Type" Required="true" />
 
                     <div class="row">
                         <div class="col-md-6">
