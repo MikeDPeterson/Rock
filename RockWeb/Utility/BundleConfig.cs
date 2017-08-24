@@ -43,40 +43,40 @@ namespace RockWeb.Utility
                 "~/Scripts/WebForms/TreeView.js",
                 "~/Scripts/WebForms/WebParts.js" ) );
 
-            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockLibs" ).Include(
-                "~/Scripts/jquery-ui-1.10.0.custom.min.js",
-                "~/Scripts/bootstrap.min.js",
-                "~/Scripts/bootstrap-timepicker.js",
-                "~/Scripts/bootstrap-datepicker.js",
-                "~/Scripts/bootstrap-modalmanager.js",
-                "~/Scripts/bootstrap-modal.js",
-                "~/Scripts/bootbox.min.js",
-                "~/Scripts/typeahead.min.js",
-                "~/Scripts/jquery.fileupload.js",
-                "~/Scripts/jquery.tinyscrollbar.js",
-                "~/Scripts/jcrop.min.js",
-                "~/Scripts/ResizeSensor.js",       
-                "~/Scripts/ion.rangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js",
-                "~/Scripts/Rock/Extensions/*.js" ) );
+            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockLibs" )
+                .Include( "~/Scripts/jquery-ui-1.10.0.custom.min.js",
+                          "~/Scripts/bootstrap.min.js",
+                          "~/Scripts/bootstrap-timepicker.js",
+                          "~/Scripts/bootstrap-datepicker.js",
+                          "~/Scripts/bootstrap-modalmanager.js",
+                          "~/Scripts/bootstrap-modal.js",
+                          "~/Scripts/bootbox.min.js",
+                          "~/Scripts/typeahead.min.js",
+                          "~/Scripts/jquery.fileupload.js",
+                          "~/Scripts/jquery.tinyscrollbar.js",
+                          "~/Scripts/jcrop.min.js",
+                          "~/Scripts/ResizeSensor.js",
+                          "~/Scripts/ion.rangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js" )
+                .IncludeDirectory( "~/Scripts/Rock/Extensions", "*.js", false ) );
 
-            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockUi" ).Include(
-                "~/Scripts/Rock/dialogs.js",
-                "~/Scripts/Rock/settings.js",
-                "~/Scripts/Rock/utility.js",
-                "~/Scripts/Rock/Controls/*.js" ) );
+            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockUi" )
+                .Include( "~/Scripts/Rock/dialogs.js",
+                          "~/Scripts/Rock/settings.js",
+                          "~/Scripts/Rock/utility.js" )
+                .IncludeDirectory( "~/Scripts/Rock/Controls", "*.js", false ) );
 
-            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockValidation" ).Include(
-                "~/Scripts/Rock/Validate/*.js" ) );
+            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockValidation" )
+                .IncludeDirectory( "~/Scripts/Rock/Validate", "*.js", false ) );
 
             // Creating a separate "Admin" bundle specifically for JS functionality that needs
             // to be included for administrative users
-            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockAdmin" ).Include( 
-                "~/Scripts/Rock/Admin/*.js" ) );
+            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockAdmin" )
+                .IncludeDirectory( "~/Scripts/Rock/Admin", "*.js", false ) );
 
             // Creating a separate "RockHtmlEditorPlugins" bundle specifically for JS functionality that needs
             // to be included for HtmlEditor
-            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockHtmlEditorPlugins" ).Include(
-                "~/Scripts/summernote/plugins/*.js" ) );
+            bundles.Add( new ScriptBundle( "~/Scripts/Bundles/RockHtmlEditorPlugins" )
+                .IncludeDirectory( "~/Scripts/summernote/plugins", "*.js", false ) );
 
             // make sure the ConcatenationToken is what we want.  This is supposed to be the default, but it occassionally was an empty string.
             foreach ( var bundle in bundles )
