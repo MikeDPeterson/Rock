@@ -40,8 +40,8 @@
                                 <div class="col-md-6">
                                     <Rock:RockRadioButtonList ID="rblScope" runat="server" Label="Scope" RepeatDirection="Horizontal"
                                         AutoPostBack="true" OnSelectedIndexChanged="rblScope_SelectedIndexChanged">
-                                        <global:asp:ListItem Value="Organization" Text="Organizational" Selected="True" />
-                                        <global:asp:ListItem Value="Personal" Text="Personal" />
+                                        <asp:ListItem Value="Organization" Text="Organizational" Selected="True" />
+                                        <asp:ListItem Value="Personal" Text="Personal" />
                                     </Rock:RockRadioButtonList>
                                     <Rock:PersonPicker ID="ppOwner" runat="server" Label="Owner" />
                                 </div>

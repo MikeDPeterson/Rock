@@ -60,7 +60,6 @@ namespace RockWeb.Blocks.Communication
         protected global::Rock.Web.UI.Controls.Grid gCancelled;
         protected global::Rock.Web.UI.Controls.Grid gOpened;
         protected global::Rock.Web.UI.Controls.PanelWidget wpEvents;
-        protected global::Rock.Web.UI.Controls.RockLiteral lDetails;
         protected global::Rock.Web.UI.Controls.Grid gActivity;
         protected global::Rock.Web.UI.Controls.NotificationBox nbResult;
 

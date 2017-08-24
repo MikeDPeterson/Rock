@@ -47,5 +47,14 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton btnMatchPeople;
+        
+        /// <summary>
+        /// lPersonMatches control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockLiteralField lPersonMatches;
     }
 }

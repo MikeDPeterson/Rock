@@ -58,7 +58,6 @@ namespace RockWeb.Blocks.Cms
     {
         #region Rock Controls
 
-        protected global::Rock.Web.UI.Controls.RockTextBox tbSearch;
         protected global::Rock.Web.UI.Controls.RockCheckBoxList cblModelFilter;
         protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlSearchType;

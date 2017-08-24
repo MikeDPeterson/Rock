@@ -94,6 +94,15 @@ namespace RockWeb.Blocks.Reporting.Dashboard {
         protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
         
         /// <summary>
+        /// upnlEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upnlEdit;
+        
+        /// <summary>
         /// mpMetricCategoryPicker control.
         /// </summary>
         /// <remarks>
@@ -110,6 +119,15 @@ namespace RockWeb.Blocks.Reporting.Dashboard {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Rock.Web.UI.Controls.RockRadioButtonList rblSelectOrContext;
+        
+        /// <summary>
+        /// phMetricValuePartitions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phMetricValuePartitions;
         
         /// <summary>
         /// cbCombineValues control.

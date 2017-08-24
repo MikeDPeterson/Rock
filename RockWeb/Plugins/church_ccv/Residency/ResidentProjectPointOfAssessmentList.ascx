@@ -15,8 +15,8 @@
                     <Rock:Grid ID="gList" runat="server" DataKeyNames="Id" AllowSorting="false" DisplayType="Light">
                         <Columns>
                             <Rock:ColorField DataField="ProjectPointOfAssessmentColor" ToolTipDataField="PointOfAssessmentTypeValue.Name" />
-                            <global:asp:BoundField DataField="AssessmentOrder" HeaderText="#" />
-                            <global:asp:BoundField DataField="AssessmentText" HeaderText="Text" />
+                            <asp:BoundField DataField="AssessmentOrder" HeaderText="#" />
+                            <asp:BoundField DataField="AssessmentText" HeaderText="Text" />
                         </Columns>
                     </Rock:Grid>
                 </div>

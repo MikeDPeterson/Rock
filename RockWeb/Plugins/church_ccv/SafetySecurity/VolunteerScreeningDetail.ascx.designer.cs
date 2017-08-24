@@ -128,5 +128,32 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pLegacy;
+        
+        /// <summary>
+        /// FileUploader1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.FileUploader FileUploader1;
+        
+        /// <summary>
+        /// FileUploader2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.FileUploader FileUploader2;
+        
+        /// <summary>
+        /// FileUploader3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.FileUploader FileUploader3;
     }
 }

@@ -64,17 +64,14 @@ namespace RockWeb.Blocks.Connection
         protected global::Rock.Web.UI.Controls.ModalDialog dlgAttribute;
         protected global::Rock.Web.UI.Controls.AttributeEditor edtAttributes;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectionActivityTypes;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfConnectionTypeAddConnectionActivityTypeGuid;
         protected global::Rock.Web.UI.Controls.DataTextBox tbConnectionActivityTypeName;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectionStatuses;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfConnectionTypeAddConnectionStatusGuid;
         protected global::Rock.Web.UI.Controls.DataTextBox tbConnectionStatusName;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbIsActive;
         protected global::Rock.Web.UI.Controls.DataTextBox tbConnectionStatusDescription;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbIsCritical;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbIsDefault;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectionWorkflow;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfAddConnectionWorkflowGuid;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerType;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlWorkflowType;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrimaryQualifier;

@@ -74,9 +74,9 @@
                                     </div>
                                 </div>
                                 <Rock:RockRadioButtonList ID="rblGender" runat="server" RepeatDirection="Horizontal" Label="Gender">
-                                    <global:asp:ListItem Text="Male" Value="Male" />
-                                    <global:asp:ListItem Text="Female" Value="Female" />
-                                    <global:asp:ListItem Text="Unknown" Value="Unknown" />
+                                    <asp:ListItem Text="Male" Value="Male" />
+                                    <asp:ListItem Text="Female" Value="Female" />
+                                    <asp:ListItem Text="Unknown" Value="Unknown" />
                                 </Rock:RockRadioButtonList>
                                 <Rock:BirthdayPicker ID="bpBirthDay" runat="server" Label="Birthday" />
                                 <div class="row">
@@ -145,9 +145,9 @@
                             </div>
 
                             <Rock:RockRadioButtonList ID="rblEmailPreference" runat="server" RepeatDirection="Horizontal" Label="Email Preference">
-                                <global:asp:ListItem Text="Email Allowed" Value="EmailAllowed" />
-                                <global:asp:ListItem Text="No Mass Emails" Value="NoMassEmails" />
-                                <global:asp:ListItem Text="Do Not Email" Value="DoNotEmail" />
+                                <asp:ListItem Text="Email Allowed" Value="EmailAllowed" />
+                                <asp:ListItem Text="No Mass Emails" Value="NoMassEmails" />
+                                <asp:ListItem Text="Do Not Email" Value="DoNotEmail" />
                             </Rock:RockRadioButtonList>
 
                         </fieldset>

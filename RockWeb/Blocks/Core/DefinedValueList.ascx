@@ -38,8 +38,8 @@
             <Rock:ModalDialog ID="modalValue" runat="server" Title="Defined Value" ValidationGroup="Value" >
                 <Content>
 
-                <global:asp:HiddenField ID="hfDefinedValueId" runat="server" />
-                <global:asp:ValidationSummary ID="valSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Value" />
+                <asp:HiddenField ID="hfDefinedValueId" runat="server" />
+                <asp:ValidationSummary ID="valSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Value" />
                 <legend>
                     <asp:Literal ID="lActionTitleDefinedValue" runat="server" />
                 </legend>

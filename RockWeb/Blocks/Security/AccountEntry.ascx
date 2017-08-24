@@ -91,9 +91,9 @@
                     <Rock:RockTextBox ID="tbLastName" runat="server" Label="Last Name" Required="true" />
                     <Rock:EmailBox ID="tbEmail" runat="server" Label="Email" Required="true" />
                     <Rock:RockDropDownList ID="ddlGender" runat="server" Label="Gender">
-                        <global:asp:ListItem Text="" Value="U" />
-                        <global:asp:ListItem Text="Male" Value="M" />
-                        <global:asp:ListItem Text="Female" Value="F" />
+                        <asp:ListItem Text="" Value="U" />
+                        <asp:ListItem Text="Male" Value="M" />
+                        <asp:ListItem Text="Female" Value="F" />
                     </Rock:RockDropDownList>
                     <Rock:BirthdayPicker ID="bdaypBirthDay" runat="server" Label="Birthday" />
                </fieldset>

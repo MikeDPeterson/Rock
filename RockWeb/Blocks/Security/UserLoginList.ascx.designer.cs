@@ -40,6 +40,15 @@ namespace RockWeb.Blocks.Security {
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
         
         /// <summary>
+        /// valUserLoginSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary valUserLoginSummary;
+        
+        /// <summary>
         /// nbMessage control.
         /// </summary>
         /// <remarks>

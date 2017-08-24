@@ -22,18 +22,18 @@
                             <Rock:GridFilter ID="rFilter" runat="server" OnDisplayFilterValue="rFilter_DisplayFilterValue">
                                 <Rock:DateRangePicker ID="drpDate" runat="server" Label="Next Start Date Range" />
                                 <Rock:RockDropDownList ID="ddlStatus" runat="server" Label="Status">
-                                    <global:asp:ListItem Text="All" Value="" />
-                                    <global:asp:ListItem Text="Active" Value="Active" />
-                                    <global:asp:ListItem Text="Inactive" Value="Inactive" />
+                                    <asp:ListItem Text="All" Value="" />
+                                    <asp:ListItem Text="Active" Value="Active" />
+                                    <asp:ListItem Text="Inactive" Value="Inactive" />
                                 </Rock:RockDropDownList>
                                 <Rock:RockDropDownList ID="ddlApprovalStatus" runat="server" Label="Approval Status">
-                                    <global:asp:ListItem Text="All" Value="" />
-                                    <global:asp:ListItem Text="Approved" Value="Approved" />
-                                    <global:asp:ListItem Text="Not Approved" Value="Not Approved" />
+                                    <asp:ListItem Text="All" Value="" />
+                                    <asp:ListItem Text="Approved" Value="Approved" />
+                                    <asp:ListItem Text="Not Approved" Value="Not Approved" />
                                 </Rock:RockDropDownList>
                                 <Rock:RockCheckBoxList ID="cblCampus" runat="server" Label="Campuses" DataTextField="Name" DataValueField="Id" />
                                 <Rock:RockCheckBoxList ID="cblAudience" runat="server" Label="Audiences" DataTextField="Name" DataValueField="Id" RepeatDirection="Horizontal" />
-                                <global:asp:PlaceHolder ID="phAttributeFilters" runat="server" />
+                                <asp:PlaceHolder ID="phAttributeFilters" runat="server" />
                             </Rock:GridFilter>
                             <Rock:Grid ID="gEventCalendarItems" runat="server" DisplayType="Full" AllowSorting="true" OnRowSelected="gEventCalendarItems_Edit">
                                 <Columns>

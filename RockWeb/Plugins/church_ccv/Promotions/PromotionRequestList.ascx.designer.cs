@@ -22,6 +22,15 @@ namespace RockWeb.Plugins.church_ccv.Promotions {
         protected global::System.Web.UI.UpdatePanel upMarketingCampaigns;
         
         /// <summary>
+        /// btnApply control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.BootstrapButton btnApply;
+        
+        /// <summary>
         /// pnlCampusSelect control.
         /// </summary>
         /// <remarks>

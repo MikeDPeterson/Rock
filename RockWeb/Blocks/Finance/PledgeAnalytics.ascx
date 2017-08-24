@@ -29,9 +29,9 @@
                             <Rock:NumberRangeEditor ID="nreAmountGiven" runat="server" Label="Amount Given" />
 
                             <Rock:RockRadioButtonList ID="rblInclude" runat="server" Label="Show">
-                                <global:asp:ListItem Text="Only those with pledges" Value="0" Selected="True" />
-                                <global:asp:ListItem Text="Only those with gifts" Value="1" />
-                                <global:asp:ListItem Text="Those with gifts or pledges" Value="2" />
+                                <asp:ListItem Text="Only those with pledges" Value="0" Selected="True" />
+                                <asp:ListItem Text="Only those with gifts" Value="1" />
+                                <asp:ListItem Text="Those with gifts or pledges" Value="2" />
                             </Rock:RockRadioButtonList>
                         </div>
 

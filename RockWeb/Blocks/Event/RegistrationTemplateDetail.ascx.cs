@@ -387,7 +387,7 @@ namespace RockWeb.Blocks.Event
         protected global::Rock.Web.UI.Controls.CurrencyBox cbMinimumInitialPayment;
         protected global::Rock.Web.UI.Controls.FinancialGatewayPicker fgpFinancialGateway;
         protected global::Rock.Web.UI.Controls.RockTextBox txtBatchNamePrefix;
-        protected global::Rock.Web.UI.Controls.WorkflowActionTypePicker wtpRegistrationWorkflow;
+        protected global::Rock.Web.UI.Controls.WorkflowTypePicker wtpRegistrationWorkflow;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowExternalUpdates;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlSignatureDocumentTemplate;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbDisplayInLine;
@@ -459,6 +459,7 @@ namespace RockWeb.Blocks.Event
         protected global::Rock.Web.UI.Controls.KeyValueList kvlMultipleFees;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbAllowMultiple;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbDiscountApplies;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbResidentComments;
 
         protected global::System.Web.UI.WebControls.Repeater rFees;
         protected global::System.Web.UI.WebControls.HiddenField hfFormGuid;

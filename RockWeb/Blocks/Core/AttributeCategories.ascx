@@ -23,7 +23,7 @@
                                 <Rock:RockTemplateField>
                                     <HeaderTemplate>Entity Type</HeaderTemplate>
                                     <ItemTemplate>
-                                        <global:asp:Literal ID="lEntityType" runat="server" />
+                                        <asp:Literal ID="lEntityType" runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField>
                                 <Rock:RockBoundField DataField="IconCssClass" HeaderText="Icon Class" />
@@ -40,7 +40,7 @@
         <Rock:ModalDialog ID="modalDetails" runat="server" Title="Category" ValidationGroup="EntityTypeName">
             <Content>
 
-                <global:asp:HiddenField ID="hfIdValue" runat="server" />
+                <asp:HiddenField ID="hfIdValue" runat="server" />
 
                 <div class="row">
                     <div class="col-md-6">

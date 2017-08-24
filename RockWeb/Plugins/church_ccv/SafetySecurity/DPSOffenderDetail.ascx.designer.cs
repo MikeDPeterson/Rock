@@ -85,21 +85,21 @@ namespace RockWeb.Plugins.church_ccv.SafetySecurity {
         protected global::System.Web.UI.WebControls.Literal lDPSOffenderInfoCol3;
         
         /// <summary>
-        /// btnIsConfirmMatch control.
+        /// lPersonImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnIsConfirmMatch;
+        protected global::Rock.Web.UI.Controls.RockLiteralField lPersonImage;
         
         /// <summary>
-        /// btnSetSOAttribute control.
+        /// lAddressInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnSetSOAttribute;
+        protected global::Rock.Web.UI.Controls.RockLiteralField lAddressInfo;
     }
 }

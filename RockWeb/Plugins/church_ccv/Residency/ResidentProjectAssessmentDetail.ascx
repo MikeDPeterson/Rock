@@ -47,10 +47,10 @@
                 <Rock:Grid ID="gList" runat="server" AllowSorting="false" DataKeyNames="ProjectPointOfAssessmentId,CompetencyPersonProjectAssessmentId" DisplayType="Light" RowClickEnabled="false">
                     <Columns>
                         <Rock:ColorField DataField="ProjectPointOfAssessmentColor" ToolTipDataField="ProjectPointOfAssessment.PointOfAssessmentTypeValue.Value" />
-                        <global:asp:BoundField DataField="ProjectPointOfAssessment.AssessmentOrder" HeaderText="#" />
-                        <global:asp:BoundField DataField="ProjectPointOfAssessment.AssessmentText" HeaderText="Text" />
-                        <global:asp:BoundField DataField="CompetencyPersonProjectAssessmentPointOfAssessment.Rating" HeaderText="Rating" />
-                        <global:asp:BoundField DataField="CompetencyPersonProjectAssessmentPointOfAssessment.RatingNotes" HeaderText="Rating Notes" />
+                        <asp:BoundField DataField="ProjectPointOfAssessment.AssessmentOrder" HeaderText="#" />
+                        <asp:BoundField DataField="ProjectPointOfAssessment.AssessmentText" HeaderText="Text" />
+                        <asp:BoundField DataField="CompetencyPersonProjectAssessmentPointOfAssessment.Rating" HeaderText="Rating" />
+                        <asp:BoundField DataField="CompetencyPersonProjectAssessmentPointOfAssessment.RatingNotes" HeaderText="Rating Notes" />
                     </Columns>
                 </Rock:Grid>
 

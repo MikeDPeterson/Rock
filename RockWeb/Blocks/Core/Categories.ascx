@@ -36,10 +36,10 @@
         <Rock:ModalDialog ID="mdDetails" runat="server" Title="Category" ValidationGroup="EntityTypeName">
             <Content>
 
-                <global:asp:HiddenField ID="hfIdValue" runat="server" />
+                <asp:HiddenField ID="hfIdValue" runat="server" />
 
-                <global:asp:Panel ID="pnlEntityInfo" runat="server" CssClass="well">
-                    <global:Rock:EntityTypePicker ID="entityTypePicker" runat="server" Label="Entity Type" Required="true" />
+                <asp:Panel ID="pnlEntityInfo" runat="server" CssClass="well">
+                    <Rock:EntityTypePicker ID="entityTypePicker" runat="server" Label="Entity Type" Required="true" />
 
                     <div class="row">
                         <div class="col-md-6">
@@ -49,7 +49,7 @@
                             <Rock:RockTextBox ID="tbEntityQualifierValue" runat="server" Label="Qualifier Value" />
                         </div>
                     </div>
-                </Panel>
+                </asp:Panel>
 
                 <div class="row">
                     <div class="col-md-6">

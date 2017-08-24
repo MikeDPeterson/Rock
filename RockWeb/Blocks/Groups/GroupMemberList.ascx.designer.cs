@@ -58,6 +58,15 @@ namespace RockWeb.Blocks.Groups {
         protected global::System.Web.UI.WebControls.HyperLink hlSyncSource;
         
         /// <summary>
+        /// vsPlaceElsewhere control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsPlaceElsewhere;
+        
+        /// <summary>
         /// rptSelectMemberTrigger control.
         /// </summary>
         /// <remarks>

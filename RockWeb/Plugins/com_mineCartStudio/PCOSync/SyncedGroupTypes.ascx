@@ -32,7 +32,7 @@
                         neccessary group attributes being created for that group type to allow syncing.
                     </p>
 
-                    <global:asp:ValidationSummary ID="valSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="GroupType" />
+                    <asp:ValidationSummary ID="valSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="GroupType" />
 
                     <Rock:RockDropDownList Id="ddlGroupType" runat="server" Label="Group Type" Required="true" ValidationGroup="GroupType" />
 

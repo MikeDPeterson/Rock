@@ -19,7 +19,7 @@
                         <Rock:Grid ID="rGrid" runat="server" RowItemText="Note Type" OnRowSelected="rGrid_Edit" >
                             <Columns>
                                 <Rock:ReorderField />
-                                <global:asp:BoundField DataField="EntityType.Name" HeaderText="Entity Type" />
+                                <asp:BoundField DataField="EntityType.Name" HeaderText="Entity Type" />
                                 <Rock:RockBoundField DataField="Name" HeaderText="Note Type" />
                                 <Rock:RockBoundField DataField="CssClass" HeaderText="CSS Class" />
                                 <Rock:RockBoundField DataField="IconCssClass" HeaderText="Icon CSS Class" />
@@ -41,7 +41,7 @@
         <Rock:ModalDialog ID="modalDetails" runat="server" Title="Category" ValidationGroup="EntityTypeName">
             <Content>
 
-                <global:asp:HiddenField ID="hfIdValue" runat="server" />
+                <asp:HiddenField ID="hfIdValue" runat="server" />
 
                 <div class="row">
                     <div class="col-md-6">

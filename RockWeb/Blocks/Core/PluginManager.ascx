@@ -46,8 +46,8 @@
                                     <div>
                                         <p><%# Eval("Summary") %></p>
                                     </div>
-                                    <global:asp:LinkButton CssClass="btn btn-default" ID="lbCommand" runat="server" />
-                                    <global:asp:LinkButton CssClass="btn btn-primary" ID="lbUpdate" CommandName="update" Text="Update" runat="server" /> &nbsp;
+                                    <asp:LinkButton CssClass="btn btn-default" ID="lbCommand" runat="server" />
+                                    <asp:LinkButton CssClass="btn btn-primary" ID="lbUpdate" CommandName="update" Text="Update" runat="server" /> &nbsp;
                                 
                                 </ItemTemplate>
                             </Rock:RockTemplateField>
@@ -90,8 +90,8 @@
                                 <Rock:RockTemplateField ShowHeader="False" ItemStyle-VerticalAlign="Top" >
                                     <ItemTemplate>
                                         <i runat="server" ID="iInstalledIcon" visible="false" class="fa fa-check" title="this version is installed"></i>
-                                        <global:asp:LinkButton CssClass="btn btn-default" ID="lbInstall" CommandName="Install" Text="<i class='fa fa-download'></i> &nbsp; Install" OnClientClick="$(this).button('loading')" data-loading-text="Installing..." runat="server" />
-                                        <global:asp:LinkButton CssClass="btn btn-primary" ID="lbUpdate" CommandName="Update" Visible="false" Text="<i class='fa fa-download'></i> &nbsp; Update" OnClientClick="$(this).button('loading')" data-loading-text="Updating..." runat="server" />
+                                        <asp:LinkButton CssClass="btn btn-default" ID="lbInstall" CommandName="Install" Text="<i class='fa fa-download'></i> &nbsp; Install" OnClientClick="$(this).button('loading')" data-loading-text="Installing..." runat="server" />
+                                        <asp:LinkButton CssClass="btn btn-primary" ID="lbUpdate" CommandName="Update" Visible="false" Text="<i class='fa fa-download'></i> &nbsp; Update" OnClientClick="$(this).button('loading')" data-loading-text="Updating..." runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField> 
                             </Columns>

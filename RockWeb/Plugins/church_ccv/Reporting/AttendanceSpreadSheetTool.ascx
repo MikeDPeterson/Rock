@@ -71,7 +71,7 @@
 
                     <Rock:SchedulePicker ID="spSchedules" runat="server" Label="Schedules" AllowMultiSelect="true" />
 
-                    <global:asp:Panel ID="pnlGroups" runat="server">
+                    <asp:Panel ID="pnlGroups" runat="server">
                         <h4 class="js-checkbox-selector cursor-pointer">Groups</h4>
                         <hr class="margin-t-none" />
                         <ul class="list-unstyled js-group-checkboxes group-checkboxes">
@@ -82,7 +82,7 @@
                             </asp:Repeater>
 
                         </ul>
-                    </Panel>
+                    </asp:Panel>
 
                 </Content>
             </Rock:ModalDialog>

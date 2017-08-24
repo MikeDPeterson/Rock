@@ -155,12 +155,12 @@
                                     <div class="grid">
                                         <Rock:Grid ID="gScheduleExclusions" runat="server" DisplayType="Light" ShowHeader="false" RowItemText="Exclusion">
                                             <Columns>
-                                                <glboal:asp:TemplateField>
+                                                <asp:TemplateField>
                                                     <ItemTemplate>
                                                         <%# ((DateTime)Eval("Value.Start")).ToShortDateString() %> - 
                                                         <%# ((DateTime)Eval("Value.End")).ToShortDateString() %>
                                                     </ItemTemplate>
-                                                </TemplateField>
+                                                </asp:TemplateField>
                                                 <Rock:EditField OnClick="gScheduleExclusions_Edit" />
                                                 <Rock:DeleteField OnClick="gScheduleExclusions_Delete" />
                                             </Columns>
@@ -171,8 +171,8 @@
                                     Help="The rule that check in should use when a person attempts to check in to a group of this type.  If 'None' is selected, user will not be added to group and is not required to belong to group.  If 'Add On Check In' is selected, user will be added to group if they don't already belong.  If 'Already Belongs' is selected, user must already be a member of the group or they will not be allowed to check in." />
                                 <Rock:RockDropDownList ID="ddlPrintTo" runat="server" Label="Print Using" 
                                     Help="When printing check-in labels, should the device's printer or the location's printer be used?  Note: the device has a similar setting which takes precedence over this setting.">
-                                    <global:asp:ListItem Text="Device Printer" Value="1" />
-                                    <global:asp:ListItem Text="Location Printer" Value="2" />
+                                    <asp:ListItem Text="Device Printer" Value="1" />
+                                    <asp:ListItem Text="Location Printer" Value="2" />
                                 </Rock:RockDropDownList>
                             </div>
                         </div>
@@ -352,8 +352,8 @@
 
         <Rock:ModalDialog ID="dlgGroupTypeRoles" runat="server" OnSaveClick="gGroupTypeRoles_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Roles">
             <Content>
-                <global:asp:HiddenField ID="hfRoleGuid" runat="server" />
-                <global:asp:ValidationSummary ID="vsRoles" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Roles" />
+                <asp:HiddenField ID="hfRoleGuid" runat="server" />
+                <asp:ValidationSummary ID="vsRoles" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Roles" />
                 <div class="row">
                     <div class="col-md-6">
                         <Rock:DataTextBox ID="tbRoleName" runat="server" SourceTypeName="Rock.Model.GroupTypeRole, Rock" PropertyName="Name" ValidationGroup="Roles" />
@@ -394,7 +394,7 @@
 
         <Rock:ModalDialog ID="dlgScheduleExclusion" runat="server" OnSaveClick="dlgScheduleExclusion_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="ScheduleExclusion">
             <Content>
-                <global:asp:HiddenField ID="hfScheduleExclusion" runat="server" />
+                <asp:HiddenField ID="hfScheduleExclusion" runat="server" />
                 <Rock:DateRangePicker ID="drpScheduleExclusion" runat="server" Label="Schedule Exclusion" ValidationGroup="ScheduleExclusion" />
             </Content>
         </Rock:ModalDialog>
@@ -425,8 +425,8 @@
 
         <Rock:ModalDialog ID="dlgMemberWorkflowTriggers" runat="server" OnSaveClick="dlgMemberWorkflowTriggers_SaveClick" OnCancelScript="clearActiveDialog();" ValidationGroup="Trigger">
             <Content>
-                <global:asp:HiddenField ID="hfTriggerGuid" runat="server" />
-                <global:asp:ValidationSummary ID="vsTrigger" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Trigger" />
+                <asp:HiddenField ID="hfTriggerGuid" runat="server" />
+                <asp:ValidationSummary ID="vsTrigger" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="Trigger" />
                 <Rock:NotificationBox ID="nbInvalidWorkflowType" runat="server" NotificationBoxType="Danger" Visible="false"
                     Text="The Workflow Type is missing or invalid. Make sure you selected a valid Workflow Type (and not a category)." />
                 <div class="row">

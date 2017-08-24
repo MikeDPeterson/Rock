@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Cms.UniversalSearch" Codebehind="UniversalSearch.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.Cms.UniversalSearch" Codebehind="UniversalSearch.ascx.cs" %>
 
 <style>
     .model-cannavigate {
@@ -18,7 +18,7 @@
 
                 <div class="input-group searchbox">
                     <div class="input-group-addon"><i class="fa fa-search"></i></div>
-                    <global:asp:TextBox id="tbSearch" runat="server" CssClass="form-control" Placeholder="Search Rock" />
+                    <asp:TextBox id="tbSearch" runat="server" CssClass="form-control" Placeholder="Search Rock" />
 
                     <span id="spanButtonGroup" runat="server" class="input-group-btn">
                         <asp:LinkButton ID="btnSearch" CssClass="btn btn-primary" runat="server" OnClick="btnSearch_Click">Go</asp:LinkButton>

@@ -43,11 +43,11 @@
 
                 <Rock:Grid ID="gDpsOffender" runat="server" DataKeyNames="Id" AllowSorting="true" OnRowDataBound="gDpsOffender_RowDataBound" OnRowSelected="gDpsOffender_RowSelected">
                     <Columns>
-                        <global:asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" />
-                        <global:asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" />
-                        <global:asp:BoundField DataField="Age" HeaderText="Age" SortExpression="Age" />
-                        <global:asp:BoundField DataField="DpsLocation" HeaderText="DPS Location" />
-                        <global:asp:BoundField DataField="FamiliesAtAddress" HeaderText="FamiliesAtAddress" SortExpression="FamiliesAtAddress" />
+                        <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" />
+                        <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" />
+                        <asp:BoundField DataField="Age" HeaderText="Age" SortExpression="Age" />
+                        <asp:BoundField DataField="DpsLocation" HeaderText="DPS Location" />
+                        <asp:BoundField DataField="FamiliesAtAddress" HeaderText="FamiliesAtAddress" SortExpression="FamiliesAtAddress" />
                         <Rock:RockLiteralField ID="lPersonMatches" HeaderText="Potential Matches" SortExpression="PotentialMatches" ItemStyle-Wrap="false" />
                     </Columns>
                 </Rock:Grid>

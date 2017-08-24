@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Cms.ContentChannelItemDetail" Codebehind="ContentChannelItemDetail.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.Cms.ContentChannelItemDetail" Codebehind="ContentChannelItemDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>
@@ -167,9 +167,9 @@
 
         <Rock:ModalDialog ID="dlgRemoveChild" runat="server" Title="Remove Child Item" OnCancelScript="clearActiveDialog();" CancelLinkVisible="false" ValidationGroup="RemoveChild" >
             <Content>
-                <global:asp:HiddenField ID="hfRemoveChildItem" runat="server" />
-                <global:asp:LinkButton ID="lbRemoveChildItem" runat="server" CssClass="btn btn-primary btn-block" Text="Remove Child Item" OnClick="lbRemoveChildItem_Click" />
-                <global:asp:LinkButton ID="lbDeleteChildItem" runat="server" CssClass="btn btn-primary btn-block" Text="Delete Child Item" onclick="lbDeleteChildItem_Click"/>
+                <asp:HiddenField ID="hfRemoveChildItem" runat="server" />
+                <asp:LinkButton ID="lbRemoveChildItem" runat="server" CssClass="btn btn-primary btn-block" Text="Remove Child Item" OnClick="lbRemoveChildItem_Click" />
+                <asp:LinkButton ID="lbDeleteChildItem" runat="server" CssClass="btn btn-primary btn-block" Text="Delete Child Item" onclick="lbDeleteChildItem_Click"/>
             </Content>
         </Rock:ModalDialog>
 

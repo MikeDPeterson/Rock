@@ -33,7 +33,7 @@
 
                 <Rock:Grid ID="gPotentialMatches" runat="server" DataKeyNames="Id" AllowSorting="true" OnRowDataBound="gPotentialMatches_RowDataBound">
                     <Columns>
-                        <global:asp:HyperLinkField ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="grid-columncommand" ItemStyle-CssClass="grid-columncommand"
+                        <asp:HyperLinkField ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="grid-columncommand" ItemStyle-CssClass="grid-columncommand"
                             DataNavigateUrlFields="Id" DataNavigateUrlFormatString="~/Person/{0}" DataTextFormatString="<div class='btn btn-default btn-sm'><i class='fa fa-user'></i></div>" DataTextField="Id" />
                         <Rock:RockBoundField DataField="FirstName" SortExpression="FirstName" HeaderText="First Name" />
                         <Rock:RockBoundField DataField="NickName" SortExpression="NickName" HeaderText="Nick Name" />

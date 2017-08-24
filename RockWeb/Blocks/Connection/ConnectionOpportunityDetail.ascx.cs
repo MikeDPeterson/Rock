@@ -64,7 +64,6 @@ namespace RockWeb.Blocks.Connection
         protected global::Rock.Web.UI.Controls.Grid gConnectionOpportunityConnectorGroups;
         protected global::Rock.Web.UI.Controls.Grid gConnectionOpportunityWorkflows;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgWorkflowDetails;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfWorkflowGuid;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlTriggerType;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlWorkflowType;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlPrimaryQualifier;
@@ -73,13 +72,11 @@ namespace RockWeb.Blocks.Connection
         protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidGroupType;
         protected global::Rock.Web.UI.Controls.GroupPicker gpOpportunityGroup;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgGroupConfigDetails;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfGroupConfigGuid;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupType;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupRole;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlGroupMemberStatus;
         protected global::Rock.Web.UI.Controls.Toggle tglUseAllGroupsOfGroupType;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectorGroupDetails;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfConnectorGroupGuid;
         protected global::Rock.Web.UI.Controls.GroupPicker gpGroup;
         protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
         protected global::System.Web.UI.WebControls.PlaceHolder phAttributes;

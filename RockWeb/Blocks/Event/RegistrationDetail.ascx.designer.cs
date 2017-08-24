@@ -301,6 +301,15 @@ namespace RockWeb.Blocks.Event {
         protected global::System.Web.UI.WebControls.LinkButton lbAddRegistrant;
         
         /// <summary>
+        /// vsMoveRegistration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsMoveRegistration;
+        
+        /// <summary>
         /// btnMoveRegistration control.
         /// </summary>
         /// <remarks>

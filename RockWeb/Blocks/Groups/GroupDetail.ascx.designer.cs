@@ -265,6 +265,15 @@ namespace RockWeb.Blocks.Groups {
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
         
         /// <summary>
+        /// valLocationSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary valLocationSummary;
+        
+        /// <summary>
         /// ulNav control.
         /// </summary>
         /// <remarks>
@@ -299,5 +308,23 @@ namespace RockWeb.Blocks.Groups {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlLocationSelect;
+        
+        /// <summary>
+        /// vsGroupRequirement control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsGroupRequirement;
+        
+        /// <summary>
+        /// vsTrigger control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsTrigger;
     }
 }

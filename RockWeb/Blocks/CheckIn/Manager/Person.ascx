@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.CheckIn.Manager.Person" Codebehind="Person.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.CheckIn.Manager.Person" Codebehind="Person.ascx.cs" %>
 
 <asp:UpdatePanel ID="upnlContent" runat="server">
     <ContentTemplate>
@@ -56,7 +56,7 @@
                     </Rock:RockTemplateField>
                     <Rock:RockTemplateField HeaderText="Code">
                         <ItemTemplate>
-                            <global:asp:RockLiteral id="lActive" runat="server" /><br />
+                            <Rock:RockLiteral id="lActive" runat="server" /><br />
                             <%# Eval("Code") %>
                         </ItemTemplate>
                     </Rock:RockTemplateField>

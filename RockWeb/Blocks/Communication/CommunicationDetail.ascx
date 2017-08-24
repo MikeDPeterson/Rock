@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Communication.CommunicationDetail" Codebehind="CommunicationDetail.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.Communication.CommunicationDetail" Codebehind="CommunicationDetail.ascx.cs" %>
 
 <asp:UpdatePanel ID="upPanel" runat="server">
     <ContentTemplate>
@@ -138,7 +138,7 @@
                     </section>
 
                     <Rock:PanelWidget ID="wpMessageDetails" runat="server" Title="Message Details">
-                        <global:asp:Literal ID="lDetails" runat="server" />
+                        <asp:Literal ID="lDetails" runat="server" />
                     </Rock:PanelWidget>
 
                     <Rock:PanelWidget ID="wpEvents" runat="server" Title="Activity" Expanded="false">

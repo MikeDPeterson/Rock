@@ -98,7 +98,7 @@
                                             <%# ((bool)Eval("IsMailing")) ? "<i class=\"fa fa-check\"></i>" : "" %>
                                         </ItemTemplate>
                                         <EditItemTemplate>
-                                            <global:asp:CheckBox ID="cbMailing" runat="server" Checked='<%# Eval("IsMailing") %>' />
+                                            <asp:CheckBox ID="cbMailing" runat="server" Checked='<%# Eval("IsMailing") %>' />
                                         </EditItemTemplate>
                                     </Rock:RockTemplateField>
                                     <Rock:RockTemplateField HeaderText="Map Location" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
@@ -107,16 +107,16 @@
                                         </ItemTemplate>
                                         <EditItemTemplate>
                                             <%# ((bool)Eval("IsLocation")) ? "<i class=\"fa fa-check\"></i>" : "" %>
-                                            <global:asp:CheckBox ID="cbLocation" runat="server" Checked='<%# Eval("IsLocation") %>' Visible='<%# !(bool)Eval("IsLocation") %>' />
+                                            <asp:CheckBox ID="cbLocation" runat="server" Checked='<%# Eval("IsLocation") %>' Visible='<%# !(bool)Eval("IsLocation") %>' />
                                         </EditItemTemplate>
                                     </Rock:RockTemplateField>
                                     <Rock:RockTemplateField ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="span1" ItemStyle-CssClass="grid-columncommand" ItemStyle-Wrap="false">
                                         <ItemTemplate>
-                                            <global:asp:LinkButton ID="lbEdit" runat="server" Text="Edit" CommandName="Edit" CssClass="btn btn-default btn-sm" CausesValidation="false"><i class="fa fa-pencil"></i></LinkButton>
+                                            <asp:LinkButton ID="lbEdit" runat="server" Text="Edit" CommandName="Edit" CssClass="btn btn-default btn-sm" CausesValidation="false"><i class="fa fa-pencil"></i></asp:LinkButton>
                                         </ItemTemplate>
                                         <EditItemTemplate>
-                                            <global:asp:LinkButton ID="lbSave" runat="server" Text="Save" CommandName="Update" CssClass="btn btn-sm btn-success"><i class="fa fa-check"></i></LinkButton>
-                                            <global:asp:LinkButton ID="lbCancel" runat="server" Text="Cancel" CommandName="Cancel" CssClass="btn btn-sm btn-warning" CausesValidation="false"><i class="fa fa-minus"></i></LinkButton>
+                                            <asp:LinkButton ID="lbSave" runat="server" Text="Save" CommandName="Update" CssClass="btn btn-sm btn-success"><i class="fa fa-check"></i></asp:LinkButton>
+                                            <asp:LinkButton ID="lbCancel" runat="server" Text="Cancel" CommandName="Cancel" CssClass="btn btn-sm btn-warning" CausesValidation="false"><i class="fa fa-minus"></i></asp:LinkButton>
                                         </EditItemTemplate>
                                     </Rock:RockTemplateField>
                                     <Rock:DeleteField OnClick="gLocation_RowDelete" />
@@ -152,14 +152,14 @@
         <Rock:ModalDialog ID="modalAddPerson" runat="server" Title="Add Person" ValidationGroup="AddPerson" >
             <Content>
 
-                <global:asp:HiddenField ID="hfActiveTab" runat="server" />
+                <asp:HiddenField ID="hfActiveTab" runat="server" />
 
                 <ul class="nav nav-pills margin-b-md">
                     <li id="liNewPerson" runat="server" class="active"><a href='#<%=divNewPerson.ClientID%>' data-toggle="pill">Add New Person</a></li>
                     <li id="liExistingPerson" runat="server"><a href='#<%=divExistingPerson.ClientID%>' data-toggle="pill">Add Existing Person</a></li>
                 </ul>
 
-                <global:asp:ValidationSummary ID="valSummaryAddPerson" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="AddPerson"/>
+                <asp:ValidationSummary ID="valSummaryAddPerson" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="AddPerson"/>
 
                 <div class="tab-content">
 

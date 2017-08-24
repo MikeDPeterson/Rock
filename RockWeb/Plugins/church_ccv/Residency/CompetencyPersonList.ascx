@@ -12,10 +12,10 @@
                 <div class="grid grid-panel">
                     <Rock:Grid ID="gList" runat="server" AllowSorting="true" OnRowSelected="gList_Edit" DataKeyNames="Id" RowItemText="Competency">
                         <Columns>
-                            <global:asp:BoundField DataField="TrackName" HeaderText="Track" SortExpression="TrackDisplayOrder" />
-                            <global:asp:BoundField DataField="CompetencyName" HeaderText="Competency" SortExpression="CompetencyName" />
-                            <global:asp:BoundField DataField="CompletedProjectAssessmentsTotal" HeaderText="Project Assessments Completed" SortExpression="CompletedProjectAssessmentsTotal" />
-                            <global:asp:BoundField DataField="MinAssessmentCount" HeaderText="Project Assessments Required" SortExpression="MinAssessmentCount" />
+                            <asp:BoundField DataField="TrackName" HeaderText="Track" SortExpression="TrackDisplayOrder" />
+                            <asp:BoundField DataField="CompetencyName" HeaderText="Competency" SortExpression="CompetencyName" />
+                            <asp:BoundField DataField="CompletedProjectAssessmentsTotal" HeaderText="Project Assessments Completed" SortExpression="CompletedProjectAssessmentsTotal" />
+                            <asp:BoundField DataField="MinAssessmentCount" HeaderText="Project Assessments Required" SortExpression="MinAssessmentCount" />
                             <Rock:DeleteField OnClick="gList_Delete" />
                         </Columns>
                     </Rock:Grid>

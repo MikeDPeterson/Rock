@@ -48,9 +48,9 @@
                                 <Rock:RockTextBox ID="tbEmail" runat="server" PrependText="<i class='fa fa-envelope'></i>" Label="Email Address" />
 
                                 <Rock:RockRadioButtonList ID="rblEmailPreference" runat="server" RepeatDirection="Horizontal" Label="Email Preference" >
-                                    <global:asp:ListItem Text="Email Allowed" Value="EmailAllowed" Selected="True" />
-                                    <global:asp:ListItem Text="No Mass Emails" Value="NoMassEmails" />
-                                    <global:asp:ListItem Text="Do Not Email" Value="DoNotEmail" />
+                                    <asp:ListItem Text="Email Allowed" Value="EmailAllowed" Selected="True" />
+                                    <asp:ListItem Text="No Mass Emails" Value="NoMassEmails" />
+                                    <asp:ListItem Text="Do Not Email" Value="DoNotEmail" />
                                 </Rock:RockRadioButtonList>
 
                                 <Rock:RockDropDownList ID="ddlCampus" runat="server" Label="Campus" />
@@ -103,8 +103,8 @@
 
             <Rock:ModalDialog ID="mdAddContact" runat="server" Title="Add Contact" ValidationGroup="AddContact">
                 <Content>
-                    <global:asp:HiddenField ID="hfModalOpen" runat="server" />
-                    <glboal:asp:ValidationSummary ID="valSummaryAddContact" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="AddContact"/>
+                    <asp:HiddenField ID="hfModalOpen" runat="server" />
+                    <asp:ValidationSummary ID="valSummaryAddContact" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="AddContact"/>
                     <Rock:PersonPicker ID="ppContact" runat="server" Label="Contact" Required="true" ValidationGroup="AddContact" />
                 </Content>
             </Rock:ModalDialog>

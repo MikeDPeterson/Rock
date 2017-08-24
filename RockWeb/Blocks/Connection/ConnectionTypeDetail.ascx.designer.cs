@@ -227,5 +227,41 @@ namespace RockWeb.Blocks.Connection {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfActiveDialog;
+        
+        /// <summary>
+        /// hfConnectionTypeAddConnectionActivityTypeGuid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfConnectionTypeAddConnectionActivityTypeGuid;
+        
+        /// <summary>
+        /// hfConnectionTypeAddConnectionStatusGuid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfConnectionTypeAddConnectionStatusGuid;
+        
+        /// <summary>
+        /// hfAddConnectionWorkflowGuid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfAddConnectionWorkflowGuid;
+        
+        /// <summary>
+        /// valConnectionWorkflowSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary valConnectionWorkflowSummary;
     }
 }

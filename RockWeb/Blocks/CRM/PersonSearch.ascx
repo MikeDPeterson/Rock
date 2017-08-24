@@ -19,7 +19,7 @@
                     <Rock:SelectField />
                     <Rock:RockTemplateField HeaderText="Person" SortExpression="LastName,FirstName">
                         <ItemTemplate>
-                            <global:asp:Literal ID="lPerson" runat="server" />
+                            <asp:Literal ID="lPerson" runat="server" />
                         </ItemTemplate>
                     </Rock:RockTemplateField>
                     <Rock:DateField 
@@ -44,7 +44,7 @@
                         ColumnPriority="Desktop" />
                     <Rock:RockTemplateField HeaderText="Campus" ColumnPriority="Tablet" >
                         <ItemTemplate>
-                            <global:asp:Literal ID="lCampus" runat="server" />
+                            <asp:Literal ID="lCampus" runat="server" />
                         </ItemTemplate>
                     </Rock:RockTemplateField>
                 </Columns>

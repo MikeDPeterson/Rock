@@ -18,9 +18,9 @@
                     <Rock:Grid ID="gRecordings" runat="server" EmptyDataText="No DVR Recordings Found" DataKeyNames="WeekendDate,CampusGuid,Venue" AllowSorting="true" OnRowSelected="gRecordings_Edit">
                         <Columns>
                             <Rock:DateField HeaderText="Weekend Date" DataField="WeekendDate" SortExpression="WeekendDate" />
-                            <global:asp:BoundField HeaderText="Campus" DataField="Campus" SortExpression="CampusId" />
-                            <global:asp:BoundField HeaderText="Venue" DataField="Venue" SortExpression="Venue" />
-                            <global:asp:BoundField HeaderText="Recordings" DataField="RecordingCount" SortExpression="RecordingCount" />
+                            <asp:BoundField HeaderText="Campus" DataField="Campus" SortExpression="CampusId" />
+                            <asp:BoundField HeaderText="Venue" DataField="Venue" SortExpression="Venue" />
+                            <asp:BoundField HeaderText="Recordings" DataField="RecordingCount" SortExpression="RecordingCount" />
                         </Columns>
                     </Rock:Grid>
                 </div>

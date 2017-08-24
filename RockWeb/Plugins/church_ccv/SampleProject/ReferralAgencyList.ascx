@@ -11,12 +11,12 @@
 
         <Rock:Grid ID="gAgencies" runat="server" AllowSorting="true" OnRowSelected="gAgencies_Edit" TooltipField="Description">
             <Columns>
-                <global:asp:BoundField DataField="Name" HeaderText="Agency Name" SortExpression="Name" />
-                <global:asp:BoundField DataField="Campus.Name" HeaderText="Campus" SortExpression="Campus.Name" />
-                <global:asp:BoundField DataField="AgencyTypeValue.Value" HeaderText="Type" SortExpression="AgencyTypeValue.Value" />
-                <global:asp:BoundField DataField="ContactName" HeaderText="Contact Name" SortExpression="ContactName" />
-                <global:asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" />
-                <global:asp:BoundField DataField="Website" HeaderText="Website" SortExpression="Website" />
+                <asp:BoundField DataField="Name" HeaderText="Agency Name" SortExpression="Name" />
+                <asp:BoundField DataField="Campus.Name" HeaderText="Campus" SortExpression="Campus.Name" />
+                <asp:BoundField DataField="AgencyTypeValue.Value" HeaderText="Type" SortExpression="AgencyTypeValue.Value" />
+                <asp:BoundField DataField="ContactName" HeaderText="Contact Name" SortExpression="ContactName" />
+                <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" />
+                <asp:BoundField DataField="Website" HeaderText="Website" SortExpression="Website" />
                 <Rock:DeleteField OnClick="gAgencies_Delete" />
             </Columns>
         </Rock:Grid>

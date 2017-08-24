@@ -31,6 +31,15 @@ namespace RockWeb.Plugins.church_ccv.Reporting {
         protected global::System.Web.UI.WebControls.Panel pnlView;
         
         /// <summary>
+        /// nbGroupsWarning control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbGroupsWarning;
+        
+        /// <summary>
         /// lSundayDate control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace RockWeb.Plugins.church_ccv.Reporting {
         protected global::System.Web.UI.WebControls.Button btnCreateSpreadsheet;
         
         /// <summary>
+        /// nbReorderInstructions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbReorderInstructions;
+        
+        /// <summary>
         /// pnlConfigure control.
         /// </summary>
         /// <remarks>
@@ -56,6 +74,15 @@ namespace RockWeb.Plugins.church_ccv.Reporting {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlConfigure;
+        
+        /// <summary>
+        /// pnlGroups control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlGroups;
         
         /// <summary>
         /// rptGroupTypes control.

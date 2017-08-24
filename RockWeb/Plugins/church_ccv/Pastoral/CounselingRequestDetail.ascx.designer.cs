@@ -49,6 +49,42 @@ namespace RockWeb.Plugins.church_ccv.Pastoral {
         protected global::System.Web.UI.WebControls.ValidationSummary valValidation;
         
         /// <summary>
+        /// wpRequestor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget wpRequestor;
+        
+        /// <summary>
+        /// pwRequest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget pwRequest;
+        
+        /// <summary>
+        /// rcwDocuments control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockControlWrapper rcwDocuments;
+        
+        /// <summary>
+        /// pwResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.PanelWidget pwResults;
+        
+        /// <summary>
         /// lbSave control.
         /// </summary>
         /// <remarks>
@@ -74,5 +110,14 @@ namespace RockWeb.Plugins.church_ccv.Pastoral {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lbPrint;
+        
+        /// <summary>
+        /// valResultsSummary control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary valResultsSummary;
     }
 }

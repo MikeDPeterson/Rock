@@ -35,26 +35,26 @@
                                 <Rock:RockTemplateField ItemStyle-Wrap="false">
                                     <HeaderTemplate>Qualifier</HeaderTemplate>
                                     <ItemTemplate>
-                                        <global:asp:Literal ID="lEntityQualifier" runat="server" />
+                                        <asp:Literal ID="lEntityQualifier" runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField>
                                 <Rock:RockBoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
                                 <Rock:RockTemplateField>
                                     <HeaderTemplate>Categories</HeaderTemplate>
                                     <ItemTemplate>
-                                        <global:asp:Literal ID="lCategories" runat="server" />
+                                        <asp:Literal ID="lCategories" runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField>
                                 <Rock:RockTemplateField>
                                     <HeaderTemplate>Default Value</HeaderTemplate>
                                     <ItemTemplate>
-                                        <global:asp:Literal ID="lDefaultValue" runat="server" />
+                                        <asp:Literal ID="lDefaultValue" runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField>
                                 <Rock:RockTemplateField>
                                     <HeaderTemplate>Value</HeaderTemplate>
                                     <ItemTemplate>
-                                        <glboal:asp:Literal ID="lValue" runat="server" />
+                                        <asp:Literal ID="lValue" runat="server" />
                                     </ItemTemplate>
                                 </Rock:RockTemplateField>
                                 <Rock:EditField OnClick="rGrid_Edit" />
@@ -75,8 +75,8 @@
 
         <Rock:ModalDialog ID="mdAttribute" runat="server" Title="Attribute" OnCancelScript="clearActiveDialog();" ValidationGroup="Attribute">
             <Content>
-                <global:asp:ValidationSummary ID="valSummaryTop" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" />
-                <global:asp:panel ID="pnlEntityTypeQualifier" runat="server" Visible="false" class="well">
+                <asp:ValidationSummary ID="valSummaryTop" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" />
+                <asp:panel ID="pnlEntityTypeQualifier" runat="server" Visible="false" class="well">
                     <Rock:EntityTypePicker ID="ddlAttrEntityType" runat="server" Label="Entity Type" IncludeGlobalOption="true" Required="true" AutoPostBack="true" OnSelectedIndexChanged="ddlAttrEntityType_SelectedIndexChanged" />
                     <div class="row">
                         <div class="col-md-6">
@@ -86,16 +86,16 @@
                             <Rock:RockTextBox ID="tbAttrQualifierValue" runat="server" Label="Qualifier Value" />
                         </div>
                     </div>
-                </panel>
+                </asp:panel>
                 <Rock:AttributeEditor ID="edtAttribute" runat="server" ShowActions="false" ValidationGroup="Attribute" ShowInGridVisible="true" />
             </Content>
         </Rock:ModalDialog>
 
         <Rock:ModalDialog ID="mdAttributeValue" runat="server" Title="Attribute Value" OnCancelScript="clearActiveDialog();" ValidationGroup="AttributeValue">
             <Content>
-                <global:asp:HiddenField ID="hfIdValues" runat="server" />
-                <global:asp:ValidationSummary ID="ValidationSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="AttributeValue" />
-                <global:asp:PlaceHolder ID="phEditControls" runat="server" EnableViewState="false" />
+                <asp:HiddenField ID="hfIdValues" runat="server" />
+                <asp:ValidationSummary ID="ValidationSummaryValue" runat="server" HeaderText="Please Correct the Following" CssClass="alert alert-danger" ValidationGroup="AttributeValue" />
+                <asp:PlaceHolder ID="phEditControls" runat="server" EnableViewState="false" />
             </Content>
         </Rock:ModalDialog>
 

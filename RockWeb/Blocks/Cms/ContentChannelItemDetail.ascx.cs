@@ -69,7 +69,6 @@ namespace RockWeb.Blocks.Cms
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlAddExistingItemChannel;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlAddExistingItem;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgRemoveChild;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfRemoveChildItem;
 
         #endregion
 

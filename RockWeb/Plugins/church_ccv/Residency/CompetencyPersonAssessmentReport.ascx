@@ -29,9 +29,9 @@
                 <div class="grid">
                     <Rock:Grid ID="gAssessmentSummary" runat="server" AllowSorting="true" DataKeyNames="Id" RowItemText="Competency" DisplayType="Light">
                         <Columns>
-                            <global:asp:BoundField DataField="TrackName" HeaderText="Track" SortExpression="TrackDisplayOrder" />
-                            <global:asp:BoundField DataField="CompetencyName" HeaderText="Competency" SortExpression="CompetencyName" />
-                            <global:asp:BoundField DataField="OverallRating" HeaderText="Overall Rating" SortExpression="OverallRating" DataFormatString="{0:F2}" />
+                            <asp:BoundField DataField="TrackName" HeaderText="Track" SortExpression="TrackDisplayOrder" />
+                            <asp:BoundField DataField="CompetencyName" HeaderText="Competency" SortExpression="CompetencyName" />
+                            <asp:BoundField DataField="OverallRating" HeaderText="Overall Rating" SortExpression="OverallRating" DataFormatString="{0:F2}" />
                         </Columns>
                     </Rock:Grid>
                 </div>
@@ -39,13 +39,13 @@
                 <h3>Assessment Details</h3>
                 <Rock:Grid ID="gAssessmentDetails" runat="server" AllowSorting="false" DataKeyNames="Id" DisplayType="Light">
                     <Columns>
-                        <global:asp:BoundField DataField="Competency" HeaderText="Competency" />
-                        <global:asp:BoundField DataField="ProjectName" HeaderText="Project Name" />
-                        <global:asp:BoundField DataField="ProjectDescription" HeaderText="Project Description" />
-                        <global:asp:BoundField DataField="Evaluator" HeaderText="Evaluator" />
+                        <asp:BoundField DataField="Competency" HeaderText="Competency" />
+                        <asp:BoundField DataField="ProjectName" HeaderText="Project Name" />
+                        <asp:BoundField DataField="ProjectDescription" HeaderText="Project Description" />
+                        <asp:BoundField DataField="Evaluator" HeaderText="Evaluator" />
                         <Rock:DateField DataField="AssessmentDateTime" HeaderText="Date" />
-                        <global:asp:BoundField DataField="OverallRating" HeaderText="Overall Rating" />
-                        <global:asp:BoundField DataField="RatingNotes" HeaderText="Assessor Notes" />
+                        <asp:BoundField DataField="OverallRating" HeaderText="Overall Rating" />
+                        <asp:BoundField DataField="RatingNotes" HeaderText="Assessor Notes" />
                     </Columns>
                 </Rock:Grid>
 

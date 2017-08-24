@@ -87,7 +87,6 @@ namespace RockWeb.Blocks.Connection
         protected global::Rock.Web.UI.Controls.PanelWidget wpConnectionRequestActivities;
         protected global::Rock.Web.UI.Controls.Grid gConnectionRequestActivities;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgConnectionRequestActivities;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfAddConnectionRequestActivityGuid;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlActivity;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlActivityConnector;
         protected global::Rock.Web.UI.Controls.RockTextBox tbNote;

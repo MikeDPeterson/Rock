@@ -58,9 +58,9 @@
                                 <Rock:RockDropDownList ID="ddlTitle" runat="server" />
                                 <Rock:RockDropDownList ID="ddlStatus" runat="server" />
                                 <Rock:RockDropDownList ID="ddlGender" runat="server" >
-                                    <global:asp:ListItem Text="Male" Value="Male" />
-                                    <global:asp:ListItem Text="Female" Value="Female" />
-                                    <global:asp:ListItem Text="Unknown" Value="Unknown" />
+                                    <asp:ListItem Text="Male" Value="Male" />
+                                    <asp:ListItem Text="Female" Value="Female" />
+                                    <asp:ListItem Text="Unknown" Value="Unknown" />
                                 </Rock:RockDropDownList>
                                 <Rock:RockDropDownList ID="ddlMaritalStatus" runat="server" />
                                 <div class="row">
@@ -85,15 +85,15 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <Rock:RockDropDownList ID="ddlIsEmailActive" runat="server" >
-                                    <global:asp:ListItem Text="Active" Value="Active" />
-                                    <global:asp:ListItem Text="Inactive" Value="Inactive" />
+                                    <asp:ListItem Text="Active" Value="Active" />
+                                    <asp:ListItem Text="Inactive" Value="Inactive" />
                                 </Rock:RockDropDownList>
                             </div>
                             <div class="col-sm-6">
                                 <Rock:RockDropDownList ID="ddlEmailPreference" runat="server" >
-                                    <global:asp:ListItem Text="Email Allowed" Value="EmailAllowed" />
-                                    <global:asp:ListItem Text="No Mass Emails" Value="NoMassEmails" />
-                                    <global:asp:ListItem Text="Do Not Email" Value="DoNotEmail" />
+                                    <asp:ListItem Text="Email Allowed" Value="EmailAllowed" />
+                                    <asp:ListItem Text="No Mass Emails" Value="NoMassEmails" />
+                                    <asp:ListItem Text="Do Not Email" Value="DoNotEmail" />
                                 </Rock:RockDropDownList>
                             </div>
                         </div>
@@ -107,8 +107,8 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <Rock:RockDropDownList ID="ddlFollow" runat="server" >
-                                    <global:asp:ListItem Text="Add to Following" Value="Add" />
-                                    <global:asp:ListItem Text="Remove Following" Value="Remove" />
+                                    <asp:ListItem Text="Add to Following" Value="Add" />
+                                    <asp:ListItem Text="Remove Following" Value="Remove" />
                                 </Rock:RockDropDownList>
                                 <Rock:RockTextBox ID="tbSystemNote" runat="server" TextMode="MultiLine" Rows="2"></Rock:RockTextBox>
                             </div>
@@ -148,9 +148,9 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <Rock:RockDropDownList ID="ddlGroupAction" runat="server" Label="Action" AutoPostBack="true" OnSelectedIndexChanged="ddlGroupAction_SelectedIndexChanged" >
-                                    <global:asp:ListItem Value="Add" Text="Add To Group" />
-                                    <global:asp:ListItem Value="Remove" Text="Remove From Group" />
-                                    <global:asp:ListItem Value="Update" Text="Update In Group" />
+                                    <asp:ListItem Value="Add" Text="Add To Group" />
+                                    <asp:ListItem Value="Remove" Text="Remove From Group" />
+                                    <asp:ListItem Value="Update" Text="Update In Group" />
                                 </Rock:RockDropDownList>
                                 <Rock:GroupPicker ID="gpGroup" runat="server" Label="Group" OnSelectItem="gpGroup_SelectItem" />
                             </div>
@@ -159,19 +159,19 @@
                                 <Rock:RockDropDownList ID="ddlGroupMemberStatus" runat="server" Label="Member Status" Visible="false" />
                             </asp:Panel>
                         </div>
-                        <global:asp:Panel ID="pnlGroupMemberAttributes" runat="server" CssClass="row">
+                        <asp:Panel ID="pnlGroupMemberAttributes" runat="server" CssClass="row">
                             <div class="col-sm-12">
                                 <asp:PlaceHolder ID="phAttributes" runat="server"></asp:PlaceHolder>
                             </div>
-                        </Panel>
+                        </asp:Panel>
                     </Rock:PanelWidget>
 
                     <Rock:PanelWidget ID="pwTag" runat="server" Title="Tag" TitleIconCssClass="fa fa-tags" Expanded="false">
                         <div class="row">
                             <div class="col-sm-6">
                                 <Rock:RockDropDownList ID="ddlTagAction" runat="server" Label="Action" AutoPostBack="true" OnSelectedIndexChanged="ddlGroupAction_SelectedIndexChanged" >
-                                    <global:asp:ListItem Value="Add" Text="Add To Tag" />
-                                    <global:asp:ListItem Value="Remove" Text="Remove From Tag" />
+                                    <asp:ListItem Value="Add" Text="Add To Tag" />
+                                    <asp:ListItem Value="Remove" Text="Remove From Tag" />
                                 </Rock:RockDropDownList>
                                 <Rock:RockDropDownList ID="ddlTagList" runat="server" Label="Tag" />
                             </div>
