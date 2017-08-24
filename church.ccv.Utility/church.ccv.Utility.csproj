@@ -43,9 +43,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\RockWeb\Bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Quartz">
-      <HintPath>..\RockWeb\Bin\Quartz.dll</HintPath>
-    </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
       <Private>True</Private>
@@ -103,6 +100,10 @@
     <ProjectReference Include="..\DotLiquid\DotLiquid.csproj">
       <Project>{00edcb8d-ef33-459c-ad62-02876bd24dff}</Project>
       <Name>DotLiquid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quartz\Quartz.csproj">
+      <Project>{a6760d8f-2e1f-402e-a482-4b27d667a212}</Project>
+      <Name>Quartz</Name>
     </ProjectReference>
     <ProjectReference Include="..\Rock.Rest\Rock.Rest.csproj">
       <Project>{ADD1EDD0-A4CB-4E82-B6AD-6AD1D556DEAE}</Project>
