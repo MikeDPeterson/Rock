@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockWeb", "RockWeb\RockWeb.csproj", "{5FD9AE6C-B7FB-440F-89F6-DBBBD1F49212}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "church.ccv.Actions", "church.ccv.Actions\church.ccv.Actions.csproj", "{AEB3EBF4-253A-4438-A380-ECFF89C6BDDA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6760D8F-2E1F-402E-A482-4B27D667A212} = {A6760D8F-2E1F-402E-A482-4B27D667A212}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "church.ccv.Authentication", "church.ccv.Authentication\church.ccv.Authentication.csproj", "{10702916-BB67-4BE9-A507-E1F8932BD05F}"
 EndProject
