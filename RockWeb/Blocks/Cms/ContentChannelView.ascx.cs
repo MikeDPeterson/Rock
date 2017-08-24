@@ -70,6 +70,7 @@ namespace RockWeb.Blocks.Cms
         #region Rock Controls
 
         protected global::Rock.Web.UI.Controls.NotificationBox nbContentError;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbError;
         protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlChannel;
         protected global::Rock.Web.UI.Controls.RockCheckBoxList cblStatus;

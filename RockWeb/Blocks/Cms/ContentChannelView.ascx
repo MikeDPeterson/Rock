@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Blocks.Cms.ContentChannelView" Codebehind="ContentChannelView.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="True" Inherits="RockWeb.Blocks.Cms.ContentChannelView" Codebehind="ContentChannelView.ascx.cs" %>
 
 <script type="text/javascript">
     function clearDialog() {
@@ -21,7 +21,7 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Channel Configuration" OnCancelScript="clearDialog();">
                 <Content>
 
-                    <global:asp:UpdatePanel ID="upnlEdit" runat="server">
+                    <asp:UpdatePanel ID="upnlEdit" runat="server">
                         <ContentTemplate>
 
                             <Rock:NotificationBox ID="nbError" runat="server" Heading="Error" Title="Query Error!" NotificationBoxType="Danger" Visible="false" />
@@ -98,7 +98,7 @@
                             </div>
 
                         </ContentTemplate>
-                    </UpdatePanel>
+                    </asp:UpdatePanel>
                 </Content>
             </Rock:ModalDialog>
 

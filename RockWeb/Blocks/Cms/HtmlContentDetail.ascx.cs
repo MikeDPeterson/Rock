@@ -63,15 +63,11 @@ namespace RockWeb.Blocks.Cms
 
         protected global::Rock.Web.UI.Controls.NotificationBox nbApprovalRequired;
         protected global::Rock.Web.UI.Controls.ModalDialog mdEdit;
-        protected global::Rock.Web.UI.Controls.HiddenFieldWithClass hfVersion;
         protected global::Rock.Web.UI.Controls.NotificationBox nbInvalidHtml;
-        protected global::Rock.Web.UI.Controls.RockUpdatePanel upnlApproval;
         protected global::Rock.Web.UI.Controls.DateRangePicker drpDateRange;
         protected global::Rock.Web.UI.Controls.HtmlEditor htmlEditor;
         protected global::Rock.Web.UI.Controls.RockCheckBox cbOverwriteVersion;
         protected global::Rock.Web.UI.Controls.Grid gVersions;
-        protected global::System.Web.UI.UpdatePanel pnlVersionGrid;
-        protected global::System.Web.UI.UpdatePanel pnlEdit;
 
         #endregion
 

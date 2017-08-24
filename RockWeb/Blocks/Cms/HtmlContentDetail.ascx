@@ -17,14 +17,14 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Edit HTML">
                 <Content>
 
-                    <global:asp:UpdatePanel runat="server" ID="upnlEdit">
+                    <asp:UpdatePanel runat="server" ID="upnlEdit">
                         <ContentTemplate>
-                            <global:asp:HiddenField ID="hfVersion" runat="server" />
-                            <global:asp:Panel ID="pnlEdit" runat="server" Visible="false">
-                                <global:Rock:NotificationBox ID="nbInvalidHtml" runat="server" NotificationBoxType="Warning" Visible="false" />
+                            <asp:HiddenField ID="hfVersion" runat="server" />
+                            <asp:Panel ID="pnlEdit" runat="server" Visible="false">
+                                <Rock:NotificationBox ID="nbInvalidHtml" runat="server" NotificationBoxType="Warning" Visible="false" />
 
                                 <!-- Approval -->
-                                <global:asp:UpdatePanel ID="upnlApproval" runat="server">
+                                <asp:UpdatePanel ID="upnlApproval" runat="server">
                                     <ContentTemplate>
 
                                         <div class="alert alert-info">
@@ -42,7 +42,7 @@
                                             <asp:HiddenField ID="hfApprovalStatus" runat="server" />
                                         </div>
                                     </ContentTemplate>
-                                </UpdatePanel>
+                                </asp:UpdatePanel>
 
                                 <div class="pull-right">
                                     <asp:Literal runat="server" ID="lVersion" Text="Version X | " />
@@ -51,15 +51,15 @@
 
                                 <!-- Edit Html -->
 
-                                <global:Rock:DateRangePicker ID="drpDateRange" runat="server" Label="Display from" />
+                                <Rock:DateRangePicker ID="drpDateRange" runat="server" Label="Display from" />
 
-                                <global:Rock:HtmlEditor ID="htmlEditor" runat="server" ResizeMaxWidth="720" Height="140" />
+                                <Rock:HtmlEditor ID="htmlEditor" runat="server" ResizeMaxWidth="720" Height="140" />
                                 
-                                <global:Rock:RockCheckBox ID="cbOverwriteVersion" runat="server" Text="Don't save as a new version" />
+                                <Rock:RockCheckBox ID="cbOverwriteVersion" runat="server" Text="Don't save as a new version" />
 
-                            </Panel>
+                            </asp:Panel>
 
-                            <global:asp:Panel ID="pnlVersionGrid" runat="server" Visible="false" >
+                            <asp:Panel ID="pnlVersionGrid" runat="server" Visible="false" >
 
                                 <div class="grid">
                                     <Rock:Grid ID="gVersions" runat="server" DataKeyNames="Id" DisplayType="Full" ShowActionRow="false" AllowPaging="true" PageSize="10">
@@ -76,12 +76,12 @@
                                     </Rock:Grid>
                                 </div>
 
-                                <global:asp:LinkButton runat="server" ID="lbReturnToEdit" CssClass="btn btn-primary" Text="Back" OnClick="lbReturnToEdit_Click" />
+                                <asp:LinkButton runat="server" ID="lbReturnToEdit" CssClass="btn btn-primary" Text="Back" OnClick="lbReturnToEdit_Click" />
 
-                            </Panel>
+                            </asp:Panel>
 
                         </ContentTemplate>
-                    </UpdatePanel>
+                    </asp:UpdatePanel>
                 </Content>
             </Rock:ModalDialog>
         </asp:Panel>

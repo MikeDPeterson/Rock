@@ -14,7 +14,7 @@
             <Rock:ModalDialog ID="mdEdit" runat="server" OnSaveClick="lbSave_Click" Title="Dynamic Data Block">
                 <Content>
 
-                    <global:asp:UpdatePanel runat="server" ID="upnlEdit">
+                    <asp:UpdatePanel runat="server" ID="upnlEdit">
                         <ContentTemplate>
 
                             <div class="row">
@@ -91,7 +91,7 @@
                             </div>
 
                         </ContentTemplate>
-                    </UpdatePanel>
+                    </asp:UpdatePanel>
 
                 </Content>
             </Rock:ModalDialog>
