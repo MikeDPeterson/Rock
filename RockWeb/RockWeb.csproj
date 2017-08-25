@@ -5267,19 +5267,19 @@
     <Content Include="Themes\CheckinAdventureKids\Assets\Images\background.jpg" />
     <Content Include="Themes\CheckinAdventureKids\Layouts\Checkin.aspx" />
     <Content Include="Themes\CheckinAdventureKids\Styles\.gitignore" />
-    <Content Include="Themes\CheckinAdventureKids\Styles\checkin-theme.css" />
+    <None Include="Themes\CheckinAdventureKids\Styles\checkin-theme.css" />
     <Content Include="Themes\CheckinBlueCrystal\Assets\Images\background%402x.jpg" />
     <Content Include="Themes\CheckinBlueCrystal\Assets\Images\background.jpg" />
     <Content Include="Themes\CheckinBlueCrystal\Assets\Images\logo%402x.png" />
     <Content Include="Themes\CheckinBlueCrystal\Assets\Images\logo.png" />
     <Content Include="Themes\CheckinBlueCrystal\Layouts\Checkin.aspx" />
     <Content Include="Themes\CheckinBlueCrystal\Styles\.gitignore" />
-    <Content Include="Themes\CheckinBlueCrystal\Styles\checkin-theme.css" />
+    <None Include="Themes\CheckinBlueCrystal\Styles\checkin-theme.css" />
     <Content Include="Themes\CheckinPark\Assets\Images\background%402x.jpg" />
     <Content Include="Themes\CheckinPark\Assets\Images\background.jpg" />
     <Content Include="Themes\CheckinPark\Layouts\Checkin.aspx" />
     <Content Include="Themes\CheckinPark\Styles\.gitignore" />
-    <Content Include="Themes\CheckinPark\Styles\checkin-theme.css" />
+    <None Include="Themes\CheckinPark\Styles\checkin-theme.css" />
     <Content Include="Themes\church_ccv_Checkin_AdventureKids\Assets\Images\background%402x.jpg" />
     <Content Include="Themes\church_ccv_Checkin_AdventureKids\Assets\Images\background.jpg" />
     <Content Include="Themes\church_ccv_Checkin_AdventureKids\Layouts\Checkin.aspx" />
@@ -5466,8 +5466,8 @@
     <Content Include="Themes\com_ccvstars_External_v5\Styles\theme.css" />
     <Content Include="Themes\DashboardStark\Layouts\Main.aspx" />
     <Content Include="Themes\DashboardStark\Styles\.gitignore" />
-    <Content Include="Themes\DashboardStark\Styles\bootstrap.css" />
-    <Content Include="Themes\DashboardStark\Styles\theme.css" />
+    <None Include="Themes\DashboardStark\Styles\bootstrap.css" />
+    <None Include="Themes\DashboardStark\Styles\theme.css" />
     <Content Include="Themes\Flat\Layouts\Dialog.aspx" />
     <Content Include="Themes\Flat\Layouts\Error.aspx" />
     <Content Include="Themes\Flat\Layouts\FullWidth.aspx" />
@@ -5479,15 +5479,15 @@
     <Content Include="Themes\Flat\Scripts\min\theme.min.js" />
     <Content Include="Themes\Flat\Scripts\theme.js" />
     <Content Include="Themes\Flat\Styles\.gitignore" />
-    <Content Include="Themes\Flat\Styles\bootstrap.css" />
-    <Content Include="Themes\Flat\Styles\theme.css" />
+    <None Include="Themes\Flat\Styles\bootstrap.css" />
+    <None Include="Themes\Flat\Styles\theme.css" />
     <Content Include="Themes\KioskStark\Assets\Images\background%402x.jpg" />
     <Content Include="Themes\KioskStark\Assets\Images\background.jpg" />
     <Content Include="Themes\KioskStark\Layouts\FullWidth.aspx" />
     <Content Include="Themes\KioskStark\Layouts\RightSidebar.aspx" />
     <Content Include="Themes\KioskStark\Styles\.gitignore" />
-    <Content Include="Themes\KioskStark\Styles\bootstrap.css" />
-    <Content Include="Themes\KioskStark\Styles\theme.css" />
+    <None Include="Themes\KioskStark\Styles\bootstrap.css" />
+    <None Include="Themes\KioskStark\Styles\theme.css" />
     <Content Include="Themes\Residency\Assets\Icons\favicon.ico" />
     <Content Include="Themes\Residency\Assets\Icons\favicon.jpg" />
     <Content Include="Themes\Residency\Assets\Icons\Icon-114.png" />
@@ -5520,8 +5520,8 @@
     <Content Include="Themes\Rock\Layouts\Splash.aspx" />
     <Content Include="Themes\Rock\Layouts\ThreeColumn.aspx" />
     <Content Include="Themes\Rock\Styles\.gitignore" />
-    <Content Include="Themes\Rock\Styles\bootstrap.css" />
-    <Content Include="Themes\Rock\Styles\theme.css" />
+    <None Include="Themes\Rock\Styles\bootstrap.css" />
+    <None Include="Themes\Rock\Styles\theme.css" />
     <Content Include="Themes\Stark\Layouts\Blank.aspx" />
     <Content Include="Themes\Stark\Layouts\Dialog.aspx" />
     <Content Include="Themes\Stark\Layouts\Error.aspx" />
@@ -5531,8 +5531,8 @@
     <Content Include="Themes\Stark\Layouts\RightSidebar.aspx" />
     <Content Include="Themes\Stark\Layouts\ThreeColumn.aspx" />
     <Content Include="Themes\Stark\Styles\.gitignore" />
-    <Content Include="Themes\Stark\Styles\bootstrap.css" />
-    <Content Include="Themes\Stark\Styles\theme.css" />
+    <None Include="Themes\Stark\Styles\bootstrap.css" />
+    <None Include="Themes\Stark\Styles\theme.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
