@@ -4957,7 +4957,6 @@
     <Content Include="Themes\church_ccv_External_v7\Scripts\badge-bar.handlebars" />
     <None Include="Themes\church_ccv_External_v7\Scripts\Vendor\.DS_Store" />
     <None Include="Themes\church_ccv_External_v7\Scripts\Vendor\._.DS_Store" />
-    <Content Include="Themes\church_ccv_External_v7\Styles\.nocompile" />
     <Content Include="Themes\church_ccv_External_v7\Styles\bootstrap.less" />
     <Content Include="Themes\church_ccv_External_v7\Styles\landing-map.less" />
     <Content Include="Themes\church_ccv_External_v7\Styles\mobileapp-theme.less" />
