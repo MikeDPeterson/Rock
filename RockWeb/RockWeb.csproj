@@ -5177,7 +5177,6 @@
     <Content Include="Themes\Rock\Assets\Lava\RSSFeedItem.lava" />
     <Content Include="Themes\Rock\Assets\Lava\TransactionYearlySummary.lava" />
     <Content Include="Themes\Rock\Layouts\Site.Master" />
-    <Content Include="Themes\Rock\Styles\.nocompile" />
     <Content Include="Themes\Rock\Styles\bootstrap.less" />
     <Content Include="Themes\Rock\Styles\theme.less" />
     <Content Include="Themes\Rock\Styles\_ccv-custom.less" />
@@ -5518,7 +5517,6 @@
     <Content Include="Themes\Rock\Layouts\RightSidebar.aspx" />
     <Content Include="Themes\Rock\Layouts\Splash.aspx" />
     <Content Include="Themes\Rock\Layouts\ThreeColumn.aspx" />
-    <Content Include="Themes\Rock\Styles\.gitignore" />
     <None Include="Themes\Rock\Styles\bootstrap.css" />
     <None Include="Themes\Rock\Styles\theme.css" />
     <Content Include="Themes\Stark\Layouts\Blank.aspx" />
