@@ -2,5 +2,6 @@
 /aspnetdb_log.LDF
 /Files
 /RockShop
+/Cache
 InstalledStorePackages.json
 RockModelViews.xml
