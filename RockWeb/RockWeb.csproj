@@ -16,7 +16,7 @@
     <AssemblyName>RockWeb</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44361</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -511,7 +511,6 @@
     <Content Include="Blocks\Examples\ModelMap.ascx" />
     <Content Include="Blocks\Examples\prettify.css" />
     <Content Include="Blocks\Examples\RockControlGallery.ascx" />
-    <Content Include="Blocks\Examples\SampleData.ascx" />
     <Content Include="Blocks\Finance\AccountDetail.ascx" />
     <Content Include="Blocks\Finance\AccountList.ascx" />
     <Content Include="Blocks\Finance\BatchDetail.ascx" />
@@ -2278,6 +2277,7 @@
     <Content Include="error.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="GatewayStep2Return.aspx" />
+    <Content Include="GetImage.ashx" />
     <Content Include="Global.asax" />
     <Content Include="Http404Error.aspx" />
     <Content Include="KeepAlive.aspx" />
@@ -4108,7 +4108,6 @@
     <Content Include="GetChannelFeed.ashx" />
     <Content Include="GetCommunication.ashx" />
     <Content Include="GetFile.ashx" />
-    <Content Include="GetImage.ashx" />
     <Content Include="ImageUploader.ashx" />
     <Content Include="prepros-6.config" />
     <Content Include="prepros.cfg" />
@@ -6952,13 +6951,6 @@
     <Compile Include="Blocks\Examples\RockControlGallery.ascx.designer.cs">
       <DependentUpon>RockControlGallery.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Blocks\Examples\SampleData.ascx.cs">
-      <DependentUpon>SampleData.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Blocks\Examples\SampleData.ascx.designer.cs">
-      <DependentUpon>SampleData.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Blocks\Finance\AccountDetail.ascx.cs">
       <DependentUpon>AccountDetail.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -7883,12 +7875,22 @@
     <Compile Include="error.aspx.designer.cs">
       <DependentUpon>error.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FileUploader.ashx.cs">
+      <DependentUpon>FileUploader.ashx</DependentUpon>
+    </Compile>
     <Compile Include="GatewayStep2Return.aspx.cs">
       <DependentUpon>GatewayStep2Return.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GatewayStep2Return.aspx.designer.cs">
       <DependentUpon>GatewayStep2Return.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetChannelFeed.ashx.cs" />
+    <Compile Include="GetFile.ashx.cs">
+      <DependentUpon>GetFile.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GetImage.ashx.cs">
+      <DependentUpon>GetImage.ashx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -7899,6 +7901,9 @@
     </Compile>
     <Compile Include="Http404Error.aspx.designer.cs">
       <DependentUpon>Http404Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageUploader.ashx.cs">
+      <DependentUpon>ImageUploader.ashx</DependentUpon>
     </Compile>
     <Compile Include="KeepAlive.aspx.cs">
       <DependentUpon>KeepAlive.aspx</DependentUpon>
@@ -8687,11 +8692,6 @@
       <DependentUpon>Error.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utility\BundleConfig.cs" />
-    <Compile Include="Utility\FileUploader.ashx.cs" />
-    <Compile Include="Utility\GetChannelFeed.cs" />
-    <Compile Include="Utility\GetFile.ashx.cs" />
-    <Compile Include="Utility\GetImage.ashx.cs" />
-    <Compile Include="Utility\ImageUploader.ashx.cs" />
     <Compile Include="Utility\LavaFileSystem.cs" />
     <Compile Include="Utility\RockMessageHub.cs" />
     <Compile Include="Utility\SqlServerTypes\Loader.cs" />
