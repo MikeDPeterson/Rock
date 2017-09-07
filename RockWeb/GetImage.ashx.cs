@@ -26,7 +26,7 @@ using Rock.Data;
 using Rock.Model;
 using Rock.Security;
 
-namespace RockWeb.Utility
+namespace RockWeb
 {
     /// <summary>
     /// Handles retrieving file (image) data from storage

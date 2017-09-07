@@ -28,7 +28,7 @@ using Rock.Security;
 using Rock.Web.Cache;
 using System.Collections.Generic;
 
-namespace RockWeb.Utility
+namespace RockWeb
 {
     /// <summary>
     /// Handles retrieving file data from storage
