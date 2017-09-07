@@ -42,8 +42,8 @@
                                 <div class="col-md-6">
                                     <Rock:RockDropDownList ID="ddlType" runat="server" Label="Check-in Type" AutoPostBack="true" OnSelectedIndexChanged="ddlType_SelectedIndexChanged"
                                         Help="The type of check-in experience to use for this type. Family check-in allows more than one person in the family to be checked in at a time.">
-                                        <Rock:ListItem Text="Individual" Value="0" />
-                                        <Rock:ListItem Text="Family" Value="1" />
+                                        <asp:ListItem Text="Individual" Value="0" />
+                                        <asp:ListItem Text="Family" Value="1" />
                                     </Rock:RockDropDownList>
                                     <Rock:NumberBox ID="nbSecurityCodeLength" runat="server" Label="Security Code Length" MinimumValue="3" MaximumValue="10" NumberType="Integer" 
                                         Help="The number of characters that should be used when generating a unique security code for labels (minimum is 3)." />
@@ -85,8 +85,8 @@
                                         Help="The maximum number of digits that can to be entered for a phone number search (default is 10)." />
                                     <Rock:RockDropDownList ID="ddlPhoneSearchType" runat="server" Label="Phone Search Type" 
                                         Help="Controls how a person's phone number should be compared to the digits that were entered by person when checking in.">
-                                        <Rock:ListItem Text="Contains" Value="0" />
-                                        <Rock:ListItem Text="Ends With" Value="1" />
+                                        <asp:ListItem Text="Contains" Value="0" />
+                                        <asp:ListItem Text="Ends With" Value="1" />
                                     </Rock:RockDropDownList>
                                 </div>
                             </div>

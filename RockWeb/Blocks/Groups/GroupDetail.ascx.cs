@@ -79,7 +79,7 @@ namespace RockWeb.Blocks.Groups
         protected global::Rock.Web.UI.Controls.GroupPicker gpParentGroup;
         protected global::Rock.Web.UI.Controls.NumberBox nbGroupCapacity;
         protected global::Rock.Web.UI.Controls.DataDropDownList ddlCampus;
-        protected global::Rock.Web.UI.Controls.DataDropDownList ddlSignatureDocumentTemplate;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSignatureDocumentTemplate;
         protected global::Rock.Web.UI.Controls.PanelWidget wpMeetingDetails;
         protected global::Rock.Web.UI.Controls.Grid gLocations;
         protected global::Rock.Web.UI.Controls.RockRadioButtonList rblScheduleSelect;
