@@ -8712,6 +8712,10 @@
       <Project>{aeb3ebf4-253a-4438-a380-ecff89c6bdda}</Project>
       <Name>church.ccv.Actions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\church.ccv.Authentication.Azure\church.ccv.Authentication.Azure.csproj">
+      <Project>{daa7c48a-7e31-4a30-93b9-b99b5b4e86be}</Project>
+      <Name>church.ccv.Authentication.Azure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\church.ccv.Authentication\church.ccv.Authentication.csproj">
       <Project>{10702916-bb67-4be9-a507-e1f8932bd05f}</Project>
       <Name>church.ccv.Authentication</Name>
