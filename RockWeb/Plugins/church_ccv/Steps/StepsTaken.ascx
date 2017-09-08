@@ -1,4 +1,4 @@
-﻿<%--<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Steps.StepsTaken" Codebehind="StepsTaken.ascx.cs" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="RockWeb.Plugins.church_ccv.Steps.StepsTaken" Codebehind="StepsTaken.ascx.cs" %>
 
 <style>
     @media print {
@@ -386,4 +386,4 @@
         </asp:Panel>
 
     </ContentTemplate>
-</asp:UpdatePanel>--%>
+</asp:UpdatePanel>

@@ -8564,18 +8564,21 @@
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\MeasureDashboardCampus.ascx.cs">
       <DependentUpon>MeasureDashboardCampus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\MeasureDashboardCampus.ascx.designer.cs">
       <DependentUpon>MeasureDashboardCampus.ascx</DependentUpon>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\MeasureDashboardPastor.ascx.cs">
       <DependentUpon>MeasureDashboardPastor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\MeasureDashboardPastor.ascx.designer.cs">
       <DependentUpon>MeasureDashboardPastor.ascx</DependentUpon>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\StepsTaken.ascx.cs">
       <DependentUpon>StepsTaken.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Plugins\church_ccv\Steps\StepsTaken.ascx.designer.cs">
       <DependentUpon>StepsTaken.ascx</DependentUpon>

@@ -31,6 +31,33 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         protected global::System.Web.UI.WebControls.Panel pnlView;
         
         /// <summary>
+        /// bsAdults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.BootstrapButton bsAdults;
+        
+        /// <summary>
+        /// bsStudents control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.BootstrapButton bsStudents;
+        
+        /// <summary>
+        /// bsTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.BootstrapButton bsTotal;
+        
+        /// <summary>
         /// pnlStatus control.
         /// </summary>
         /// <remarks>
@@ -38,6 +65,42 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlStatus;
+        
+        /// <summary>
+        /// bsWeekendAttendance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.BootstrapButton bsWeekendAttendance;
+        
+        /// <summary>
+        /// hlDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlDate;
+        
+        /// <summary>
+        /// ddlSundayDates control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSundayDates;
+        
+        /// <summary>
+        /// dpSundayPicker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.DatePicker dpSundayPicker;
         
         /// <summary>
         /// lbSetDate control.
@@ -74,6 +137,24 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lMeasureCompareValueSum;
+        
+        /// <summary>
+        /// cpCampus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampus;
+        
+        /// <summary>
+        /// nbMessages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessages;
         
         /// <summary>
         /// rptCampusMeasures control.

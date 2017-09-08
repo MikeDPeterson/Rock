@@ -31,6 +31,24 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         protected global::System.Web.UI.WebControls.Panel pnlView;
         
         /// <summary>
+        /// hlDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlDate;
+        
+        /// <summary>
+        /// drpDateRange control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.SlidingDateRangePicker drpDateRange;
+        
+        /// <summary>
         /// lbSetDateRange control.
         /// </summary>
         /// <remarks>
@@ -139,6 +157,15 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         protected global::System.Web.UI.WebControls.Literal lCampusCampus;
         
         /// <summary>
+        /// cpCampusCampus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.CampusPicker cpCampusCampus;
+        
+        /// <summary>
         /// rptAdultMeasures control.
         /// </summary>
         /// <remarks>
@@ -184,6 +211,15 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         protected global::System.Web.UI.WebControls.Literal lAdultSingleChartValue;
         
         /// <summary>
+        /// lcAdultsSingleMeasure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.LineChart lcAdultsSingleMeasure;
+        
+        /// <summary>
         /// rptAdultSingleMeasure control.
         /// </summary>
         /// <remarks>
@@ -218,6 +254,15 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lPastorPastor;
+        
+        /// <summary>
+        /// ddlPastor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPastor;
         
         /// <summary>
         /// rptPastorMeasures control.
@@ -265,6 +310,15 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         protected global::System.Web.UI.WebControls.Literal lPastorSingleChartValue;
         
         /// <summary>
+        /// lcPastorSingleMeasure control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.LineChart lcPastorSingleMeasure;
+        
+        /// <summary>
         /// rptPastorSingleMeasure control.
         /// </summary>
         /// <remarks>
@@ -290,6 +344,15 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lAdultsCampus;
+        
+        /// <summary>
+        /// cpAdultsCampus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.CampusPicker cpAdultsCampus;
         
         /// <summary>
         /// lAdultUniqueAdults control.
@@ -344,5 +407,41 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lDetailCampus;
+        
+        /// <summary>
+        /// cpDetailCampus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.CampusPicker cpDetailCampus;
+        
+        /// <summary>
+        /// gfStepDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.GridFilter gfStepDetails;
+        
+        /// <summary>
+        /// ddlMeasureType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlMeasureType;
+        
+        /// <summary>
+        /// gStepDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.Grid gStepDetails;
     }
 }

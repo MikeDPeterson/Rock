@@ -31,6 +31,33 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         protected global::System.Web.UI.WebControls.Panel pnlView;
         
         /// <summary>
+        /// hlDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.HighlightLabel hlDate;
+        
+        /// <summary>
+        /// ddlSundayDates control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlSundayDates;
+        
+        /// <summary>
+        /// dpSundayPicker control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.DatePicker dpSundayPicker;
+        
+        /// <summary>
         /// lbSetDate control.
         /// </summary>
         /// <remarks>
@@ -65,6 +92,24 @@ namespace RockWeb.Plugins.church_ccv.Steps {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal lMeasureCompareValueSum;
+        
+        /// <summary>
+        /// ddlPastor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlPastor;
+        
+        /// <summary>
+        /// nbMessages control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Rock.Web.UI.Controls.NotificationBox nbMessages;
         
         /// <summary>
         /// rptCampusMeasures control.
