@@ -26,7 +26,7 @@
                         <Rock:ReorderField/>
                         <Rock:RockTemplateField>
                             <ItemTemplate>
-                                <Rock:Literal ID="lValue" runat="server" />
+                                <asp:Literal ID="lValue" runat="server" />
                             </ItemTemplate>
                         </Rock:RockTemplateField>
                         <Rock:DeleteField OnClick="gLinks_Delete" ButtonCssClass="btn btn-danger btn-xs grid-delete-button" />
