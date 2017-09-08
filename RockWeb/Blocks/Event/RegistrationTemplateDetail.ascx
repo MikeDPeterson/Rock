@@ -360,7 +360,7 @@
                                             <div class="col-xs-8"><%# FormatFeeCost( Eval("CostValue").ToString() ) %></div>
                                         </div>
                                     </ItemTemplate>
-                                </Repeater>
+                                </asp:Repeater>
                             </Rock:RockControlWrapper>
                         </div>
                     </div>

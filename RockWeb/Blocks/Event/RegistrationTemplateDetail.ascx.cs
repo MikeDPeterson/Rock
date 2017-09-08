@@ -454,7 +454,7 @@ namespace RockWeb.Blocks.Event
         protected global::Rock.Web.UI.Controls.NumberBox nbDiscountMinRegistrants;
         protected global::Rock.Web.UI.Controls.DateRangePicker drpDiscountDateRange;
         protected global::Rock.Web.UI.Controls.ModalDialog dlgFee;
-        protected global::Rock.Web.UI.Controls.RockRadioButtonList tbFeeName;
+        protected global::Rock.Web.UI.Controls.RockTextBox tbFeeName;
         protected global::Rock.Web.UI.Controls.RockRadioButtonList rblFeeType;
         protected global::Rock.Web.UI.Controls.CurrencyBox cCost;
         protected global::Rock.Web.UI.Controls.KeyValueList kvlMultipleFees;
