@@ -131,7 +131,7 @@ namespace RockWeb
                 var stopwatch = System.Diagnostics.Stopwatch.StartNew();
                 LogMessage( APP_LOG_FILENAME, "Application Starting..." ); 
                 
-                if ( System.Web.Hosting.HostingEnvironment.IsDevelopmentEnvironment )
+                if ( HttpContext.Current.IsDebuggingEnabled )
                 {
                     System.Diagnostics.Debug.WriteLine( string.Format( "Application_Start: {0}", RockDateTime.Now.ToString( "hh:mm:ss.FFF" ) ) );
                 }
@@ -149,7 +149,7 @@ namespace RockWeb
                 // Get a db context
                 using ( var rockContext = new RockContext() )
                 {
-                    if ( System.Web.Hosting.HostingEnvironment.IsDevelopmentEnvironment )
+                    if ( HttpContext.Current.IsDebuggingEnabled )
                     {
                         try
                         {
@@ -171,8 +171,8 @@ namespace RockWeb
                     // Preload the commonly used objects
                     stopwatch.Restart();
                     LoadCacheObjects( rockContext );
-
-                    if ( System.Web.Hosting.HostingEnvironment.IsDevelopmentEnvironment )
+                    
+                    if ( HttpContext.Current.IsDebuggingEnabled )
                     {
                         System.Diagnostics.Debug.WriteLine( string.Format( "LoadCacheObjects - {0} ms", stopwatch.Elapsed.TotalMilliseconds ) );
                     }
@@ -185,7 +185,8 @@ namespace RockWeb
                     // Configure Rock Rest API
                     stopwatch.Restart();
                     System.Web.Http.GlobalConfiguration.Configure( Rock.Rest.WebApiConfig.Register );
-                    if ( System.Web.Hosting.HostingEnvironment.IsDevelopmentEnvironment )
+                    
+                    if ( HttpContext.Current.IsDebuggingEnabled )
                     {
                         System.Diagnostics.Debug.WriteLine( string.Format( "Configure WebApiConfig - {0} ms", stopwatch.Elapsed.TotalMilliseconds ) );
                         stopwatch.Restart();
@@ -195,7 +196,6 @@ namespace RockWeb
                     bool runJobsInContext = Convert.ToBoolean( ConfigurationManager.AppSettings["RunJobsInIISContext"] );
                     if ( runJobsInContext )
                     {
-
                         ISchedulerFactory sf;
 
                         // create scheduler
@@ -282,7 +282,8 @@ namespace RockWeb
                 SqlServerTypes.Utilities.LoadNativeAssemblies( Server.MapPath( "~" ) );
 
                 LogMessage( APP_LOG_FILENAME, "Application Started Successfully" );
-                if ( System.Web.Hosting.HostingEnvironment.IsDevelopmentEnvironment )
+                
+                if ( HttpContext.Current.IsDebuggingEnabled )
                 {
                     System.Diagnostics.Debug.WriteLine( string.Format( "Application_Started_Successfully: {0}", RockDateTime.Now.ToString( "hh:mm:ss.FFF" ) ) );
                 }
