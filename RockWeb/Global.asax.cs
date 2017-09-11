@@ -129,7 +129,7 @@ namespace RockWeb
             try
             {
                 var stopwatch = System.Diagnostics.Stopwatch.StartNew();
-                LogMessage( APP_LOG_FILENAME, "Application Starting..." ); 
+                LogMessage( APP_LOG_FILENAME, "Application Starting....." ); 
                 
                 if ( HttpContext.Current.IsDebuggingEnabled )
                 {
