@@ -39,7 +39,7 @@ namespace RockWeb.Plugins.church_ccv.Residency
         protected global::Rock.Web.UI.Controls.DataTextBox tbName;
         protected global::Rock.Web.UI.Controls.DataTextBox tbDescription;
         protected global::Rock.Web.UI.Controls.DateRangePicker dpStartEndDate;
-        protected global::Rock.Web.UI.Controls.ModalAlert nbEditModeMessage;
+        protected global::Rock.Web.UI.Controls.NotificationBox nbEditModeMessage;
         protected global::Rock.Web.UI.Controls.NotificationBox nbCloneMessage;
         #endregion
 
