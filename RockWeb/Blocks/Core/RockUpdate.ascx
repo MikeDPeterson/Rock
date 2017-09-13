@@ -108,9 +108,9 @@
 
                 <asp:Panel ID="pnlError" runat="server" Visible="false">
                     <div class="well well-message well-message-danger">
-                        <h1>Whoa... That Wasn't Suppose To Happen</h1>
+                        <h1>Feature Not Supported</h1>
                         <i class="fa fa-exclamation-circle"></i>
-                        <p>An error ocurred during the update process.</p>
+                        <p>Due to web application conversion, Rock Update is not supported. </p>
                     </div>
             
                     <asp:Literal ID="lMessage" runat="server"></asp:Literal>
