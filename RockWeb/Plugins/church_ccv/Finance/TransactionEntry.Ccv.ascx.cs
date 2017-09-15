@@ -1061,6 +1061,13 @@ namespace RockWeb.Plugins.church_ccv.Finance
             rockContext.SaveChanges();
         }
 
+        public string GetGoogleMapsUrl( )
+        {
+            var globalAttributesCache = GlobalAttributesCache.Read();
+
+            return "https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete&key=" + globalAttributesCache.GetValue( "GoogleAPIKey" );
+        }
+
         /// <summary>
         /// Sends the receipt.
         /// </summary>
