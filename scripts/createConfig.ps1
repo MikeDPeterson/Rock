@@ -8,8 +8,19 @@ $connectionStrConfig = @"
   </connectionStrings>
 "@
 $connectionStrConfig | out-file .\web.ConnectionStrings.config -Force
+if ($MyInvocation.MyCommand.Path)
+{
+    $scriptpath = $MyInvocation.MyCommand.Path
+    $d = Split-Path $scriptpath
+    write-output -InputObject "Script Directory: `t`t$D"
+    import-module "$d\kudufunctions.psm1" -DisableNameChecking -Force
+}
+else
+{
+    import-module .\kudufunctions.psm1 -DisableNameChecking -Force
+}
 $kudufile = get-item .\web.ConnectionStrings.config
-ipmo .\kudufunctions.psm1 -Force
+#ipmo .\kudufunctions.psm1 -Force
 $rockwebPubProfile = Get-PublishingProfileCredentials -resourceGroupName $resourcegroup -webAppName $webapp
 $rockwebAuthHeader = Get-KuduApiAuthorisationHeaderValue -resourceGroupName $resourcegroup -webAppName $webapp
 Upload-FileToWebApp -resourceGroupName $resourcegroup -webAppName $webapp -localPath $kudufile.FullName -kuduPath $kudufile.name
