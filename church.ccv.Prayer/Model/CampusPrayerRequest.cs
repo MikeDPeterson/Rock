@@ -13,7 +13,7 @@ namespace church.ccv.Prayer.Model
     /// <summary>
     /// Represents a prayer request that a person has submitted. The PrayerRequest entity implements ICategorized which means that a prayer request can belong to a category.
     /// </summary>
-    [Table( "_church_ccv_CampusPrayerRequest" )]
+    [Table( "_church_ccv_PrayerRequest" )]
     [DataContract]
     public partial class CampusPrayerRequest : Model<CampusPrayerRequest>, ICategorized, IRockEntity
     { 
