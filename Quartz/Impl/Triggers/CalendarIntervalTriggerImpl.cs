@@ -20,6 +20,7 @@
 using System;
 
 using Quartz.Spi;
+using Rock;
 
 namespace Quartz.Impl.Triggers
 {
@@ -54,7 +55,7 @@ namespace Quartz.Impl.Triggers
     [Serializable]
     public class CalendarIntervalTriggerImpl : AbstractTrigger, ICalendarIntervalTrigger
     {
-        private static readonly int YearToGiveupSchedulingAt = DateTime.Now.Year + 100;
+        private static readonly int YearToGiveupSchedulingAt = RockDateTime.Now.Year + 100;
 
         private DateTimeOffset startTime;
         private DateTimeOffset? endTime;

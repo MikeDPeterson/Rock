@@ -25,6 +25,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 using Quartz.Collection;
+using Rock;
 
 namespace Quartz
 {
@@ -347,7 +348,7 @@ namespace Quartz
         [NonSerialized]
         protected bool expressionParsed;
 
-        public static readonly int MaxYear = DateTime.Now.Year + 100;
+        public static readonly int MaxYear = RockDateTime.Now.Year + 100;
 
         static CronExpression()
         {

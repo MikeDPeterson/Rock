@@ -17,6 +17,7 @@
  */
 #endregion
 
+using Rock;
 using System;
 using System.Globalization;
 using System.IO;
@@ -130,7 +131,7 @@ namespace Quartz.Job
                 minAge = mergedJobDataMap.GetLong(MinimumUpdateAge);
             }
             
-            DateTime maxAgeDate = DateTime.Now.AddMilliseconds(minAge);
+            DateTime maxAgeDate = RockDateTime.Now.AddMilliseconds(minAge);
         
 			DateTime newDate = GetLastModifiedDate(fileName);
 

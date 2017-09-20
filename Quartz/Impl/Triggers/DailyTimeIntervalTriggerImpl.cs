@@ -22,6 +22,7 @@
 using System;
 
 using Quartz.Collection;
+using Rock;
 
 namespace Quartz.Impl.Triggers
 {
@@ -79,7 +80,7 @@ namespace Quartz.Impl.Triggers
         /// </summary>
         public const int RepeatIndefinitely = -1;
 
-        private static readonly int YearToGiveupSchedulingAt = DateTime.Now.Year + 100;
+        private static readonly int YearToGiveupSchedulingAt = RockDateTime.Now.Year + 100;
 
         private DateTimeOffset startTimeUtc;
         private DateTimeOffset? endTimeUtc;

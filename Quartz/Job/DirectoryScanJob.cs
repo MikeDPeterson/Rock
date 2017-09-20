@@ -1,3 +1,4 @@
+using Rock;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -97,7 +98,7 @@ namespace Quartz.Job
             {
                 minAge = mergedJobDataMap.GetLong(MINIMUM_UPDATE_AGE);
             }
-            DateTime maxAgeDate = DateTime.Now.AddMilliseconds(minAge);
+            DateTime maxAgeDate = RockDateTime.Now.AddMilliseconds(minAge);
 
             FileInfo[] updatedFiles = GetUpdatedOrNewFiles(dirName, lastDate, maxAgeDate);
 

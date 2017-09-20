@@ -1029,7 +1029,7 @@ namespace RockWeb
             {
                 OnCacheRemove = new CacheItemRemovedCallback( CacheItemRemoved );
                 HttpRuntime.Cache.Insert( "IISCallBack", 60, null,
-                    DateTime.Now.AddSeconds( 60 ), Cache.NoSlidingExpiration,
+                    RockDateTime.Now.AddSeconds( 60 ), Cache.NoSlidingExpiration,
                     CacheItemPriority.NotRemovable, OnCacheRemove );
             }
         }

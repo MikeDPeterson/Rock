@@ -82,7 +82,7 @@ namespace RockWeb.Plugins.church_ccv.Residency
             if ( !Page.IsPostBack )
             {
                 // set reasonable defaults for Date/Range and Semester Name
-                var currentResidencyPeriod = new ResidencyService<Period>( new ResidencyContext() ).Queryable().Where( a => a.StartDate <= DateTime.Now ).OrderByDescending( a => a.StartDate ).FirstOrDefault();
+                var currentResidencyPeriod = new ResidencyService<Period>( new ResidencyContext() ).Queryable().Where( a => a.StartDate <= RockDateTime.Now ).OrderByDescending( a => a.StartDate ).FirstOrDefault();
                 string classSemesterName = string.Empty;
                 if ( currentResidencyPeriod != null )
                 {
