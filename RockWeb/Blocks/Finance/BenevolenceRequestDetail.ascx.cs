@@ -61,7 +61,7 @@ namespace RockWeb.Blocks.Finance
         protected global::Rock.Web.UI.Controls.DataDropDownList ddlRequestStatus;
         protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
         protected global::Rock.Web.UI.Controls.DataDropDownList ddlConnectionStatus;
-        protected global::Rock.Web.UI.Controls.DataDropDownList ddlCaseWorker;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlCaseWorker;
         protected global::Rock.Web.UI.Controls.DataDropDownList ddlResultType;
         protected global::Rock.Web.UI.Controls.DataTextBox dtbResultSummary;
         protected global::Rock.Web.UI.Controls.DataTextBox dtbAmount;
