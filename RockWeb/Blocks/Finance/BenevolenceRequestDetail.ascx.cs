@@ -64,7 +64,7 @@ namespace RockWeb.Blocks.Finance
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlCaseWorker;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlResultType;
         protected global::Rock.Web.UI.Controls.DataTextBox dtbResultSummary;
-        protected global::Rock.Web.UI.Controls.DataTextBox dtbAmount;
+        protected global::Rock.Web.UI.Controls.CurrencyBox dtbAmount;
         protected global::Rock.Web.UI.Controls.ModalDialog mdAddResult;
         protected global::Rock.Web.UI.Controls.ConfirmPageUnload confirmExit;
 
