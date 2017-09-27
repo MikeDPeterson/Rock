@@ -58,11 +58,11 @@ namespace RockWeb.Blocks.Finance
         protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbCellPhone;
         protected global::Rock.Web.UI.Controls.PhoneNumberBox pnbWorkPhone;
         protected global::Rock.Web.UI.Controls.LocationAddressPicker lapAddress;
-        protected global::Rock.Web.UI.Controls.DataDropDownList ddlRequestStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlRequestStatus;
         protected global::Rock.Web.UI.Controls.HighlightLabel hlStatus;
-        protected global::Rock.Web.UI.Controls.DataDropDownList ddlConnectionStatus;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlConnectionStatus;
         protected global::Rock.Web.UI.Controls.RockDropDownList ddlCaseWorker;
-        protected global::Rock.Web.UI.Controls.DataDropDownList ddlResultType;
+        protected global::Rock.Web.UI.Controls.RockDropDownList ddlResultType;
         protected global::Rock.Web.UI.Controls.DataTextBox dtbResultSummary;
         protected global::Rock.Web.UI.Controls.DataTextBox dtbAmount;
         protected global::Rock.Web.UI.Controls.ModalDialog mdAddResult;
